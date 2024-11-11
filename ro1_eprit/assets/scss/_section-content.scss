@@ -1,0 +1,194 @@
+﻿//컨텐츠 공통
+.section-content {
+  overflow: hidden;
+  position: relative;
+
+  .content {
+    width: 2560px;
+    left: 50%;
+    margin-left: (-2560px/2);
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+  }
+  .i {
+    z-index: 2;
+  }
+}
+
+//  d888
+// d8888
+//   888
+//   888
+//   888
+//   888
+//   888
+// 8888888
+//메가 부스터 프로모션
+
+.section--smelt {
+  height: 4528px;
+  .content {
+    background-image: url(../images/smelt/bg.webp#{$version});
+    .promotion {
+      &-box {
+        &__list {
+          position: absolute;
+          top: 16.56%;
+          left: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: -5.274%;
+          gap: 0 16px;
+          > li {
+            min-width: 270px;
+            height: 52px;
+            select {
+              width: 100%;
+              height: 100%;
+              padding: 0 20px;
+              color: #000;
+              font-size: 20px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    .btn {
+      &.btn1 {
+        top: 11%;
+      }
+      &.btn2 {
+        top: 19.1%;
+      }
+      &.btn3 {
+        top: 45.2%;
+        margin-left: -13%;
+        width: 6%;
+        height: 1%;
+      }
+    }
+  }
+  &.stove {
+    .content {
+      background-image: url(../images/smelt/bg_stove.webp#{$version});
+    }
+  }
+  .i {
+    position: absolute;
+    background-image: url(../images/smelt/chars.webp#{$version});
+    background-repeat: no-repeat;
+    display: block;
+    left: 50%;
+
+    &--1 {
+      @include spr(0, 0, 380px, 674px);
+      margin-left: 385px;
+      top: 720px;
+    }
+
+    &--2 {
+      @include spr(-730px, 0, 424px, 674px);
+      margin-left: -895px;
+      top: 2528px;
+    }
+
+    &--3 {
+      @include spr(-380px, -674px, 440px, 380px);
+      margin-left: 420px;
+      top: 4000px;
+    }
+  }
+}
+
+//  .d8888b.
+// d88P  Y88b
+//        888
+//      .d88P
+//  .od888P"
+// d88P"
+// 888"
+// 888888888
+//서버 오픈 페스티벌
+
+.section--festival {
+  height: 3998px;
+  .content {
+    background-image: url(../images/festival/bg.webp#{$version});
+  }
+
+  .i {
+    position: absolute;
+    background-image: url(../images/festival/chars.webp#{$version}); //
+    background-repeat: no-repeat;
+    display: block;
+    left: 50%;
+
+    &--1 {
+      @include spr(-54px, -44px, 361px, 531px);
+      margin-left: 351px;
+      top: 698px;
+    }
+
+    &--2 {
+      @include spr(-70px, -610px, 380px, 414px);
+      margin-left: -750px;
+      top: 2020px;
+    }
+
+    &--3 {
+      @include spr(-680px, -435px, 375px, 589px);
+      margin-left: 400px;
+      top: 3030px;
+    }
+  }
+}
+
+//  .d8888b.
+// d88P  Y88b
+//      .d88P
+//     8888"
+//      "Y8b.
+// 888    888
+// Y88b  d88P
+//  "Y8888P"
+//룬 타블렛
+
+.section--nightMarket {
+  height: 3598px;
+  .content {
+    background-image: url(../images/nightMarket/bg.webp#{$version});
+  }
+
+  .i {
+    position: absolute;
+    background-image: url(../images/nightMarket/chars.webp#{$version});
+    background-repeat: no-repeat;
+    display: block;
+    left: 50%;
+    &--1 {
+      @include spr(-525px, 0, 611px, 505px);
+      margin-left: 352px;
+      top: 241px;
+    }
+
+    &--2 {
+      @include spr(-70px, -565px, 470px, 471px);
+      margin-left: -880px;
+      top: 1725px;
+    }
+
+    &--3 {
+      @include spr(-680px, -520px, 415px, 516px);
+      margin-left: 420px;
+      top: 2608px;
+    }
+  }
+
+  .btn1 {
+    top: 13.9%;
+  }
+}

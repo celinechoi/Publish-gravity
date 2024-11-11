@@ -1,0 +1,212 @@
+﻿@keyframes effectBg {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.9;
+    filter: brightness(1);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1.3);
+  }
+}
+
+.section-landing {
+  font-size: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 2560px;
+  position: relative;
+  height: 800px;
+  .particles {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 4;
+  }
+  &__wrap {
+    position: relative;
+    overflow: hidden;
+    height: 800px;
+    display: block;
+    width: 100%;
+    &:before {
+      position: absolute;
+      content: '';
+      background: url(../images/landing/bg.webp#{$version}) no-repeat 50% 0%;
+      background-size: 2560px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: scale(1.3);
+      transition: 5s transform;
+      @at-root body[data-loading='done'] & {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .firework {
+    width: 100%;
+    height: 100%;
+    max-height: 650px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+  }
+
+  .light {
+    $duration: 3s;
+    background: url(../images/landing/char/package.webp#{$version}) no-repeat;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    animation: lightSway $duration infinite alternate linear;
+    @keyframes lightSway {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(10deg);
+      }
+    }
+
+    &--l1 {
+      z-index: 3;
+      @include spr(0, 0, 300px, 232px);
+      top: 12px;
+      margin-left: -600px;
+      animation-delay: $duration/-2;
+    }
+
+    &--l2 {
+      @include spr(-200px, -360px, 120px, 120px);
+      top: 370px;
+      margin-left: -540px;
+    }
+
+    &--r1 {
+      z-index: 3;
+      @include spr(-1237px, -170px, 79px, 62px);
+      top: 170px;
+      margin-left: 512px;
+      animation-delay: $duration/-2;
+    }
+
+    &--r2 {
+      z-index: 3;
+      @include spr(-1200px, -300px, 170px, 160px);
+      top: 310px;
+      margin-left: 472px;
+    }
+  }
+
+  .ch-table {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 426px;
+    background: url(../images/landing/table.webp#{$version}) no-repeat 50% 0;
+    display: block;
+    z-index: 4;
+  }
+
+  .ch {
+    background: url(../images/landing/char/ch_package.webp#{$version}) no-repeat;
+    display: block;
+    position: absolute;
+    left: 50%;
+    &-wrap {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+    }
+    &--m1 {
+      @include spr(-65px, -45px, 325px, 375px);
+      bottom: -95px;
+      margin-left: -593px;
+      z-index: 2;
+    }
+
+    &--f1 {
+      @include spr(-220px, -560px, 610px, 625px);
+      margin-left: -450px;
+      bottom: -210px;
+      z-index: 2;
+    }
+
+    &--m2 {
+      @include spr(-1110px, 0, 453px, 430px);
+      bottom: -54px;
+      margin-left: 170px;
+    }
+
+    &--f2 {
+      @include spr(-960px, -580px, 450px, 605px);
+      margin-left: 40px;
+      bottom: -150px;
+    }
+  }
+
+  .title-wrap {
+    width: 809px;
+    height: 307px;
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  .i {
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+
+    &--logo {
+      background-image: url(../images/landing/logo.webp#{$version});
+      @include spr(0, 0, 176px, 108px);
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: -30px;
+    }
+
+    &--title {
+      background-image: url(../images/landing/title.webp#{$version});
+      @include spr(0, 0, 803px, 233px);
+      top: 0;
+      left: 0;
+      animation: effectBg infinite 2.5s alternate both;
+    }
+  }
+}
+
+.stove-floating-banner {
+  position: absolute;
+  top: 13%;
+  right: 5%;
+  width: 162px;
+  height: 169px;
+  background: url(../images/landing/stove_floating.webp) no-repeat;
+  z-index: 5;
+  @media (hover: hover) {
+    transition: 300ms filter;
+    &:hover {
+      filter: brightness(1.05);
+    }
+  }
+}
