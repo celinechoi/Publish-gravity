@@ -1,0 +1,101 @@
+<style>
+  body:after {
+    height: 50vh;
+    background-color: #ddd;
+    content: '여백';
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    display: block;
+    /* margin: 5px 0; */
+    padding: 1em;
+    color: #222;
+    font-weight: 500;
+    text-align: left;
+    background-color: #bdbdbd;
+  }
+
+  body,
+  html {
+    height: auto;
+    scroll-padding: 96px;
+  }
+  .nav {
+    padding-left: 1em;
+    padding-bottom: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+  }
+  .nav * {
+    font-size: 0.9rem;
+  }
+  .nav div {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+  }
+  .nav p {
+    font-weight: 600;
+    flex: 0 0 3em;
+    margin-right: 1em;
+    background-color: #ff8;
+  }
+  .nav ol {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nav ol li {
+    display: inline-block;
+  }
+  .nav ol li a:hover {
+    text-decoration: underline;
+  }
+  .nav ol li:last-child:after {
+    content: none;
+  }
+  .nav ol li:after {
+    content: '/';
+    padding: 0 0.5em;
+  }
+</style>
+<nav class="nav">
+  <div>
+    <p><a href="common-footer.html">PC</a></p>
+    <ol>
+      <li><a href="common-footer.html#description">description</a></li>
+      <li><a href="common-footer.html#gnjoy">gnjoy</a></li>
+      <li><a href="common-footer.html#ro1">ro1</a></li>
+      <!-- S: S: 240607 ro1 dark mode 추가 -->
+      <li><a href="common-footer.html#ro1-dark">ro1-dark</a></li>
+      <!-- E: S: 240607 ro1 dark mode 추가 -->
+      <li><a href="common-footer.html#roz">roz</a></li>
+      <li><a href="common-footer.html#neocyon">neocyon</a></li>
+      <li><a href="common-footer.html#neocyon-pad">neocyon-pad</a></li>
+      <li><a href="common-footer.html#gnjoy-simple">gnjoy-simple</a></li>
+      <li><a href="common-footer.html#rag-simple">rag-simple</a></li>
+    </ol>
+  </div>
+  <div>
+    <p><a href="common-footer-mobile.html">MO</a></p>
+    <ol>
+      <li><a href="common-footer-mobile.html">gnjoy</a></li>
+      <li><a href="common-footer-mobile.html#NEOCYON">neocyon</a></li>
+      <li><a href="common-footer-mobile.html#MRO">MRO</a></li>
+    </ol>
+  </div>
+  <div>
+    <p><a href="common-footer-responsive.html">반응형</a></p>
+    <ol>
+      <li><a href="common-footer-responsive.html">반응형</a></li>
+    </ol>
+  </div>
+</nav>

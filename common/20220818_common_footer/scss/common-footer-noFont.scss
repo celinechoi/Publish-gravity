@@ -1,0 +1,364 @@
+﻿// 88888b.   .d8888b
+// 888 "88b d88P"
+// 888  888 888
+// 888 d88P Y88b.
+// 88888P"   "Y8888P
+// 888
+// 888
+// 888
+@mixin stitches-sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+}
+
+.common-footer {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  &,
+  * {
+    // font-family: 'Noto Sans KR', 'dotum', '돋움', sans-serif;
+    box-sizing: border-box;
+    line-height: initial;
+    letter-spacing: initial;
+    word-break: keep-all;
+  }
+  // S: 240607 reset 추가
+  .txt_hidden,
+  .txtHidden,
+  caption {
+    display: inline;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+    text-indent: -9999px;
+  }
+  // E: 240607 reset 추가
+  height: auto;
+  width: 100%;
+  padding: 30px 0 60px;
+  text-align: center;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+
+  &.common-footer--simple {
+    padding: 30px 0;
+    .common-footer__bottom {
+      margin-top: 0;
+    }
+  }
+  //다크모드
+  &.common-footer--darkmode {
+    background-color: #1e1e23;
+    .common-footer__link {
+      li:before {
+        border-left-color: #dcdbdb;
+      }
+      .link {
+        color: #dcdbdb;
+      }
+    }
+    .logo__gravity {
+      @include stitches-sprite(-10px, -65px, 150px, 35px);
+    }
+    .logo__neocyonGravity {
+      @include stitches-sprite(-10px, -175px, 150px, 35px);
+    }
+  } //다크모드
+
+  &__container {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    li {
+      position: relative;
+      padding: 0 0.5em;
+      &:nth-child(1):before {
+        content: none;
+      }
+      &:before {
+        content: '';
+        left: -1px;
+        height: 0.8em;
+        top: 50%;
+        margin-top: -0.4em;
+        position: absolute;
+        border-left: 1px solid #707070;
+      }
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #707070;
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      &--privacy {
+        //개인정보처리방침
+        color: #1470e1 !important;
+      }
+      &--inquiry {
+        // 사업문의
+        color: #00aeef !important;
+        &:before {
+          //아이콘
+          content: '';
+          width: 14px;
+          height: 17px;
+          display: inline-block;
+          background-image: url("data:image/svg+xml,%3Csvg width='14' height='17' viewBox='0 0 14 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.292 9.59921C11.5432 9.28771 10.5623 9.04911 9.4487 8.90988C9.51294 8.28898 9.54362 7.64397 9.54362 7.00105C9.54362 6.35813 9.51268 5.71311 9.4487 5.09012C10.5623 4.95089 11.5408 4.71229 12.2899 4.39843C12.6767 5.18268 12.8953 6.06656 12.8953 7.00105C12.8953 7.93344 12.6788 8.81496 12.292 9.59921ZM6.78893 1.10911C6.85972 1.10702 6.93025 1.10466 7.00105 1.10466C7.07184 1.10466 7.14237 1.10675 7.21317 1.10911C7.63295 1.39413 8.1786 2.4744 8.46597 4.30142C7.48271 4.37431 6.46878 4.36776 5.53639 4.28831C5.8256 2.46784 6.36914 1.39177 6.78893 1.10911ZM5.33948 7.00131C5.33948 6.33401 5.37042 5.72203 5.42574 5.16537C5.96037 5.21414 6.51702 5.23591 7.08705 5.23591C7.58418 5.23591 8.08342 5.21598 8.574 5.17848C8.62932 5.73304 8.66026 6.34056 8.66026 7.00105C8.66026 7.66153 8.62932 8.26906 8.574 8.82151C8.09679 8.78166 7.59756 8.76409 7.08705 8.76409C6.51702 8.76409 5.95827 8.78612 5.42574 8.83489C5.37042 8.27823 5.33948 7.66625 5.33948 7.00131ZM11.8347 3.63202C11.1763 3.89055 10.3192 4.09166 9.34067 4.21306C9.16395 3.05544 8.87238 2.02367 8.47253 1.29029C9.85302 1.64584 11.0395 2.49196 11.8347 3.63202ZM5.52957 1.29029C5.12971 2.01922 4.84024 3.04233 4.66142 4.19103C3.696 4.05836 2.84096 3.84414 2.20459 3.57669C2.99985 2.46548 4.16875 1.64138 5.52957 1.29029ZM11.4524 12.3528C13.0144 11.067 14 9.17732 14 7.00131C14 3.13934 10.8604 0 7.00105 0C3.56122 0 0.695621 2.48987 0.110387 5.76398C0.037495 6.16594 0 6.57917 0 7.00105C0 10.8628 2.05409 13.8914 6.01386 15.0328V16.7809L11.8513 13.41L6.0136 10.0397V11.6952C2.81893 11.6952 1.11567 9.10495 1.11567 6.64629C1.13324 6.34528 1.17283 6.05004 1.23471 5.76398C1.343 5.26239 1.51317 4.78518 1.74286 4.34127C2.47204 4.66614 3.44166 4.91786 4.55313 5.0681C4.4868 5.69791 4.45586 6.34948 4.45586 7.00131C4.45586 7.65078 4.4868 8.30262 4.55313 8.93216C3.87692 9.02262 3.25419 9.1532 2.70409 9.31419C2.73712 9.35405 2.76597 9.3939 2.79691 9.43349C2.89418 9.55725 2.98464 9.67655 3.07982 9.76701L3.10185 9.78694L3.12177 9.81133C3.19231 9.89104 3.27857 9.96812 3.37349 10.0478C3.76889 9.95292 4.20205 9.87111 4.66142 9.80923C4.7233 10.2025 4.79619 10.5804 4.88246 10.9359H4.88456C5.02824 10.98 5.15174 11.0177 5.24036 11.0222H5.26685C5.26685 11.0222 5.33082 11.0287 5.35075 11.0311V8.89257L6.66963 9.65269C6.80886 9.65033 6.94808 9.64824 7.08731 9.64824C7.56006 9.64824 8.02416 9.6658 8.46597 9.6991C8.4151 10.0193 8.35768 10.3176 8.2937 10.5916L9.08896 11.051C9.18834 10.6556 9.2746 10.2293 9.34094 9.7872C10.3218 9.90887 11.1792 10.1097 11.8374 10.3682C11.4464 10.9273 10.9624 11.4155 10.4057 11.8109L11.4524 12.3528Z' fill='%2300AEEF' /%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+
+  &__txt {
+    margin-bottom: 30px;
+    * {
+      color: #707070;
+      font-size: 12px;
+    }
+    .btn {
+      cursor: pointer;
+      background: none;
+      vertical-align: initial;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      letter-spacing: -0.02em;
+      border: 0;
+      outline: 0;
+    }
+    &__address {
+      display: block;
+      font-style: normal;
+    }
+    span {
+      padding: 0.1em 0.3em;
+      line-height: 1.3;
+      display: inline-block;
+    }
+  }
+
+  &__game-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: -4px;
+    > * {
+      margin: 4px 2px 0;
+      // margin-left: 5px;
+      // &:nth-child(1) {
+      //   margin-left: 0;
+      // }
+    }
+  }
+  .game-grade-mark {
+    display: flex;
+    justify-content: center;
+    > * {
+      margin-left: 4px;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+    }
+  }
+  .game-grade-table {
+    table-layout: fixed;
+    text-align: left;
+    height: 54px;
+    width: auto;
+    tr {
+      height: auto;
+      background: none;
+    }
+    colgroup {
+      col {
+        &:nth-child(1) {
+          // width: 4em;
+          width: 54px;
+        }
+        // &:nth-child(1){}
+        &:nth-child(3) {
+          // width: 10em;
+          width: 108px;
+        }
+      }
+    }
+    td,
+    th {
+      background: none;
+      height: auto;
+      border: 0;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      vertical-align: middle;
+      font-size: 11px;
+      border-top: 1px solid rgba(#fff, 0.2);
+      border-left: 1px solid rgba(#fff, 0.2);
+      padding: 1px 5px;
+      font-weight: 300;
+      &:nth-child(1) {
+        border-left: 0;
+      }
+    }
+    tr:nth-child(1) {
+      th,
+      td {
+        border-top: 0;
+      }
+    }
+
+    &--all {
+      background-color: #050;
+      td,
+      th {
+        color: #fff;
+        border-color: desaturate(lighten(#050, 17%), 40%);
+      }
+    }
+    &--12 {
+      background-color: #007;
+      td,
+      th {
+        color: #fff;
+        border-color: desaturate(lighten(#007, 17%), 40%);
+      }
+    }
+    &--15 {
+      background-color: #fc0;
+      td,
+      th {
+        color: #000;
+        border-color: desaturate(darken(#fc0, 17%), 40%);
+      }
+    }
+    &--18 {
+      background-color: #400;
+      td,
+      th {
+        color: #fff;
+        border-color: desaturate(lighten(#400, 17%), 40%);
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__copyright {
+      font-size: 12px;
+      color: #676767;
+      // letter-spacing: -0.02em;
+      margin-left: 12px;
+      br {
+        display: none;
+      }
+    }
+  }
+  // ## [GNJOY] PC/콘솔 게임사 플랫폼 로고 표기 관련 상담의 건 - 권리 표기 추가
+  &__trademarks {
+    margin-top: 10px;
+    color: #707070;
+    text-align: center;
+    p {
+      font-size: 12px;
+      .trademarks {
+        &-btn {
+          font-size: 12px;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .spr-grade {
+    background-image: url(../images/spr-grade.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    // https://spritegen.website-performance.org/
+    &__all {
+      @include stitches-sprite(-10px, -1666px, 46px, 54px);
+    }
+    &__12 {
+      @include stitches-sprite(-10px, -1740px, 46px, 54px);
+    }
+    &__15 {
+      @include stitches-sprite(-10px, -1814px, 46px, 54px);
+    }
+    &__18 {
+      @include stitches-sprite(-10px, -1888px, 46px, 54px);
+    }
+    &__test {
+      @include stitches-sprite(-10px, -1962px, 46px, 54px);
+    }
+    &__language {
+      @include stitches-sprite(-10px, -2036px, 46px, 54px);
+    }
+    &__gambling {
+      @include stitches-sprite(-10px, -2110px, 46px, 54px);
+    }
+    &__crime {
+      @include stitches-sprite(-10px, -2184px, 46px, 54px);
+    }
+    &__fear {
+      @include stitches-sprite(-10px, -2258px, 46px, 54px);
+    }
+    &__drug {
+      @include stitches-sprite(-10px, -2332px, 46px, 54px);
+    }
+    &__sexuality {
+      @include stitches-sprite(-10px, -2406px, 46px, 54px);
+    }
+    &__violence {
+      @include stitches-sprite(-10px, -2480px, 46px, 54px);
+    }
+    &__anab-bsi {
+      @include stitches-sprite(-10px, -2554px, 66px, 28px);
+    }
+  }
+  .logo {
+    background-image: url(../images/footerlogo.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    &__gravity {
+      @include stitches-sprite(-10px, -10px, 150px, 35px);
+    }
+    &__neocyonGravity {
+      @include stitches-sprite(-10px, -120px, 150px, 35px);
+    }
+  }
+}

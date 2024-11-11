@@ -1,0 +1,17 @@
+﻿// 색상
+$body-color: '#222';
+//메인컬러
+$color-1: '#0138c2';
+
+// 미디어 쿼리 사이즈
+$mediaResponsiveSize: 1024px;
+// 시안 사이즈
+$mediaPSD: 1000px;
+
+//기본컨테이너 사이즈
+$container: 1200px;
+$gutter: 40px; //기본 여백
+
+// ## FONT 관리 ##  → _font-face.scss
+$font-family-pretendard: 'Pretendard', sans-serif;
+$font-family-poppins: 'Poppins', $font-family-pretendard;

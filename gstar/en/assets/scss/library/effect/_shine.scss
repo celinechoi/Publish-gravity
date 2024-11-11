@@ -1,0 +1,6 @@
+// 테두리 반짝임 효과
+@keyframes shine {
+  to {
+    transform: translateX(-25%);
+  }
+}

@@ -1,0 +1,19 @@
+// 스크롤 다운 안내 모션
+@keyframes scroll-down {
+  0% {
+    transform-origin: 50% 100%;
+    transform: scaleY(1);
+  }
+  50% {
+    transform-origin: 50% 100%;
+    transform: scaleY(0);
+  }
+  50.0001% {
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+  }
+  to {
+    transform-origin: 50% 0;
+    transform: scaleY(1);
+  }
+}

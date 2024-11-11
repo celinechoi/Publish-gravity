@@ -1,0 +1,59 @@
+footer {
+  position: relative;
+  padding: 31px 0 67px;
+  border-top: 1px solid #101113;
+  background-color: #1a1b1f;
+  text-align: center;
+  @include lg-max {
+    padding: vw(167) 0;
+  }
+  p {
+    color: #6f717e;
+    font-size: 14px;
+    @include lg-max {
+      font-size: vw(30);
+    }
+    &.copyright {
+      padding-top: 16px;
+      @include lg-max {
+        padding-top: vw(53);
+      }
+    }
+  }
+  .footer {
+    &-logo {
+      img {
+        // width: 357px;
+        margin: 0 auto;
+        @include lg-max {
+          width: vw(685);
+          height: vw(99);
+        }
+      }
+    }
+  }
+}
+.btnTop {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 52px;
+  bottom: vw(50);
+  right: vw(40);
+  z-index: 10;
+  background-image: url('../images/inc/top.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  @include lg-max {
+    width: vw(85);
+    height: vw(89);
+  }
+  &:hover {
+    background-image: url('../images/inc/top_on.webp');
+  }
+  &.fix {
+    position: absolute;
+    bottom: calc(100% + vw(40));
+  }
+}

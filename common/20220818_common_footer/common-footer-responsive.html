@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNJOY 공통푸터 : 반응형</title>
+    <link rel="stylesheet" href="https://imgc.gnjoy.com/common/css/reset.css" />
+
+    <!-- 공통푸터 css -->
+    <!-- <link rel="stylesheet" href="https://imgc1.gnjoy.com/common/20220818_common_footer/css/common-footer-responsive.min.css" /> -->
+
+    <link rel="stylesheet" href="css/common-footer-responsive.min.css" />
+  </head>
+  <body>
+    <!-- #include file="inc/nav.html" -->
+
+    <div style="padding: 1em; background-color: #ddd; font-size: 12px; border-radius: 5px; text-align: center">
+      <em>※게임등급테이블 반응형 작업 시 주의사항※</em><br />
+      PC에서사용하는 테이블을 사용합니다.<br />
+      기본적으로 web(1080px초과)에서만 노출합니다.<br />
+      <!-- 240119 수정 -->
+      1080px이하 해상도에서 표시하려면 table 태그에 .show 클래스를 추가해주세요.
+    </div>
+
+    <h2 id="gnjoy"># gnjoy 예시</h2>
+
+    <footer class="common-footer">
+      <!-- 
+      ## [footer mode: 푸터 라이트모드/다크모드] ##
+      라이트 : common-footer
+      다크 : common-footer common-footer--darkmode 
+      
+    -->
+      <div class="common-footer__container">
+        <ul class="common-footer__link">
+          <li><a class="link" href="" target="_blank">회사소개</a></li>
+          <li><a class="link" href="">이용약관</a></li>
+          <li><a class="link" href="">유료서비스 이용약관</a></li>
+          <li><a class="link link--privacy" href="">개인정보 처리방침</a></li>
+          <li><a class="link" href="">청소년 보호정책</a></li>
+          <li><a class="link" href="">모바일 이용약관</a></li>
+          <li><a class="link" href="">모바일 개인정보처리방침</a></li>
+          <li><a class="link" href="" target="_blank">PC방 가맹문의</a></li>
+          <li><a class="link link--inquiry" href="https://www.gravity.co.kr/kr/utility/contactUs.asp" target="_blank">사업문의</a></li>
+          <!-- 사업문의 :링크통일 -->
+        </ul>
+
+        <div class="common-footer__txt">
+          <address class="common-footer__txt__address">
+            <span>㈜그라비티</span>
+            <span>대표이사 : 박현철</span>
+            <span>서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+            <span>전화문의: 1588-9897</span>
+            <span>팩스: 02-2132-7077</span>
+            <span>e-mail : webmaster@gravity.co.kr</span>
+          </address>
+          <address class="common-footer__txt__address">
+            <span>사업자등록번호: 201-81-56197</span>
+            <span class="btn-bizinfo"><button class="btn" onclick="window.open('//www.ftc.go.kr/bizCommPop.do?wrkr_no=2018156197', 'bizCommPop', 'width=750, height=700')">사업자정보확인</button></span>
+            <span>통신사업자등록번호: 제2008-서울마포-0207호 </span>
+            <span>고객지원센터 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+          </address>
+        </div>
+
+        <div class="common-footer__game-info">
+          <div class="game-grade-mark">
+            <!-- 
+            ##### [게임등급 tag list] #####
+            .game-grade-mark > 
+            <span class="spr-grade spr-grade__all"><span class="sr-only">전체이용가</span></span>
+            <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+            <span class="spr-grade spr-grade__15"><span class="sr-only">15세이용가</span></span>
+            <span class="spr-grade spr-grade__18"><span class="sr-only">18세이용가</span></span>              
+            <span class="spr-grade spr-grade__language"><span class="sr-only">언어의 부적절성</span></span>
+            <span class="spr-grade spr-grade__gambling"><span class="sr-only">사행성</span></span>
+            <span class="spr-grade spr-grade__crime"><span class="sr-only">범죄</span></span>
+            <span class="spr-grade spr-grade__fear"><span class="sr-only">공포</span></span>
+            <span class="spr-grade spr-grade__drug"><span class="sr-only">약물</span></span>
+            <span class="spr-grade spr-grade__sexuality"><span class="sr-only">선정성</span></span>
+            <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span>
+            <span class="spr-grade spr-grade__anab-bsi"><span class="sr-only">anab/bsi</span></span>
+          -->
+            <span class="spr-grade spr-grade__anab-bsi"><span class="sr-only">anab/bsi</span></span>
+            <span class="spr-grade spr-grade__sexuality"><span class="sr-only">선정성</span></span>
+            <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span>
+            <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+          </div>
+
+          <!-- 
+          ### 게임정보 class list ###
+          .game-grade-table 
+          game-grade-table game-grade-table--all
+          game-grade-table game-grade-table--12
+          game-grade-table game-grade-table--12
+          game-grade-table game-grade-table--15
+          game-grade-table game-grade-table--18
+          
+          모바일에서는 td+th (tr내 두번째 th앞) 에 </tr><tr>로 끊어줍니다..
+          -->
+          <table class="game-grade-table game-grade-table--12">
+            <caption> 라그나로크 온라인 등급분류표 입니다. </caption>
+            <tbody>
+              <tr>
+                <th>제명</th>
+                <td>라그나로크 온라인</td>
+                <th>등급분류일자</th>
+                <td>2007.10.10</td>
+              </tr>
+              <tr>
+                <th>상호</th>
+                <td>(주)그라비티</td>
+                <th>등급분류번호</th>
+                <td>제OL-071010-006호</td>
+              </tr>
+              <tr>
+                <th>이용등급</th>
+                <td>12세이용가</td>
+                <th>제작·배급업신고번호</th>
+                <td>제2000-000002호</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- <table class="game-grade-table game-grade-table--12">
+            <caption>RAGNAROK ONLINE ZERO(라그나로크 온라인 제로) 등급분류표 입니다.</caption>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>제명</th>
+                <td>RAGNAROK ONLINE ZERO<br>(라그나로크 온라인 제로)</td>
+                <th>등급분류일자</th>
+                <td>2017.10.27</td>
+              </tr>
+              <tr>
+                <th>상호</th>
+                <td>(주)그라비티</td>
+                <th>등급분류번호</th>
+                <td>제GC-CC-NP-171027-016</td>
+              </tr>
+              <tr>
+                <th>이용등급</th>
+                <td>12세이용가</td>
+                <th>제작·배급업신고번호</th>
+                <td>제2000-000002호</td>
+              </tr>
+            </tbody>
+          </table> -->
+        </div>
+
+        <div class="common-footer__bottom">
+          <div class="common-footer__bottom__logo">
+            <!-- 
+              .common-footer__bottom__logo
+              ## [logo 종류] ##
+              
+              <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>            
+              <span class="logo logo__neocyonGravity"><span class="sr-only">GRAVITY NEOCYON</span></span>            
+            -->
+            <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+          </div>
+          <div class="common-footer__bottom__copyright">&#169; GRAVITY CO., LTD. ALL RIGHTS RESERVED.</div>
+          <!-- ##라그나로크 IP 카피라이트: 
+            &#169; Gravity Co., LTD & Lee MyoungJin(studio DTDS). All Rights Reserved.
+          -->
+        </div>
+      </div>
+    </footer>
+
+    <h2 id="gnjoy-darkmode"># gnjoy darkmode 예시</h2>
+    <footer class="common-footer common-footer--darkmode">
+      <div class="common-footer__container">
+        <ul class="common-footer__link">
+          <li><a class="link" href="" target="_blank">회사소개</a></li>
+          <li><a class="link" href="">이용약관</a></li>
+          <li><a class="link" href="">유료서비스 이용약관</a></li>
+          <li><a class="link link--privacy" href="">개인정보 처리방침</a></li>
+          <li><a class="link" href="">청소년 보호정책</a></li>
+          <li><a class="link" href="">모바일 이용약관</a></li>
+          <li><a class="link" href="">모바일 개인정보처리방침</a></li>
+          <li><a class="link" href="" target="_blank">PC방 가맹문의</a></li>
+          <li><a class="link link--inquiry" href="https://www.gravity.co.kr/kr/utility/contactUs.asp" target="_blank">사업문의</a></li>
+          <!-- 사업문의 :링크통일 -->
+        </ul>
+
+        <div class="common-footer__txt">
+          <address class="common-footer__txt__address">
+            <span>㈜그라비티</span>
+            <span>대표이사 : 박현철</span>
+            <span>서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+            <span>전화문의: 1588-9897</span>
+            <span>팩스: 02-2132-7077</span>
+            <span>e-mail : webmaster@gravity.co.kr</span>
+          </address>
+          <address class="common-footer__txt__address">
+            <span>사업자등록번호: 201-81-56197</span>
+            <span class="btn-bizinfo"><button class="btn" onclick="window.open('//www.ftc.go.kr/bizCommPop.do?wrkr_no=2018156197', 'bizCommPop', 'width=750, height=700')">사업자정보확인</button></span>
+            <span>통신사업자등록번호: 제2008-서울마포-0207호 </span>
+            <span>고객지원센터 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+          </address>
+        </div>
+
+        <div class="common-footer__game-info">
+          <div class="game-grade-mark">
+            <span class="spr-grade spr-grade__sexuality"><span class="sr-only">선정성</span></span>
+            <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span>
+            <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+          </div>
+          <table class="game-grade-table game-grade-table--12">
+            <caption> 라그나로크 온라인 등급분류표 입니다. </caption>
+            <tbody>
+              <tr>
+                <th>제명</th>
+                <td>라그나로크 온라인</td>
+                <th>등급분류일자</th>
+                <td>2007.10.10</td>
+              </tr>
+              <tr>
+                <th>상호</th>
+                <td>(주)그라비티</td>
+                <th>등급분류번호</th>
+                <td>제OL-071010-006호</td>
+              </tr>
+              <tr>
+                <th>이용등급</th>
+                <td>12세이용가</td>
+                <th>제작·배급업신고번호</th>
+                <td>제2000-000002호</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="common-footer__bottom">
+          <div class="common-footer__bottom__logo">
+            <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+          </div>
+          <div class="common-footer__bottom__copyright">&#169; GRAVITY CO., LTD. ALL RIGHTS RESERVED.</div>
+        </div>
+      </div>
+    </footer>
+
+    <h2 id="NEOCYON"># NEOCYON</h2>
+    <footer class="common-footer">
+      <!-- common-footer--darkmode -->
+      <div class="common-footer__container">
+        <div class="common-footer__txt">
+          <address class="common-footer__txt__address">
+            <span>㈜그라비티네오싸이언</span>
+            <span>대표이사 : 기타무라요시노리</span>
+            <span>서울시 마포구 월드컵북로 396 (상암동 1605)</span>
+            <span>누리꿈스퀘어 R&D 타워 12층 ㈜네오싸이언</span>
+          </address>
+          <address class="common-footer__txt__address">
+            <span>전화문의 : 1588-9897</span>
+            <span>팩스 : 02-2132-7980</span>
+            <span>이메일 : biz@neocyon.com</span>
+            <span>사업자등록번호 : 211-86-66362 </span>
+            <span class="btn-bizinfo"><button class="btn" onclick="window.open('//www.ftc.go.kr/bizCommPop.do?wrkr_no=2118666362', 'bizCommPop', 'width=750, height=700')">사업자정보확인</button></span>
+            <span>통신판매업신고번호 : 2009-서울마포-00159</span>
+          </address>
+        </div>
+
+        <div class="common-footer__game-info">
+          <div class="game-grade-mark">
+            <span class="spr-grade spr-grade__sexuality"><span class="sr-only">선정성</span></span>
+            <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span>
+            <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+          </div>
+        </div>
+
+        <div class="common-footer__bottom">
+          <div class="common-footer__bottom__logo">
+            <span class="logo logo__neocyonGravity"><span class="sr-only">GRAVITY NEOCYON</span></span>
+          </div>
+          <div class="common-footer__bottom__copyright">
+            &#169; GRAVITY NEOCYON INC. ALL RIGHTS RESERVED.
+            <br />
+            &#169; GUNGHO ONLINE ENTERTAINMENT, INC. ALL RIGHTS RESERVED.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <h2 id="gnjoy-simple"># gnjoy simple</h2>
+    <footer class="common-footer common-footer--simple">
+      <div class="common-footer__container">
+        <div class="common-footer__bottom__copyright">&#169; GRAVITY CO., LTD. ALL RIGHTS RESERVED.</div>
+      </div>
+    </footer> -->
+
+    <h2 id="gnjoy-simple"># gnjoy simple : gnjoy홈페이지 회원가입/회원서비스, 이벤트, 마이크로 사이트 등에서 사용합니다. </h2>
+    <footer class="common-footer common-footer--simple common-footer--darkmode">
+      <div class="common-footer__container">
+        <div class="common-footer__bottom">
+          <div class="common-footer__bottom__logo">
+            <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+          </div>
+          <div class="common-footer__bottom__copyright">&#169; GRAVITY CO., LTD. ALL RIGHTS RESERVED. </div>
+        </div>
+      </div>
+    </footer>
+
+    <h2 id="rag-simple">#라그나로크 simple : 게임사이트의 이벤트, 마이크로 사이트 등에서 사용합니다. </h2>
+    <footer class="common-footer common-footer--simple">
+      <div class="common-footer__container">
+        <div class="common-footer__bottom">
+          <div class="common-footer__bottom__logo">
+            <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+          </div>
+          <!-- <div class="common-footer__bottom__copyright">&#169; GRAVITY CO., LTD. ALL RIGHTS RESERVED. </div> -->
+          <div class="common-footer__bottom__copyright"> &#169; Gravity Co., LTD & Lee MyoungJin(studio DTDS). All Rights Reserved. </div>
+        </div>
+      </div>
+    </footer>
+
+    <h2 id="test"># 이용등급 test</h2>
+    <footer class="common-footer">
+      <div class="common-footer__container">
+        <div class="common-footer__game-info">
+          <!-- all -->
+          <div class="game-grade-mark">
+            <span class="spr-grade spr-grade__all"><span class="sr-only">전체이용가</span></span>
+          </div>
+          <table class="game-grade-table game-grade-table--all show">
+            <caption> 라그나로크 온라인 등급분류표 입니다. </caption>
+            <tbody>
+              <tr>
+                <th>제명</th>
+                <td>game test game test</td>
+                <th>상호</th>
+                <td>(주)그라비티</td>
+              </tr>
+              <tr>
+                <th>이용등급</th>
+                <td>전체이용가</td>
+                <th>등급분류일자</th>
+                <td>2020.01.01</td>
+              </tr>
+              <tr>
+                <th>등급분류번호</th>
+                <td>test</td>
+                <th>제작·배급업신고번호</th>
+                <td>제2000-000002호</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <div class="common-footer__game-info">
+          <!-- 12 -->
+          <div class="game-grade-mark">
+            <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+          </div>
+          <table class="game-grade-table game-grade-table--12 show">
+            <caption> 라그나로크 온라인 등급분류표 입니다. </caption>
+            <tbody>
+              <tr>
+                <th>제명</th>
+                <td>game test game test</td>
+                <th>상호</th>
+                <td>(주)그라비티</td>
+              </tr>
+              <tr>
+                <th>이용등급</th>
+                <td>12세이용가</td>
+                <th>등급분류일자</th>
+                <td>2020.01.01</td>
+              </tr>
+              <tr>
+                <th>등급분류번호</th>
+                <td>test</td>
+                <th>제작·배급업신고번호</th>
+                <td>제2000-000002호</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <div class="common-footer__game-info">
+          <!-- 15 -->
+          <div class="game-grade-mark">
+            <span class="spr-grade spr-grade__15"><span class="sr-only">15세이용가</span></span>
+          </div>
+          <table class="game-grade-table game-grade-table--15 show">
+            <caption> 라그나로크 온라인 등급분류표 입니다. </caption>
+            <tbody>
+              <tr>
+                <th>제명</th>
+                <td>game test game test</td>
+                <th>상호</th>
+                <td>(주)그라비티</td>
+              </tr>
+              <tr>
+                <th>이용등급</th>
+                <td>15세이용가</td>
+                <th>등급분류일자</th>
+                <td>2020.01.01</td>
+              </tr>
+              <tr>
+                <th>등급분류번호</th>
+                <td>test</td>
+                <th>제작·배급업신고번호</th>
+                <td>제2000-000002호</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <div class="common-footer__game-info">
+          <!-- 18 -->
+          <div class="game-grade-mark">
+            <span class="spr-grade spr-grade__18"><span class="sr-only">청소년이용불가</span></span>
+          </div>
+          <table class="game-grade-table game-grade-table--18 show">
+            <caption> 라그나로크 온라인 등급분류표 입니다. </caption>
+            <tbody>
+              <tr>
+                <th>제명</th>
+                <td>game test game test</td>
+                <th>상호</th>
+                <td>(주)그라비티</td>
+              </tr>
+              <tr>
+                <th>이용등급</th>
+                <td>청소년이용불가</td>
+                <th>등급분류일자</th>
+                <td>2020.01.01</td>
+              </tr>
+              <tr>
+                <th>등급분류번호</th>
+                <td>test</td>
+                <th>제작·배급업신고번호</th>
+                <td>제2000-000002호</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="common-footer__bottom">
+          <div class="common-footer__bottom__logo">
+            <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+          </div>
+          <div class="common-footer__bottom__copyright">&#169; Gravity Co., LTD & Lee MyoungJin(studio DTDS). All Rights Reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

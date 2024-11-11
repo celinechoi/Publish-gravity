@@ -1,0 +1,63 @@
+﻿@mixin web-e {
+  @media all and (max-width: 1660px) {
+    @content;
+  }
+}
+
+@mixin web-e2 {
+  @media all and (max-width: 1480px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  // 1280
+  @media all and (max-width: ($container + $gutter * 2)) {
+    @content;
+  }
+}
+
+@mixin lg-max {
+  //mobile
+  @media all and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin lg {
+  // web
+  @media all and (min-width: ($mediaResponsiveSize +  0.02px)) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media all and (min-width: 1900px) {
+    @content;
+  }
+}
+
+@mixin h-desktop {
+  @media all and (max-height: 876px) {
+    @content;
+  }
+}
+
+@mixin h-desktop2 {
+  @media all and (max-height: 770px) {
+    @content;
+  }
+}
+
+@mixin h-desktop3 {
+  @media all and (max-height: 650px) {
+    @content;
+  }
+}
+
+// 가로 모드
+@mixin landscape {
+  @media all and (orientation: landscape) {
+    @content;
+  }
+}

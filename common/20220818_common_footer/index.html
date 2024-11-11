@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNJOY 공통푸터 : 미리보기</title>
+    <link rel="stylesheet" href="https://imgc.gnjoy.com/common/css/reset.css" />
+    <script src="https://imgc.gnjoy.com/common/js/jquery-1.last.min.js"></script>
+    <link rel="stylesheet" id="style-sheet" href="css/common-footer.css" />
+
+    <style>
+      .preview fieldset > p {
+        font-weight: 500;
+        margin-bottom: 0.2em;
+      }
+      .preview fieldset {
+        padding: 0.5em 0;
+        border-top: 2px dashed #ddd;
+      }
+      .preview fieldset:nth-child(1) {
+        padding-top: 0;
+        border-top: 0;
+      }
+      .preview label:has(input) {
+        margin-right: 1em;
+      }
+      .preview button {
+        padding: 0.3em 0.6em;
+        background-color: #fff;
+        border: 1px solid #ddd;
+      }
+      .preview button.on {
+        border-color: #222;
+        color: #222;
+      }
+      hr {
+        border: 0;
+        background: none;
+        border-bottom: 3px dashed #ddd;
+      }
+      h2 {
+        margin: 1em 0;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <section style="margin: 2rem">
+      <h1 style="font-size: 2em; font-weight: 600">공통 푸터 미리보기</h1>
+      <p>
+        이 페이지는 공통푸터 타입별 미리보기를 제공합니다. <span style="color: red">(실제내용X) </span>
+        <br />
+        해당 페이지를 참고하여 프로젝트 내용에 따라 별도 작업해주세요.
+        <br />
+        <a style="display: inline-block; text-decoration: underline" href="https://gravity.dooray.com/project/pages/3718912103629044003" target="_blank"> 관리현황 확인하기 🔗 </a>
+      </p>
+
+      <h2>푸터 템플릿 페이지 바로가기</h2>
+      <div style="position: relative; overflow: hidden">
+        <a style="border: 2px solid #ddd; padding: 0.3em 0.6em; display: inline-block; font-weight: 500" href="common-footer.html">PC 📌</a>
+        <a style="border: 2px solid #ddd; padding: 0.3em 0.6em; display: inline-block; font-weight: 500" href="common-footer-mobile.html">MOBILE 📌</a>
+        <a style="border: 2px solid #ddd; padding: 0.3em 0.6em; display: inline-block; font-weight: 500" href="common-footer-responsive.html">반응형 📌</a>
+      </div>
+    </section>
+
+    <hr />
+    <section style="margin: 2rem 2rem 0">
+      <h2>푸터 미리보기 <span style="color: red">(실제내용X) </span> </h2>
+
+      <aside class="preview" style="padding: 10px; border: 3px solid #ddd; box-sizing: border-box; background: #f2f2f2">
+        <fieldset>
+          <p>페이지 타입</p>
+          <button class="on" name="type" onclick="changeStyle('css/common-footer.css',$(this))">PC</button>
+          <button name="type" id="type-mobile" onclick="changeStyle('css/common-footer-mobile.css',$(this));">MOBILE</button>
+          <button name="type" onclick="changeStyle('css/common-footer-responsive.css',$(this))">반응형</button>
+
+          <p style="margin-top: 0.5em">
+            <span>💡link 해야할 css</span>
+            <input id="styleCdn" style="display: block; width: 100%; box-sizing: border-box; margin: 0.5em 0; border: 2px solid #ddd" type="text" readonly value="/common/20220818_common_footer/css/common-footer.min.css" />
+            <span style="color: red; font-size: 14px; font-weight: 400">
+              ※예외사항:
+              <a style="text-decoration: underline; color: inherit" href="https://roa.gnjoy.com/" target="_blank">ROA</a>,
+              <a style="text-decoration: underline; color: inherit" href="https://r20h.gravityneocyon.com/" target="_blank">R20H</a>
+              등 viewport=1000 모바일페이지는 별도의 개별 SCSS 작업으로 진행하였습니다.
+            </span>
+          </p>
+        </fieldset>
+        <fieldset>
+          <p>형태</p>
+          <label>
+            <input
+              checked
+              name="simple"
+              type="radio"
+              onclick="
+            if($('button#type-mobile').hasClass('on')){              
+              $('.common-footer__link,.common-footer__txt').show();
+              $('.common-footer__game-info').hide();
+              $('.common-footer').removeClass('common-footer--simple');
+            }else{
+              
+              $('.common-footer__link,.common-footer__txt,.common-footer__game-info').show();$('.common-footer').removeClass('common-footer--simple');
+            }
+            "
+            />
+            일반 (gnjoy/게임 랜딩)
+          </label>
+          <label>
+            <input name="simple" type="radio" onclick="$('.common-footer__link,.common-footer__txt,.common-footer__game-info').hide();$('.common-footer').addClass('common-footer--simple')" />
+            simple (이벤트)
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <p>모드</p>
+          <label>
+            <input name="mode" type="radio" onclick="$('footer').removeClass('common-footer--darkmode')" checked />
+            라이트모드
+          </label>
+          <label>
+            <input name="mode" type="radio" onclick="$('footer').addClass('common-footer--darkmode')" />
+            다크모드
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <p>로고 / 카피라이트</p>
+          <label>
+            <input name="logo" checked type="radio" onclick='$(".common-footer__bottom").html(logo_gravityRagnarok)' />
+            그라비티 라그나로크
+          </label>
+          <label>
+            <input name="logo" type="radio" onclick='$(".common-footer__bottom").html(logo_gravity)' />
+            그라비티
+          </label>
+          <label>
+            <input name="logo" type="radio" onclick='$(".common-footer__bottom").html(logo_neocyon)' />
+            네오싸이언 그라비티
+          </label>
+        </fieldset>
+      </aside>
+    </section>
+
+    <footer class="common-footer">
+      <div class="common-footer__container">
+        <ul class="common-footer__link">
+          <li><a class="link" href="" target="_blank">회사소개</a></li>
+          <li><a class="link" href="">이용약관</a></li>
+          <li><a class="link" href="">유료서비스 이용약관</a></li>
+          <li><a class="link link--privacy" href="">개인정보 처리방침</a></li>
+          <li><a class="link" href="">청소년 보호정책</a></li>
+          <li><a class="link" href="">모바일 이용약관</a></li>
+          <li><a class="link" href="">모바일 개인정보처리방침</a></li>
+          <li><a class="link" href="" target="_blank">PC방 가맹문의</a></li>
+          <li><a class="link link--inquiry" href="https://www.gravity.co.kr/kr/utility/contactUs.asp" target="_blank">사업문의</a></li>
+        </ul>
+
+        <div class="common-footer__txt">
+          <address class="common-footer__txt__address">
+            <span>㈜그라비티</span>
+            <span>대표이사 : 박현철</span>
+            <span>서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+            <span>전화문의: 1588-9897</span>
+            <span>팩스: 02-2132-7077</span>
+            <span>e-mail : webmaster@gravity.co.kr</span>
+          </address>
+          <address class="common-footer__txt__address">
+            <span>사업자등록번호: 201-81-56197</span>
+            <span class="btn-bizinfo"><button class="btn" onclick="window.open('//www.ftc.go.kr/bizCommPop.do?wrkr_no=2018156197', 'bizCommPop', 'width=750, height=700')">사업자정보확인</button></span>
+            <span>통신사업자등록번호: 제2008-서울마포-0207호</span>
+            <span>고객지원센터 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+          </address>
+        </div>
+
+        <div class="common-footer__game-info">
+          <div class="game-grade-mark">
+            <span class="spr-grade spr-grade__anab-bsi"><span class="sr-only">anab/bsi</span></span>
+            <span class="spr-grade spr-grade__sexuality"><span class="sr-only">선정성</span></span>
+            <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span>
+            <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+          </div>
+
+          <table class="game-grade-table game-grade-table--12">
+            <caption>라그나로크 온라인 등급분류표 입니다.</caption>
+            <tbody>
+              <tr>
+                <th>제명</th>
+                <td>라그나로크 온라인</td>
+                <th>상호</th>
+                <td>(주)그라비티</td>
+              </tr>
+              <tr>
+                <th>이용등급</th>
+                <td>12세이용가</td>
+                <th>등급분류일자</th>
+                <td>2007.10.10</td>
+              </tr>
+              <tr>
+                <th>등급분류번호</th>
+                <td>제OL-071010-006호</td>
+                <th>제작·배급업신고번호</th>
+                <td>제2000-000002호</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="common-footer__bottom">
+          <div class="common-footer__bottom__logo">
+            <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+          </div>
+
+          <div class="common-footer__bottom__copyright">&#169; Gravity Co., LTD & Lee MyoungJin(studio DTDS). All Rights Reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function changeStyle(style, btn) {
+        var link = document.getElementById('style-sheet');
+
+        link.setAttribute('href', style);
+
+        $('button[name="type"]').removeClass('on');
+        $(btn).addClass('on');
+
+        if (style == 'css/common-footer-mobile.css') {
+          // console.log('모바일');
+          $('.common-footer__game-info').html(table_mobile);
+          $('.common-footer__link li').hide();
+          $('.common-footer__link li').eq(1).show();
+          $('.common-footer__link li').eq(3).show();
+          $('.common-footer__game-info').hide();
+          $('#styleCdn').val('/common/20220818_common_footer/css/common-footer-mobile.min.css');
+          // $('input[name="simple"]').attr('disabled', true);
+        } else if (style == 'css/common-footer.css') {
+          // console.log('pc');
+          $('.common-footer__game-info').html(table_pc);
+          $('.common-footer__link li').show();
+          $('.common-footer__game-info').show();
+
+          $('#styleCdn').val('/common/20220818_common_footer/css/common-footer.min.css');
+          // $('input[name="simple"]').attr('disabled', false);
+        } else {
+          // console.log('반응형');
+          $('.common-footer__game-info').empty();
+          $('.common-footer__link li').show();
+
+          $('#styleCdn').val('/common/20220818_common_footer/css/common-footer-responsive.min.css');
+          // $('input[name="simple"]').attr('disabled', false);
+        }
+      }
+
+      var logo_gravity = ["<div class='common-footer__bottom__logo'> <span class='logo logo__gravity'><span class='sr-only'>gravity</span></span> </div> <div class='common-footer__bottom__copyright'>&#169; GRAVITY CO., LTD. ALL RIGHTS RESERVED.</div>"];
+      var logo_gravityRagnarok = ["<div class='common-footer__bottom__logo'> <span class='logo logo__gravity'><span class='sr-only'>gravity</span></span> </div> <div class='common-footer__bottom__copyright'> &#169; Gravity Co., LTD & Lee MyoungJin(studio DTDS). All Rights Reserved. </div>"];
+
+      var logo_neocyon = ["<div class='common-footer__bottom__logo'> <span class='logo logo__neocyonGravity'><span class='sr-only'>neocyonGRAVITY</span></span> </div> <div class='common-footer__bottom__copyright'>&#169; GRAVITY CO., LTD. ALL RIGHTS RESERVED.</div>"];
+      var table_pc = ['<div class="game-grade-mark"> <span class="spr-grade spr-grade__anab-bsi"><span class="sr-only">anab/bsi</span></span> <span class="spr-grade spr-grade__sexuality"><span class="sr-only">선정성</span></span> <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span> <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span> </div> <table class="game-grade-table game-grade-table--12"> <caption>라그나로크 온라인 등급분류표 입니다.</caption>  <tbody> <tr> <th>제명</th> <td>라그나로크 온라인</td> <th>상호</th> <td>(주)그라비티</td> </tr> <tr> <th>이용등급</th> <td>12세이용가</td> <th>등급분류일자</th> <td>2007.10.10</td> </tr> <tr> <th>등급분류번호</th> <td>제OL-071010-006호</td> <th>제작·배급업신고번호</th> <td>제2000-000002호</td> </tr> </tbody></table>'];
+      var table_mobile = ['<div class="game-grade-mark"> <span class="spr-grade spr-grade__anab-bsi"><span class="sr-only">anab/bsi</span></span> <span class="spr-grade spr-grade__sexuality"><span class="sr-only">선정성</span></span> <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span> <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span> </div> <table class="game-grade-table game-grade-table--12"> <caption>라그나로크 온라인 등급분류표 입니다.</caption>  <tbody> <tr> <th>제명</th> <td>라그나로크 온라인</td> </tr><tr> <th>상호</th> <td>(주)그라비티</td> </tr> <tr> <th>이용등급</th> <td>12세이용가</td> </tr><tr> <th>등급분류일자</th> <td>2007.10.10</td> </tr> <tr> <th>등급분류번호</th> <td>제OL-071010-006호</td> </tr><tr> <th>제작·배급업신고번호</th> <td>제2000-000002호</td> </tr> </tbody></table>'];
+    </script>
+  </body>
+</html>

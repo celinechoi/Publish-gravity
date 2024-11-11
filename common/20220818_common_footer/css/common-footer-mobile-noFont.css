@@ -1,0 +1,404 @@
+@charset "UTF-8";
+.common-footer {
+  padding: 43px 0;
+  text-align: center;
+  background-color: #f2f4f7;
+}
+.common-footer * {
+  margin: 0;
+  padding: 0;
+}
+.common-footer,
+.common-footer * {
+  font-family: "Noto Sans KR", "dotum", "돋움", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: initial;
+  letter-spacing: initial;
+  word-break: keep-all;
+}
+.common-footer .txt_hidden,
+.common-footer .txtHidden,
+.common-footer caption {
+  display: inline;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  text-indent: -9999px;
+}
+.common-footer--simple .common-footer__bottom {
+  margin-top: 0;
+}
+.common-footer.common-footer--darkmode {
+  background-color: #1e1e23;
+}
+.common-footer.common-footer--darkmode .logo__gravity {
+  background-position-x: -5px;
+  background-position-y: -5px;
+  width: 167px;
+  height: 39px;
+}
+.common-footer.common-footer--darkmode .logo__neocyonGravity {
+  background-position-x: -5px;
+  background-position-y: -103px;
+  width: 168.5px;
+  height: 39px;
+}
+.common-footer__container {
+  padding: 0 8px;
+  margin: 0 auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.common-footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: -3px;
+  margin-left: -3px;
+  margin-bottom: 28px;
+  margin-top: -6px;
+}
+.common-footer__link li {
+  padding: 0 3px;
+  margin-top: 6px;
+}
+.common-footer__link .link {
+  background-color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #3f3f3f;
+  padding: 0.7em 2em;
+  line-height: 1.3;
+  min-width: 8em;
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  font-size: 13px;
+  letter-spacing: -0.02em;
+}
+.common-footer__txt {
+  margin-bottom: 28px;
+}
+.common-footer__txt * {
+  color: #707070;
+  font-size: 13px;
+}
+.common-footer__txt .btn {
+  cursor: pointer;
+  background: none;
+  vertical-align: initial;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  letter-spacing: -0.02em;
+  border: 0;
+  outline: 0;
+}
+.common-footer__txt__address {
+  display: block;
+  font-style: normal;
+}
+.common-footer__txt .btn-bizinfo {
+  display: block;
+}
+.common-footer__txt span {
+  padding: 0.1em 0.3em;
+  line-height: 1.3;
+  display: inline-block;
+}
+.common-footer .game-grade-mark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.common-footer .game-grade-mark > * {
+  margin-left: 4px;
+}
+.common-footer .game-grade-mark > *:nth-child(1) {
+  margin-left: 0;
+}
+.common-footer .game-grade-table {
+  margin: 0 auto;
+  margin-top: 13px;
+  table-layout: fixed;
+  text-align: left;
+  max-width: 260px;
+}
+.common-footer .game-grade-table,
+.common-footer .game-grade-table th,
+.common-footer .game-grade-table td {
+  display: block;
+}
+.common-footer .game-grade-table tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.common-footer .game-grade-table tr {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.common-footer .game-grade-table tr:nth-child(1) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.common-footer .game-grade-table tr:nth-child(1) th,
+.common-footer .game-grade-table tr:nth-child(1) td {
+  border-top: 0;
+}
+.common-footer .game-grade-table tr:nth-child(3) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.common-footer .game-grade-table tr:nth-child(5) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+.common-footer .game-grade-table tr:nth-child(2) {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+.common-footer .game-grade-table tr:nth-child(4) {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+.common-footer .game-grade-table tr:nth-child(6) {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+.common-footer .game-grade-table colgroup {
+  display: none;
+}
+.common-footer .game-grade-table td,
+.common-footer .game-grade-table th {
+  background: none;
+  height: auto;
+  border: 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  vertical-align: middle;
+  font-size: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3px;
+  font-weight: 300;
+}
+.common-footer .game-grade-table td:nth-child(1),
+.common-footer .game-grade-table th:nth-child(1) {
+  border-left: 0;
+}
+.common-footer .game-grade-table th {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 11em;
+          flex: 0 0 11em;
+  text-align: center;
+}
+.common-footer .game-grade-table td {
+  padding-left: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(100% - 11em);
+          flex: 1 1 calc(100% - 11em);
+}
+.common-footer .game-grade-table--all {
+  background-color: #050;
+  color: #fff;
+}
+.common-footer .game-grade-table--all td,
+.common-footer .game-grade-table--all th {
+  border-color: #228922;
+}
+.common-footer .game-grade-table--12 {
+  background-color: #007;
+  color: #fff;
+}
+.common-footer .game-grade-table--12 td,
+.common-footer .game-grade-table--12 th {
+  border-color: #2929a5;
+}
+.common-footer .game-grade-table--15 {
+  background-color: #fc0;
+  color: #000;
+}
+.common-footer .game-grade-table--15 td,
+.common-footer .game-grade-table--15 th {
+  border-color: #877222;
+}
+.common-footer .game-grade-table--18 {
+  background-color: #400;
+  color: #fff;
+}
+.common-footer .game-grade-table--18 td,
+.common-footer .game-grade-table--18 th {
+  border-color: #7c1f1f;
+}
+.common-footer__bottom {
+  margin-top: 19px;
+  text-align: center;
+}
+.common-footer__bottom__copyright {
+  font-size: 10px;
+  color: #676767;
+  margin-top: 13px;
+}
+.common-footer__trademarks {
+  margin-top: 10px;
+  color: #707070;
+  text-align: center;
+}
+.common-footer__trademarks p {
+  font-size: 12px;
+}
+.common-footer__trademarks p .trademarks-btn {
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.common-footer .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.common-footer .spr-grade {
+  background-image: url(../images/spr-grade.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100px;
+}
+.common-footer .spr-grade__all {
+  background-position-x: -5px;
+  background-position-y: -5px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__12 {
+  background-position-x: -5px;
+  background-position-y: -74px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__15 {
+  background-position-x: -5px;
+  background-position-y: -143px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__18 {
+  background-position-x: -5px;
+  background-position-y: -212px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__test {
+  background-position-x: -5px;
+  background-position-y: -281px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__language {
+  background-position-x: -5px;
+  background-position-y: -350px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__gambling {
+  background-position-x: -5px;
+  background-position-y: -419px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__crime {
+  background-position-x: -5px;
+  background-position-y: -488px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__fear {
+  background-position-x: -5px;
+  background-position-y: -557px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__drug {
+  background-position-x: -5px;
+  background-position-y: -626px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__sexuality {
+  background-position-x: -5px;
+  background-position-y: -695px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__violence {
+  background-position-x: -5px;
+  background-position-y: -764px;
+  width: 50.5px;
+  height: 59px;
+}
+.common-footer .spr-grade__anab-bsi {
+  background-position-x: -5px;
+  background-position-y: -1301px;
+  width: 90px;
+  height: 36.5px;
+}
+.common-footer .logo {
+  background-image: url(../images/footerlogo-mobile.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 178.5px;
+}
+.common-footer .logo__gravity {
+  background-position-x: -5px;
+  background-position-y: -54px;
+  width: 167px;
+  height: 39px;
+}
+.common-footer .logo__neocyonGravity {
+  background-position-x: -5px;
+  background-position-y: -152px;
+  width: 168.5px;
+  height: 39px;
+}

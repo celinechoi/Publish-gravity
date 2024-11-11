@@ -1,0 +1,43 @@
+﻿// 클래스형태로 자주 사용하는 유틸 모음
+@import 'utilities/_tab.scss';
+@import 'utilities/_swiper-sample.scss';
+@import 'utilities/_sr-only.scss';
+@import 'utilities/_stretched-link.scss';
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+
+.desk-none {
+  display: block;
+}
+.desk-block {
+  display: none;
+}
+
+@include lg {
+  .d-lg-flex {
+    display: flex !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-block {
+    display: block !important;
+  }
+}
+
+@include desktop {
+  .desk-none {
+    display: none;
+  }
+  .desk-block {
+    display: block;
+  }
+}
