@@ -1,0 +1,315 @@
+$nav-bottom-fix: 500px;
+.dimmed {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background: rgba(#000, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+  @include lg-min {
+    display: none !important;
+  }
+}
+
+.header {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  width: $nav-width;
+  // transition: left 500ms;
+  left: -$nav-width;
+  transition: all 700ms;
+  &.active {
+    left: 0;
+  }
+
+  .nav {
+    position: absolute; //scroll
+    background-color: $nav-bg;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+
+    @include lg {
+      overflow-y: auto;
+    }
+    @include lg-min {
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: rgba(#9cdbff, 0.5);
+      }
+      &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &__toggle {
+      z-index: 3;
+      position: absolute;
+      right: 0;
+      transform: translateX(100%);
+      top: 0;
+      width: 50px;
+      height: 50px;
+      background: url(../images/nav/nav-btn.webp) no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+      &.on {
+        background-image: url(../images/nav/nav-close.webp);
+      }
+    }
+
+    &__wrap {
+      position: relative;
+      overflow-y: auto;
+      position: absolute; //scroll
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: flex-start;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding-bottom: 50px;
+      width: 100%;
+    }
+    .logo {
+      align-self: flex-start;
+      display: block;
+      margin: 35px auto 25px;
+    }
+
+    $nav-link-height: 78px;
+    $nav-link-length: 3;
+
+    .nav-item {
+      @each $i, $sub in $subs {
+        &[data-menuanchor='section-#{$sub}'] .link {
+          background-position-y: percentage($i - 1) / ($nav-link-length - 1);
+        }
+      }
+      //FIXME: 임시
+      .link {
+        background-position-x: 0;
+        background-image: url(../images/nav/nav_bg.webp);
+        background-repeat: no-repeat;
+        height: $nav-link-height;
+        width: 100%;
+        display: block;
+        transition: none;
+        // opacity: 0.6;
+        color: #888;
+        font-size: 18px;
+        filter: grayscale(1);
+        @include lg {
+          font-size: vw(45);
+        }
+        > span {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          padding-left: 102px;
+          @include lg {
+            padding-left: vw(350);
+          }
+        }
+      }
+      &.hidden {
+        background: none;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        top: 78px;
+        width: 100%;
+        .link {
+          background: none;
+          font-size: 0;
+        }
+        &[data-menuanchor='section-event2'] {
+          top: 156px;
+        }
+        &[data-menuanchor='section-event3'] {
+          top: 156px;
+        }
+      }
+
+      @include lg-min {
+        .link:hover {
+          color: #fff;
+          filter: grayscale(0);
+        }
+      }
+    }
+
+    .nav-package:has(.active) {
+      // background-color: palegreen;
+      .link {
+        color: #fff;
+        filter: grayscale(0);
+      }
+    }
+
+    &__list {
+      flex: 1 1 auto;
+      align-self: flex-start;
+      width: 100%;
+      position: relative;
+      .nav-package {
+        &.on {
+          .nav-item {
+            .link {
+              color: #fff;
+              filter: grayscale(0);
+            }
+          }
+        }
+      }
+    }
+
+    &__banner {
+      align-items: flex-start;
+      align-self: flex-start;
+      // position: absolute;
+      // bottom: 167px;
+      margin: 0 auto;
+      margin-top: 28px;
+      .link {
+        + .link {
+          margin-top: 10px;
+        }
+        cursor: pointer;
+        width: $nav-width;
+        @include lg-min {
+          overflow: hidden;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @include lg {
+    $nav-width: vw(720);
+    width: $nav-width;
+    left: -$nav-width;
+    &.active {
+      left: 0;
+    }
+
+    .nav {
+      &__toggle {
+        $btn: vw(135);
+        // right: -$btn;
+        top: 0;
+        width: $btn;
+        height: $btn;
+        background-size: $btn;
+        background-image: url(../images/nav/nav-btn-m.webp);
+        &.on {
+          background-image: url(../images/nav/nav-close-m.webp?Ver=fd);
+          transform: translateX(0);
+          right: -$btn;
+        }
+      }
+
+      &__wrap {
+        padding-bottom: vw(440);
+      }
+      .logo {
+        margin: vw(80) auto vw(80);
+        width: vw(455);
+      }
+      $nav-link-height: 26.3vw;
+      $nav-link-length: 8;
+      &__list {
+        width: $nav-width;
+        overflow: hidden;
+      }
+
+      .nav-item {
+        .link {
+          background-image: url(../images/nav/nav_bg_m.webp);
+          height: $nav-link-height;
+          background-size: $nav-width;
+        }
+      }
+
+      &__banner {
+        margin-top: vw(120);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: vw(20);
+        width: 100%;
+
+        .link {
+          + .link {
+            margin-top: 0;
+          }
+          width: auto;
+          img {
+            width: vw(114);
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: 1199.9px) and (max-width: 1920px) {
+    $nav-width: 199px;
+    width: $nav-width;
+    left: -$nav-width;
+    .nav {
+      .nav {
+        &-item {
+          .link {
+            $nav-link-height: 60px;
+            height: $nav-link-height;
+            background-image: url(../images/nav/nav_bg_2.webp);
+            font-size: 15px;
+            > span {
+              padding-left: 76px;
+            }
+          }
+          &[data-menuanchor='section-update1'] {
+            .link {
+              background-position-y: 51.5%;
+            }
+          }
+          &[data-menuanchor='section-event1'] {
+            .link {
+              background-position-y: 101%;
+            }
+          }
+        }
+        &__wrap {
+          .logo {
+            width: 167px;
+            height: auto;
+          }
+        }
+      }
+      &__banner {
+        width: 86%;
+        .link {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

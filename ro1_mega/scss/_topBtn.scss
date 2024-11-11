@@ -1,0 +1,21 @@
+﻿.topBtn {
+  display: none;
+  position: fixed;
+  // right: 50%;
+  // margin-right: -700px; //50px;
+  right: 50px;
+  bottom: 50px;
+  z-index: 50;
+  // display: block;
+  width: 136px;
+  height: 136px;
+  background-image: url(../images/topBtn.webp);
+  z-index: 10;
+  @media all and (max-width: 1600px) {
+    margin-right: auto;
+    right: 50px;
+  }
+  &:hover {
+    filter: brightness(1.1);
+  }
+}

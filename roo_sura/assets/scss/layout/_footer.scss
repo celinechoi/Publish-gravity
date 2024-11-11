@@ -1,0 +1,39 @@
+.btnTop {
+  display: none;
+  position: fixed;
+  width: vw(153);
+  height: vw(180);
+  bottom: vw(40);
+  right: vw(40);
+  z-index: 100;
+  background-image: url('../../assets/images/btnTop.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &.fix {
+    position: absolute;
+    bottom: calc(100% + vw(40));
+  }
+
+  @include lg {
+    &.fix {
+      bottom: calc(100% + 20px);
+    }
+
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    width: 85px;
+    height: 100px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+.common-footer {
+  overflow: visible;
+}

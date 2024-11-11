@@ -1,0 +1,166 @@
+﻿.section-main {
+  position: relative;
+  justify-content: start;
+  overflow: hidden;
+  background-color: #fff;
+  min-height: auto !important;
+  padding-bottom: 0;
+  height: 1080px;
+  color: #fff;
+  text-align: center;
+  padding-top: 0;
+  @include lg-max {
+    height: vw(2100);
+  }
+
+  .main {
+    &-bg {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100vw;
+      height: 1080px;
+      background: url('../images/main/bg.webp') no-repeat center top / cover;
+      transition: 0.5s ease-in-out; // 231016
+      // animation: fadeIn 3s .5s forwards;
+      // opacity: 0;
+      @include lg-max {
+        height: auto;
+        background-image: url('../images/main/bg_mo.webp');
+      }
+      &.gray {
+        background-image: url('../images/main/bg_b.jpg'); // 231016
+      }
+    }
+  }
+  @include lg-max {
+    .section-container--m {
+      position: relative;
+      .btn-link {
+        position: absolute;
+        display: block;
+        width: 41.1%;
+        height: 6.2%;
+        &--aos {
+          top: 79.6%;
+          left: 7.8%;
+        }
+
+        &--ios {
+          top: 79.6%;
+          left: 51.2%;
+        }
+
+        &--one {
+          top: 87.5%;
+          left: 29.4%;
+        }
+      }
+      .section {
+        &-content {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+  .section {
+    &-container {
+      position: relative;
+    }
+
+    &-content {
+      padding: 0;
+    }
+  }
+
+  .section-container {
+    padding-bottom: 196px;
+
+    @include respon-h {
+      padding-bottom: 0;
+    }
+  }
+
+  .logo {
+    padding-top: 7px;
+
+    // @include respon-h {
+    //   margin-top: 0;
+    // }
+    @include lg-max {
+      width: 47.6%;
+      margin: vw(133) auto vw(138);
+      padding: 0;
+    }
+  }
+
+  .main-title {
+    background: url(../../assets/images/main/title.webp);
+    width: 903px;
+    height: 513px;
+    margin: 0 auto;
+    @include lg-max {
+      width: 95.2%;
+      margin: 0 auto;
+      height: auto;
+      aspect-ratio: 952/539;
+      background: url(../../assets/images/main/title_mo.webp);
+      background-size: cover;
+    }
+  }
+
+  .app-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .link {
+      margin: 0 6px;
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 14px 0 0 -53px;
+    animation: pulse 2s infinite;
+    @include lg-max {
+      display: none;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    // background: #fff;
+  }
+
+  to {
+    opacity: 1;
+    // background: url(../images/main/bg.webp) no-repeat center / cover;
+  }
+}

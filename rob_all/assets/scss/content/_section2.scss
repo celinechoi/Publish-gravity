@@ -1,0 +1,40 @@
+﻿.section--2 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: cover;
+  // padding-bottom: vw(200);
+  @include lg {
+    background-position: 50% 50%;
+    background-image: url(../images/section2/bg.webp);
+    background-attachment: fixed;
+    // padding-bottom: 100px;
+    // background-size: 1920px auto;
+  }
+  @include lg-max {
+    background-image: url(../images/section2/bg_tm.webp);
+    background-size: cover;
+    // background-attachment: fixed;
+    background-position: center top;
+  }
+}
+
+@keyframes floatCh {
+  // 0%,
+  // 100% {
+  //   transform: translate(0);
+  // }
+  // 60% {
+  //   transform: translateY(-5%) rotate(-2deg);
+  // }
+
+  0% {
+    transform: rotate(-1deg) translateY(1%);
+  }
+  100% {
+    transform: rotate(0deg) translateY(2%);
+  }
+}

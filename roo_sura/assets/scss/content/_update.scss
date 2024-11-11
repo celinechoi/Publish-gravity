@@ -1,0 +1,322 @@
+// ##### UPDATE
+
+// ##### 신규 4차 클래스
+.update--1 {
+  z-index: 1;
+  background-color: #000;
+  .paral_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
+    &__bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: 50% 50% no-repeat;
+      background-size: cover;
+      width: calc(100vw + 2vw);
+      height: calc(100vh + 50%);
+      overflow: hidden;
+      &.tabContent1 {
+        background-image: url('../../assets/images/update/sura_bg.webp');
+      }
+      &.tabContent2 {
+        background-image: url('../../assets/images/update/royal_bg.webp');
+      }
+    }
+  }
+  .section {
+    &-container {
+      min-height: 100vh;
+      padding: 0;
+      @include lg-max {
+        min-height: auto;
+      }
+      .js-tab {
+        @include lg-max {
+          position: relative;
+        }
+      }
+      .sub-title {
+        z-index: 3;
+        // add
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        margin-top: -267px;
+        @include lg-max {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 100;
+          transform: translate(0, 50%);
+          width: 100%;
+          margin-top: -12%;
+        }
+        @include mo {
+          margin-top: -23%;
+        }
+        .title {
+          &.d-block {
+            &.d-lg-none {
+              @include lg-max {
+                width: 50%;
+                margin: 0 auto;
+                padding-top: 30px;
+              }
+              @include mo {
+                width: 56%;
+              }
+            }
+          }
+        }
+        .tab {
+          &-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            padding-top: 27px;
+            @include lg-max {
+              width: 96%;
+              gap: 30px;
+              margin: 0 auto;
+              padding: 29px 0 0;
+            }
+            @include mo {
+              width: 76%;
+              gap: 16px;
+              margin: 0 auto;
+              padding: 3.2% 0 0;
+            }
+            > li {
+              width: 194px;
+              height: 58px;
+              background: no-repeat center center / contain;
+              cursor: pointer;
+              @include lg-max {
+                width: 225px;
+                height: 78px;
+              }
+              @include mo {
+                width: 194px;
+                height: 58px;
+              }
+              &[data-hash='tabContent1'] {
+                background-image: url('../../assets/images/update/tab_sura.png');
+                &:hover {
+                  background-image: url('../../assets/images/update/tab_sura_on.png');
+                }
+                &.active {
+                  background-image: url('../../assets/images/update/tab_sura_on.png');
+                }
+              }
+              &[data-hash='tabContent2'] {
+                background-image: url('../../assets/images/update/tab_royal.png');
+                &:hover {
+                  background-image: url('../../assets/images/update/tab_royal_on.png');
+                }
+                &.active {
+                  background-image: url('../../assets/images/update/tab_royal_on.png');
+                }
+              }
+            }
+          }
+        }
+      }
+      .content {
+        // 불꽃 수정
+        .section-main {
+          &__obj {
+            &--left,
+            &--right {
+              width: 100%;
+              left: 0;
+              transform: skew(0);
+            }
+          }
+        }
+        .tab {
+          &-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 100vh;
+            transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            @include lg-max {
+              position: initial;
+              left: auto;
+              top: auto;
+              bottom: auto;
+              min-height: auto;
+            }
+            &::after {
+              content: '';
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              background: url('../../assets/images/update/dim.webp') no-repeat center top / cover;
+            }
+            &#tabContent1 {
+              @include lg-max {
+                background-image: none;
+              }
+            }
+            &#tabContent2 {
+              @include lg-max {
+                background-image: none;
+              }
+              .bg {
+                .light {
+                  .img {
+                    background-image: url('../../assets/images/update/blue_bg.webp');
+                    background-position: center bottom;
+                  }
+                }
+                .stone {
+                  .img {
+                    background-image: url('../../assets/images/update/royal_stone_bg.webp');
+                  }
+                }
+              }
+              .tab-content {
+                &__char {
+                  > span {
+                    margin-left: 100px;
+                  }
+                }
+              }
+            }
+            img {
+              @include lg-max {
+                width: 100%;
+              }
+            }
+            .d-lg-none {
+              &.d-block {
+                @include lg-max {
+                  position: relative;
+                  z-index: 1;
+                }
+              }
+            }
+            .bg {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              z-index: 1;
+              .light {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                &__sway {
+                  position: relative;
+                  width: 100%;
+                  height: 100vh;
+                  position: absolute;
+                  bottom: 0;
+                  z-index: 1;
+                  animation: lightTrans 3.5s ease-in-out infinite alternate;
+                }
+                .img {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  display: block;
+                  background: url('../../assets/images/update/fire_bg.webp') no-repeat center top / cover;
+                }
+              }
+              .stone {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                &.on {
+                  .img {
+                    animation: swirl 1500ms forwards cubic-bezier(0.65, 0.05, 0.36, 1);
+                  }
+                }
+                .img {
+                  display: block;
+                  width: 100%;
+                  height: 100vh;
+                  background: url('../../assets/images/update/sura_stone_bg.webp') no-repeat center center / cover;
+                }
+
+                @at-root {
+                  html:not(.no-js) {
+                    .stone {
+                      .img {
+                        opacity: 0;
+                        transform: rotate(50deg);
+                        &.aos-animate {
+                          opacity: 1;
+                          transform: rotate(0);
+                        }
+                      }
+                    }
+                  }
+                }
+
+                &__sway {
+                  animation: starSway 50000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+                  animation-delay: 1s;
+                }
+              }
+            }
+            &__char,
+            &__box {
+              display: block;
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              z-index: 1;
+              width: 100%;
+            }
+            &__char {
+              top: 50%;
+              transform: translate(-50%, -50%);
+              height: auto;
+              margin-top: 2%;
+              > span {
+                display: block;
+                animation: floatCh2 7000ms infinite alternate ease-in;
+              }
+            }
+            &__box {
+              // add
+              transform: translate(-50%, -50%);
+              top: 50%;
+              margin-top: 13%;
+              padding: 70px 0;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

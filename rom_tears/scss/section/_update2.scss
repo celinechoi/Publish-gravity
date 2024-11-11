@@ -1,0 +1,111 @@
+﻿.section-update2 {
+  font-size: 0;
+  .section-title {
+    margin-top: -40px;
+  }
+  .desc {
+    width: 100%;
+    margin-top: -90px;
+    &__txt {
+      display: block;
+      width: 100%;
+      background: url(../images/update2/desc.webp) no-repeat;
+      background-position-x: 50%;
+      &--1 {
+        height: 95px;
+        background-position-y: 0;
+      }
+      &--2 {
+        height: 185px;
+        background-position-y: 38%;
+      }
+      &--3 {
+        height: 161px;
+        background-position-y: 100%;
+      }
+    }
+  }
+  .section-container {
+    &.d {
+      &-none {
+        &.d {
+          &-lg {
+            &-flex {
+              position: relative;
+              &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+                @include lg {
+                  display: none;
+                }
+              }
+              @media all and (min-width: 1921px) {
+                left: 0;
+                margin-left: 0;
+                top: 0;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .section-container-m {
+    @include lg {
+      .class {
+        &-intro {
+          &__txt {
+            .title {
+              > img {
+                width: vw(762);
+              }
+            }
+            .line {
+              margin-top: vw(65);
+              > img {
+                width: vw(835);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .section-container-m,
+  .section-container {
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+  }
+  // .bg {
+  //   @include lg {
+  //     display: none;
+  //   }
+  //   z-index: 2;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   // filter: blur(10px);
+
+  //   &,
+  //   video {
+  //     max-width: 100%;
+  //     // min-height: 100vh;
+  //     height: 100%;
+  //     width: 100vw;
+  //   }
+  //   video {
+  //     object-fit: cover;
+  //   }
+  // }
+}

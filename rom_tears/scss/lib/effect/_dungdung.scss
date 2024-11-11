@@ -1,0 +1,102 @@
+// ##### 둥둥 떠다니는 모션 모음
+@keyframes swayCh {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  30% {
+    transform: translate(10px, 4px);
+  }
+  60% {
+    transform: translate(8px, 4px);
+  }
+  90% {
+    transform: translate(0, 2px);
+  }
+}
+@keyframes swayDust {
+  0%,
+  100% {
+    transform: rotate(0) translate(0);
+  }
+  50% {
+    transform: rotate(-20deg) translateY(20%);
+  }
+}
+@keyframes swayDust2 {
+  0%,
+  100% {
+    transform: rotate(0) translate(0);
+  }
+  50% {
+    transform: rotate(20deg) translateY(-20%);
+  }
+}
+@keyframes pulse {
+  // 0% {
+  //   background-position: center bottom;
+  // }
+
+  // 50% {
+  //   background-position: center bottom -5px;
+  // }
+
+  // 100% {
+  //   background-position: center bottom;
+  // }
+  0%,
+  100% {
+    background-position: center bottom -55px;
+    transform: translate(0);
+  }
+  30% {
+    background-position: center bottom -50px;
+    transform: translate(10px, 0);
+  }
+  60% {
+    background-position: center bottom -45px;
+    transform: translate(8px, 0);
+  }
+  90% {
+    background-position: center bottom -55px;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes zoomDung {
+  0% {
+    background-size: 100% 100%;
+  }
+
+  50% {
+    background-size: 120% 120%;
+  }
+
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes floatCh {
+  from {
+    background-position: right bottom;
+  }
+
+  to {
+    background-position: right -10% bottom -15%;
+  }
+}

@@ -1,0 +1,71 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  // position: relative;
+  overflow-x: hidden;
+  //전환효과
+  background: #243a71;
+  font: 18px #{$font-family-basic};
+  @if $body-transition == true {
+    @at-root html {
+      background: #243a71;
+    }
+    opacity: 0;
+    &[data-loading='done'] {
+      opacity: 1;
+    }
+  }
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+
+  // 드래그 방지
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+}
+
+#wrap {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-down {
+  display: block;
+  position: absolute;
+  // top: 31%;
+  bottom: 1%;
+  left: 50%;
+  z-index: 11;
+  width: 40px;
+  height: 86px;
+  margin-left: -18px;
+  background: url('../images/scroll_down.webp') no-repeat center center / contain;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  @include lg-max {
+    display: none;
+  }
+}
+
+// GNJOY 헤더 모바일 숨김
+@include lg-max {
+  form[name='frmPaymentGnb'] + table {
+    display: none !important;
+  }
+}

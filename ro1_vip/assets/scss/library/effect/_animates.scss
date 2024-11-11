@@ -1,0 +1,60 @@
+// Scroll Down
+@keyframes pulse {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+// 나타났다 사라졌다
+@keyframes fadeIn {
+  from {
+    opacity: 0.22;
+    filter: brightness(1);
+  }
+
+  to {
+    opacity: 1;
+    filter: brightness(2);
+  }
+}
+
+// 팡파레 모션
+@keyframes confettiMove {
+  from {
+    transform: translate(-50%, 0%);
+    // opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 100%);
+    // opacity: 1;
+  }
+}
+
+@keyframes confettiMove2 {
+  from {
+    transform: translate(-50%, -100%);
+    // opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0%);
+    // opacity: 1;
+  }
+}
+
+// 흔들 흔들
+@keyframes swing {
+  0% {
+    transform: rotate(-1deg) translateY(1%);
+  }
+  100% {
+    transform: rotate(0deg) translateY(2%);
+  }
+}

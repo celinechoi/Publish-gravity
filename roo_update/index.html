@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <!-- S: meta -->
+    <meta name="keywords" content="그라비티, gravity, 라그나로크, 라그나로크 오리진, 대규모 업데이트, 신규 직업, 4차 직업, 아크비숍, 길로틴크로스, 룬나이트, PC버전, MMORPG, ragnarok origin, 이벤트, 모바일 게임, 업데이트" />
+    <meta name="description" content="라그나로크 오리진 10월 대규모 업데이트" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="라그나로크 오리진" />
+    <meta property="og:description" content="라그나로크 오리진 10월 대규모 업데이트" />
+    <!-- 231018 수정 -->
+    <meta property="og:image" content="assets/og_img/og_img_231018.jpg" />
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+
+    <title>[ROO] 10월 대규모 업데이트 페이지</title>
+    <!-- E: meta -->
+
+    <script src="https://imgc.gnjoy.com/common/js/jquery-3.last.min.js"></script>
+    <script src="assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="assets/js/lib/aos.min.js"></script>
+
+    <!-- 231016 gsap 추가 -->
+    <script type="text/javascript" src="https://imgc.gnjoy.com/common/js/gsap/gsap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://imgc.gnjoy.com/common/20220818_common_footer/css/common-footer-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/lib/aos.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/lib/swiper-bundle.min.css" />
+    <!-- 231020 -->
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css?ver=231020" />
+  </head>
+
+  <body>
+    <span class="nav__dimmed"></span>
+    <header class="header" id="header">
+      <button type="button" title="네비게이션 닫기" class="nav__toggle"></button>
+      <nav class="nav">
+        <div class="nav__wrap">
+          <a class="logo" href="index.html">
+            <span class="logo__img"></span>
+            <span class="sr-only">라그나로크 오리진</span>
+          </a>
+
+          <ul class="nav__list">
+            <li class="nav-item nav-item__title" data-name="section-update">
+              <img src="assets/images/inc/nav_update.webp" class="d-none d-lg-block" alt="UPDATE" />
+              <img src="assets/images/inc/nav_update_mo.webp" class="d-block d-lg-none" alt="UPDATE" />
+            </li>
+
+            <li class="nav-item">
+              <a href="#section-1" class="link">
+                <img src="assets/images/inc/update_menu.webp" class="d-none d-lg-block" alt="신규 4차 클래스" onmouseenter="src='assets/images/inc/update_menu_on.webp'" onmouseleave="src='assets/images/inc/update_menu.webp'" />
+                <img src="assets/images/inc/update_menu_mo.webp" class="d-block d-lg-none" alt="신규 4차 클래스" onmouseenter="src='assets/images/inc/update_menu_mo_on.webp'" onmouseleave="src='assets/images/inc/update_menu_mo.webp'" />
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#section-2" class="link">
+                <img src="assets/images/inc/update_menu2.webp" class="d-none d-lg-block" alt="업데이트 소식" onmouseenter="src='assets/images/inc/update_menu2_on.webp'" onmouseleave="src='assets/images/inc/update_menu2.webp'" />
+                <img src="assets/images/inc/update_menu2_mo.webp" class="d-block d-lg-none" alt="업데이트 소식" onmouseenter="src='assets/images/inc/update_menu2_mo_on.webp'" onmouseleave="src='assets/images/inc/update_menu2_mo.webp'" />
+              </a>
+            </li>
+
+            <li class="nav-item nav-item__title" data-name="section-event">
+              <img src="assets/images/inc/nav_event.webp" class="d-none d-lg-block" alt="EVENT" />
+              <img src="assets/images/inc/nav_event_mo.webp" class="d-block d-lg-none" alt="EVENT" />
+            </li>
+
+            <li class="nav-item">
+              <a href="#section-3" class="link">
+                <img src="assets/images/inc/event_menu.webp" class="d-none d-lg-block" alt="출석체크 이벤트" onmouseenter="src='assets/images/inc/event_menu_on.webp'" onmouseleave="src='assets/images/inc/event_menu.webp'" />
+                <img src="assets/images/inc/event_menu_mo.webp" class="d-block d-lg-none" alt="출석체크 이벤트" onmouseenter="src='assets/images/inc/event_menu_mo_on.webp'" onmouseleave="src='assets/images/inc/event_menu_mo.webp'" />
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#section-4" class="link">
+                <img src="assets/images/inc/event_menu2.webp" class="d-none d-lg-block" alt="전직 인증 이벤트" onmouseenter="src='assets/images/inc/event_menu2_on.webp'" onmouseleave="src='assets/images/inc/event_menu2.webp'" />
+                <img src="assets/images/inc/event_menu2_mo.webp" class="d-block d-lg-none" alt="전직 인증 이벤트" onmouseenter="src='assets/images/inc/event_menu2_mo_on.webp'" onmouseleave="src='assets/images/inc/event_menu2_mo.webp'" />
+              </a>
+            </li>
+          </ul>
+          <div class="nav__banner">
+            <a href="https://play.google.com/store/apps/details?id=com.gravity.ragnarokorigin.aos" class="link link--download-aos" target="_blank" title="구글플레이에서 다운로드하기"></a>
+            <a href="https://apps.apple.com/kr/app/id1490960415" class="link link--download-ios" target="_blank" title="앱스토어에서 다운로드하기"></a>
+            <a href="https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000749813" class="link link--download-one" target="_blank" title="원스토어에서 다운로드하기"></a>
+            <a href="https://ragnarokorigin.gnjoy.com/" class="link link--homepage" target="_blank" title="공식 홈페이지"></a>
+            <a href="https://game.naver.com/lounge/Ragnarok_Origin/home" class="link link--community" target="_blank" title="공식 커뮤니티"></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="contents">
+      <section class="section section-main">
+        <section class="section-container d-none d-lg-block">
+          <div class="main-bg gray"></div>
+          <section class="section-container">
+            <div class="section-content">
+              <div class="logo">
+                <img src="assets/images/main/logo.webp" alt="라그나로크 오리진" />
+              </div>
+              <h1 class="main-title">
+                <!-- 231020 수정 -->
+                <!-- <img src="assets/images/main/title.webp" alt="신규 4차 클래스 아크비숍,룬나이트,길로틴크로스 출시 2023.10.25" /> -->
+              </h1>
+              <div class="app-download">
+                <a href="https://play.google.com/store/apps/details?id=com.gravity.ragnarokorigin.aos" class="link" target="_blank" title="구글플레이에서 다운로드하기">
+                  <img src="assets/images/main/app-download-aos.webp" alt="구글플레이에서 다운로드하기" />
+                </a>
+                <a href="https://apps.apple.com/kr/app/id1490960415" class="link" target="_blank" title="앱스토어에서 다운로드하기">
+                  <img src="assets/images/main/app-download-ios.webp" alt="앱스토어에서 다운로드하기" />
+                </a>
+                <a href="https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000749813" class="link" target="_blank" title="원스토어에서 다운로드하기">
+                  <img src="assets/images/main/app-download-one.webp" alt="원스토어에서 다운로드하기" />
+                </a>
+              </div>
+              <a href="#section-1" type="button" title="scroll down" class="scroll-down anchorBtn">
+                <img src="assets/images/main/scroll_down.webp" alt="scroll" />
+              </a>
+            </div>
+          </section>
+        </section>
+        <section class="section-container--m d-block d-lg-none">
+          <img src="assets/images/main/bg_mo.webp" alt="" />
+          <a class="btn-link btn-link--aos" target="_blank" href="https://play.google.com/store/apps/details?id=com.gravity.ragnarokorigin.aos" title="구글플레이에서 다운로드하기"></a>
+          <a class="btn-link btn-link--ios" target="_blank" href="https://apps.apple.com/kr/app/id1490960415" title="앱스토어에서 다운로드하기"></a>
+          <a class="btn-link btn-link--one" target="_blank" href="https://m.onestore.co.kr/mobilepoc/apps/appsDetail.omp?prodId=0000749813" title="원스토어에서 다운로드하기"></a>
+          <div class="section-content">
+            <div class="logo">
+              <img src="assets/images/main/logo.webp" alt="라그나로크 오리진" />
+            </div>
+            <h1 class="main-title">
+              <!-- 231020 수정 -->
+              <!-- <img src="assets/images/main/title_mo.webp" class="d-block d-lg-none" alt="신규 4차 클래스 아크비숍,룬나이트,길로틴크로스 출시 2023.10.25" /> -->
+            </h1>
+          </div>
+        </section>
+      </section>
+
+      <section class="section section--1" id="section-1">
+        <div class="section-container">
+          <span class="ch__wrap d-none d-lg-block">
+            <span class="ch ch--1">
+              <span class="ch__ani"><img src="assets/images/event/sec_left_obj.webp" /></span>
+            </span>
+            <span class="ch ch--2">
+              <span class="ch__ani"><img src="assets/images/event/sec_right_obj.webp" /></span>
+            </span>
+          </span>
+          <span class="ch__wrap d-block d-lg-none">
+            <span class="ch ch--1">
+              <span class="ch__ani"><img src="assets/images/event/sec_left_obj_mo.webp" /></span>
+            </span>
+            <span class="ch ch--2">
+              <span class="ch__ani"><img src="assets/images/event/sec_right_obj_mo.webp" /></span>
+            </span>
+          </span>
+          <section class="section-event" id="section-event--1">
+            <div class="section-content">
+              <div class="sub-title">
+                <h3 class="title" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                  <img src="assets/images/event/sec_title.webp" class="d-none d-lg-block" alt="세번째 4차 직업군 출시!" />
+                  <img src="assets/images/event/sec_title_mo.webp" class="d-block d-lg-none" alt="세번째 4차 직업군 출시!" />
+                </h3>
+              </div>
+              <div class="sec-frame d-none d-lg-block" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="300">
+                <img src="assets/images/event/sec_box.webp" alt="룬나이트, 아크비숍, 길로틴크로스" />
+                <button data-popup="popup--1" class="popup-link btn-link" title="룬나이트 자세히 보기"></button>
+                <button data-popup="popup--2" class="popup-link btn-link--2" title="아크비숍 자세히 보기"></button>
+                <button data-popup="popup--3" class="popup-link btn-link--3" title="길로틴크로스 자세히 보기"></button>
+              </div>
+              <div class="d-block d-lg-none">
+                <div class="swiper-common swiper-common--portrait" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                  <div class="swiper-container" id="sampleSwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div>
+                          <img src="assets/images/event/sec_box1_mo.webp" data-popup="popup--1" class="popup-link" alt="룬나이트" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div>
+                          <img src="assets/images/event/sec_box2_mo.webp" data-popup="popup--2" class="popup-link" alt="아크비숍" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div>
+                          <img src="assets/images/event/sec_box3_mo.webp" data-popup="popup--3" class="popup-link" alt="길로틴크로스" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section section--2" id="section-2">
+        <div class="section-container">
+          <span class="ch__wrap d-none d-lg-block">
+            <span class="ch ch--1">
+              <span class="ch__ani"><img src="assets/images/event/sec2_right_obj2.webp" /></span>
+            </span>
+          </span>
+          <section class="section-event" id="section-event--2">
+            <div class="section-content">
+              <div class="sub-title">
+                <h3 class="title" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                  <img src="assets/images/event/sec2_title.webp" class="d-none d-lg-block" alt="업데이트 소식!" />
+                  <img src="assets/images/event/sec2_title_mo.webp" class="d-block d-lg-none" alt="업데이트 소식!" />
+                </h3>
+                <p class="sub-txt" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                  <img src="assets/images/event/sec2_sub_title.webp" class="d-none d-lg-block" alt="에너지 매트릭스 / 관측 환상 / 스킬 밸런스 최적화 " />
+                  <img src="assets/images/event/sec2_sub_title_mo.webp" class="d-block d-lg-none" alt="에너지 매트릭스 / 관측 환상 / 스킬 밸런스 최적화 " />
+                </p>
+              </div>
+              <div class="content">
+                <img src="assets/images/event/sec2_box.webp" class="d-none d-lg-block" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000" alt="에너지 매트릭스" />
+                <img src="assets/images/event/sec2_box_mo.webp" class="d-block d-lg-none" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000" alt="에너지 매트릭스" />
+                <img src="assets/images/event/sec2_box2.webp" class="d-none d-lg-block" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000" alt="룬나이트, 아크비숍, 길로틴크로스" />
+                <img src="assets/images/event/sec2_box2_mo.webp" class="d-block d-lg-none sec2-box-mo--2" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000" alt="룬나이트, 아크비숍, 길로틴크로스" />
+                <img src="assets/images/event/sec2_box3.webp" class="d-none d-lg-block" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000" alt="룬나이트, 아크비숍, 길로틴크로스" />
+                <img src="assets/images/event/sec2_box3_mo.webp" class="d-block d-lg-none sec2-box-mo--3" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000" alt="룬나이트, 아크비숍, 길로틴크로스" />
+              </div>
+              <p class="section-comment" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000">
+                <img src="assets/images/event/sec2_txt.webp" class="d-none d-lg-block" alt="* 안내된 이미지의 경우 이해를 돕기 위한 목적이며, 자세한 밸런스 최적화 내용은 추후 공지사항을 통해 안내드리겠습니다." />
+                <img src="assets/images/event/sec2_txt_mo.webp" class="d-block d-lg-none" alt="* 안내된 이미지의 경우 이해를 돕기 위한 목적이며, 자세한 밸런스 최적화 내용은 추후 공지사항을 통해 안내드리겠습니다." />
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section section--3" id="section-3">
+        <div class="section-container">
+          <span class="ch__wrap d-none d-lg-block">
+            <span class="ch ch--1">
+              <span class="ch__ani"><img src="assets/images/event/sec3_right_obj.webp" /></span>
+            </span>
+          </span>
+          <section class="section-event" id="section-event--3">
+            <div class="section-content">
+              <div class="sub-title">
+                <h3 class="title" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                  <!-- 231020 수정 -->
+                  <img
+                    src="assets/images/event/sec3_title_231020.webp"
+                    class="d-none d-lg-block"
+                    alt="
+                  EVENT 1 출석체크 이벤트. 접속만 하면 선물이 쏟아진다!
+                  2023.10.25 ~ 2023.10.31 까지
+                "
+                  />
+                  <img
+                    src="assets/images/event/sec3_title_mo_231020.webp"
+                    class="d-block d-lg-none"
+                    alt="
+                  EVENT 1 출석체크 이벤트. 접속만 하면 선물이 쏟아진다!
+                  2023.10.25 ~ 2023.10.31 까지
+                  "
+                  />
+                </h3>
+                <!-- //231020 수정 -->
+              </div>
+              <div class="content">
+                <img
+                  src="assets/images/event/sec3_box.webp"
+                  class="d-none d-lg-block"
+                  data-aos="fade-up"
+                  data-aos-offset="100"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  alt="
+                특별 푸시 선물 받자! 기간 내 저녁 6시 30분 게임에 접속한 캐릭터의 우편함 속에 특별 선물 지급!
+                10/25 [수] 냥다래 100개 뽑기 소환권 10개
+                10/26 [목] 다이아 100개 고급 카드 자판기 5개
+                10/27 [금] 다이아 100개 신비한 기어 캡슐 5개
+                10/28 [토] 다이아 100개 전설 펫 소환권 5개
+                10/29 [일] 다이아 100개 디로 조각 망치 5개
+                10/30 [월] 다이아 100개 페코페코 피규어 5개
+                10/31 [화] 냥다래 100개 한정 펫 소환권 5개
+                • 보상 우편은 1일동안 보관되며, 삭제된 우편은 복구되지 않습니다.
+                • 해당 이벤트로 수령하신 무료 냥다래는 청약철회 대상에서 제외됩니다.
+                • 보상 지급 이후 생성된 캐릭터는 해당 일자의 보상을 받을 수 없습니다.
+              "
+                />
+                <img
+                  src="assets/images/event/sec3_box_mo.webp"
+                  class="d-block d-lg-none"
+                  data-aos="fade-up"
+                  data-aos-offset="100"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  alt="
+                특별 푸시 선물 받자! 기간 내 저녁 6시 30분 게임에 접속한 캐릭터의 우편함 속에 특별 선물 지급!
+                10/25 [수] 냥다래 100개 뽑기 소환권 10개
+                10/26 [목] 다이아 100개 고급 카드 자판기 5개
+                10/27 [금] 다이아 100개 신비한 기어 캡슐 5개
+                10/28 [토] 다이아 100개 전설 펫 소환권 5개
+                10/29 [일] 다이아 100개 디로 조각 망치 5개
+                10/30 [월] 다이아 100개 페코페코 피규어 5개
+                10/31 [화] 냥다래 100개 한정 펫 소환권 5개
+                • 보상 우편은 1일동안 보관되며, 삭제된 우편은 복구되지 않습니다.
+                • 해당 이벤트로 수령하신 무료 냥다래는 청약철회 대상에서 제외됩니다.
+                • 보상 지급 이후 생성된 캐릭터는 해당 일자의 보상을 받을 수 없습니다.
+              "
+                />
+                <img
+                  src="assets/images/event/sec3_box2.webp"
+                  class="sec3-box2 d-none d-lg-block"
+                  data-aos="fade-up"
+                  data-aos-offset="100"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="1000"
+                  data-aos-delay="310"
+                  alt="
+                  보너스 출석 선물!
+                  기간 내 7일 동안 모두 출석을 완료한 모험가님께는 보너스 선물 추가 지급!
+                  냥다래 200개
+                  • 보상은 별도의 당첨자 발표 없이 이벤트 종료 후 게임 내 우편을 통해 지급됩니다.
+                  • 해당 이벤트로 수령하신 무료 냥다래는 청약철회 대상에서 제외됩니다.
+                  • 우편은 발송일로부터 15일까지만 보관되며 이후 삭제됩니다. (삭제된 우편은 복구되지 않습니다.)
+                  • 매일 24시 기준으로 출석일수를 체크합니다.
+                "
+                />
+                <img
+                  src="assets/images/event/sec3_box2_mo.webp"
+                  class="sec3-box2 d-block d-lg-none"
+                  data-aos="fade-up"
+                  data-aos-offset="100"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="1000"
+                  data-aos-delay="310"
+                  alt="
+                  보너스 출석 선물!
+                  기간 내 7일 동안 모두 출석을 완료한 모험가님께는 보너스 선물 추가 지급!
+                  냥다래 200개
+                  • 보상은 별도의 당첨자 발표 없이 이벤트 종료 후 게임 내 우편을 통해 지급됩니다.
+                  • 해당 이벤트로 수령하신 무료 냥다래는 청약철회 대상에서 제외됩니다.
+                  • 우편은 발송일로부터 15일까지만 보관되며 이후 삭제됩니다. (삭제된 우편은 복구되지 않습니다.)
+                  • 매일 24시 기준으로 출석일수를 체크합니다.
+                "
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="section section--4" id="section-4">
+        <div class="section-container">
+          <section class="section-event" id="section-event--4">
+            <div class="section-content">
+              <div class="sub-title">
+                <h3 class="title" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                  <!-- 231020 수정 -->
+                  <img src="assets/images/event/sec4_title_231020.webp" class="d-none d-lg-block" alt="EVENT 2 전직 인증 선물 이벤트. 4차 직업 전직 후 인증하고 선물받자! 2023.10.25 ~ 2023.11.07 까지" />
+                  <img src="assets/images/event/sec4_title_mo_231020.webp" class="d-block d-lg-none" alt="EVENT 2 전직 인증 선물 이벤트. 4차 직업 전직 후 인증하고 선물받자! 2023.10.25 ~ 2023.11.07 까지" />
+                  <!-- //231020 수정 -->
+                </h3>
+              </div>
+              <div class="content">
+                <img
+                  src="assets/images/event/sec4_box.webp"
+                  class="d-none d-lg-block"
+                  data-aos="fade-up"
+                  data-aos-offset="100"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  alt="
+              신규 4차 작업 [아크비숍,룬나이트,길로틴크로스] 중 1개직업으로 [라그나로크 오리진 공식 게임 라운지]의 이벤트 참여 게시판에 인증만 하면 선물을 드려요!
+              냥다래 300개/ 뽑기 소환권 10개/ 신비한 기어 캡술 10개/ 몽환 시리즈 깃털 선택 상자 5개/
+              - 캐릭터 당 1회만 참여 가능합니다. (다수 글 작성 시 최초 게시글만 참여 인정됩니다.)
+              - 이벤트 참여 게시판은 이벤트 시작 전에 생성될 예정입니다.
+              - 해당 이벤트로 지급된 무료 냥다래는 청약철회 대상에서 제외됩니다.
+              - 당첨자 안내 전 게시글이 삭제되었을 경우 참여 대상에서 제외됩니다.
+              - 제목에 서버명 / 캐릭터ID / 캐릭터명이 정확하지 않을 경우 참여 대상에서 제외됩니다.
+              - 게시글 제목과 캐릭터 정보화면의 정보가 일치하지 않을 경우 참여 대상에서 제외됩니다.
+              - 캐릭터 정보화면에 직업명, 직업마크, 캐릭터ID가 모두 노출되지 않을 경우 대상에서 제외됩니다.
+              - 다른 모험가님의 스크린샷을 도용 혹은 변조한 것으로 확인될 경우 참여 대상에서 제외됩니다.
+              - 인증 게시글 업로드 시 게시글 제목에 [서버명/캐릭터ID/캐릭터명]을 기재하여
+                [캐릭터 정보화면]과 [전직 인증 완료! 이벤트 참여] 게시판에 등록하셔야 정상 참여로 인정됩니다.
+              - 이벤트와 관련없는 무분별하고 의미없는 게시글 및 운영정책에 반하는 게시글은 참여가 인정되지
+                않으며,사전 통보없이 게시글이 이동 · 삭제될 수 있습니다.
+              - 보상은 이벤트 종료 후 2주 이내 공식 게임 라운지의 당첨자 안내 게시판을 통해 안내 후 우편을 통해
+                지급될 예정입니다.
+              - 보상 우편은 15일동안 보관 후 삭제되며, 삭제된 우편은 복구가 불가하오니 기간 내 수령하시길 바랍니다.                  
+              "
+                />
+                <img
+                  src="assets/images/event/sec4_box_mo.webp"
+                  class="d-block d-lg-none"
+                  data-aos="fade-up"
+                  data-aos-offset="100"
+                  data-aos-easing="ease-out-cubic"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  alt="
+              신규 4차 작업 [아크비숍,룬나이트,길로틴크로스] 중 1개직업으로 [라그나로크 오리진 공식 게임 라운지]의 이벤트 참여 게시판에 인증만 하면 선물을 드려요!
+              냥다래 300개/ 뽑기 소환권 10개/ 신비한 기어 캡술 10개/ 몽환 시리즈 깃털 선택 상자 5개/
+              - 캐릭터 당 1회만 참여 가능합니다. (다수 글 작성 시 최초 게시글만 참여 인정됩니다.)
+              - 이벤트 참여 게시판은 이벤트 시작 전에 생성될 예정입니다.
+              - 해당 이벤트로 지급된 무료 냥다래는 청약철회 대상에서 제외됩니다.
+              - 당첨자 안내 전 게시글이 삭제되었을 경우 참여 대상에서 제외됩니다.
+              - 제목에 서버명 / 캐릭터ID / 캐릭터명이 정확하지 않을 경우 참여 대상에서 제외됩니다.
+              - 게시글 제목과 캐릭터 정보화면의 정보가 일치하지 않을 경우 참여 대상에서 제외됩니다.
+              - 캐릭터 정보화면에 직업명, 직업마크, 캐릭터ID가 모두 노출되지 않을 경우 대상에서 제외됩니다.
+              - 다른 모험가님의 스크린샷을 도용 혹은 변조한 것으로 확인될 경우 참여 대상에서 제외됩니다.
+              - 인증 게시글 업로드 시 게시글 제목에 [서버명/캐릭터ID/캐릭터명]을 기재하여
+                [캐릭터 정보화면]과 [전직 인증 완료! 이벤트 참여] 게시판에 등록하셔야 정상 참여로 인정됩니다.
+              - 이벤트와 관련없는 무분별하고 의미없는 게시글 및 운영정책에 반하는 게시글은 참여가 인정되지
+                않으며,사전 통보없이 게시글이 이동 · 삭제될 수 있습니다.
+              - 보상은 이벤트 종료 후 2주 이내 공식 게임 라운지의 당첨자 안내 게시판을 통해 안내 후 우편을 통해
+                지급될 예정입니다.
+              - 보상 우편은 15일동안 보관 후 삭제되며, 삭제된 우편은 복구가 불가하오니 기간 내 수령하시길 바랍니다.                  
+              "
+                />
+                <!-- S: 231025 수정 -->
+                <a href="https://game.naver.com/lounge/Ragnarok_Origin/board/106" class="btn-link" title="공식 게임라운지 바로가기" target="_blank"></a>
+                <!-- E: 231025 수정 -->
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="common-footer common-footer--darkmode">
+      <div class="common-footer__container">
+        <div class="common-footer__txt">
+          <address class="common-footer__txt__address">
+            <span>㈜그라비티</span>
+            <span>대표이사 : 박현철</span>
+            <span>서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+            <span>전화문의: 1588-9897</span>
+            <span>팩스: 02-2132-7077</span>
+            <span>e-mail : webmaster@gravity.co.kr</span>
+          </address>
+          <address class="common-footer__txt__address">
+            <span>사업자등록번호: 201-81-56197</span>
+            <span class="btn-bizinfo"><button class="btn" onclick="window.open('//www.ftc.go.kr/bizCommPop.do?wrkr_no=2018156197', 'bizCommPop', 'width=750, height=700')">사업자정보확인</button></span>
+            <span>통신사업자등록번호: 제2008-서울마포-0207호</span>
+            <span>고객지원센터 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+          </address>
+        </div>
+        <div class="common-footer__game-info">
+          <div class="game-grade-mark">
+            <span class="spr-grade spr-grade__gambling"><span class="sr-only">사행성</span></span>
+            <span class="spr-grade spr-grade__18"><span class="sr-only">18세이용가</span></span>
+          </div>
+        </div>
+        <div class="common-footer__bottom">
+          <div class="common-footer__bottom__logo">
+            <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+          </div>
+          <div class="common-footer__bottom__copyright">Copyright © Gravity Co., LTD &amp; Lee MyoungJin(studio DTDS). All Rights Reserved.</div>
+        </div>
+      </div>
+      <button type="button" title="최상단으로" class="btnTop"></button>
+    </footer>
+    <span class="blind"></span>
+    <button type="button" class="blind--btnClosed" title="닫기 버튼" onclick="closed_popup()"></button>
+
+    <!-- 팝업1 -->
+    <aside class="popup popup--1">
+      <div class="popup__scroll">
+        <img src="assets/images/popup/popup.webp" alt="룬나이트 설명" />
+      </div>
+    </aside>
+
+    <!-- 팝업2 -->
+    <aside class="popup popup--2">
+      <div class="popup__scroll">
+        <img src="assets/images/popup/popup2.webp" alt="아크비숍 설명" />
+      </div>
+    </aside>
+
+    <!-- 팝업3 -->
+    <aside class="popup popup--3">
+      <div class="popup__scroll">
+        <img src="assets/images/popup/popup3.webp" alt="길로틴크로스 설명" />
+      </div>
+    </aside>
+
+    <script src="assets/js/common.min.js"></script>
+  </body>
+</html>

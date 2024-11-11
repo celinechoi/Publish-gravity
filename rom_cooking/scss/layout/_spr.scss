@@ -1,0 +1,232 @@
+@mixin spr($x: 0, $y: 0, $width: 0, $height: 0) {
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+}
+
+.main-spr {
+  background-image: url(../images/main/spr.webp);
+  background-repeat: no-repeat;
+  display: block;
+
+  @at-root [class*='main-spr--balloon'] {
+    animation: 10s balloonSway infinite;
+    @keyframes balloonSway {
+      0%,
+      100% {
+        transform: skew(0) translateY(0);
+      }
+      55% {
+        transform: skew(-2deg) translateY(5%);
+      }
+    }
+  }
+  &--balloon_1 {
+    animation-delay: -1000ms;
+    @include spr(-10px, -10px, 173px, 214px);
+    bottom: 0;
+    left: 43px;
+  }
+
+  &--balloon_2 {
+    animation-delay: -2000ms;
+
+    @include spr(-203px, -10px, 118px, 300px);
+    bottom: 0;
+    left: 139px;
+  }
+
+  &--balloon_3 {
+    animation-delay: -3000ms;
+
+    @include spr(-341px, -10px, 175px, 389px);
+    bottom: 0;
+    left: -30px;
+  }
+
+  &--balloon_4 {
+    animation-delay: -4000ms;
+
+    @include spr(-536px, -10px, 167px, 394px);
+    bottom: 92px;
+    left: 82px;
+  }
+
+  &--balloon_r1 {
+    animation-delay: -1000ms;
+
+    @include spr(-723px, -10px, 194px, 565px);
+    bottom: 22px;
+    right: -72px;
+  }
+
+  &--balloon_r2 {
+    animation-delay: -2000ms;
+
+    @include spr(-937px, -10px, 170px, 484px);
+    bottom: 0;
+    right: 50px;
+  }
+
+  &--balloon_r3 {
+    animation-delay: -3000ms;
+
+    @include spr(-1127px, -10px, 143px, 471px);
+    bottom: 4px;
+    right: 319px;
+  }
+
+  &--balloon_r4 {
+    animation-delay: -4000ms;
+
+    @include spr(-1290px, -10px, 98px, 450px);
+    bottom: 77px;
+    right: 424px;
+  }
+
+  &--balloon_r5 {
+    animation-delay: -5000ms;
+
+    @include spr(-1408px, -10px, 107px, 413px);
+    bottom: 0;
+    right: 470px;
+  }
+
+  &--balloon_r6 {
+    animation-delay: -6 000ms;
+
+    @include spr(-10px, -443px, 102px, 236px);
+    bottom: 0;
+    right: 612px;
+  }
+
+  &--cake {
+    @include spr(-132px, -501px, 434px, 512px);
+    left: 50%;
+    bottom: -157px;
+    margin-left: -122px;
+  }
+
+  &--ch1 {
+    @include spr(-586px, -595px, 1036px, 779px);
+    bottom: 0;
+    left: -70px;
+    // top: 302px;
+  }
+
+  &--ch2 {
+    @include spr(-1535px, -10px, 385px, 302px);
+    bottom: 0;
+    left: 605px;
+    // top: 778px;
+  }
+
+  &--ch3 {
+    @include spr(-1535px, -332px, 143px, 175px);
+    left: 649px;
+    // left: 50%;
+    // margin-left: -315px;
+    bottom: 318px;
+  }
+
+  &--poring1 {
+    @include spr(-132px, -332px, 179px, 144px);
+    left: 50%;
+    margin-left: (-1920px / 2 + 405px);
+    // left: 405px;
+    // top: 174px;
+    top: 50%;
+    margin-top: (-174px - 150px);
+  }
+
+  &--poring2 {
+    @include spr(-1698px, -332px, 123px, 86px);
+    left: 50%;
+    margin-left: (-1920px / 2 + 1280px);
+    // left: 1280px;
+    // top: 177px;
+    top: 50%;
+    margin-top: (-177px - 150px);
+  }
+
+  &--poring3 {
+    @include spr(-1698px, -438px, 274px, 257px);
+    left: 50%;
+    margin-left: (-1920px / 2 + 1409px);
+    // left: 1409px;
+    // top: 194px;
+    top: 50%;
+    margin-top: (-194px - 100px);
+  }
+
+  &--porings {
+    @include spr(-10px, -1394px, 850px, 368px);
+  }
+
+  @media all and (min-height: 1000px) {
+    &--ch1,
+    &--ch2,
+    &--porings {
+      top: auto;
+      bottom: 0;
+    }
+  }
+  &--title_1 {
+    @include spr(-1642px, -715px, 382px, 151px);
+    //라그M
+    left: 138px;
+    top: 366px;
+  }
+
+  &--title_2 {
+    @include spr(-1642px, -886px, 380px, 153px);
+    //주년
+    left: 521px;
+    top: 377px;
+  }
+
+  &--title_3 {
+    @include spr(-10px, -1059px, 144px, 195px);
+    //5
+    z-index: 5;
+    left: 534px;
+    top: 319px;
+    top: 330px;
+  }
+
+  &--title_4 {
+    @include spr(-174px, -1059px, 203px, 148px);
+    //Oh
+    left: 257px;
+    top: 209px;
+  }
+
+  &--title_5 {
+    @include spr(-1940px, -10px, 77px, 69px);
+    // 장식
+    left: 224px;
+    top: 194px;
+  }
+
+  &--title_6 {
+    @include spr(-1940px, -99px, 65px, 132px);
+    //!
+    left: 425px;
+    top: 227px;
+  }
+
+  &--title_7 {
+    @include spr(-10px, -251px, 88px, 88px);
+    //5!
+    left: 381px;
+    top: 175px;
+    transform-origin: 70% 100%;
+  }
+
+  &--title_8 {
+    //놀라운이벤트!
+    @include spr(-1642px, -1059px, 284px, 58px);
+    left: 474px;
+    top: 276px;
+  }
+}

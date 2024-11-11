@@ -1,0 +1,131 @@
+﻿.section-event3 {
+  position: relative;
+  @include lg {
+    top: -15px;
+  }
+  .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    .ch {
+      position: absolute;
+      top: 283px;
+      right: 50%;
+      margin-right: 517px;
+      &--left {
+        margin-right: 650px;
+        .img {
+          display: block;
+          width: 713px;
+          height: 843px;
+          background: url(../images/event3/ch.webp) no-repeat;
+        }
+      }
+      &--right {
+        top: 15%;
+        right: -24%;
+        .ch__sway {
+          animation: floatCh 8000ms infinite alternate ease-in-out;
+          animation-delay: -2000ms;
+        }
+        .img {
+          display: block;
+          width: 334px;
+          height: 268px;
+          background: url(../images/event3/ch_r.webp) no-repeat;
+        }
+      }
+    }
+  }
+  .section-title {
+    margin-top: 24px;
+  }
+  .desc {
+    margin-top: 15px;
+  }
+  .event-duration {
+    margin-top: 14px;
+  }
+  .event-content {
+    margin-top: 36px;
+  }
+  .ticket {
+    position: relative;
+    margin-top: 60px;
+    #app {
+      position: absolute;
+      left: 50%;
+      top: 16.6%;
+      margin-left: -116px;
+      height: 46%;
+      width: 54.5%;
+      .wrapper {
+        position: relative;
+        height: 100%;
+      }
+      .result {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 91px;
+        color: #2a4189;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      #canvas {
+        position: relative;
+        width: 100%;
+        height: 91px;
+      }
+    }
+  }
+  &__detail {
+    &-mo {
+      position: relative;
+      #app2 {
+        position: absolute;
+        left: 42.5%;
+        top: 72.3%;
+        z-index: 1;
+        width: vw(452);
+        height: vw(127);
+        background-color: #fff;
+        .wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          left: 0;
+          right: 0;
+          z-index: 1;
+        }
+        .result {
+          display: flex;
+          align-items: center;
+          height: vw(127);
+          color: #2a4189;
+          font-size: 32px;
+          font-weight: bold;
+          @include lg {
+            font-size: 16px;
+          }
+        }
+        .packaging {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #ebebeb;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+// /** footer **/
+// .footer {
+//   overflow: hidden;
+//   width: 100%;
+//   max-width: 1100px;
+//   margin: 0 auto;
+//   padding: 40px 0;
+//   background-color: #fff;
+//   font-weight: 300;
+//   display: flex;
+//   &-logo {
+//     flex: 0 0 135px;
+//   }
+//   &-text {
+//     letter-spacing: -0.01em;
+//     flex: 1 1 calc(100% - 135px);
+//     text-align: left;
+//     font-size: 12px;
+//     color: #888;
+//     word-break: keep-all;
+//     span {
+//       display: inline-block;
+//       padding: 0 0.2em;
+//     }
+//   }
+// }
+
+.btnTop {
+  // display: none;
+  // position: absolute;
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background: url(../images/btnTop.webp) no-repeat;
+  background-size: contain;
+  transition: 400ms opacity;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+  @include lg {
+    width: vw(130);
+    height: vw(130);
+    bottom: vw(39);
+    right: vw(20);
+  }
+  @at-root {
+    // body:not(.fp-viewing-section-main) .btnTop {
+    .fp-viewing-section-main .btnTop {
+      opacity: 0;
+    }
+  }
+}
+// .fp-viewing-section-footer {
+//   @at-root .section-footer {
+//     overflow: visible;
+//   }
+//   .btnTop {
+//     position: absolute;
+//     bottom: calc(100% + 20px);
+//   }
+// }

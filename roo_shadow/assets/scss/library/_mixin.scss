@@ -1,0 +1,12 @@
+@import 'mixin/_breakpoints';
+@import 'mixin/_btnImg';
+@import 'mixin/_bgfix';
+@import 'mixin/_100vh';
+
+@mixin backgroundDefault {
+  background: no-repeat center center / contain;
+}
+
+@mixin backgroundCover {
+  background: no-repeat center center / cover;
+}

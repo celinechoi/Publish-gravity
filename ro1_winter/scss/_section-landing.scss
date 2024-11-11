@@ -1,0 +1,61 @@
+﻿.section-landing {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  margin-bottom: -10px;
+  font-size: 0;
+  background: url('../images/common/bg_.webp') no-repeat center top / cover;
+  height: 727px;
+  &.fix {
+    margin-bottom: 0;
+  }
+  &__container {
+    z-index: 3;
+    text-align: center;
+    .title {
+      &-frame {
+        display: inline-block;
+        position: relative;
+        z-index: 5;
+        width: 751px;
+        height: 552px;
+        margin: 0 auto;
+        span {
+          width: 100%;
+          display: block;
+        }
+        video {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          object-fit: cover;
+          min-height: 100%;
+          min-width: 100%;
+          &.video {
+            &-after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ch {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      position: relative;
+    }
+    &--r {
+      margin-left: 575px;
+      margin-top: 268px;
+    }
+    &--l {
+      margin-left: -508px;
+      margin-top: 228px;
+    }
+  }
+}

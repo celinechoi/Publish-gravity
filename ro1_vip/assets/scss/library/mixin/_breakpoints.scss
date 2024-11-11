@@ -1,0 +1,47 @@
+﻿// $mediaResponsiveSize: 1024px; => _var
+
+@mixin lg-mega-max {
+  // max 1700px
+  @media all and (max-width: ($mediaResponsiveSize + 676px)) {
+    @content;
+  }
+}
+
+@mixin lp {
+  // max 1078px
+  @media all and (max-width: 1078px) {
+    @content;
+  }
+}
+
+@mixin lg-max {
+  @media all and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin mo {
+  @media all and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin respon-h {
+  // wide monitor
+  @media (min-device-height: 1080px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  // web
+  @media all and (min-width: ($mediaResponsiveSize + 0.02px)) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media all and (min-width: 1900px) {
+    @content;
+  }
+}

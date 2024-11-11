@@ -1,0 +1,106 @@
+﻿.section--3 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: cover;
+  background-image: url(../images/section3/bg_m_231205.webp);
+  height: vw(13370);
+  @include lg {
+    height: auto;
+    background-position: 50% 50%;
+    background-image: url(../images/section3/bg_231116_2.webp?ver=231116);
+    background-attachment: fixed;
+  }
+  @include lg-max {
+    .content {
+      // border-top: 10px solid yellow;
+      // display: block;
+      // z-index: 10;
+      // width: 100%;
+    }
+    #section-31 {
+      position: absolute;
+      top: vw(0);
+    }
+    #section-32 {
+      position: absolute;
+      top: vw(2968);
+    }
+    #section-33 {
+      position: absolute;
+      top: vw(6780);
+    }
+    #section-34 {
+      position: absolute;
+      top: vw(9834);
+    }
+    #section-35 {
+      position: absolute;
+      top: vw(11466);
+    }
+  }
+
+  .content {
+    @include lg {
+      position: relative;
+    }
+  }
+  .link,
+  .link-btn {
+    // background: rgba(yellow, 0.5); //FIXME:
+  }
+
+  .link-btn {
+    position: absolute;
+    // transform: translateX(-50%);
+    transform: translateX(calc(-50% - 1px));
+    border-radius: 10px;
+    left: 50%;
+    @include lg-max {
+      top: vw(5908);
+      width: vw(920);
+      height: vw(202);
+    }
+    @include lg {
+      bottom: 99px;
+      width: 440px;
+      height: 100px;
+      mix-blend-mode: overlay;
+      transition: 300ms all;
+      background-color: rgba(#fff, 0);
+      &:hover {
+        background-color: rgba(#fff, 0.3);
+      }
+    }
+  }
+
+  .download-link {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 225px;
+
+    @include lg-max {
+      flex-wrap: wrap;
+      gap: vw(20);
+      top: vw(6680);
+      .link {
+        width: vw(384);
+        height: vw(116);
+      }
+    }
+    @include lg {
+      flex-wrap: nowrap;
+      gap: 20px;
+      .link {
+        height: 72px;
+        width: 240px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+// 서브 배경 눈꽃 움직임
+@keyframes flowerTwinkle {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 30px);
+  }
+}
+@keyframes flowerTwinkle2 {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, 30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+// menu fixed
+@keyframes menuFix {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}

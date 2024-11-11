@@ -1,0 +1,426 @@
+// ##### EVENT
+
+// ##### 이벤트 프레임
+.event {
+  &-frame {
+    position: relative;
+    overflow: hidden;
+    background: url('../../assets/images/event/event_bg.webp') no-repeat center top / cover;
+    background-attachment: fixed;
+    @include lg-max {
+      padding-bottom: 10%;
+      background-image: url('../../assets/images/event/event_bg_mo.webp');
+    }
+  }
+}
+
+// ##### common
+.event {
+  &--1,
+  &--2,
+  &--3,
+  &--4,
+  &--5 {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 0;
+      transform: translateX(-50%);
+      width: 699px;
+      height: 24px;
+      background: url('../../assets/images/event/line.webp') no-repeat center center / contain;
+      @include lg-max {
+        width: 93%;
+      }
+    }
+    .section-event {
+      min-height: 100%;
+      padding: 80px 0;
+      box-sizing: border-box;
+      @include lg-max {
+        min-height: auto;
+        padding: 0;
+      }
+    }
+  }
+  &--1 {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.ch {
+  position: absolute;
+  &__wrap {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__ani {
+    display: block;
+    animation: floatCh2 3000ms infinite alternate ease-in;
+  }
+  img {
+    width: auto;
+    max-width: fit-content;
+  }
+  @at-root {
+    .event-frame {
+      .ch {
+        &__wrap {
+          &.frame {
+            position: fixed;
+            z-index: 0;
+            .ch {
+              &--l {
+                top: 14%;
+                left: 0;
+                .ch__ani {
+                  animation-delay: -2000ms;
+                  animation-duration: 5000ms;
+                }
+              }
+              &--r {
+                top: 2%;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .event--2 .ch {
+      left: 50%;
+      &--r {
+        top: 150px;
+        transform: translateX(250px);
+      }
+    }
+    .event--5 .ch {
+      left: 50%;
+      &--l {
+        top: 157px;
+        transform: translateX(-700px);
+        .ch__ani {
+          animation-delay: -1000ms;
+        }
+      }
+      &--r {
+        top: 710px;
+        z-index: 1;
+        transform: translateX(170px);
+        .ch__ani {
+          animation-delay: -7000ms;
+          animation-timing-function: ease-in-out;
+          animation-duration: 8000ms;
+        }
+      }
+    }
+  }
+}
+
+// ##### 특별 선물
+.event--1 {
+  .content {
+    &__con {
+      margin-left: -7%;
+    }
+  }
+  .ch {
+    &__wrap {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__ani {
+      display: block;
+      animation: floatCh 5000ms infinite alternate ease-in;
+    }
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    &--1 {
+      transform: translate(102%, -270%);
+
+      @include lg-mega-max {
+        transform: translate(66%, -270%);
+      }
+
+      .ch__ani {
+        animation-duration: 4000ms;
+      }
+    }
+  }
+}
+
+// ##### 전직 인증
+.event--2 {
+  .section {
+    &-event {
+      .section {
+        &-content {
+          @include lg-max {
+            padding: vw(100) 0;
+          }
+        }
+      }
+
+      .content {
+        display: inline-block;
+        position: relative;
+
+        img {
+          display: block;
+          &.d-none,
+          &.d-lg-block {
+            @include lg-max {
+              display: none;
+            }
+          }
+        }
+
+        .btn {
+          &-link {
+            position: absolute;
+            left: 50%;
+            bottom: 37%;
+            transform: translateX(-50%);
+            // background-color: blue;
+            opacity: 0;
+            width: 43%;
+            height: 11%;
+            @include lg-max {
+              height: 7.5%;
+              bottom: 37.5%;
+              width: 74%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sub-title {
+    padding-bottom: 60px;
+  }
+  &__btn {
+    display: block;
+    width: 394px;
+    height: 66px;
+    margin: 60px auto 0;
+    background: url('../../assets/images/event/event2/btn.webp') no-repeat center center / contain;
+    &:hover {
+      background-image: url('../../assets/images/event/event2/btn_hover.webp');
+    }
+  }
+  .notice-link {
+    position: absolute;
+    left: 26%;
+    bottom: 17%;
+    width: 30%;
+    height: 5%;
+    z-index: 1001;
+    &:hover {
+      @include lg {
+        filter: brightness(1.1) hue-rotate(3deg);
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    @include lg-max {
+      bottom: auto;
+      top: 84.7%;
+      left: 35%;
+      height: 2%;
+      width: 36%;
+    }
+    &__box {
+      display: inline-block;
+      position: relative;
+    }
+  }
+  &__btn {
+    &--mo {
+      display: none;
+      @include lg-max {
+        display: block;
+        position: absolute;
+        left: 15%;
+        top: 55.8%;
+        width: 70%;
+        height: 5%;
+        z-index: 1001;
+      }
+    }
+  }
+}
+
+// ##### 복귀 보상
+.event--3 {
+  &__detail {
+    position: relative;
+    width: 1060px;
+    height: 370px;
+    margin: 70px auto 0;
+    .bx-confetti {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 16%;
+      z-index: 1;
+      width: 100%;
+      transform: scale(0.1);
+      opacity: 0;
+      transition-timing-function: cubic-bezier(0.76, 0.44, 0.24, 0.91) !important;
+      transform-origin: 50% 0;
+      transition-duration: 800ms;
+      transition: opacity 200ms transform 1000ms !important;
+      transform: scale(0.1) translate3d(0, 250%, 0);
+      &.aos-animate {
+        opacity: 1;
+        transform: scale(1) translate3d(0, 0, 0);
+        transition-duration: 0.7s;
+      }
+      .confetti {
+        display: block;
+        width: 100%;
+        height: 460px;
+        background: url('../../assets/images/event/event3/whole_paper.webp') no-repeat;
+        animation: confetti 6000ms infinite alternate;
+        animation-delay: 1000ms;
+        animation-direction: alternate;
+      }
+    }
+    .img-tornado {
+      animation: lightTrans 1000ms alternate infinite;
+    }
+  }
+  .content {
+    &__notice {
+      padding-top: 0;
+    }
+  }
+}
+
+// ##### 단풍 인증
+.event--4 {
+  .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    .maple {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      .img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url('../../assets/images/event/event4/maple_bg.webp') no-repeat center center / contain;
+      }
+
+      @at-root {
+        html:not(.no-js) {
+          .maple {
+            .img {
+              opacity: 0;
+              transform: rotate(50deg);
+              transition-duration: 2s !important;
+              &.aos-animate {
+                opacity: 1;
+                transform: rotate(0);
+              }
+            }
+          }
+        }
+      }
+
+      &__sway {
+        height: 100%;
+        animation: starSway 50000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+        animation-delay: 1s;
+      }
+    }
+  }
+  .sub-title {
+    padding-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+
+// ##### 캐릭터 육성
+.event--5 {
+  .sub-title {
+    padding-bottom: 50px;
+  }
+  .level {
+    &-list {
+      min-width: 1040px;
+      margin: 0 auto;
+      > li {
+        &.middle {
+          height: 80px;
+        }
+      }
+      &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        > li {
+          // opacity: 0;
+          &:not(.path) {
+            min-width: 480px;
+          }
+          &.path {
+            min-width: 60px;
+          }
+          &.arrow {
+            &-b {
+              transform: rotate(90deg);
+            }
+            &-l {
+              transform: scaleX(-1);
+            }
+          }
+          @at-root {
+            html:not(.no-js) {
+              .level-list__inner > li {
+                opacity: 0;
+                &.aos-animate {
+                  $sequential: (one, two, three, four, five, six, seven);
+                  @each $item in $sequential {
+                    $i: index($sequential, $item);
+                    &.#{$item} {
+                      animation: fadeIn2 300ms alternate ease-in forwards;
+                      animation-delay: #{$i * 200 +'ms'};
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__final {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    padding-top: 50px;
+  }
+}

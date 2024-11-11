@@ -1,0 +1,227 @@
+﻿.section-update1 {
+  @include lg {
+    top: -3px;
+  }
+  .section-content {
+    max-width: 100%;
+    padding: 0;
+  }
+  .bg {
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    .ch {
+      position: absolute;
+      top: 76%;
+      left: 53%;
+      margin-left: 43%;
+      &__sway {
+        position: relative;
+        animation: swayCh 10000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+      }
+
+      .img {
+        display: block;
+        width: 206px;
+        height: 262px;
+        display: block;
+        background: url(../images/update1/ch.webp) no-repeat;
+      }
+    }
+    .dust {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      .img {
+        background: url(../images/update1/dusts.webp);
+        display: block;
+      }
+      &--1 {
+        margin-left: 610px;
+        margin-top: 371px;
+        // background-color: red;
+        animation-delay: -1000ms;
+        .img {
+          @include spr(-10px, -10px, 100px, 161px);
+        }
+      }
+
+      &--2 {
+        margin-left: 610px;
+        margin-top: -390px;
+        // background-color: pink;
+        animation-delay: -2000ms;
+        .img {
+          @include spr(-130px, -10px, 298px, 178px);
+        }
+      }
+
+      &--3 {
+        margin-left: -90px;
+        margin-top: -270px;
+        // background-color: blue;
+        animation-delay: -3000ms;
+        .img {
+          @include spr(-448px, -10px, 82px, 115px);
+        }
+        .dust__sway {
+          animation-name: swayDust2;
+        }
+      }
+      &__sway {
+        animation: swayDust 10000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+      }
+    }
+  }
+  .class-intro {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    &__frame {
+      position: relative;
+      z-index: 5;
+      width: 53%;
+      margin-left: auto;
+      margin-right: 0;
+      > h2 {
+        width: 872px;
+      }
+      .line {
+        margin-top: -5px;
+      }
+      .video-btn {
+        margin-top: 24px;
+        position: relative;
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+        }
+        &:before {
+          transition: 500ms all;
+          z-index: 2;
+          content: '';
+          opacity: 0.5;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          display: block;
+          background: url(../images/update1/class-video-cover.webp) no-repeat;
+        }
+      }
+      .desc {
+        margin-top: 30px;
+      }
+    }
+  }
+  .section-container-m {
+    position: relative;
+  }
+  .img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px 24px;
+    width: 872px;
+    height: 674px;
+    position: relative;
+    margin-top: -110px;
+    @include lg {
+      position: absolute;
+      left: 50%;
+      top: 53%;
+      margin-top: 0;
+      width: 90%;
+      height: 20%;
+      transform: translateX(-50%);
+      gap: 6% 4%;
+    }
+    &__item {
+      display: inline-block;
+      position: relative;
+      flex: 1 1 calc(100% / 2 - 24px / 2 * 1);
+      @include lg {
+        flex: 1 1 48%;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10.3%;
+        width: 100%;
+        height: 73.6%;
+        @include backgroundCover;
+        background-size: 100% 100%;
+        background-image: url('../images/update1/skills/skill_frame.webp');
+      }
+      > img {
+        max-width: 100%;
+      }
+      .skill {
+        &-gif {
+          position: absolute;
+          left: 0;
+          top: 11%;
+        }
+        &-tit {
+          position: absolute;
+          left: 50%;
+          top: 74.2%;
+          z-index: 1;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+@keyframes swayCh {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  30% {
+    transform: translate(4px, -4px);
+  }
+  60% {
+    transform: translate(2px, 4px);
+  }
+  90% {
+    transform: translate(-4px, -2px);
+  }
+}
+@keyframes swayDust {
+  0%,
+  100% {
+    transform: rotate(0) translate(0);
+  }
+  50% {
+    transform: rotate(-20deg) translateY(20%);
+  }
+}
+@keyframes swayDust2 {
+  0%,
+  100% {
+    transform: rotate(0) translate(0);
+  }
+  50% {
+    transform: rotate(20deg) translateY(-20%);
+  }
+}
+
+@keyframes dustTop {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}

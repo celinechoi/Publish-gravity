@@ -1,0 +1,117 @@
+﻿.section-update3 {
+  .section-container {
+    position: relative;
+    overflow: hidden;
+    .firefly {
+      &__wrap {
+        + .section-content {
+          z-index: 3;
+        }
+      }
+    }
+  }
+  .section-title {
+    margin-top: 40px;
+  }
+  .desc {
+    margin-top: 40px;
+  }
+
+  // .update-swiper
+  .update3-swiper {
+    position: relative;
+    z-index: 4;
+    max-width: 900px;
+    margin: 38px auto 0;
+    .swiper-container,
+    .swiper-wrapper {
+      overflow: visible !important;
+    }
+    .swiper-slide {
+      width: 700px;
+      overflow: hidden;
+      position: relative;
+      opacity: 0;
+      transition-property: transform, -webkit-transform, opacity;
+    }
+    .swiper-slide-prev,
+    .swiper-slide-next,
+    .swiper-slide-active {
+      opacity: 1;
+    }
+    .swiper-button {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 10;
+      cursor: pointer;
+      width: 57px;
+      height: 61px;
+      opacity: 0.8;
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+      &--next {
+        background-image: url(../images/update3/btn-next.webp);
+        right: -70px;
+      }
+      &--prev {
+        background-image: url(../images/update3/btn-prev.webp);
+        left: -70px;
+      }
+    }
+  }
+
+  .section-container-m {
+    @include lg {
+      .class {
+        &-intro {
+          &__txt {
+            .title {
+              > img {
+                width: vw(864);
+              }
+            }
+            .line {
+              > img {
+                width: vw(604);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .update3-swiper-m {
+    &.initial {
+      margin: vw(150) 0 0 vw(60);
+    }
+    @include lg {
+      position: relative;
+      margin: vw(150) 0 0 0;
+      .swiper {
+        &-button {
+          display: none;
+        }
+        &-slide {
+          width: vw(880);
+          height: auto;
+          .inner {
+            margin: 0 vw(20) 0 0;
+            > img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              // width: vw(880);
+              // height: vw(495);
+            }
+          }
+        }
+      }
+    }
+  }
+}

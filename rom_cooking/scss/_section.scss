@@ -1,0 +1,133 @@
+﻿.section-sub {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    max-width: 1280px;
+    width: 100%;
+    position: relative;
+    padding: 0;
+  }
+
+  @include lg-min {
+    .section-container {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.section-container-m {
+  &,
+  img {
+    width: 100%;
+    max-width: initial;
+  }
+}
+
+@include lg {
+  .section {
+    height: auto !important;
+  }
+}
+
+$subs: (
+  1: update1,
+  2: update2,
+  3: event1,
+  4: event2,
+  5: event3,
+);
+
+@each $i, $sub in $subs {
+  .section-#{$sub} {
+    @if (#{$sub} == 'update2') {
+      background-image: none;
+    } @else {
+      background-image: url(../images/#{$sub}/#{$sub}_bg.webp);
+    }
+  }
+}
+
+// 이벤트 섹션 버튼 스타일
+[class*='section-event'] {
+  .btn .link {
+    display: inline-block;
+    transition: 300ms all;
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+  @include lg {
+    .section-container-m .link {
+      position: absolute;
+      bottom: vw(78);
+      left: 50%;
+      transform: translateX(-50%);
+      width: vw(600);
+      height: vw(120);
+    }
+  }
+}
+
+.section-update1,
+.section-event1,
+.section-event2 {
+  @media all and (max-width: 1900px) {
+    .section-container,
+    .bg {
+      min-height: calc(var(--vh) / var(--scale) * 1px) !important;
+    }
+    .bg {
+      height: 100% !important;
+    }
+  }
+}
+.section-update2,
+.section-update4 {
+  //영상배경 공통 스타일
+  .bg {
+    @include lg {
+      display: none;
+    }
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+@import 'section/_update1';
+@import 'section/_update2';
+@import 'section/_event1';
+@import 'section/_event2';
+@import 'section/_event3';
+
+.section .section-container {
+  // 모든 해상도를 100vw처럼(1920비율로) 만들어버리기
+  position: absolute;
+  // transform-origin: 50% 0; // 컨텐츠 상단 노출
+  width: 1920px;
+  // width: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -960px;
+  &:not(.section-update2 .section-container) {
+    top: 50%;
+  }
+}
+
+.floating-top {
+  position: absolute;
+  right: 0;
+  top: 2%;
+  z-index: 4;
+  transform: scale(0.8);
+}

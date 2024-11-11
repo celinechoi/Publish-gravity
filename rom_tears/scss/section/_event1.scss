@@ -1,0 +1,145 @@
+﻿.section-event1 {
+  position: relative;
+  .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    // overflow: hidden;
+
+    .ch {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      &__sway {
+        position: relative;
+        // width: 618px;
+        // height: 927px;
+        width: 32.19%;
+        height: 85.84%;
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        animation: swayCh 10000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+      }
+      .img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url(../images/event1/char.webp) no-repeat center bottom / contain;
+      }
+    }
+    .stone {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      // left: 50%;
+      // top: 50%;
+      // margin-left: -590px;
+      // margin-left: -900px;
+      // margin-top: -1030px;
+
+      // mix-blend-mode: overlay;
+      // background-color: blue;
+      .img {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background: url(../images/event1/stone.webp) no-repeat center center / contain;
+      }
+
+      @at-root {
+        html:not(.no-js) {
+          .stone .img {
+            opacity: 0;
+            transform: rotate(50deg);
+            transition-duration: 2s !important;
+          }
+          .stone .img.aos-animate {
+            opacity: 1;
+            transform: rotate(0);
+          }
+        }
+      }
+
+      &__sway {
+        // animation: dustTop 10000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+        animation: starSway 50000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+        animation-delay: 1s;
+      }
+    }
+  }
+
+  .section-title {
+    margin-top: 32px;
+    // img {
+    //   display: block;
+    //   width: vw(899);
+    //   height: vw(116);
+    // }
+  }
+  .desc {
+    margin-top: 42px;
+  }
+  .event-content {
+    display: inline-block;
+    position: relative;
+    margin-top: 38px;
+    z-index: 1;
+    &__btn {
+      position: absolute;
+      left: 50%;
+      bottom: 16.87%;
+      transform: translateX(-50%);
+    }
+  }
+  .section-container-m {
+    @include lg {
+      .class {
+        &-intro {
+          &__txt {
+            .title {
+              > img {
+                width: vw(874);
+              }
+            }
+            .line {
+              > img {
+                width: vw(804);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes starSway {
+  0%,
+  100% {
+    filter: brightness(1);
+    // transform: rotate(0);
+  }
+  0%,
+  100%,
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(1deg);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+}

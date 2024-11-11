@@ -1,0 +1,109 @@
+﻿.section-event1 {
+  position: relative;
+  @include lg {
+    top: -9px;
+  }
+  .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    .ch {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      margin-left: 487px;
+
+      .img {
+        display: block;
+        width: 332px;
+        height: 289px;
+        display: block;
+        background: url(../images/event1/ch.webp) no-repeat center center / contain;
+      }
+    }
+    .star {
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      margin-left: -1170px;
+      &__sway {
+        position: relative;
+        animation: swayCh 10000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+      }
+      .img {
+        display: block;
+        width: 786px;
+        height: 973px;
+        background: url(../images/event1/ch_l.webp) no-repeat;
+        background-position: 100% 100%;
+      }
+
+      @at-root {
+        html:not(.no-js) {
+          .section-event1 .ch .img {
+            opacity: 0;
+            transform: rotate(50deg);
+            transition-duration: 2s !important;
+          }
+          .section-event1 .ch .img.aos-animate {
+            opacity: 1;
+            transform: rotate(0);
+          }
+        }
+      }
+
+      &__sway {
+        animation: starSway 50000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+        animation-delay: 1s;
+      }
+    }
+  }
+
+  .section-title {
+    margin-top: 29px;
+  }
+  .desc {
+    margin-top: 12px;
+  }
+  .event-duration {
+    margin-top: 24px - 15px;
+  }
+  .event-content {
+    margin-top: 40px - 11px;
+  }
+  .btn {
+    margin-top: 85px;
+  }
+  .section-container-m .link {
+    @include lg {
+      bottom: vw(78);
+    }
+  }
+}
+
+@keyframes starSway {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  0%,
+  100%,
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(1deg);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+}

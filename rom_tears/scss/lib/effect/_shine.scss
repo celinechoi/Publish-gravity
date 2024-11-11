@@ -1,0 +1,28 @@
+// ##### 반짝이 가루 효과
+.firefly {
+  z-index: 5;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 0px 17px 2px #fff, 0px 0px 5px 2px #fbfafe;
+  border-radius: 50%;
+  mix-blend-mode: color-dodge;
+  filter: blur(1px);
+  @include lg {
+    display: none;
+  }
+  &__wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    @include lg {
+      display: none;
+    }
+  }
+}

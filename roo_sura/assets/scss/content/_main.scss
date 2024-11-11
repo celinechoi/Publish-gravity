@@ -1,0 +1,317 @@
+﻿.section {
+  &-main {
+    position: relative;
+    z-index: 3;
+    justify-content: start;
+    overflow: initial;
+    background-color: #000;
+    min-height: auto !important;
+    padding-bottom: 0;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    padding-top: 0;
+    .section {
+      &-container {
+        min-height: 100vh;
+        height: 100vh;
+        padding: 0;
+        &--m {
+          @include lg-max {
+            position: relative;
+            aspect-ratio: auto;
+            height: 200vw;
+          }
+          .btn-link {
+            @include lg-max {
+              position: absolute;
+              display: block;
+              width: 41.1%;
+              height: 6%;
+              background: no-repeat center center / contain;
+            }
+            @include mo {
+              height: 50px;
+            }
+            &--aos {
+              @include lg-max {
+                top: 72.6%;
+                left: 7.8%;
+                background-image: url('../../assets/images/inc/btn-download-aos.webp');
+              }
+            }
+
+            &--ios {
+              @include lg-max {
+                top: 72.6%;
+                left: 51.2%;
+                background-image: url('../../assets/images/inc/btn-download-ios.webp');
+              }
+            }
+
+            &--one {
+              @include lg-max {
+                top: 80.1%;
+                left: 29.4%;
+                background-image: url('../../assets/images/inc/btn-download-one.webp');
+              }
+            }
+          }
+          .scroll-down {
+            display: none;
+            @include lg-max {
+              display: block;
+              position: absolute;
+              bottom: 2%;
+              left: 50%;
+              z-index: 4;
+              width: 125px;
+              height: 120px;
+              margin: 10% auto 0 -68.5px;
+              background: url('../../assets/images/main/scroll_down.webp') no-repeat center center / 59% auto;
+              cursor: pointer;
+              animation: pulse 2s infinite;
+            }
+            @include mo {
+              width: 85px;
+              height: 80px;
+              margin: 10% auto 0 -45.5px;
+            }
+          }
+        }
+      }
+    }
+    &__obj {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      .ef1 {
+        position: absolute;
+        left: -2%;
+        top: 30%;
+        z-index: 4;
+        transform: skew(-25deg) scaleX(-1);
+        width: 50%;
+        animation: fadeIn 3000ms alternate infinite;
+      }
+      .ef2 {
+        position: absolute;
+        right: 0;
+        top: 30%;
+        z-index: 5;
+        transform: skew(-16.5deg) scaleX(-1);
+        width: 50%;
+        animation: fadeIn 3000ms alternate infinite;
+      }
+      &--left {
+        position: absolute;
+        z-index: 1;
+        width: 1050px;
+        height: 100%;
+        top: 0px;
+        left: -6%;
+        transform: skew(-25deg);
+        overflow: hidden;
+      }
+      &--right {
+        position: absolute;
+        z-index: 1;
+        width: 1050px;
+        height: 100%;
+        top: 0px;
+        left: 51%;
+        transform: skew(-16.5deg);
+        overflow: hidden;
+      }
+      .obj-box {
+        // --left
+        .circle-container2 {
+          $particleWidth: 5px;
+          $particleNum: 200;
+          $particleColor: hsl(32, 100%, 50%);
+          $particleColorA: hsla(50, 100%, 80%, 0);
+
+          position: absolute;
+          transform: translateY(-10vh);
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+
+          .circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            mix-blend-mode: screen;
+            background-color: rgba(#ebe98f, 1);
+            box-shadow: 0px 0px 17px 2px #eae8e8, 0px 0px 5px 2px #e74d2a;
+            mix-blend-mode: lighten;
+            animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+
+            @keyframes fade-frames {
+              0% {
+                opacity: 1;
+              }
+
+              50% {
+                opacity: 0.7;
+              }
+
+              100% {
+                opacity: 1;
+              }
+            }
+
+            @keyframes scale-frames {
+              0% {
+                transform: scale3d(0.4, 0.4, 1);
+              }
+
+              50% {
+                transform: scale3d(2.2, 2.2, 1);
+              }
+
+              100% {
+                transform: scale3d(0.4, 0.4, 1);
+              }
+            }
+          }
+
+          @for $i from 1 through $particleNum {
+            &:nth-child(#{$i}) {
+              $circleSize: random($particleWidth);
+              width: $circleSize + px;
+              height: $circleSize + px;
+
+              $startPositionY: random(10) + 100;
+              $framesName: 'move-frames-' + $i;
+              $moveDuration: 7000 + random(5000) + ms;
+
+              animation-name: #{$framesName};
+              animation-duration: $moveDuration;
+              animation-delay: random(11000) + ms;
+
+              @keyframes #{$framesName} {
+                from {
+                  transform: translate3d(#{random(100) + vw}, #{$startPositionY + vh}, 0);
+                }
+
+                to {
+                  transform: translate3d(#{random(100) + vw}, #{- $startPositionY - random(30) + vh}, 0);
+                }
+              }
+
+              .circle {
+                animation-delay: random(5000) + ms;
+              }
+            }
+          }
+        }
+        // --right
+        .circle-container {
+          $particleWidth: 5px;
+          $particleNum: 200;
+          $particleColor: hsl(32, 100%, 50%);
+          $particleColorA: hsla(50, 100%, 80%, 0);
+
+          position: absolute;
+          transform: translateY(-10vh);
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+
+          .circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            mix-blend-mode: screen;
+            background-color: rgba(#98ebec, 1);
+            box-shadow: 0px 0px 17px 2px #eaebec, 0px 0px 5px 2px #3f5ce0;
+            mix-blend-mode: lighten;
+
+            animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+
+            @keyframes fade-frames {
+              0% {
+                opacity: 1;
+              }
+
+              50% {
+                opacity: 0.7;
+              }
+
+              100% {
+                opacity: 1;
+              }
+            }
+
+            @keyframes scale-frames {
+              0% {
+                transform: scale3d(0.4, 0.4, 1);
+              }
+
+              50% {
+                transform: scale3d(2.2, 2.2, 1);
+              }
+
+              100% {
+                transform: scale3d(0.4, 0.4, 1);
+              }
+            }
+          }
+
+          @for $i from 1 through $particleNum {
+            &:nth-child(#{$i}) {
+              $circleSize: random($particleWidth);
+              width: $circleSize + px;
+              height: $circleSize + px;
+
+              $startPositionY: random(10) + 100;
+              $framesName: 'move-frames-' + $i;
+              $moveDuration: 7000 + random(5000) + ms;
+
+              animation-name: #{$framesName};
+              animation-duration: $moveDuration;
+              animation-delay: random(11000) + ms;
+
+              @keyframes #{$framesName} {
+                from {
+                  transform: translate3d(#{random(100) + vw}, #{$startPositionY + vh}, 0);
+                }
+
+                to {
+                  transform: translate3d(#{random(100) + vw}, #{- $startPositionY - random(30) + vh}, 0);
+                }
+              }
+
+              .circle {
+                animation-delay: random(5000) + ms;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &--main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    video {
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      top: 50%;
+      min-height: 100%;
+      min-width: 100%;
+      @include lg-max {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+  }
+}

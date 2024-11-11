@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=1200, user-scalable=no" />
+    <!-- 
+      <meta name="keywords" content="" />
+      <meta name="description" content="" />
+      <meta property="og:url" content="" />
+      <meta property="og:title" content="" />
+      <meta property="og:description" content="" />
+      
+      <meta property="og:image" content="" /> -->
+    <link rel="icon" href="/games/ro1/2013_ro1/favicon/favicon_ro1.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/games/ro1/2013_ro1/favicon/favicon_ro1.ico" type="image/x-icon" />
+
+    <title>22주년 메가 부스터 프로모션</title>
+
+    <script src="/common/js/jquery-3.last.min.js"></script>
+    <!-- S: 240829 수정 -->
+    <script src="/common/js/aos.js"></script>
+    <!-- E: 240829 수정 -->
+    <script type="text/javascript" src="js/common.min.js"></script>
+    <!-- S: 240829 수정 -->
+    <link rel="stylesheet" type="text/css" href="/common/css/aos.css" />
+    <!-- E: 240829 수정 -->
+    <link rel="stylesheet" type="text/css" href="/common/css/reset.css" />
+    <link rel="stylesheet" href="/common/20220818_common_footer/css/common-footer.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.min.css" />
+
+    <script src="https://gnb.gnjoy.com/ResJs/gnb/gnb_game.js.asp?servicecode=game&gamecode=ro2013"></script>
+  </head>
+
+  <body>
+    <section class="section-landing" id="main">
+      <span class="section-landing__bg"></span>
+      <div class="section-landing__container">
+        <div class="title">
+          <span class="title__piece" data-aos="fade-up-right" data-aos-duration="1000"><img src="images/main_title.webp" /></span>
+          <!-- S: 240821 수정 -->
+          <span class="title__piece title--date" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"><img src="images/main_during_240821.webp" /></span>
+          <!-- E: 240821 수정 -->
+          <span class="blink blink--1"><img src="images/main_shine.webp" /></span>
+          <span class="blink blink--2"><img src="images/main_shine2.webp" /></span>
+        </div>
+        <div class="sr-only">
+          <h1>라그나로크온라인 22주년 기념 메가 부스터 프로모션 사전예약</h1>
+          <!-- S: 240821 수정 -->
+          <p>24년 8월 21일 점검 후 부터 24년 9월 1일 23시 59분 까지</p>
+          <!-- E: 240821 수정 -->
+        </div>
+        <span class="ch" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200"> </span>
+      </div>
+    </section>
+    <span class="section-content__bg"></span>
+    <section class="section-content">
+      <div class="sr-only">
+        <h2>부스터 프로모션이란?</h2>
+        <p>원하는 캐릭터를 받아, 부스터 아이템으로 빠르게 성장시키며 게임을 즐길 수 있는 이벤트입니다.</p>
+      </div>
+      <!-- S: 240819 추가 -->
+      <a href="#formPlat" class="btn-link btn-link--0" title="메가부스터 사전예약 신청하기"></a>
+      <script>
+        $(document).ready(function () {
+          $('.btn-link--0').on('click', function () {
+            console.log('***');
+            let elmHash = $(this).attr('href');
+            let pos;
+            pos = Math.round($(elmHash).offset().top - 90);
+            $('body,html').animate({ scrollTop: pos }, 'slow');
+          });
+        });
+      </script>
+      <!-- E: 240819 추가 -->
+      <a href="https://ro.gnjoy.com/news/update/View.asp?seq=278&curpage=1" target="_blank" class="btn-link btn-link--1" title="메가 부스터 프로모션 안내"></a>
+
+      <div class="container">
+        <span class="ch ch--l">
+          <span data-aos="fade-down-right" data-aos-duration="700">
+            <img src="images/con_ch_l.webp" />
+          </span>
+        </span>
+        <span class="ch ch--r">
+          <span data-aos="fade-up-left" data-aos-duration="700">
+            <img src="images/con_ch_r.webp" />
+          </span>
+        </span>
+        <span class="ch ch--l-2">
+          <span data-aos="fade-down-right" data-aos-duration="700">
+            <img src="images/rab.webp" />
+          </span>
+        </span>
+        <!-- S: 240819 추가 -->
+        <form action="" class="form" id="formPlat">
+          <!-- E: 240819 추가 -->
+          <h2 class="sr-only">메가 부스터 사전예약 캐릭터 신청하기</h2>
+          <a href="https://ro.gnjoy.com/guide/runemidgarts/jobmain.asp" target="_blank" class="pre-btn" title="직업전직트리 미리보기"><img src="images/tree_btn.webp" alt="" /></a>
+          <!-- TODO : 사전예약 취소하기시 select element에 disabled 옵션 추가 (disabled="disabled") -->
+          <div class="form__selects">
+            <select name="" id="">
+              <option value="" disabled="disabled" selected="selected">서버 선택</option>
+              <option value="">다크로드</option>
+              <option value="">이그드라실</option>
+              <option value="">바포메트</option>
+            </select>
+            <select name="" id="">
+              <option value="" disabled="disabled" selected="selected">종족 선택</option>
+              <option value="">노비스</option>
+              <option value="">도람족</option>
+            </select>
+            <select name="" id="">
+              <option value="" disabled="disabled" selected="selected">성별 선택</option>
+              <option value="">남자</option>
+              <option value="">여자</option>
+            </select>
+          </div>
+          <button class="form__btn" title="사전예약 신청하기" type="submit"></button>
+        </form>
+        <!-- S: TODO 사전예약 취소하기 -->
+        <div class="form-cancel">
+          <p class="form-cancel__txt">0000년 00월 00일 사전예약 신청이 완료되었습니다.</p>
+          <a href="javascript:;" class="form-cancel__btn" title="사전예약 취소하기"><img src="images/cancel_btn.webp" alt="사전예약 취소하기" /></a>
+        </div>
+        <!-- E: TODO 사전예약 취소하기 -->
+        <div class="sr-only">
+          <h2>사전예약특전</h2>
+          <h3>부스터 프로모션 사전예약 감사상자</h3>
+          <p>"2024 년 라그나로크 메가 부스터 프로모션에 사전예약해주셔서 감사합니다.” 라는 글귀가 바닥에 새겨져 있는 은빛상자. 아래와 같은 아이템이 들어있다.</p>
+          <ul>
+            <li>[비매품]블레싱 10레벨스크롤 50개</li>
+            <li>[비매품] 중형 생명수 30개</li>
+            <li>[비매품] 파워 부스터 20개</li>
+            <li>월드이동권 20개</li>
+            <li>[비매품] 민접성증가 10레벨 스크롤 50개</li>
+            <li>[비매품] 신묘한 생명수 30개</li>
+            <li>[비매품] 인피니티 드링크 20개</li>
+            <li>부스터코인 20개</li>
+            <li>[비매품] 소형 생명수 30개</li>
+            <li>[비매품] 올마이티 20개</li>
+            <li>[비매품] 소형 마나수 20 개</li>
+          </ul>
+          <!-- S: 240820 수정 -->
+          <p>해당 아이템은 2025년 1월 첫번째 정기점검 시 삭제됩니다.</p>
+          <!-- E: 240820 수정 -->
+          <h2>꼭 알아두세요!!</h2>
+          <ul>
+            <li>사전 예약을 진행한 캐릭터는 메가 부스터 프로모션 진행 시 신청하신 비전승 캐릭터가 자동 지급됩니다.</li>
+            <li>신청한 캐릭터 정보(서버, 종족, 성별)의 경우, 변경되지 않으니 잘못 입력하지 않도록 주의해 주시기 바랍니다.</li>
+            <li>사전예약을 하셨을 경우, 메가 부스터 프로모션 이벤트 진행 시 캐릭터는 추가 지급되지 않습니다.</li>
+            <li>계정 내 캐릭터가 없을 경우 사전 예약 캐릭터는 지급되니 않으며 추가 지급 역시 불가능하오니 프로모션 진행 전 반드시 캐릭터를 1개 이상 생성해 주시기 바랍니다.</li>
+            <li>메가 부스터 프로모션 진행 시 별도 캐릭터 슬롯은 지급되지 않으며, 캐릭터 슬롯이 가득 찬 경우 캐릭터가 지급되지 않으니 반드시 캐릭터 슬롯을 1개 이상 비워주시기 바랍니다.</li>
+            <li>메가 부스터 프로모션 사전 예약 및 본 이벤트는 명의 당 1회만 가능하니 반드시 사용하시는 계정으로 신청해 주시기 바랍니다.</li>
+            <li>2개 이상의 브라우저로 중복 로그인하신 경우, 신청하는 계정과 다른 계정에 캐릭터가 지급이 될 수 있습니다.</li>
+            <li>다른 브라우저에서 로그인 된 계정이 있다면 모두 로그아웃 후 재로그인하여 신청하시기 바랍니다.</li>
+            <li>사전예약 이벤트 및 메가 부스터 프로모션은 통합 계정만 신청이 가능하며 미 통합 계정은 통합 전환 후 신청해 주셔야 합니다.</li>
+          </ul>
+        </div>
+        <a href="https://member.gnjoy.com/change/index.asp" target="_blank" class="btn-link btn-link--2" title="통합계정 전환하기"></a>
+      </div>
+    </section>
+
+    <!--#include file="inc/footer.html"-->
+  </body>
+</html>

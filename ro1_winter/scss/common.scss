@@ -1,0 +1,90 @@
+html,
+body {
+  height: auto;
+  position: static;
+}
+
+img {
+  backface-visibility: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif;
+}
+
+@mixin spr($x: 0, $y: 0, $width: 0, $height: 0) {
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+}
+
+@function vw($val) {
+  @return ($val/1000 * 100vw);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+* {
+  &,
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+}
+body {
+  $html-bg-color: #000;
+
+  background-color: $html-bg-color;
+  min-width: 1200px;
+  margin: 0 auto;
+
+  @at-root html {
+    background-color: $html-bg-color;
+  }
+  transition: opacity 1000ms !important;
+  opacity: 0;
+  &[data-loading='done'] {
+    opacity: 1;
+  }
+}
+
+footer {
+  background: url(../images/common/bg_main-full.jpg) no-repeat;
+  width: 100%;
+  background-position: center bottom;
+  height: 133px;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@import '_nav.scss';
+@import '_topBtn.scss';
+@import '_section-landing.scss';
+@import '_section-content.scss';
+@import '_animate.scss';
+@import '_snow.scss';

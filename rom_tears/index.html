@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords" content="그라비티, Gravity, 라그나로크, ragnarok, ragnarokM, 라그나로크M, 라그나로크 모바일, M, 제련, 라그나로크 오리진, 라그나로크 온라인, MMO, MMORPG, 고성의 눈물, 업데이트, 이벤트, 고성, 하인리히, 신규 직업, 신규 클래스, 키우기, 그림자 비경, 그림자 장비, 신규 던전, 신규 장비, 신규 맵, 요르문간드" />
+    <meta name="description" content="라그나로크M 대규모 업데이트 <고성의 눈물>" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="라그나로크M 대규모 업데이트" />
+    <meta property="og:description" content="<라그나로크M> 고성의 눈물 업데이트" />
+    <meta property="og:image" content="og_img/og_img.jpg" />
+
+    <link rel="icon" href="https://imgc.gnjoy.com/games/rom/favicon/favicon_rom.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://imgc.gnjoy.com/games/rom/favicon/favicon_rom.ico" type="image/x-icon" />
+
+    <title>라그나로크 M | 11월 대규모 업데이트</title>
+
+    <script src="https://imgc.gnjoy.com/common/js/jquery-3.last.min.js"></script>
+    <script src="js/aos.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/fullpage.extensions.min.js"></script>
+    <script src="js/fullpage.parallax.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/tweenmax.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://imgc.gnjoy.com/common/css/reset.css" />
+    <link rel="stylesheet" href="/common/20220818_common_footer/css/common-footer-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/lib/fullpage.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/lib/aos.css" />
+    <link rel="stylesheet" type="text/css" href="css/lib/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.min.css" />
+
+    <!-- S: 브라우저 지원 경고창 -->
+    <script>
+      function ieVersion() {
+        var agent = navigator.userAgent.toLowerCase();
+        if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || agent.indexOf('msie') != -1) {
+          $('[data-aos]').attr('data-aos', '');
+          $('.ch').hide();
+          alert('인터넷익스플로러 브라우저를 지원하지 않습니다.\nMS Edge, Google Chrome 브라우저에서 이용해주세요');
+        }
+      }
+      $(document).ready(function () {
+        ieVersion();
+      });
+    </script>
+    <!-- E: 브라우저 지원 경고창 -->
+  </head>
+  <body>
+    <!-- S : header -->
+    <span class="dimmed"></span>
+    <header class="header" id="header">
+      <button type="button" title="네비게이션 닫기" class="nav__toggle"></button>
+      <div class="nav">
+        <div class="nav__wrap">
+          <a class="logo" href="index.html">
+            <img class="d-none d-lg-block" src="images/nav/logo.webp" alt="라그나로크M" />
+            <!-- 230913 수정 : webp -->
+            <img class="d-block d-lg-none" src="images/nav/logo-m.webp" alt="라그나로크M" />
+            <!-- 230913 수정 : webp -->
+          </a>
+
+          <ul class="nav__list">
+            <li class="nav-item nav-item__title--update" data-name="section-update">
+              <img src="images/nav/nav_update.webp" class="d-none d-lg-block" alt="update" />
+              <img src="images/nav/nav_update_mo.webp" class="mo-update d-block d-lg-none" alt="update" />
+            </li>
+            <li class="nav-item" data-menuanchor="section-update1">
+              <a href="#section-update1" data-href="#section-update-1" class="link">
+                <img src="images/nav/update_menu_on.webp" class="d-none d-lg-block" alt="신규 영웅 클래스" />
+                <img src="images/nav/update_menu_mo_on.webp" class="d-block d-lg-none" alt="신규 영웅 클래스" />
+              </a>
+            </li>
+            <li class="nav-item" data-menuanchor="section-update2">
+              <a href="#section-update2" data-href="#section-update-2" class="link">
+                <img src="images/nav/update_menu2_on.webp" class="d-none d-lg-block" alt="신규 스토리" />
+                <img src="images/nav/update_menu2_mo_on.webp" class="d-block d-lg-none" alt="신규 스토리" />
+              </a>
+            </li>
+            <li class="nav-item" data-menuanchor="section-update3">
+              <a href="#section-update3" data-href="#section-update-3" class="link">
+                <img src="images/nav/update_menu3_on.webp" class="d-none d-lg-block" alt="신규 지역" />
+                <img src="images/nav/update_menu3_mo_on.webp" class="d-block d-lg-none" alt="신규 지역" />
+              </a>
+            </li>
+            <li class="nav-item" data-menuanchor="section-update4">
+              <a href="#section-update4" data-href="#section-update-4" class="link">
+                <img src="images/nav/update_menu4_on.webp" class="d-none d-lg-block" alt="신규 던전" />
+                <img src="images/nav/update_menu4_mo_on.webp" class="d-block d-lg-none" alt="신규 던전" />
+              </a>
+            </li>
+            <li class="nav-item nav-item__title--event" data-name="section-event">
+              <img src="images/nav/nav_event.webp" class="d-none d-lg-block" class="d-none d-lg-block" alt="event" />
+              <img src="images/nav/nav_event_mo.webp" class="mo-event d-block d-lg-none" alt="event" />
+            </li>
+            <li class="nav-item" data-menuanchor="section-event1">
+              <a href="#section-event1" data-href="#section-event-1" class="link">
+                <img src="images/nav/event_menu_on.webp" class="d-none d-lg-block" alt="전직 이벤트" />
+                <img src="images/nav/event_menu_mo_on.webp" class="d-block d-lg-none" alt="전직 이벤트" />
+              </a>
+            </li>
+            <li class="nav-item" data-menuanchor="section-event2">
+              <a href="#section-event2" data-href="#section-event-2" class="link">
+                <img src="images/nav/event_menu2_on.webp" class="d-none d-lg-block" alt="공략 이벤트" />
+                <img src="images/nav/event_menu2_mo_on.webp" class="d-block d-lg-none" alt="공략 이벤트" />
+              </a>
+            </li>
+          </ul>
+          <div class="nav__banner">
+            <a href="https://play.google.com/store/apps/details?id=com.gravity.rom.aos" class="link" target="_blank" title="구글플레이에서 다운로드하기">
+              <img class="d-none d-lg-block" src="images/nav/btn-download-aos.webp" alt="구글플레이에서 다운로드하기" />
+              <img class="d-block d-lg-none" src="images/nav/btn-download-aos-m.webp" alt="구글플레이에서 다운로드하기" />
+            </a>
+            <a href="https://apps.apple.com/kr/app/id1297870337" class="link" target="_blank" title="앱스토어에서 다운로드하기">
+              <img class="d-none d-lg-block" src="images/nav/btn-download-ios.webp" alt="앱스토어에서 다운로드하기" />
+              <img class="d-block d-lg-none" src="images/nav/btn-download-ios-m.webp" alt="앱스토어에서 다운로드하기" />
+            </a>
+            <a href="https://community.gnjoy.com/rom/" class="link" target="_blank" title="공식 커뮤니티">
+              <img class="d-none d-lg-block" src="images/nav/btn-community.webp" alt="공식 커뮤니티" />
+              <img class="d-block d-lg-none" src="images/nav/btn-community-m.webp" alt="공식 커뮤니티" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- E : header -->
+
+    <main id="contents">
+      <!-- S: fullpage -->
+      <div class="fullpage" id="fullpage">
+        <!-- S: main -->
+        <section class="section fp-overflow section-main">
+          <!-- mo -->
+          <div class="section-container-m main d-block d-lg-none">
+            <img src="images/main/bg-m.webp" class="main-mo" alt="대규모 업데이트 고성의 눈물 메인 배경" />
+            <div class="section-content">
+              <div class="logo" data-aos="fade-up" data-aos-duration="500">
+                <img src="images/main/logo-m.webp" alt="라그나로크 M" />
+              </div>
+              <h1 class="title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><img src="images/main/title-m.webp" alt="대규모 업데이트 고성의 눈물" /></h1>
+            </div>
+            <div class="app-download">
+              <a href="https://play.google.com/store/apps/details?id=com.gravity.rom.aos" class="link" target="_blank" title="구글플레이에서 다운로드하기"></a>
+              <a href="https://apps.apple.com/kr/app/id1297870337" class="link" target="_blank" title="앱스토어에서 다운로드하기"></a>
+            </div>
+          </div>
+          <!-- pc -->
+          <div class="section-main__video d-none d-lg-block">
+            <video src="images/main/bg.webm" data-keepplaying autoplay muted loop poster="images/main/bg.webp"></video>
+          </div>
+          <!-- pc -->
+          <div class="section-container d-none d-lg-block">
+            <div class="logo" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+              <img src="images/main/logo.webp" alt="라그나로크 M" />
+            </div>
+            <h1 class="title">
+              <span class="title__title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><img src="images/main/title.webp" alt="대규모 업데이트 고성의 눈물" /></span>
+            </h1>
+            <div class="app-download" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+              <a href="https://play.google.com/store/apps/details?id=com.gravity.rom.aos" class="link" target="_blank" title="구글플레이에서 다운로드하기">
+                <img src="images/main/app-download-aos.webp" alt="App Store 다운로드하기" />
+              </a>
+              <a href="https://apps.apple.com/kr/app/id1297870337" class="link" target="_blank" title="앱스토어에서 다운로드하기">
+                <img src="images/main/app-download-ios.webp" alt="앱스토어에서 다운로드하기" />
+              </a>
+            </div>
+            <div class="scroll-down">
+              <a href="javascript:;" title="scroll down" class="scroll-down__inner anchorBtn">
+                <img src="images/main/scroll_down.webp" alt="scroll" />
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- E: main -->
+        <!-- S : update1 -->
+        <section class="section section-sub fp-overflow section-update1" id="section-update-1">
+          <!-- mo -->
+          <div class="section-container-m d-block d-lg-none">
+            <img src="images/update1/bg-m.webp" alt="UPDATE:신규 영웅 클래스 하인리히 배경" />
+            <div class="section-content">
+              <h2 class="title-tag">
+                <img src="images/update1/title_mo.webp" alt="UPDATE" />
+              </h2>
+              <div class="class-intro">
+                <span class="class-intro__txt">
+                  <p class="title">
+                    <img src="images/update1/class-title_mo.webp" alt="신규 영웅 클래스 하인리히" />
+                  </p>
+                  <p class="line">
+                    <img src="images/update1/class-line_mo.webp" alt="충성과 믿음의 백색의 기사. 뛰어난 능력과 모든 것을 꿰뚫어보는 통찰력을 지닌 그의 무기는 찰나의 순간에 정확하고 날카롭게 적의 약점을 공격한다." />
+                  </p>
+                  <button type="button" class="video-btn popup-link--video" data-content="//www.youtube.com/embed/EcoQ1AscU40?rel=0">
+                    <img src="images/update1/class-video-cover_mo.webp" alt="하인리히 영상" />
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- pc -->
+          <div class="section-container d-none d-lg-flex">
+            <div class="section-update1-inner">
+              <div class="left">
+                <div class="left-inner">
+                  <h2 class="left-title" data-aos="fade-up">
+                    <img src="images/update1/title.webp" alt="UPDATE" />
+                  </h2>
+                  <div class="class-intro">
+                    <span class="class-intro__txt">
+                      <p data-aos="fade-up" class="title"><img src="images/update1/class-title.webp" alt="신규 영웅 클래스 하인리히" /></p>
+                      <p data-aos="fade-up" class="line">
+                        <img src="images/update1/class-line.webp" alt="충성과 믿음의 백색의 기사. 뛰어난 능력과 모든 것을 꿰뚫어보는 통찰력을 지닌 그의 무기는 찰나의 순간에 정확하고 날카롭게 적의 약점을 공격한다." />
+                      </p>
+                      <button data-aos="fade-up" type="button" class="video-btn popup-link--video" data-content="//www.youtube.com/embed/EcoQ1AscU40?rel=0">
+                        <img src="images/update1/class-video.webp" alt="하인리히 영상" />
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="right-inner">
+                  <div class="title"><img src="images/update1/ch_title.webp" alt="heinrich" /></div>
+                  <div class="bg">
+                    <div class="dust dust--1">
+                      <div class="dust__sway"><span class="img" data-aos="fade-left" data-aos-duration="500" data-aos-delay="100"></span></div>
+                    </div>
+                    <div class="dust dust--2">
+                      <div class="dust__sway"><span class="img" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200"></span></div>
+                    </div>
+                    <div class="dust dust--3">
+                      <div class="dust__sway"><span class="img" data-aos="fade-left" data-aos-duration="500" data-aos-delay="300"></span></div>
+                    </div>
+                    <div class="ch">
+                      <div class="ch__sway">
+                        <span class="img" data-aos="fade-up" data-aos-duration="1000"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- E: update1 -->
+        <!-- S: update2 -->
+        <section class="section section-sub fp-overflow section-update2" id="section-update-2">
+          <!-- mo -->
+          <div class="section-container-m d-block d-lg-none">
+            <img src="images/update2/bg-m.webp" alt="UPDATE:신규 스토리. 고성의 눈물 배경" />
+            <div class="section-content">
+              <h2 class="title-tag">
+                <img src="images/update2/title_mo.webp" alt="UPDATE" />
+              </h2>
+              <div class="class-intro">
+                <span class="class-intro__txt">
+                  <p class="title">
+                    <img src="images/update2/section-title_mo.webp" alt="신규 스토리 고성의 눈물." />
+                  </p>
+                  <p class="line">
+                    <img
+                      src="images/update2/desc_mo.webp"
+                      alt="한때 거대한 용조차 품었던 고대성 글레스트헤임.
+                    프론테라보다 위대한 도시로 찬양받던 과거는
+                    독재적이고 잔인한 통치자 슈미트로 인해 무너지고 있었고 몬스터들의 잦은 출몰로 순식간에 폐허가 되어버렸다. 이젠 한쪽 구석에 널브러진 성벽의 잔해들로 겨우 성의 수도였던 영광의 흔적만 남았다. 300년이 지난 현재, 운명의 바람을 타고 들리는 백성들의 통곡 소리를 쫓아 온 어느 모험가에게 역사를 바꿀 기회가 생기는데..."
+                    />
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- pc -->
+          <div class="section-container d-none d-lg-flex">
+            <div class="bg">
+              <video src="images/update2/bg.webm" data-keepplaying autoplay muted loop poster="images/update2/bg.webp"></video>
+            </div>
+            <div class="section-content">
+              <h2 class="title" data-aos-delay="none" data-aos="fade-up"><img src="images/update2/title.webp" alt="UPDATE" /></h2>
+              <h3 class="section-title" data-aos-delay="none" data-aos="fade-up"><img src="images/update2/section-title.webp" alt="신규 스토리. 고성의 눈물" /></h3>
+
+              <p class="desc">
+                <span class="desc__txt desc__txt--1" data-aos-delay="none" data-aos="fade-up">
+                  <span class="sr-only">한때 거대한 용조차 품었던 고대성 글레스트헤임.</span>
+                </span>
+                <span class="desc__txt desc__txt--2" data-aos-delay="none" data-aos="fade-up">
+                  <span class="sr-only">프론테라보다 위대한 도시로 찬양받던 과거는 독재적이고 잔인한 통치자 슈미트로 인해 무너지고 있었고 몬스터들의 잦은 출몰로 순식간에 폐허가 되어버렸다. 이젠 한쪽 구석에 널브러진 성벽의 잔해들로 겨우 성의 수도였던 영광의 흔적만 남았다.</span>
+                </span>
+                <span class="desc__txt desc__txt--3" data-aos-delay="none" data-aos="fade-up">
+                  <span class="sr-only">300년이 지난 현재, 운명의 바람을 타고 들리는 백성들의 통곡 소리를 쫓아 온 어느 모험가에게 역사를 바꿀 기회가 생기는데...</span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- E: update2 -->
+        <!-- S: update3 -->
+        <section class="section section-sub fp-overflow section-update3" id="section-update-3">
+          <!-- mo -->
+          <div class="section-container-m d-block d-lg-none">
+            <img src="images/update3/bg-m.webp" alt="UPDATE:신규 지역. 고대성 글래스트 헤임 배경" />
+            <div class="section-content">
+              <h2 class="title-tag">
+                <img src="images/update3/title_mo.webp" alt="UPDATE" />
+              </h2>
+              <div class="class-intro">
+                <span class="class-intro__txt">
+                  <p class="title">
+                    <img src="images/update3/section-title_mo.webp" alt="신규 지역 고대성 글래스트 헤임" />
+                  </p>
+                  <p class="line">
+                    <img src="images/update3/desc_mo.webp" alt="프론테라보다 위대한 도시로 찬양 받던 고대성 글래스트 헤임을 여행해보세요!" />
+                  </p>
+                </span>
+              </div>
+              <div class="update3-swiper-m">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="inner">
+                        <img src="images/update3/img1.webp" alt="고대성 글래스트 헤임 미리보기" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="inner">
+                        <img src="images/update3/img2.webp" alt="고대성 글래스트 헤임 미리보기" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="inner">
+                        <img src="images/update3/img3.webp" alt="고대성 글래스트 헤임 미리보기" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- pc -->
+          <div class="section-container d-none d-lg-flex">
+            <!-- S: 가루 -->
+            <div class="firefly__wrap"></div>
+            <!-- E: 가루 -->
+            <div class="section-content">
+              <h2 class="title" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/update3/title.webp" alt="UPDATE" />
+              </h2>
+              <h3 class="section-title" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/update3/section-title.webp" alt="신규 지역. 고대성 글래스트 헤임" />
+              </h3>
+              <p class="desc" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/update3/desc.webp" alt="프론테라보다 위대한 도시로 찬양 받던 고대성 글래스트 헤임을 여행해보세요!" />
+              </p>
+
+              <div class="update3-swiper" data-aos-delay="none" data-aos="fade-up">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/update3/img1.webp" alt="고대성 글래스트 헤임 미리보기" /></div>
+                    <div class="swiper-slide"><img src="images/update3/img2.webp" alt="고대성 글래스트 헤임 미리보기" /></div>
+                    <div class="swiper-slide"><img src="images/update3/img3.webp" alt="고대성 글래스트 헤임 미리보기" /></div>
+                  </div>
+                </div>
+                <div class="swiper-button swiper-button--prev" title="이전"></div>
+                <div class="swiper-button swiper-button--next" title="다음"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- E: update3 -->
+        <!-- S: update4 -->
+        <section class="section section-sub section-update4" id="section-update-4">
+          <!-- mo -->
+          <div class="section-container-m d-block d-lg-none">
+            <img src="images/update4/bg-m.webp" alt="UPDATE:신규 던전. 에리즈 비행선 배경" />
+            <div class="section-content">
+              <h2 class="title-tag">
+                <img src="images/update4/title_mo.webp" alt="UPDATE" />
+              </h2>
+              <div class="class-intro">
+                <span class="class-intro__txt">
+                  <p class="title">
+                    <img src="images/update4/section-title_mo.webp" alt="신규 던전 에리즈 비행선" />
+                  </p>
+                  <p class="line">
+                    <img src="images/update4/desc_mo.webp" alt="하인리히가 속한 백기사단은 고대성으로 보내는 마지막 지원군과 탑승하던 중, 갑자기 몰려오는 몬스터 군단때문에 굉장히 절박해 졌습니다. 그들을 도와 몬스터를 처치하고 고대성의 영웅이 되어주세요." />
+                  </p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- pc -->
+          <div class="cloud-front"></div>
+          <div class="cloud-bak"></div>
+          <div class="section-container d-none d-lg-flex">
+            <!-- S: 가루 -->
+            <div class="firefly__wrap"></div>
+            <div class="section-content">
+              <h2 class="title" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/update4/title.webp" alt="UPDATE" />
+              </h2>
+              <h3 class="section-title" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/update4/section-title.webp" alt="신규 던전. 에리즈 비행선" />
+              </h3>
+              <p class="desc" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/update4/desc.webp" alt="하인리히가 속한 백기사단은 고대성으로 보내는 마지막 지원군과 탑승하던 중, 갑자기 몰려오는 몬스터 군단때문에 굉장히 절박해 졌습니다. 그들을 도와 몬스터를 처치하고 고대성의 영웅이 되어주세요." />
+              </p>
+            </div>
+          </div>
+          <div class="ship d-none d-lg-flex" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+            <div class="ship__sway">
+              <span class="img"></span>
+            </div>
+          </div>
+        </section>
+        <!-- E: update4 -->
+        <!-- S: event1 -->
+        <section class="section section-sub fp-overflow section-event1" id="section-event-1">
+          <!-- mo -->
+          <div class="section-container-m d-block d-lg-none">
+            <img src="images/event1/bg-m.webp" alt="EVENT 1:전직 이벤트. 신규 영웅 하인리히 인증 배경" />
+            <div class="section-content">
+              <h2 class="title-tag">
+                <img src="images/event1/title_mo.webp" alt="UPDATE" />
+              </h2>
+              <div class="class-intro">
+                <span class="class-intro__txt">
+                  <p class="title">
+                    <img src="images/event1/section-title_mo.webp" alt="전직 이벤트 신규 영웅 하인리히 인증" />
+                  </p>
+                  <p class="line">
+                    <img src="images/event1/desc_mo.webp" alt=". 신규 영웅 클래스 하인리히를 인증해보세요! 2023년 11월 14일 점검 후 부터 11월 24일 23시 59분 까지." />
+                  </p>
+                </span>
+              </div>
+              <div class="event-frame">
+                <div class="event-area">
+                  <img src="images/event1/event-content_mo.webp" alt="직업 스타룬 2개. 노렌 카드 2000개. 초급 그림자 마력광석 5개." />
+                  <a href="https://community.gnjoy.com/rom/Board/EVENT/141120" target="_blank" class="event-area__btn" title="이벤트 바로가기"></a>
+                </div>
+                <p class="info-txt"><img src="images/event1/info_txt_mo.webp" alt="자세한 내용은 공식 커뮤니티 공지사항을 확인해주세요." /></p>
+              </div>
+            </div>
+          </div>
+          <!-- pc -->
+          <div class="section-container d-none d-lg-flex">
+            <div class="bg">
+              <div class="stone">
+                <div class="stone__sway"><span class="img" data-aos="" data-aos-duration="50000"></span></div>
+              </div>
+              <div class="ch">
+                <div class="ch__sway"><span class="img" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="2000"></span></div>
+              </div>
+            </div>
+            <div class="section-content">
+              <h2 class="title" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/event1/title.webp" alt="EVENT 1" />
+              </h2>
+              <h3 class="section-title" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/event1/section-title.webp" alt="전직 이벤트. 신규 영웅 하인리히 인증" />
+              </h3>
+              <p class="desc" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/event1/desc.webp" alt="신규 영웅 클래스 하인리히를 인증해보세요! 2023년 11월 14일 점검 후 부터 11월 24일 23시 59분 까지" />
+              </p>
+              <div class="event-content" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/event1/event-content.webp" alt="직업 스타룬 2개. 노렌 카드 2000개. 초급 그림자 마력광석 5개. 자세한 내용은 공식 커뮤니티 공지사항을 확인해주세요." />
+                <a href="https://community.gnjoy.com/rom/Board/EVENT/141120" target="_blank" class="event-content__btn">
+                  <img src="images/event1/event_btn.webp" onmouseenter="src='images/event1/event_btn_on.webp'" onmouseleave="src='images/event1/event_btn.webp'" alt="이벤트바로가기" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- E: event1 -->
+        <!-- S: event2 -->
+        <section class="section section-sub fp-overflow section-event2" id="section-event-2">
+          <!-- mo -->
+          <div class="section-container-m d-block d-lg-none">
+            <img src="images/event2/bg-m.webp" alt="EVENT 2:업데이트 공략 이벤트 배경" />
+            <div class="section-content">
+              <h2 class="title-tag">
+                <img src="images/event2/title_mo.webp" alt="UPDATE" />
+              </h2>
+              <div class="class-intro">
+                <span class="class-intro__txt">
+                  <p class="title">
+                    <img src="images/event2/section-title_mo.webp" alt="업데이트 공략 이벤트 배경" />
+                  </p>
+                  <p class="line">
+                    <img src="images/event2/desc_mo.webp" alt="신규 맵! 신규 던전! 신규 영웅 클래스! 정보를 공유해보세요! 2023년 11월 14일 점검 후 부터 11월 22일 23시 59분 까지" />
+                  </p>
+                </span>
+              </div>
+              <div class="event-frame">
+                <div class="event-area">
+                  <img src="images/event2/event-content_mo.webp" alt="에리즈 비행선 과 고대성 글래스트 헤임." />
+                  <a href="https://community.gnjoy.com/rom/Board/EVENT/141120" target="_blank" class="event-area__btn" title="이벤트 바로가기"></a>
+                </div>
+                <p class="info-txt"><img src="images/event2/info_txt_mo.webp" alt="자세한 내용은 공식 커뮤니티 공지사항을 확인해주세요." /></p>
+              </div>
+            </div>
+          </div>
+          <!-- pc -->
+          <div class="section-container d-none d-lg-flex">
+            <div class="bg">
+              <div class="stone">
+                <div class="stone__sway"><span class="img" data-aos="" data-aos-duration="50000"></span></div>
+              </div>
+              <div class="ch">
+                <div class="ch__sway">
+                  <span class="img" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="2000"></span>
+                </div>
+              </div>
+            </div>
+            <div class="section-content">
+              <h2 class="title" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/event2/title.webp" alt="EVENT 2" />
+              </h2>
+              <h3 class="section-title" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/event2/section-title.webp" alt="업데이트 공략 이벤트" />
+              </h3>
+              <p class="desc" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/event2/desc.webp" alt="신규 맵! 신규 던전! 신규 영웅 클래스! 정보를 공유해보세요! 2023년 11월 14일 점검 후 부터 11월 22일 23시 59분 까지" />
+              </p>
+              <div class="event-content" data-aos-delay="none" data-aos="fade-up">
+                <img src="images/event2/event-content.webp" alt="에리즈 비행선 과 고대성 글래스트 헤임. 자세한 내용은 공식 커뮤니티 공지사항을 확인해주세요." />
+                <a href="https://community.gnjoy.com/rom/Board/EVENT/141120" target="_blank" class="event-content__btn">
+                  <img src="images/event2/event_btn.webp" onmouseenter="src='images/event2/event_btn_on.webp'" onmouseleave="src='images/event2/event_btn.webp'" alt="이벤트 바로가기" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- E: event2 -->
+        <!-- footer -->
+        <section class="section section-sub fp-overflow section-footer fp-auto-height">
+          <footer class="common-footer common-footer--darkmode">
+            <div class="common-footer__container">
+              <div class="common-footer__txt">
+                <address class="common-footer__txt__address">
+                  <span>㈜그라비티</span>
+                  <span>대표이사 : 박현철</span>
+                  <span>서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+                  <span>전화문의: 1588-9897</span>
+                  <span>팩스: 02-2132-7077</span>
+                  <span>e-mail : webmaster@gravity.co.kr</span>
+                </address>
+                <address class="common-footer__txt__address">
+                  <span>사업자등록번호: 201-81-56197</span>
+                  <span class="btn-bizinfo"><button class="btn" onclick="window.open('//www.ftc.go.kr/bizCommPop.do?wrkr_no=2018156197', 'bizCommPop', 'width=750, height=700')">사업자정보확인</button></span>
+                  <span>통신사업자등록번호: 제2008-서울마포-0207호</span>
+                  <span>고객지원센터 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+                </address>
+              </div>
+              <div class="common-footer__game-info">
+                <div class="game-grade-mark">
+                  <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span>
+                  <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+                </div>
+              </div>
+              <div class="common-footer__bottom">
+                <div class="common-footer__bottom__logo">
+                  <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+                </div>
+                <div class="common-footer__bottom__copyright">Copyright &#169; Gravity Co., LTD & Lee MyoungJin(studio DTDS). All Rights Reserved.</div>
+              </div>
+            </div>
+          </footer>
+
+          <a href="#section-main" title="최상단으로" class="btnTop"></a>
+        </section>
+      </div>
+      <!-- E: fullpage -->
+    </main>
+
+    <!-- 블라인드 -->
+    <span class="blind"></span>
+    <button type="button" class="blind--btnClosed" title="닫기 버튼" onclick="closed_popup()"></button>
+    <!-- 유튜브 영상 팝업 -->
+    <aside class="popup popup--video">
+      <div class="popup__wrap">
+        <div class="YOUTUBE">
+          <div class="you_tube"></div>
+        </div>
+      </div>
+    </aside>
+
+    <script src="js/common.min.js"></script>
+  </body>
+</html>

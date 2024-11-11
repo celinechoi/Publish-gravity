@@ -1,0 +1,18 @@
+﻿.topBtn {
+  display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 50;
+  width: 107px;
+  height: 107px;
+  background: url(../images/common/topBtn.webp) no-repeat center top / contain;
+  z-index: 101;
+  @media all and (max-width: 1600px) {
+    margin-right: auto;
+    right: 50px;
+  }
+  &:hover {
+    filter: brightness(1.1);
+  }
+}

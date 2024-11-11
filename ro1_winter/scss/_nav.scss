@@ -1,0 +1,80 @@
+﻿#nav {
+  position: relative;
+  font-size: 0;
+}
+.nav {
+  font-size: 0;
+  position: relative;
+  width: 100%;
+  height: 121px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  background: url('../images/common/nav_bg.png') no-repeat center bottom / cover;
+  transition: all 0.2s ease-in alternate;
+  animation: none;
+  &.fix {
+    animation: menuFix 0.5s;
+    animation-fill-mode: forwards;
+  }
+  &__list {
+    display: flex;
+    height: 110px;
+    max-width: 1053px;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+  .item {
+    &:nth-child(1) {
+      width: 159px;
+      a {
+        background-position-x: 0;
+      }
+    }
+    &:nth-child(2) {
+      width: 167px;
+      a {
+        background-position-x: -159px;
+      }
+    }
+    &:nth-child(3) {
+      width: 215px;
+      a {
+        background-position-x: -326px;
+      }
+    }
+    &:nth-child(4) {
+      width: 225px;
+      a {
+        background-position-x: -551px;
+      }
+    }
+    &:nth-child(5) {
+      width: 288px;
+      a {
+        background-position-x: 100%;
+      }
+    }
+  }
+  .link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: none;
+    background: url(../images/common/nav.webp) no-repeat;
+    background-position-y: 100%;
+    @include hover {
+      background-position-y: -113px;
+    }
+    &.active {
+      background-position-y: 0;
+    }
+  }
+}

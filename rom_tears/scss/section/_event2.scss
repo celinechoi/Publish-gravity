@@ -1,0 +1,148 @@
+﻿.section-event2 {
+  position: relative;
+  .section-container {
+    overflow: visible !important;
+  }
+  .section-container-m {
+    @include lg {
+      .section-content {
+        padding-top: vw(200);
+      }
+      .class {
+        &-intro {
+          &__txt {
+            .title {
+              > img {
+                width: vw(733);
+              }
+            }
+            .line {
+              > img {
+                width: vw(841);
+              }
+            }
+          }
+        }
+      }
+      .event {
+        &-area {
+          &__btn {
+            position: absolute;
+            left: 5%;
+            bottom: 4%;
+            width: 90%;
+            height: 16%;
+            // background-color: aquamarine;
+            // opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  .bg {
+    min-width: 100vw;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    .stone {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      // left: 50%;
+      // top: 50%;
+      // margin-left: -590px;
+      // margin-left: -900px;
+      // margin-top: -1030px;
+
+      // mix-blend-mode: overlay;
+      // background-color: blue;
+      .img {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background: url(../images/event2/wings.webp) no-repeat left center / contain;
+      }
+
+      @at-root {
+        html:not(.no-js) {
+          .stone .img {
+            opacity: 0;
+            transform: rotate(50deg);
+            transition-duration: 2s !important;
+          }
+          .stone .img.aos-animate {
+            opacity: 1;
+            transform: rotate(0);
+          }
+        }
+      }
+
+      &__sway {
+        width: 100%;
+        height: 100%;
+        // animation: dustTop 10000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+        animation: floatCh 50000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+        animation-delay: 1s;
+      }
+    }
+    .ch {
+      // width: 100%;
+      // height: 100%;
+      // position: absolute;
+      // left: 0;
+      // right: 0;
+      // top: 0;
+      // background: url(../images/event2/ch-right.webp) no-repeat right bottom / contain;
+      // animation: swayCh 10000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      &__sway {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        // width: 640px;
+        // height: 950px;
+        width: 32.19%;
+        height: 85.84%;
+        width: 33.34%;
+        height: 87.97%;
+        @include de {
+          right: 5%;
+        }
+        .img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url(../images/event2/ch-right.webp) no-repeat right bottom / contain;
+          animation: swayCh 10000ms infinite alternate cubic-bezier(0.62, 0.22, 0.28, 0.85);
+        }
+      }
+    }
+  }
+
+  .section-title {
+    margin-top: 32px;
+  }
+  .desc {
+    margin-top: 38px;
+  }
+  .event-content {
+    position: relative;
+    margin-top: 36px;
+    &__btn {
+      position: absolute;
+      left: 50%;
+      bottom: 16.87%;
+      transform: translateX(-50%);
+    }
+  }
+  .btn {
+    margin-top: 50px;
+  }
+}

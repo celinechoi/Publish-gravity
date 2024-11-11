@@ -1,0 +1,46 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  //전환효과
+  background-color: #1e1e23;
+  font: 18px #{$font-family-basic};
+  @if $body-transition == true {
+    @at-root html {
+      background-color: #1e1e23;
+    }
+    opacity: 0;
+    &[data-loading='done'] {
+      opacity: 1;
+    }
+  }
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+
+  // 드래그 방지
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+}
+
+.container {
+  max-width: $container + $gutter * 2;
+  padding: 0 $gutter;
+  width: 100%;
+  margin: 0 auto;
+}

@@ -1,0 +1,131 @@
+$color-1: #67a0ff;
+$font-family-sub: 'GmarketSans', Arial;
+$nav-bg: rgba(#000000, 0.9);
+$nav-width: 265px;
+$subs: (
+  1: main,
+  2: update1,
+  // 2: update2,
+  3: event1,
+  // 4: event2,
+  // 5: event3,,,,,,,,,,,,,,,,,,,,
+);
+
+@mixin lg {
+  //mo
+  @media all and (max-width: 1199.8px) {
+    @content;
+  }
+}
+@mixin lg-min {
+  //pc
+  @media all and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin tm {
+  @media all and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin ta {
+  @media all and (min-width: 767px) and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mo {
+  @media all and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin backgroundCover {
+  background: no-repeat center center / cover;
+}
+
+@mixin btnImg($w, $h, $file) {
+  position: absolute;
+  left: 50%;
+  margin-left: ($w/-2);
+  width: $w;
+  height: ($h/2);
+  background-image: url($file);
+  background-position-y: 0;
+  background-repeat: no-repeat;
+  transition: none;
+  &:hover,
+  &:focus {
+    background-position-y: 100%;
+  }
+}
+
+// /* 2022-08-12 15:40 banghg
+// fullpage scroll 이슈. height가 정확히 안되는 문제가 있어 섹션 높이를 재서 넣어줬습니다..
+// */
+@mixin secWrapHeight($h) {
+  min-height: $h; //height로 하면 overflow 안먹는다
+}
+
+@function vw($val, $std: 1000) {
+  @return ($val/($std/100)) * 1vw;
+}
+
+@function vw2($val, $std: 2560) {
+  @return ($val/($std/100)) * 1vw;
+}
+
+@function vw3($val, $std: 1200) {
+  @return ($val/($std/100)) * 1vw;
+}
+
+@function vw4($val, $std: 1920) {
+  @return ($val/($std/100)) * 1vw;
+}
+
+@mixin btnHover($img, $x, $y, $relative: false) {
+  background: url(../images/#{$img}) no-repeat;
+  display: block;
+  width: $x;
+  height: ($y/2);
+  transition: none;
+  // background-color: rgba(red, 0.5);
+  // @include lg {
+  //   background-image: none;
+  // }
+  @if $relative {
+  } @else {
+    left: 50%;
+    margin-left: ($x / -2);
+    position: absolute;
+  }
+  &:hover {
+    background-position-y: ($y/-2);
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-flex {
+  display: flex !important;
+}
+@include lg-min {
+  .d-lg-flex {
+    display: flex !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-block {
+    display: block !important;
+  }
+}
+
+@mixin spr($x: 0, $y: 0, $width: 0, $height: 0) {
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+  display: block;
+}
