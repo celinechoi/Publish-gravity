@@ -1,0 +1,586 @@
+.section3 {
+  .section {
+    &-inner {
+      @include device {
+        max-width: 100%;
+      }
+    }
+  }
+  &-cloud {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 458px;
+    background: url('../images/section3/cloud.png') repeat-x center top / cover;
+    animation: cloudAnimation 7s linear infinite;
+  }
+  @keyframes cloudAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: scale(1.1) translateX(-50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  $waveSize: 200px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin-top: -$waveSize + 1px; //-100px;
+  margin-bottom: -$waveSize + 1px; //-100px;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-color: #8ca9c0;
+  mask: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/bg_color.png'), url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/section3/bg.jpg') 100% 100%;
+  mask-size: 100% ($waveSize + 1px), 100% calc(100% - ($waveSize - 1px));
+  mask-position: 0 0, 0 $waveSize;
+  mask-repeat: repeat-x;
+  @include lg {
+    padding: 285px 0 384px;
+    background-position: 50% 50%;
+    background-image: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/section3/bg.jpg');
+    // background-attachment: fixed;
+    background-size: cover;
+  }
+  @include device {
+    overflow: hidden;
+    // z-index: 200;
+    $waveSize: 120px;
+    margin-top: -$waveSize + 1px; //-100px;
+    margin-bottom: -$waveSize + 1px; //-100px;
+    padding: 120px 0 160px;
+    $waveSize: 120px;
+    background: #634c34 url('../images/section3/bg_tm.png') no-repeat center bottom 40px;
+    mask: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/bg_color_tm.png'), url('../images/section3/bg_tm.png') 100% 100%;
+    mask-size: 99% ($waveSize + 1px), 100% calc(100% - ($waveSize - 1px));
+    mask-position: 0 0, 0 $waveSize;
+    mask-repeat: repeat-x;
+    // mask: none;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background: url('../images/bg_white.png') repeat-x center top / 100% 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    @include device {
+      height: 120px;
+      background-image: url('../images/bg_white_tm.png');
+    }
+  }
+  .ch {
+    &__wrap {
+      .ch {
+        &__item {
+          display: block;
+          > img {
+            display: block;
+            width: 100%;
+          }
+        }
+        &--r {
+          z-index: 2;
+          top: 195px;
+          margin-left: 25%;
+          animation: swing 2.5s ease-in infinite alternate;
+          @media all and (max-width: 1598px) {
+            padding-left: 13px;
+          }
+          .ch {
+            &__item {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#infoSwiper {
+  position: relative;
+  z-index: 22;
+  max-width: 1558px;
+  width: 1558px;
+  height: auto;
+  margin: 0 auto;
+  @media all and (max-width: 1598px) {
+    max-width: 100%;
+    width: 95%;
+  }
+  @include device {
+    width: 100%;
+  }
+  .pen-img {
+    position: absolute;
+    left: 105px;
+    top: 44px;
+    z-index: 2;
+    animation: penSwing 1s infinite alternate;
+    @media all and (max-width: 1598px) {
+      left: 34px;
+      width: 15%;
+    }
+    @include device {
+      display: none;
+    }
+  }
+  @keyframes penSwing {
+    from {
+      transform: rotate(2deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  .swiper {
+    &-container {
+      display: inline-block;
+      width: 1282px;
+      margin: 0 auto;
+      @media all and (max-width: 1598px) {
+        width: 90%;
+      }
+      @include device {
+        width: 100%;
+      }
+      .info-bg {
+        display: block;
+        @media all and (max-width: 1598px) {
+          width: 100%;
+        }
+      }
+    }
+    &-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &-slide {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      @include tm {
+        // width: vw(360);
+        width: 45vw;
+      }
+      @include mo {
+        width: 72%;
+      }
+      &.now {
+        &::after {
+          content: none;
+        }
+      }
+      &__inner {
+        width: 1225px;
+        height: 100%;
+        margin-left: 58px;
+        text-align: center;
+        @media all and (max-width: 1598px) {
+          width: 100%;
+          margin-left: 0;
+        }
+        > img {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        &--l,
+        &--r {
+          flex: 0 0 50%;
+        }
+        &--l {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 73px;
+          @media all and (max-width: 1598px) {
+            padding-left: 80px;
+          }
+          @include device {
+            flex-basis: 100%;
+            justify-content: flex-start;
+            padding: 0;
+            height: 60%;
+          }
+          &__title {
+            text-align: center;
+            .title {
+              color: #513a2b;
+              font-size: 90px;
+              font-weight: 700;
+              > img {
+                @include device {
+                  width: 70%;
+                  display: inline-block;
+                  vertical-align: -14px;
+                }
+              }
+            }
+            &--txt {
+              color: #bea77d;
+              font: 26px $font-family-serif;
+              font-weight: 700;
+              @include device {
+                font-size: 35px;
+              }
+              @include mo {
+                font-size: 20px;
+              }
+            }
+          }
+          &__txt {
+            display: block;
+            width: 350px;
+            margin: 0 auto;
+            padding-top: 15px;
+            color: #4a4742;
+            font-size: 18px;
+            text-align: center;
+            @include device {
+              width: 70%;
+              font-size: 26px;
+            }
+            @include mo {
+              font-size: 17px;
+            }
+            @media all and (max-width: 430px) {
+              padding-top: 7px;
+            }
+          }
+          .gif-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 44px;
+            padding-top: 20px;
+            @include device {
+              width: 61.12%;
+              gap: 20px;
+            }
+            @media all and (max-width: 490px) {
+              padding-top: 7px;
+            }
+            > li {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 143px;
+              height: 151px;
+              background: url('../images/section3/slider/slide_gif_bg.png') no-repeat center center / contain;
+              @include device {
+                width: 50%;
+                height: 287px;
+              }
+              @include mo {
+                height: 157px;
+              }
+              @media all and (max-width: 430px) {
+                height: 104px;
+              }
+              > img {
+                @include device {
+                  width: 69%;
+                }
+              }
+            }
+          }
+        }
+        &--r {
+          > img {
+            display: block;
+            position: relative;
+            &.edit {
+              &1 {
+                top: -25px;
+                left: -49px;
+              }
+              &2 {
+                top: 9px;
+              }
+              &3 {
+                left: 48px;
+                top: 37px;
+              }
+              &4 {
+                top: 30px;
+                left: 32px;
+              }
+              &5 {
+                top: 30px;
+                left: 62px;
+              }
+              &6 {
+                left: 49px;
+                top: 45px;
+              }
+              &7 {
+                left: 61px;
+                top: 40px;
+              }
+              &8 {
+                left: 51px;
+                top: 60px;
+              }
+              &9 {
+                left: -30px;
+                top: 72px;
+              }
+              &10 {
+                top: 104px;
+              }
+              &11 {
+                left: -6px;
+                top: 66px;
+              }
+              &12 {
+                left: 47px;
+                top: 35px;
+              }
+            }
+          }
+          @include device {
+            display: none;
+          }
+        }
+      }
+      &__txt {
+        position: absolute;
+        bottom: 51px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        color: #ffebc9;
+        font-size: 26px;
+        font-weight: 900;
+        text-align: center;
+        @include mo {
+          bottom: 8%;
+          font-size: 12px;
+        }
+      }
+      &-tab {
+        position: absolute;
+        left: 195px;
+        top: 105px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 29px;
+        @media all and (max-width: 1598px) {
+          top: 11%;
+          left: 50%;
+          transform: translateX(-50%);
+          margin-left: -21.7%;
+        }
+        @include device {
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          margin-top: -54%;
+          margin-left: 0;
+        }
+        @include mo {
+          margin-top: -59%;
+          gap: 11px;
+        }
+        @media all and (max-width: 430px) {
+          margin-top: -55%;
+          width: 76%;
+        }
+        > li {
+          cursor: pointer;
+          width: 170px;
+          height: 56px;
+          color: #fff;
+          font-size: 22px;
+          text-shadow: 0 0 7px #ffb648, 0 0 1em #ffb648;
+          font-weight: 700;
+          text-align: center;
+          line-height: 59px;
+          background: url('../images/tab_btn.png') no-repeat center center / contain;
+          &.active {
+            background-image: url('../images/tab_btn_on.png');
+            text-shadow: 0 0 7px #8196ff, 0 0 1em #8196ff;
+          }
+          @include device {
+            width: 242px;
+            height: 80px;
+            font-size: 29px;
+            line-height: 83px;
+          }
+          @include tm {
+            width: 140px;
+            font-size: 19px;
+          }
+          @include mo {
+            font-size: 18px;
+            width: 130px;
+            height: 45px;
+            line-height: 47px;
+          }
+        }
+      }
+      &-content {
+        display: none;
+        height: 100%;
+        @include device {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .swiper {
+    &-control {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 75px;
+      @include tm {
+        width: 108%;
+      }
+      @include mo {
+        display: none;
+      }
+      .swiper {
+        &-button {
+          &-prev,
+          &-next {
+            position: relative;
+            z-index: 1;
+            top: auto;
+            transform: translate(0, 0);
+            width: 49px;
+            height: 75px;
+            margin-top: 0;
+            background-size: 49px 75px;
+            &::after {
+              content: none;
+            }
+          }
+          &-prev {
+            left: 0;
+            background-image: url('../images/section3/arrow_l.png');
+          }
+          &-next {
+            right: 0;
+            background-image: url('../images/section3/arrow_r.png');
+          }
+        }
+      }
+    }
+    &-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      width: 100%;
+      margin-top: 0;
+      bottom: -34px;
+      left: 22px;
+      z-index: 23;
+      user-select: none;
+      @media all and (max-width: 1598px) {
+        bottom: -41px;
+        gap: 8px;
+        left: 18px;
+      }
+      @media all and (max-width: 1150px) {
+        gap: 12px;
+      }
+      @include device {
+        gap: 30px;
+        bottom: 14%;
+        flex-wrap: wrap;
+        width: 61.12%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      @include mo {
+        gap: 15px;
+        width: 72%;
+        bottom: auto;
+        top: 73%;
+        margin-left: 2%;
+      }
+      @media all and (max-width: 490px) {
+        top: 71%;
+        gap: 9px;
+      }
+      .swiper-pagination-bullet {
+        width: 142px;
+        height: 77px;
+        background: url('../images/section3/slider/pagination.png') no-repeat center center / contain;
+        font-weight: 900;
+        line-height: 77px;
+        border-radius: 0;
+        opacity: 1;
+        color: #5c402d;
+        font: 20px 'Spoqa Han Sans Neo', sans-serif;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 70px;
+        @media all and (max-width: 1150px) {
+          width: 12.6%;
+        }
+        @include device {
+          width: calc(100% / 2 - 30px / 2 * 1);
+          flex-basis: calc(100% / 2 - 30px / 2 * 1);
+          background-image: url('../images/section3/slider/pagination_tm.jpg');
+          background-size: 100% 100%;
+          font-size: 31px;
+        }
+        @include mo {
+          width: calc(100% / 2 - 15px / 2 * 1);
+          flex-basis: calc(100% / 2 - 15px / 2 * 1);
+          font-size: 19px;
+          height: 45px;
+          line-height: 45px;
+        }
+        @media all and (max-width: 490px) {
+          font-size: 17px;
+          height: 35px;
+          line-height: 35px;
+        }
+        &-active {
+          background-image: url('../images/section3/slider/pagination_on.png');
+          color: #fff;
+          text-decoration: underline;
+          @include device {
+            background-image: url('../images/section3/slider/pagination_tm_on.jpg');
+          }
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

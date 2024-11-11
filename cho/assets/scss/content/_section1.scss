@@ -1,0 +1,406 @@
+.section1 {
+  .wings {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background: url('../images/section1/wings.png') no-repeat center center / contain;
+    animation: floatCh 3000ms infinite alternate ease-in;
+  }
+  &-bg {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 710px;
+    background: url('../images/bg_white.png') repeat-x center top / 100% 100%;
+    height: 200px;
+    @media all and (min-width: 1921px) {
+      margin-top: 800px;
+    }
+    @media all and (min-width: 2500px) {
+      margin-top: 990px;
+    }
+    @include device {
+      height: 120px;
+      margin-top: 550px;
+      background-image: url('../images/bg_white_tm.png');
+    }
+  }
+  $waveSize: 179px;
+  margin: 0 auto;
+  margin-top: -192px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background: #ded3bc;
+  mask: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/bg_color.png'), url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/section1/bg.png') 100% 100%;
+  mask-size: 100% ($waveSize + 1px), 100% calc(100% - ($waveSize - 1px));
+  mask-position: 0 0, 0 $waveSize;
+  mask-repeat: repeat-x;
+  @include lg {
+    padding: 200px 0 340px;
+    background-position: center top;
+    background-image: url('../images/section1/bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  @include device {
+    overflow: hidden;
+    // z-index: 100;
+    margin-top: -123px;
+    padding: 120px 0 240px;
+    $waveSize: 120px;
+    background: #ded3bc url('../images/section1/bg_tm.png') no-repeat 0 50%;
+    $waveDuration: 20s;
+    mask: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/bg_color_tm.png'), url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/section1/bg_tm.png') 100% 100%;
+    mask-size: 99% ($waveSize + 1px), 100% calc(100% - ($waveSize - 1px));
+    mask-position: 0 0, 0 $waveSize;
+    mask-repeat: repeat-x;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background: url('../images/bg_white.png') repeat-x center top / 100% 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    @include device {
+      height: 120px;
+      background-image: url('../images/bg_white_tm.png');
+    }
+  }
+  .ch {
+    &__wrap {
+      .ch {
+        &__item {
+          display: block;
+          width: 911px;
+          > img {
+            display: block;
+            width: 100%;
+          }
+          &--cloud {
+            position: absolute;
+            right: 0;
+            bottom: -160px;
+            animation: cloudMove 5.5s ease-in infinite alternate;
+          }
+        }
+        &--r {
+          z-index: 22;
+          top: 480px;
+          margin-left: 17.5%;
+          animation: swing 7.5s ease-in infinite alternate;
+          @media all and (max-width: 1530px) {
+            top: 550px;
+            margin-left: 20%;
+          }
+          @media all and (max-width: 1410px) {
+            display: none;
+          }
+          > img {
+            @media all and (max-width: 1530px) {
+              width: 88%;
+            }
+          }
+        }
+        &--l {
+          z-index: -1;
+          top: 1765px;
+          margin-left: -41%;
+          @media all and (max-width: 1570px) {
+            display: none;
+          }
+          .ch {
+            &__item {
+              width: 93%;
+              @media all and (max-width: 1530px) {
+                width: 81%;
+              }
+            }
+          }
+          &.bird {
+            width: 43%;
+            margin-left: -56%;
+            z-index: 22;
+            top: 129px;
+            animation: swing 10.5s ease-in infinite alternate;
+            @media all and (max-width: 1269px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    position: relative;
+    z-index: 5;
+    margin-top: 30px;
+    &.popup-link {
+      @include mo {
+        font-size: 32px;
+      }
+      @media all and (max-width: 520px) {
+        margin-top: 0;
+        font-size: 21px;
+      }
+    }
+    @include mo {
+      width: 67%;
+      line-height: 79px;
+      height: 74px;
+    }
+    &.con-btn {
+      @include device {
+        top: 87.5%;
+        line-height: 128px;
+        height: 124px;
+        font-size: 36px;
+      }
+      @include tm {
+        line-height: 108px;
+        height: 105px;
+        top: 87%;
+      }
+      @include mo {
+        font-size: 32px;
+        top: 85%;
+      }
+      @media all and (max-width: 520px) {
+        top: 82% !important;
+        font-size: 21px !important;
+      }
+    }
+  }
+  .section {
+    &-inner {
+      max-width: 1200px;
+      @media all and (max-width: 1240px) {
+        max-width: 95%;
+      }
+      @include device {
+        max-width: 100%;
+      }
+    }
+  }
+  .form-area {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    padding-top: 13px;
+    margin: 0 auto;
+    @media all and (max-width: 1280px) {
+      width: 95%;
+    }
+    @include device {
+      position: absolute;
+      left: 50%;
+      top: 6%;
+      z-index: 100;
+      width: 76%;
+      height: 14.456%;
+      margin-left: -39%;
+      padding-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__inner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include device {
+        position: initial;
+        left: auto;
+        top: auto;
+        transform: translate(0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        margin: 0 auto;
+      }
+      @include ta {
+        height: 100%;
+      }
+    }
+    .table-bg {
+      display: block;
+    }
+    form {
+      width: 720px;
+      margin: 0 auto;
+      @include device {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 100;
+      }
+      @include lg-max {
+        width: 100%;
+      }
+      @include ta {
+        height: 60%;
+      }
+    }
+    > img {
+      display: block;
+      width: 100%;
+      transform: scale(1.02);
+      @media all and (max-width: 1200px) {
+        transform: scale(1.05);
+      }
+      @include tm {
+        width: auto;
+        margin: 0 auto;
+        transform: scale(1);
+      }
+    }
+    .input {
+      &-frame {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        @include device {
+          width: 100%;
+        }
+        @include tm {
+          gap: 10px;
+        }
+      }
+      &-label {
+        width: 100%;
+        height: 70px;
+        border: 3px solid #b28c51;
+        background-color: #fff;
+        @include ta {
+          height: 50px;
+        }
+        @include mo {
+          height: 46px;
+        }
+        input {
+          border: 0;
+          width: 100%;
+          height: 100%;
+          padding: 16px 25px;
+          color: #000;
+          font-size: 24px;
+          text-align: center;
+          font-weight: 600;
+          @include mo {
+            font-size: 13px;
+          }
+          &::placeholder {
+            color: #b5afa7;
+          }
+        }
+      }
+    }
+  }
+  .radio-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    padding: 27px 0 30px;
+    @include device {
+      width: 100%;
+      gap: 8px;
+    }
+    @media all and (max-width: 500px) {
+      padding: 0;
+    }
+    > li {
+      @include device {
+        width: 31%;
+      }
+      .radio-tab-box {
+        > label {
+          display: block;
+          width: 201px;
+          height: 70px;
+          background: url('../images/tab_btn.png') no-repeat center center / contain;
+          color: #fff;
+          font-size: 24px;
+          font-weight: 700;
+          text-align: center;
+          line-height: 72px;
+          cursor: pointer;
+          @include device {
+            width: 100%;
+          }
+          @include ta {
+            font-size: 18px;
+          }
+          @include mo {
+            font-size: 14px;
+          }
+          @media all and (max-width: 500px) {
+            height: 66px;
+            line-height: 69px;
+          }
+        }
+        input {
+          &[type='radio'] {
+            display: none;
+            &:checked {
+              + label {
+                background-image: url('../images/tab_btn_on.png');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .device-box {
+    @include device {
+      > img {
+        width: 100%;
+      }
+    }
+  }
+}
+.app-list {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0 0;
+  @media all and (max-width: 1200px) {
+    padding: 3.5% 0 0;
+  }
+  @include device {
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  > li {
+    @include device {
+      width: 48%;
+    }
+    @include tm {
+      width: 47%;
+    }
+  }
+}

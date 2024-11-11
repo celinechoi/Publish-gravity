@@ -1,0 +1,142 @@
+.menu {
+  position: fixed;
+  right: 50px;
+  top: 35px;
+  z-index: 100;
+  width: 196px;
+  height: 385px;
+  background: url('../images/menu_bg.webp') no-repeat center top / contain;
+  animation: twinkle 2.5s ease-in infinite alternate;
+  @include device {
+    display: none;
+    background-image: none;
+    width: auto;
+    height: auto;
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+  &.on {
+    display: block;
+  }
+  &-shine {
+    display: block;
+    width: 100%; /* 유리창의 너비를 조절하세요 */
+    height: 345px; /* 유리창의 높이를 조절하세요 */
+    background-color: rgba(255, 255, 255, 0.2); /* 유리창의 투명도 조절 */
+    animation: shine 2s linear infinite; /* 빛나는 애니메이션 속성 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 98px solid rgba(0, 0, 0, 0);
+      border-right: 98px solid rgba(0, 0, 0, 0);
+      border-bottom: 41px solid rgba(255, 255, 255, 0.2);
+      position: absolute;
+      left: 0;
+      bottom: -41px;
+      transform: rotate(180deg);
+    }
+    @include device {
+      display: none;
+    }
+  }
+  @keyframes shine {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  &.movement {
+    top: 0;
+  }
+  &-list {
+    padding-top: 15px;
+    > li {
+      margin-top: 11px;
+      &:first-child {
+        margin-top: 0;
+      }
+      > a {
+        color: #fff;
+        font-size: 20px;
+        text-shadow: 0 0 7px #8196ff, 0 0 1em #8196ff;
+        mix-blend-mode: color-dodge;
+        &::before,
+        &::after {
+          content: '';
+          display: inline-block;
+          vertical-align: -5px;
+          width: 28px;
+          height: 27px;
+        }
+        &.on {
+          &::before,
+          &::after {
+            background: url('../images/inc/icon_star.png') no-repeat center center;
+          }
+        }
+        &:hover {
+          text-shadow: 0 0 7px #3b559e, 0 0 1em #3b559e;
+        }
+      }
+    }
+  }
+  &-app-list {
+    margin-top: 15px;
+    > li {
+      &:first-child {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .btn-entry {
+    // display: block;
+    // width: 144px;
+    // height: 38px;
+    // margin: 0 auto;
+    // background: url('../images/inc/entry_btn.png') no-repeat center center / contain;
+    // color: #607ece;
+    // font-size: 18px;
+    // font-weight: 700;
+    // text-align: center;
+    // line-height: 38px;
+    display: block;
+  }
+  &__inner {
+    position: relative;
+    z-index: 5;
+    padding-top: 95px;
+    text-align: center;
+    @include device {
+      display: none;
+    }
+    &--tm {
+      position: relative;
+      z-index: 500;
+      display: inline-block;
+      > img {
+        display: block;
+        width: 100%;
+      }
+      .btn-entry--tm {
+        // background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 55%;
+        top: 30%;
+        width: 26%;
+        height: 40%;
+      }
+    }
+  }
+}

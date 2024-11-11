@@ -1,0 +1,391 @@
+﻿.section {
+  &-flag {
+    position: relative;
+  }
+  &-inner {
+    width: 100%;
+    margin: 0 auto;
+    @include tm {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+  &-txt {
+    padding-bottom: 30px;
+    &--tit {
+      position: relative;
+      color: #{$primary-color};
+      font-size: 60px;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      @include tm {
+        font-size: 50px;
+      }
+      @include mo {
+        font-size: 32px;
+        line-height: 1;
+      }
+      &::before,
+      &::after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        top: 30px;
+        width: 38px;
+        height: 37px;
+        background: url('../../assets/images/icon_knife.png') no-repeat center center / contain;
+        @include ta {
+          top: 29px;
+          width: 29px;
+          height: 28px;
+        }
+        @include mo {
+          width: 24px;
+          height: 23px;
+        }
+      }
+      &::before {
+        left: -54px;
+        @include mo {
+          top: 7px;
+        }
+      }
+      &::after {
+        right: -54px;
+        @include mo {
+          top: 7px;
+        }
+      }
+      &.pre-tit {
+        padding-top: 0;
+        font-size: 70px;
+        line-height: 1.3;
+        @include tm {
+          font-size: 50px;
+        }
+        @include mo {
+          font-size: 40px;
+        }
+      }
+    }
+    &--sub {
+      padding-top: 18px;
+      color: #895417;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center;
+      @include tm {
+        font-size: 28px;
+      }
+      @include mo {
+        padding-top: 5px;
+        font-size: 17px;
+      }
+      .point {
+        color: #{$primary-color};
+        font-size: 38px;
+        @include tm {
+          font-size: 34px;
+        }
+        @include mo {
+          font-size: 22px;
+        }
+      }
+      &.pre-sub {
+        padding-top: 0;
+        font-size: 40px;
+        line-height: 1;
+        @include tm {
+          font-size: 30px;
+        }
+        @include mo {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.swiper {
+  &-container {
+    overflow: hidden;
+    margin: 0 auto;
+  }
+}
+
+.chk-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.device-box {
+  @include device {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.btn {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 411px;
+  height: 83px;
+  margin: 0 auto;
+  background: url('../../assets/images/inc/btn.png') no-repeat center center / contain;
+  color: #fff;
+  text-shadow: 0 0 7px #ffb648, 0 0 1em #ffb648;
+  text-align: center;
+  font-size: 30px;
+  line-height: 83px;
+  letter-spacing: 9px;
+  font-weight: 900;
+  &:hover {
+    filter: brightness(1.1);
+  }
+  @include device {
+    width: 88%;
+    line-height: 104px;
+    height: 97px;
+    font-size: 36px;
+  }
+  @include mo {
+    width: 87%;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+}
+
+// checkbox
+$chk-color: '#986647';
+.chk-box {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  input {
+    display: none;
+    &:checked {
+      ~ .chk-box {
+        &__icon {
+          border-color: #986647;
+          background-color: #fff;
+          &::before,
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            background-color: #{$chk-color};
+            position: absolute;
+            transform-origin: left top;
+          }
+          &::before {
+            top: 10px;
+            left: 3px;
+            transform: rotate(-45deg);
+            height: 5px;
+          }
+          &::after {
+            top: 15px;
+            left: 8px;
+            transform: rotate(-135deg);
+            height: 10px;
+          }
+        }
+      }
+    }
+    &.bor {
+      &:checked {
+        ~ .chk-box {
+          &__icon {
+            border-color: #986647;
+          }
+        }
+      }
+    }
+  }
+  &__icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    box-sizing: border-box;
+    border: 2px solid #{$chk-color};
+    background-color: #fff;
+    position: relative;
+    &.round {
+      border-radius: 50%;
+    }
+  }
+  &__txt {
+    display: inline-block;
+    padding-left: 6px;
+    color: #{$primary-color};
+    font-size: 16px;
+    font-weight: 600;
+    .point {
+      color: #935c3c;
+      font-weight: 600;
+    }
+    @include mo {
+      font-size: 12px;
+    }
+  }
+}
+
+// characters
+.ch {
+  position: absolute;
+  left: 50%;
+  z-index: 0;
+  transform: translateX(-50%);
+  transition: all 2s ease-in-out;
+  &__wrap {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    @media all and (max-width: 1025px) {
+      display: none !important;
+    }
+    .ch {
+      &--l {
+        @include tm {
+          width: 40%;
+        }
+        .ch {
+          &__item {
+            @include tm {
+              width: 100%;
+            }
+            > img {
+              @include tm {
+                display: block;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      &--r {
+        @include tm {
+          width: 40%;
+        }
+        .ch {
+          &__item {
+            @include tm {
+              width: 100%;
+            }
+            > img {
+              @include tm {
+                display: block;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__ani {
+    display: block;
+    animation: floatCh 3000ms infinite alternate ease-in;
+  }
+  img {
+    width: auto;
+    max-width: fit-content;
+  }
+}
+
+.area-con {
+  &.fix {
+    .ch {
+      &__wrap {
+        position: fixed;
+      }
+    }
+  }
+}
+
+.caution-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  > li {
+    // display: inline-block;
+    flex-basis: 100%;
+    position: relative;
+    color: #494642;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: 5px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      margin-right: 5px;
+      font-size: 20px;
+      background-color: #935c3c;
+    }
+    .point {
+      position: relative;
+      z-index: 22;
+      color: #e5ca82;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+section {
+  text-align: center;
+  .btn {
+    &.con-btn {
+      margin: 80px auto;
+      @include device {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 90.5%;
+      }
+    }
+  }
+  .con-img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+}
+
+.particles-js {
+  display: block;
+  width: 90%;
+  height: 50%;
+  background: url('../images/powder.webp') no-repeat center top / contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 70%;
+  overflow: hidden;
+  filter: brightness(1.2) hue-rotate(240deg);
+  animation: fadeIn 3000ms alternate infinite;
+  canvas {
+    opacity: 1;
+  }
+}

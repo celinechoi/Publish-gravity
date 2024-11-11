@@ -1,0 +1,136 @@
+// ##### S: leaf animate #####
+@keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10%;
+    transform: translateX(20px) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-20px) rotate(45deg);
+  }
+  40% {
+    transform: translateX(-20px) rotate(90deg);
+  }
+  60% {
+    transform: translateX(20px) rotate(135deg);
+  }
+  80% {
+    transform: translateX(-20px) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    top: 110%;
+    transform: translateX(-20px) rotate(225deg);
+  }
+}
+@keyframes swingswing {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+// ##### E : leaf animate #####
+
+// 빛나게만
+@keyframes twinkle {
+  0% {
+    filter: brightness(1) hue-rotate(0);
+  }
+  100% {
+    filter: brightness(1.3) hue-rotate(1deg);
+  }
+}
+// ##### E: 반짝임 #####
+
+// ##### S: scroll down #####
+@keyframes downAction {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    ransform: translateY(0);
+  }
+}
+// ##### E: scroll down #####
+
+// ##### S: characters moving
+@keyframes floatCh {
+  0% {
+    transform: rotate(-1deg) translateY(1%);
+  }
+  100% {
+    transform: rotate(0deg) translateY(2%);
+  }
+}
+// ##### E: characters moving
+
+// ##### S: rotate
+@keyframes rotateInfin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+  }
+}
+// ##### E: rotate
+
+// ##### zoom
+@keyframes zoomZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+// 나타났다 사라졌다
+@keyframes fadeIn {
+  from {
+    opacity: 0.22;
+    filter: brightness(1);
+  }
+
+  to {
+    opacity: 1;
+    filter: brightness(2);
+  }
+}
+
+@keyframes cloudMove {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-10%, -10%);
+  }
+}

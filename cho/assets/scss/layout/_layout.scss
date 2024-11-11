@@ -1,0 +1,167 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+}
+
+body {
+  // width: 100%;
+  // margin: 0 auto;
+  position: relative;
+  background-color: #000;
+  font: 600 16px $font-family-basic;
+  line-height: 1.1;
+  overflow-x: hidden;
+  &.none {
+    &-scroll {
+      overflow: hidden !important;
+      touch-action: none !important;
+      -webkit-overflow-scrolling: none !important;
+      overscroll-behavior: none !important;
+    }
+  }
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+  //전환효과
+  @if $body-transition == true {
+    @at-root html {
+      background-color: #000;
+    }
+    transition: opacity 300ms !important;
+    opacity: 0;
+    &[data-loading='done'] {
+      opacity: 1;
+    }
+  }
+
+  // 드래그 방지
+  // * {
+  //   -webkit-user-select: none;
+  //   -moz-user-select: none;
+  //   -ms-user-select: none;
+  //   user-select: none;
+  //   -webkit-user-drag: none;
+  //   user-drag: none;
+  // }
+}
+
+footer {
+  background-color: #000 !important;
+  position: relative;
+  z-index: 1;
+}
+
+.wrap {
+  // max-width: 2560px;
+  // max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+#btnTop {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 20px;
+  right: 50px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4) url('../images/btnTop.webp') no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  @include mo {
+    width: 60px;
+    height: 60px;
+    right: 10px;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url('../images/btnTop_on.webp');
+  }
+  &.absolute {
+    position: absolute;
+    bottom: 220px;
+  }
+}
+
+.scroll-icon {
+  display: block;
+  position: absolute;
+  top: 69.7%;
+  left: 50%;
+  z-index: 5;
+  width: 98px;
+  height: 49px;
+  margin: 4% auto 0 -49px;
+  background: url('../images/main/scroll_down.png') no-repeat center center / contain;
+  cursor: pointer;
+  animation: downAction 1s infinite alternate;
+  @include device {
+    top: 72.7%;
+    display: none;
+  }
+}
+
+//투명한 스크롤
+
+// html {
+//   // width: 100vw;
+//   // overflow-x: hidden;
+//   // overflow-y: overlay !important;
+//   @at-root {
+//     // html {
+//     //   overflow-y: auto;
+//     //   background: transparent;
+//     // }
+//     &::-webkit-scrollbar {
+//       width: 7px;
+//       height: 7px;
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//       outline: none;
+//       border-radius: 10px;
+//       border: 2px solid transparent;
+//       box-shadow: inset 6px 6px 0 rgba($color-1, 0.5);
+//       background-color: $color-1;
+//       min-height: 3em;
+//     }
+
+//     &::-webkit-scrollbar-thumb:hover {
+//       border: 2px solid transparent;
+//       box-shadow: inset 6px 6px 0 rgba($color-1, 0.8);
+//       background-color: $color-1;
+//     }
+
+//     &::-webkit-scrollbar-track {
+//       box-shadow: none;
+//       background-color: transparent;
+//     }
+//   }
+//   body {
+//     width: 100vw;
+//     overflow-x: hidden;
+//     overflow-y: overlay !important;
+//   }
+// }
+
+#troSideBtn.troclose {
+  span {
+    &::after {
+      width: 100% !important;
+      height: 85px !important;
+    }
+  }
+}
+@import 'menu';
+@import 'footer';
+@import 'popup';

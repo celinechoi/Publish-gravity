@@ -1,0 +1,189 @@
+.section2 {
+  $waveSize: 200px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin-top: -$waveSize + 1px; //-100px;
+  margin-bottom: -$waveSize + 1px; //-100px;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background: #634c34;
+  mask: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/bg_color.png'), url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/section2/bg.png') 100% 100%;
+  mask-size: 100% ($waveSize + 1px), 100% calc(100% - ($waveSize - 1px));
+  mask-position: 0 0, 0 $waveSize;
+  mask-repeat: repeat-x;
+  @include lg {
+    padding: 200px 0 354px;
+    background-position: center top;
+    background-image: url('../images/section2/bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 990px;
+    z-index: -1;
+    width: 100%;
+    height: 1200px;
+    background: url('../images/section2/ch_b.png') no-repeat center top / cover;
+    @media all and (max-width: 1785px) {
+      top: 910px;
+      top: 910px;
+      background-size: contain;
+      background-position: bottom;
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background: url('../images/bg_white.png') repeat-x center top / 100% 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    @include device {
+      height: 120px;
+      background-image: url('../images/bg_white_tm.png');
+    }
+  }
+  @include device {
+    overflow: hidden;
+    $waveSize: 120px;
+    margin-top: -$waveSize + 1px; //-100px;
+    margin-bottom: -$waveSize + 1px; //-100px;
+    padding: 120px 0 240px;
+    background: #634c34 url('../images/section2/bg_tm.png') no-repeat 0 50%;
+    mask: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/bg_color_tm.png'), url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/section2/bg_tm.png') 100% 100%;
+    mask-size: 99% ($waveSize + 1px), 100% calc(100% - ($waveSize - 1px));
+    mask-position: 0 0, 0 $waveSize;
+    mask-repeat: repeat-x;
+  }
+  .ch {
+    &__wrap {
+      .ch {
+        &__item {
+          display: block;
+          > img {
+            display: block;
+            width: 100%;
+          }
+        }
+        &--l {
+          z-index: -1;
+          top: 247px;
+          margin-left: -41%;
+          animation: swing 2.5s ease-in infinite alternate;
+          @media all and (max-width: 1330px) {
+            margin-left: -47%;
+          }
+          .ch {
+            &__item {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .con-img {
+    padding-top: 0;
+  }
+  .con-btn {
+    @include device {
+      top: 74.5% !important;
+      line-height: 128px;
+      height: 124px;
+      font-size: 36px;
+    }
+    @include tm {
+      line-height: 108px;
+      height: 105px;
+      top: 86.5%;
+    }
+    @include mo {
+      top: 73% !important;
+      font-size: 32px;
+      width: 67%;
+    }
+    @media all and (max-width: 520px) {
+      font-size: 21px;
+    }
+  }
+  .device-box {
+    .point-link {
+      @include device {
+        position: absolute;
+        left: 26%;
+        top: 96.7%;
+        width: 41%;
+        height: 1%;
+      }
+    }
+  }
+  .ch {
+    &__wrap {
+      .ch {
+        &--r {
+          z-index: 1;
+          top: 1274px;
+          left: auto;
+          right: 0;
+          transform: translateX(0);
+          animation: twinkle 2.5s ease-in infinite alternate;
+          .ch {
+            &__ani {
+              @include tm {
+                width: 100%;
+                animation: none;
+              }
+              > img {
+                @include tm {
+                  display: block;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .section {
+    &-inner {
+      max-width: 1200px;
+      @media all and (max-width: 1240px) {
+        max-width: 95%;
+      }
+      @include tm {
+        max-width: 95%;
+      }
+    }
+    &-txt {
+      padding-bottom: 0;
+    }
+  }
+  .caution-list {
+    > li {
+      color: #fff;
+      font-weight: 500;
+      &::before {
+        background-color: #ffba6a;
+      }
+    }
+  }
+  .particles-js {
+    background-image: url('../images/section2/spark_bg.png');
+    animation: none;
+    width: 100%;
+    height: 100%;
+  }
+}

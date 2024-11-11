@@ -1,0 +1,67 @@
+// $mediaResponsiveSize = 1024px; <= _var.scss
+
+@mixin web-e {
+  @media all and (max-width: 1660px) {
+    @content;
+  }
+}
+
+@mixin web-e2 {
+  @media all and (max-width: 1480px) {
+    @content;
+  }
+}
+@mixin lg-max {
+  //tablet, mobile
+  @media all and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin lg {
+  // web
+  @media all and (min-width: ($mediaResponsiveSize +  0.02px)) {
+    @content;
+  }
+}
+
+@mixin deviceLg {
+  @media all and (min-width: 1201px) {
+    @content;
+  }
+}
+
+@mixin device {
+  @media all and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin lp {
+  // 1440px 이하
+  @media all and (max-width: 1440px) {
+    @content;
+  }
+}
+
+// ##### normal #####
+
+@mixin tm {
+  // tablet, mobile
+  @media all and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin ta {
+  // tablet
+  @media all and (min-width: 768px) and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin mo {
+  @media all and (max-width: 767px) {
+    @content;
+  }
+}

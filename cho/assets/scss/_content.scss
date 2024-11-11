@@ -1,0 +1,14 @@
+﻿@import 'content/_common.scss'; //컨텐츠 공통
+@import 'content/_main.scss'; //메인
+@import 'content/_section1.scss'; //사전예약
+@import 'content/_section2.scss';
+@import 'content/_section3.scss';
+@import 'content/_section4.scss';
+
+.section {
+  * {
+    //튕김 방지
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+  }
+}

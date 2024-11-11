@@ -1,0 +1,225 @@
+.section4 {
+  $waveSize: 200px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin-top: -$waveSize + 1px; //-100px;
+  margin-bottom: -$waveSize + 1px; //-100px;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-color: #524535;
+  mask: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/bg_color.png'), url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/section4/bg.png') 100% 100%;
+  mask-size: 100% ($waveSize + 1px), 100% calc(100% - ($waveSize - 1px));
+  mask-position: 0 0, 0 $waveSize;
+  mask-repeat: repeat-x;
+  @include lg {
+    padding: 256px 0 387px;
+    background-position: 50% 50%;
+    background-image: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/section4/bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  @include device {
+    overflow: hidden;
+    // z-index: 250;
+    $waveSize: 120px;
+    padding: 120px 0 200px;
+    margin-top: -$waveSize + 1px; //-100px;
+    margin-bottom: -$waveSize + 1px; //-100px;
+    background: #634c34 url('../images/section4/bg_tm.png') no-repeat 0 50%;
+    mask: url('https://imgc.gnjoy.com/event/2024/05/0503_ro_choSimZigeon_CVALK44/assets/images/bg_color_tm.png'), url('../images/section4/bg_tm.png') 100% 100%;
+    mask-size: 100% ($waveSize + 1px), 100% calc(100% - ($waveSize - 1px));
+    mask-position: 0 0, 0 $waveSize;
+    mask-repeat: repeat-x;
+  }
+  .papers {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -69px;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background: url('../images/section4/papers.png') no-repeat center top / contain;
+    animation: floatCh 3000ms infinite alternate ease-in;
+  }
+  .ch {
+    &__wrap {
+      .ch {
+        &__item {
+          display: block;
+          > img {
+            display: block;
+            width: 100%;
+          }
+        }
+        &--l {
+          z-index: -1;
+          top: 557px;
+          margin-left: -55%;
+          animation: swing 2.5s ease-in infinite alternate;
+          @media all and (max-width: 1600px) {
+            display: none;
+          }
+          .ch {
+            &__item {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .particles-js {
+    background-image: url('../images/section2/spark_bg.png');
+    animation: none;
+    width: 100%;
+    height: 100%;
+  }
+  .section-txt {
+    @include mo {
+      width: 50%;
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+  }
+}
+#lastSwiper {
+  position: relative;
+  z-index: 22;
+  max-width: 1200px;
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  @media all and (max-width: 1240px) {
+    max-width: 100%;
+    width: 100%;
+  }
+  @include ta {
+    max-width: 95%;
+  }
+  @include mo {
+    max-width: 100%;
+  }
+  .swiper {
+    &-container {
+      display: inline-block;
+      width: 962px;
+      margin: 0 auto;
+      @media all and (max-width: 1240px) {
+        width: 85%;
+      }
+      .info-bg {
+        display: block;
+      }
+    }
+    &-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &-slide {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      &.now {
+        &::after {
+          content: none;
+        }
+      }
+      &__inner {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        > img {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .swiper {
+    &-control {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 75px;
+      @include tm {
+        width: 108%;
+      }
+      @include mo {
+        display: none;
+      }
+      .swiper {
+        &-button {
+          &-disabled {
+            opacity: 0;
+          }
+          &-prev,
+          &-next {
+            position: relative;
+            z-index: 1;
+            top: initial;
+            transform: translate(0, 0);
+            width: 49px;
+            height: 75px;
+            margin-top: 0;
+            background-size: 49px 75px;
+            &::after {
+              content: none;
+            }
+          }
+          &-prev {
+            left: 0;
+            background-image: url('../images/section3/arrow_l.png');
+          }
+          &-next {
+            right: 0;
+            background-image: url('../images/section3/arrow_r.png');
+          }
+        }
+      }
+      & + .swiper {
+        &-pagination {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          width: 100%;
+          margin-top: 30px;
+          @include mo {
+            margin-top: 10px;
+            gap: 11px;
+          }
+          .swiper-pagination-bullet {
+            width: 60px;
+            height: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 77px;
+            border-radius: 4px;
+            opacity: 1;
+            background-color: #c4c0ba;
+            font-weight: 700;
+            &-active {
+              background-color: #e3c171;
+            }
+            @include mo {
+              width: 10%;
+              height: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
