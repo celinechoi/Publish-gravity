@@ -1,0 +1,31 @@
+﻿//턴스타일
+.cloudeflare-container {
+  @at-root .reservation--1 .container__inner {
+    overflow: visible !important;
+  }
+  $h: 65px;
+  min-height: calc($h + 1.5 * 0.9em);
+  padding-top: $h;
+  position: relative;
+  width: 100%;
+  line-height: 1.2;
+  @media all and (max-width: 370px) {
+    width: 89%;
+    margin: 0 auto;
+  }
+  p {
+    margin-top: 0.2em;
+  }
+  * {
+    text-align: center !important;
+  }
+  .cf-turnstile {
+    font-size: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    // width: 100%;
+    // min-width: 330px;
+  }
+}

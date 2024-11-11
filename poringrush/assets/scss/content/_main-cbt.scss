@@ -1,0 +1,248 @@
+﻿//메인
+#main {
+  // ##### section1만 cover
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  position: relative;
+  @include backgroundCover;
+  background-image: url('../images/main/main_bg.png');
+  width: 100%;
+  min-height: 1080px;
+  // max-height: 1200px;
+  max-height: 100%;
+  // z-index: -1;
+  @include lg-max {
+    min-height: auto;
+    background: none;
+    font-size: 0; //하단 여백생겨서 처리..
+  }
+  .set {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    transform: skew(-16.5deg);
+    > div {
+      position: absolute;
+      display: block;
+      &:nth-child(2n-1) {
+        filter: blur(1.5px);
+      }
+      &:nth-child(1) {
+        left: 20%;
+        animation: animate 15s linear infinite, swingswing 2s linear alternate;
+        animation-delay: -7s;
+      }
+      &:nth-child(2) {
+        left: 80%;
+        animation: animate 20s linear infinite;
+        animation-delay: -5s;
+      }
+      &:nth-child(3) {
+        left: 70%;
+        animation: animate 4s linear infinite;
+        animation-delay: -13s;
+      }
+      &:nth-child(4) {
+        left: 0%;
+        animation: animate 15s linear infinite;
+        animation-delay: -5s;
+      }
+      &:nth-child(5) {
+        left: 85%;
+        animation: animate 18s linear infinite;
+        animation-delay: -10s;
+      }
+      &:nth-child(6) {
+        left: 0%;
+        animation: animate 12s linear infinite;
+      }
+      &:nth-child(7) {
+        left: 28%;
+        animation: animate 5s linear infinite;
+      }
+      &:nth-child(8) {
+        left: 60%;
+        animation: animate 15s linear infinite;
+      }
+    }
+  }
+  .ch {
+    transition: 600ms all;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.3) translate(-50%, -50%) rotate(30deg);
+    opacity: 0;
+    &.aos-animate {
+      opacity: 1;
+    }
+    &__wrap {
+      .ch {
+        position: absolute;
+        &__ani {
+          animation: floatingStar 10s infinite alternate;
+          display: inline-block;
+        }
+        &--l {
+          &-mini {
+            .ch__ani {
+              animation-delay: 7s;
+            }
+            &.aos-animate {
+              transform: scale(1) translate(-290%, -665%) rotate(0);
+            }
+          }
+          &-1 {
+            .ch__ani {
+              animation-delay: -5s;
+            }
+            &.aos-animate {
+              transform: scale(1) translate(-175%, -173%) rotate(0);
+            }
+          }
+          &-coin1 {
+            .ch__ani {
+              animation-delay: -7s;
+            }
+            &.aos-animate {
+              transform: scale(1) translate(-293%, -193%) rotate(0);
+            }
+          }
+          &-2 {
+            .ch__ani {
+              animation-delay: -9s;
+            }
+            &.aos-animate {
+              transform: scale(1) translate(-139%, -29%) rotate(0);
+            }
+          }
+        }
+        &--r {
+          &-coin2 {
+            .ch__ani {
+              animation-delay: 3s;
+            }
+            &.aos-animate {
+              transform: scale(1) translate(203%, -569%) rotate(0);
+            }
+            .ch__ani {
+              animation-delay: -5s;
+            }
+          }
+          &-1 {
+            .ch__ani {
+              animation-delay: 5s;
+            }
+            &.aos-animate {
+              transform: scale(1) translate(83%, -179%) rotate(0);
+            }
+          }
+          &-coin3 {
+            .ch__ani {
+              animation-delay: 7s;
+            }
+            &.aos-animate {
+              transform: scale(1) translate(191%, -143%) rotate(0);
+            }
+          }
+          &-2 {
+            .ch__ani {
+              animation-delay: 0;
+            }
+            &.aos-animate {
+              transform: scale(1) translate(45%, 0) rotate(0);
+            }
+          }
+        }
+      }
+    }
+  }
+  .main {
+    &__con {
+      position: absolute;
+      left: 50%;
+      top: 16.7%;
+      transform: translateX(-50%);
+      width: 50%;
+      text-align: center;
+      .logo {
+        padding-bottom: 22px;
+      }
+      &--btn {
+        display: block;
+        // width: 440px;
+        // height: 110px;
+        width: 50%;
+        // aspect-ratio: (354/75);
+        margin: 0 auto;
+        background: url('../images/main/btn_gold.webp') no-repeat center center / contain;
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 78px;
+        padding: 0 20px 13px;
+        &:hover {
+          background-image: url('../images/main/btn_gold_on.webp');
+        }
+        @include lp {
+          width: 100%;
+          font-size: 32px;
+        }
+        @include tm {
+          width: 100%;
+        }
+        @include mo {
+          font-size: 25px;
+        }
+      }
+      &--date {
+        color: #702424;
+        font-size: 34px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: -1px;
+        @include tm {
+          padding-top: 0;
+        }
+        @include mo {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .scroll-icon {
+    display: block;
+    // position: absolute;
+    // top: 90.4%;
+    // left: 50%;
+    width: 139px;
+    height: 47px;
+    margin: 43px auto 0;
+    background: url('../images/main/scroll_down.png') no-repeat center center / contain;
+    cursor: pointer;
+    animation: downAction 1s infinite alternate;
+    @include tm {
+      top: 13%;
+    }
+  }
+  .mo-box {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    &__img {
+      display: block;
+      width: 100%;
+    }
+    &__anchor {
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      transform: translateX(-50%);
+      width: 81%;
+      height: 20%;
+    }
+  }
+}

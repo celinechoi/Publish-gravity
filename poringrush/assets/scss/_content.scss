@@ -1,0 +1,15 @@
+﻿@import 'content/_common.scss'; //컨텐츠 공통
+@import 'content/_main-cbt.scss'; //메인
+@import 'content/_section1-2.scss'; //사전예약, reward
+@import 'content/_section3.scss'; //game character
+// @import 'content/_section4.scss'; //p2e
+@import 'content/_section4.scss'; //game info
+@import 'content/_cbt.scss'; // CBT
+
+.section {
+  * {
+    //flicking 방지
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+  }
+}

@@ -1,0 +1,147 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+}
+
+body {
+  // width: 100%;
+  // margin: 0 auto;
+  position: relative;
+  font: 500 16px $font-family-basic;
+  overflow-x: hidden;
+  //전환효과
+  background: #000;
+  font: 18px #{$font-family-basic};
+  @if $body-transition == true {
+    @at-root html {
+      background: #000;
+    }
+    opacity: 0;
+    &[data-loading='done'] {
+      opacity: 1;
+    }
+  }
+  &.none {
+    &-scroll {
+      overflow: hidden !important;
+      touch-action: none !important;
+      -webkit-overflow-scrolling: none !important;
+      overscroll-behavior: none !important;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 10px; /* 스크롤바의 너비 */
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #feae6a; /* 스크롤바의 색상 */
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgb(255, 220, 163, 0.9); /*스크롤바 뒷 배경 색상*/
+  }
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+  //전환효과
+  @if $body-transition == true {
+    @at-root html {
+      background-color: #000;
+    }
+    transition: opacity 300ms !important;
+    opacity: 0;
+    &[data-loading='done'] {
+      opacity: 1;
+    }
+  }
+
+  // 드래그 방지
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+}
+
+#btnTop {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background: url('../../assets/images/btnTop.webp') no-repeat;
+  background-size: contain;
+  transition: 400ms opacity;
+  opacity: 0.6;
+  @include mo {
+    width: 60px;
+    height: 60px;
+    right: 10px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &.absolute {
+    position: absolute;
+    bottom: 220px;
+  }
+}
+
+//투명한 스크롤
+
+// html {
+//   // width: 100vw;
+//   // overflow-x: hidden;
+//   // overflow-y: overlay !important;
+//   @at-root {
+//     // html {
+//     //   overflow-y: auto;
+//     //   background: transparent;
+//     // }
+//     &::-webkit-scrollbar {
+//       width: 7px;
+//       height: 7px;
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//       outline: none;
+//       border-radius: 10px;
+//       border: 2px solid transparent;
+//       box-shadow: inset 6px 6px 0 rgba($color-1, 0.5);
+//       background-color: $color-1;
+//       min-height: 3em;
+//     }
+
+//     &::-webkit-scrollbar-thumb:hover {
+//       border: 2px solid transparent;
+//       box-shadow: inset 6px 6px 0 rgba($color-1, 0.8);
+//       background-color: $color-1;
+//     }
+
+//     &::-webkit-scrollbar-track {
+//       box-shadow: none;
+//       background-color: transparent;
+//     }
+//   }
+//   body {
+//     width: 100vw;
+//     overflow-x: hidden;
+//     overflow-y: overlay !important;
+//   }
+// }
+@import 'header';
+@import 'footer';
+@import 'popup';
