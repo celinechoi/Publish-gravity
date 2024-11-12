@@ -1,0 +1,26 @@
+﻿// 적응형
+
+// ## 컬러##
+// 기본 폰트 색상
+$body-color: #222;
+//메인컬러
+$color-1: #0e69d0;
+//서브컬러
+// $color-2: #999;
+
+// BODY 전환효과 사용여부
+$body-transition: true;
+
+$media: true;
+// 미디어 쿼리 사이즈
+$mediaResponsiveSize: 1024px;
+// 시안 사이즈
+$mediaPSD: 1000px;
+
+//기본컨테이너 사이즈
+$container: 1200px;
+$gutter: 20px; //기본 여백
+
+// ## FONT 관리 ##  → _font-face.scss
+$font-family-basic: 'NotoSansKR', sans-serif !important;
+$font-family-main: 'SpoqaHanSansNeo', $font-family-basic;

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <!-- #include file="inc/head.html" -->
+  <body>
+    <!-- S: 임시 ---------------- 스토브 헤더 -->
+    <!-- #include file="inc/stove_header.html" -->
+    <!-- S: 임시 ---------------- 스토브 헤더 -->
+
+    <!-- #include file="inc/header.html" -->
+    <div id="wrap">
+      <!-- #include file="inc/visual.html" -->
+      <!-- S: 서브 페이지 -->
+      <div id="sub">
+        <h3 class="sub-title">
+          <p>이벤트</p>
+          <ul class="form-list">
+            <li>
+              <select name="" id="">
+                <option value="">제목+내용</option>
+              </select>
+            </li>
+            <li>
+              <div class="input-box">
+                <input type="text" placeholder="검색어를 입력해주세요" />
+                <a href="javascript:;" class="icon-search"><img src="assets/images/inc/search.png" alt="검색" /></a>
+              </div>
+            </li>
+          </ul>
+        </h3>
+        <div class="inner">
+          <div id="tabArea" class="tab tabMimic">
+            <ul class="tab-title">
+              <li class="item--1">
+                <a href="5_gallery_event.html"  class="tab-link ">진행중인 이벤트</a>
+              </li>
+              <li class="item--2">
+                <a href="5_gallery_event-blank.html"  class="tab-link active">지난 이벤트</a>
+              </li>
+            </ul>
+
+            <ul class="bbs-list">
+              <!-- S: 게시글 없는 경우 -->
+              <li class="nodata-box">
+                <img src="assets/images/inc/caution.png" alt="nodata" />
+                <p class="nodata-box__txt">지난 이벤트가 없습니다.</p>
+              </li>
+              <!-- E: 게시글 없는 경우 -->
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <!-- E: 서브 페이지 -->
+    </div>
+
+    <!-- #include file="inc/footer.html" -->
+
+    <script src="assets/js/common.min.js"></script>
+  </body>
+</html>

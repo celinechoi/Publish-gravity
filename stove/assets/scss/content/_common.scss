@@ -1,0 +1,179 @@
+﻿// ##### 데이터 없을 때 내용
+.nodata-box {
+  width: 100%;
+  min-height: 336px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 0 !important;
+  &__txt {
+    padding-top: 30px;
+    text-align: center;
+    color: $body-color;
+    font-size: 20px;
+    font-weight: 700;
+    > span {
+      color: $body-color;
+      font-size: 20px;
+    }
+  }
+}
+.txt {
+  // 말줄임
+  &-ellipsis {
+    display: inline-block;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &-point {
+    font: inherit;
+    color: $color-1;
+  }
+}
+.form-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 41px;
+  @include minWidth;
+  > li {
+    &:first-child {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 10px;
+        width: 1px;
+        height: 16px;
+        background-color: #dfe2e7;
+      }
+    }
+  }
+}
+select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 115px;
+  height: 35px;
+  background: url('../images/inc/arrow_b.png') no-repeat right center / 10% auto;
+  padding: 5px 30px 5px 10px;
+  outline: 0 none;
+  border: 0;
+  font-size: 16px !important;
+}
+.input {
+  &-box {
+    display: flex;
+    align-items: center;
+    width: 219px;
+    height: 34px;
+    input {
+      width: calc(100% - 34px);
+      border: 0;
+      font-size: 16px;
+    }
+    .icon-search {
+      padding: 5px 0 0 10px;
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  &-outlink {
+    width: 12px;
+    height: 12px;
+    margin: 2px 0 0 7px;
+    @at-root .nav & {
+      margin: 0 0 0 3px;
+    }
+  }
+  &-new {
+    padding-left: 3px;
+    vertical-align: top;
+    color: #e8472f;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  &-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid $color-1;
+    color: $color-1;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+  &-watch {
+    margin-right: 5px;
+    vertical-align: -1px;
+  }
+  &-clip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #6a6a6a;
+  }
+}
+
+.btn {
+  display: inline-block;
+  &-more {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid $body-color;
+    color: $body-color;
+    font-size: 25px;
+    text-align: center;
+    line-height: 13px;
+    &:hover {
+      background-color: $body-color;
+      color: #fff;
+    }
+  }
+  &-normal {
+    display: inline-block;
+    min-width: 260px;
+    max-width: 260px;
+    background-color: #222;
+    text-align: center;
+    font-size: 18px;
+    line-height: 70px;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+.spacing {
+  padding-top: 80px;
+}
+
+.section {
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-size: 40px;
+      font-weight: 900;
+      color: $body-color;
+    }
+  }
+}

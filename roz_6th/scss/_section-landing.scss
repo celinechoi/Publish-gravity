@@ -1,0 +1,168 @@
+﻿.section-landing {
+  overflow: hidden;
+  position: relative;
+  top: 32px;
+  margin-top: -32px;
+  font-size: 0;
+  background: url('../images/common/bg.webp') no-repeat 50% 0; // 50% 50%;
+  background-size: cover;
+  // background-attachment: fixed;
+  height: 802px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+    background-image: url('../images/common/bg-ef1.webp');
+    animation: shineMotion 3.5s linear infinite alternate;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 56px;
+    background: url('../images/common/bg-overlay.webp') no-repeat center top / cover;
+  }
+  .bg-confetti {
+    position: absolute;
+    top: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    z-index: 5;
+    opacity: 0;
+    // transform-origin: 50% 50%;
+    &.motion1 {
+      // animation: confettiMove 15s 0.1s infinite;
+      animation: confettiMove 45s 0.1s infinite;
+      // opacity: 1;
+    }
+    &.motion2 {
+      // animation: confettiMove2 15s 0.1s infinite;
+      animation: confettiMove2 45s 0.1s infinite;
+      // top: 0;
+      // margin-left: 100px;
+    }
+  }
+
+  .shine {
+    &-frame {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      > div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .shine2 {
+        background-image: url('../images/common/bg-ef2.webp');
+        animation: shineMotion 3s linear infinite alternate;
+      }
+    }
+  }
+
+  &__container {
+    z-index: 3;
+    text-align: center;
+    .title {
+      &-frame {
+        display: inline-block;
+        position: relative;
+        width: 583px;
+        height: 738px;
+        margin: 0 auto;
+        &__bg {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background: url('../images/common/title_bg.webp') no-repeat center top / contain;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/common/title_make2_bg.webp') no-repeat center top / contain;
+            // animation: mainStarsTwinkle 0.8s ease-in-out infinite alternate;
+            animation: mainStarsTwinkle 0.5s ease-in-out infinite alternate;
+          }
+          &--inner {
+            display: block;
+            // animation: mainStarsTwinkle 1.6s ease-in-out infinite alternate;
+            animation: mainStarsTwinkle 1.3s ease-in-out infinite alternate;
+          }
+        }
+        .title {
+          position: absolute;
+          left: 0;
+          &--logo {
+            top: 97px;
+          }
+          &--desc {
+            top: 276px;
+          }
+          &--title {
+            top: 338px;
+            animation: titleTrans 3.5s ease-in-out infinite alternate;
+          }
+        }
+        span {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  .ch {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      position: relative;
+    }
+    // transform: translate(-50%,-50%);
+    &--r {
+      margin-left: 521px;
+      margin-top: 180px;
+    }
+    &--l {
+      margin-left: -516px;
+      margin-top: 153px;
+    }
+    &--poring {
+      top: 52px;
+      z-index: 5;
+      margin-left: 300px;
+      animation: poringMove 3s infinite alternate;
+      animation-delay: -1.5s;
+    }
+    &--mouse {
+      margin-left: -398px;
+      margin-top: 247px;
+    }
+    &--coco {
+      margin-left: 245px;
+      margin-top: 257px;
+    }
+  }
+}

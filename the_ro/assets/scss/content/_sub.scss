@@ -1,0 +1,1348 @@
+﻿//  .d8888b.   .d88888b.  888b     d888 888b     d888  .d88888b.  888b    888
+// d88P  Y88b d88P" "Y88b 8888b   d8888 8888b   d8888 d88P" "Y88b 8888b   888
+// 888    888 888     888 88888b.d88888 88888b.d88888 888     888 88888b  888
+// 888        888     888 888Y88888P888 888Y88888P888 888     888 888Y88b 888
+// 888        888     888 888 Y888P 888 888 Y888P 888 888     888 888 Y88b888
+// 888    888 888     888 888  Y8P  888 888  Y8P  888 888     888 888  Y88888
+// Y88b  d88P Y88b. .d88P 888   "   888 888   "   888 Y88b. .d88P 888   Y8888
+//  "Y8888P"   "Y88888P"  888       888 888       888  "Y88888P"  888    Y888
+#contents {
+  max-width: 2560px;
+  margin: 0 auto;
+  &.official-page {
+    .section-main {
+      .section-content {
+        .nav__banner {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          width: 549px;
+          margin: 220px auto 0;
+          @include lg-max {
+            width: 90%;
+            gap: 3%;
+            margin: 0 auto;
+          }
+          .link {
+            margin: 0;
+            background-image: none;
+            > img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .section {
+      &--intro {
+        @include lg {
+          background-position: center bottom;
+          background-image: url(../images/intro/bg_official.webp);
+        }
+        @include lg-max {
+          background-image: url(../images/intro/bg_mo.png);
+        }
+        &::before {
+          content: '';
+          // position: absolute;
+          // left: 0;
+          // top: 5px;
+          display: block;
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          height: 240px;
+          background: no-repeat center center / cover;
+          background-size: 2560px auto;
+          background-image: url(../images/sub/sub_bg_top.png);
+          background-position: center 100%, center 0;
+          @include lg-max {
+            aspect-ratio: (1080/175);
+            height: auto;
+            bottom: -3%;
+            bottom: -18px;
+            max-width: vw(1080);
+            background-image: url(../images/sub/sub_bg_top_mo.png);
+            background-size: vw(1080) auto;
+          }
+        }
+        .frame-section {
+          @include lg {
+            min-height: 1000px;
+            padding-top: 103px;
+          }
+        }
+        .bg {
+          .bg {
+            &-racoon {
+              top: 1038px;
+              margin-left: 294px;
+            }
+            &-dog {
+              top: 1031px;
+            }
+          }
+        }
+      }
+      &--feature {
+        .swiper-pagination-bullet-active {
+          &::after {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .char {
+      &-frame {
+        &.active {
+          // .char-frame__item {
+          //   &.click-c {
+          //     @include lg-max {
+          //       top: vw(606); //vw(1122);
+          //       background-color: green;
+          //       // top: 100.481481vw;
+          //     }
+          //   }
+          // }
+          // &[data-nowsection='intro'],
+          // &[data-nowsection='feature'] {
+
+          // }
+          .char-frame {
+            &__item {
+              @include lg-max {
+                top: vw(610); //vw(910);
+                // background-color: orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.section-sub {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  @include lg {
+    margin-top: -114px;
+  }
+  @include lg-max {
+    margin-top: vw(-190);
+  }
+  &__inner {
+    z-index: 3;
+    min-width: 1365px;
+    margin: 0 auto;
+    @include lp {
+      min-width: 100%;
+      min-width: min(100%, calc(100% - 30px));
+    }
+  }
+}
+
+.trigger {
+  &-section {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    @include backgroundCover;
+    background-size: 2560px auto;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    margin-bottom: -34px;
+    @include lg-max {
+      background-attachment: local;
+      background-size: vw(1080) auto;
+      margin-bottom: 0;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      height: 231px;
+      @include backgroundCover;
+      background-position: center bottom;
+      background-size: 2560px auto;
+      background-image: url(../images/sub/sub_bg_top.png);
+      @include lg-max {
+        aspect-ratio: (1080/175);
+        height: auto;
+        bottom: -3%;
+        bottom: -18px;
+        max-width: vw(1080);
+        background-image: url(../images/sub/sub_bg_top_mo.png);
+        background-size: vw(1080) auto;
+      }
+    }
+    .bg {
+      @include lg-max {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.frame {
+  &-section {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 100px 0 0;
+    @include lg-max {
+      padding: 0;
+    }
+    .container {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      @include lg-max {
+        padding: 0;
+      }
+      &__inner {
+        overflow: hidden;
+        width: 760px;
+        z-index: 2;
+        position: relative;
+        left: min(22%, 220px);
+        margin: 0 auto;
+        text-align: center;
+        max-width: 760px;
+        width: 100%;
+        @include lg-max {
+          left: 0;
+          max-width: min(85%, calc(100% - 30px));
+        }
+        &--wrap {
+          padding: 0 50px;
+          background: url(../images/sub/frame.webp) repeat-y;
+          background-size: 100% auto;
+          @include lg-max {
+            padding: 0 vw(50);
+            background-image: url(../images/sub/frame_mo.webp);
+          }
+          .btn {
+            display: block;
+          }
+        }
+        &:before,
+        &:after {
+          //뚜껑
+          content: '';
+          display: block;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          @include lg-max {
+            z-index: -1;
+            position: relative;
+            aspect-ratio: (980/94) !important;
+          }
+        }
+        &:before {
+          aspect-ratio: 760/80;
+          background-image: url(../images/sub/frame_top.webp);
+          background-position: 0 0;
+          @include lg-max {
+            bottom: -2px;
+            aspect-ratio: 980/94;
+            background-image: url(../images/sub/frame_top_mo.webp);
+          }
+        }
+        &:after {
+          aspect-ratio: 760/80;
+          background-image: url(../images/sub/frame_bot.webp);
+          background-position: 100% 100%;
+          @include lg-max {
+            top: -2px;
+            aspect-ratio: 980/94;
+            background-image: url(../images/sub/frame_bot_mo.webp);
+          }
+        }
+      }
+    }
+    .title-bx {
+      margin: 0 auto;
+      @include backgroundDefault;
+    }
+    .content {
+      position: relative;
+      margin: 30px auto 0;
+      @include backgroundDefault;
+      @include lg-max {
+        margin: vw(30) auto 0;
+      }
+      h3 {
+        @include backgroundDefault;
+      }
+    }
+  }
+}
+
+.hr {
+  display: block;
+  width: 660px;
+  height: 18px;
+  margin: 30px auto;
+  @include backgroundDefault;
+  background-image: url(../images/sub/hr.webp);
+  @include lg-max {
+    width: 100%;
+    margin: 5% auto;
+    background-size: 100% auto;
+  }
+}
+
+.talk-box {
+  @include lg-max {
+    display: inline-block;
+    position: relative;
+    &__img {
+      display: block;
+    }
+    &__btn {
+      position: absolute;
+      left: 19%;
+      top: 6%;
+      width: 55%;
+      height: 51%;
+      opacity: 0.7;
+      z-index: 5;
+    }
+    i {
+      display: block;
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      &.bg-turtle-mo {
+        @include gifMo(250, 313, 153, 489, 'turtle_mo');
+      }
+      &.bg-bug-mo {
+        z-index: 10;
+        @include gifMo(200, 367, 151, 463, 'bug_mo');
+      }
+      &.bg-tree-mo {
+        @include gifMo(350, 350, 91, 461, 'tree_mo');
+      }
+      &.bg-orange-mo {
+        @include gifMo(200, 200, 208, 560, 'orange_mo');
+      }
+      &.bg-beetle-mo {
+        @include gifMo(200, 156, 240, 500, 'beetle_mo');
+      }
+      &.bg-racoon-mo {
+        z-index: 10;
+        @include gifMo(130, 130, 310, 547, 'racoon_mo');
+        margin-left: 11vw;
+      }
+    }
+  }
+}
+
+.bg {
+  &--l,
+  &--r {
+    @include lg-max {
+      display: none !important;
+    }
+  }
+}
+
+// 888b     d888 8888888888 888b    888 888     888  d888                    888888b.    .d88888b.   .d88888b.  888    d8P
+// 8888b   d8888 888        8888b   888 888     888 d8888                    888  "88b  d88P" "Y88b d88P" "Y88b 888   d8P
+// 88888b.d88888 888        88888b  888 888     888   888                    888  .88P  888     888 888     888 888  d8P
+// 888Y88888P888 8888888    888Y88b 888 888     888   888                    8888888K.  888     888 888     888 888d88K
+// 888 Y888P 888 888        888 Y88b888 888     888   888                    888  "Y88b 888     888 888     888 8888888b
+// 888  Y8P  888 888        888  Y88888 888     888   888        888888      888    888 888     888 888     888 888  Y88b
+// 888   "   888 888        888   Y8888 Y88b. .d88P   888                    888   d88P Y88b. .d88P Y88b. .d88P 888   Y88b
+// 888       888 8888888888 888    Y888  "Y88888P"  8888888                  8888888P"   "Y88888P"   "Y88888P"  888    Y88b
+
+.section--reservation {
+  background-image: url(../images/reservation/bg.png);
+  padding-top: 70px;
+  @include lg {
+    background-attachment: local;
+    background-size: 2560px auto;
+    background-repeat: repeat-y;
+    background-position: 50% -1106px;
+    background-position: 50% -1199px;
+  }
+  @include lg-max {
+    background-image: url(../images/reservation/bg_mo.png);
+    padding-top: vw(300);
+  }
+  &::before {
+    //풀 + 담장
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    z-index: 1;
+    width: 100%;
+
+    height: 240px;
+    @include backgroundDefault;
+    background-size: 2453px auto, 2560px auto;
+    background-image: url(../images/reservation/res_1/leaves.webp),
+      //
+      url(../images/sub/sub_bg_top.png);
+    background-position: center 100%, center 0;
+
+    @include lg-max {
+      max-width: vw(1080);
+      height: vw(230);
+      top: 1%;
+      background-image: url(../images/reservation/res_1/leaves_m.webp), url(../images/sub/sub_bg_top_mo.png);
+      background-size: 100% auto;
+      top: 0.6%;
+    }
+  }
+  .bg {
+    //배경요소캐릭터 : 세로 반복
+    height: 100%;
+    position: absolute;
+    top: 170px;
+    max-height: 3960px;
+    background-repeat: repeat-y;
+    left: 50%;
+    width: 2560px;
+    transform: translateX(-50%);
+    background-image: url(../images/reservation/bg-repeat.webp);
+    background-size: 2241px auto;
+    background-position: 200px 70px;
+    i {
+      display: block;
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .bg-turtle {
+      @include gif(250, 313, -800, 100, 'turtle');
+    }
+    .bg-green {
+      @include gif(147, 153, -710, 1167, 'green');
+    }
+    .bg-tree {
+      @include gif(350, 350, 604, 604, 'tree');
+    }
+    .bg-orange {
+      @include gif(200, 200, 800, 1490, 'orange');
+    }
+    .bg-pig {
+      @include gif(300, 300, -840, 1966, 'pig');
+    }
+    .bg-bug {
+      @include gif(200, 367, 810, 2465, 'bug');
+    }
+    .bg-goblin {
+      @include gif(300, 421, -810, 3190, 'goblin');
+    }
+    .bg-larva {
+      @include gif(120, 102, 690, 4020, 'larva');
+    }
+  }
+}
+
+//                                                              888    d8b
+//                                                              888    Y8P
+//                                                              888
+// 888d888  .d88b.  .d8888b   .d88b.  888d888 888  888  8888b.  888888 888  .d88b.  88888b.
+// 888P"   d8P  Y8b 88K      d8P  Y8b 888P"   888  888     "88b 888    888 d88""88b 888 "88b
+// 888     88888888 "Y8888b. 88888888 888     Y88  88P .d888888 888    888 888  888 888  888
+// 888     Y8b.          X88 Y8b.     888      Y8bd8P  888  888 Y88b.  888 Y88..88P 888  888
+// 888      "Y8888   88888P'  "Y8888  888       Y88P   "Y888888  "Y888 888  "Y88P"  888  888
+
+.reservation--1 {
+  padding-top: 210px;
+  @include lg-max {
+    padding-top: vw(180);
+  }
+  .title-bx {
+    background-image: url(../images/reservation/res_1/title.webp);
+    max-width: 419px;
+    aspect-ratio: (419/138);
+    @include lg-max {
+      background-image: url(../images/reservation/res_1/title_mo.webp);
+      max-width: vw(503);
+      aspect-ratio: (503/130);
+    }
+  }
+  .content {
+    background-image: url(../images/reservation/res_1/contents.webp);
+    max-width: 660px;
+    aspect-ratio: (660/224);
+    @include lg-max {
+      background-image: url(../images/reservation/res_1/contents_mo.webp);
+      max-width: 857px;
+      aspect-ratio: (857/308);
+      margin-top: 0;
+    }
+  }
+}
+
+//                                888               888
+//                                888               888
+//                                888               888
+// 88888b.d88b.   8888b.  888d888 888  888  .d88b.  888888
+// 888 "888 "88b     "88b 888P"   888 .88P d8P  Y8b 888
+// 888  888  888 .d888888 888     888888K  88888888 888
+// 888  888  888 888  888 888     888 "88b Y8b.     Y88b.
+// 888  888  888 "Y888888 888     888  888  "Y8888   "Y888
+
+.reservation--2 {
+  .title-bx {
+    max-width: 549px;
+    aspect-ratio: (549/139);
+    background-image: url(../images/reservation/res_2/title.webp);
+    @include lg-max {
+      background-image: url(../images/reservation/res_2/title_mo.webp);
+      max-width: vw(639);
+      aspect-ratio: (639/130);
+    }
+  }
+  .content {
+    background-image: url(../images/reservation/res_2/contents.webp);
+    aspect-ratio: (390/222);
+    max-width: 390px;
+    @include lg-max {
+      background-image: url(../images/reservation/res_2/contents_mo.webp);
+      max-width: vw(597);
+      aspect-ratio: (597/306);
+    }
+  }
+  .btn {
+    background: url(../images/reservation/res_2/btn.webp) no-repeat 50% 0;
+    background-size: contain;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: min(vw(56), 56px);
+    max-width: 548px;
+    aspect-ratio: (548/104);
+    transition: 300ms filter;
+    @include hover {
+      filter: brightness(1.1);
+    }
+  }
+  .market-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    img {
+      height: 66px;
+      @include lg-max {
+        height: auto;
+      }
+    }
+  }
+}
+
+//  .d888         d8b                        888
+// d88P"          Y8P                        888
+// 888                                       888
+// 888888 888d888 888  .d88b.  88888b.   .d88888 .d8888b
+// 888    888P"   888 d8P  Y8b 888 "88b d88" 888 88K
+// 888    888     888 88888888 888  888 888  888 "Y8888b.
+// 888    888     888 Y8b.     888  888 Y88b 888      X88
+// 888    888     888  "Y8888  888  888  "Y88888  88888P'
+
+.reservation--3 {
+  .title-bx {
+    max-width: 609px;
+    aspect-ratio: (609/60);
+    background-image: url(../images/reservation/res_3/title.webp);
+    @include lg-max {
+      background-image: url(../images/reservation/res_3/title_mo.webp);
+      max-width: vw(727);
+      aspect-ratio: (727/73);
+    }
+  }
+  .content {
+    background-image: url(../images/reservation/res_3/contents.webp);
+    aspect-ratio: (661/273);
+    max-width: 661px;
+    @include lg-max {
+      background-image: url(../images/reservation/res_3/contents_mo.webp);
+      max-width: vw(643);
+      aspect-ratio: (643/774);
+    }
+    &-2 {
+      aspect-ratio: (586/301);
+      max-width: 586px;
+      background-image: url(../images/reservation/res_3/contents2.webp);
+      @include lg-max {
+        background-image: url(../images/reservation/res_3/contents2_mo.webp);
+        max-width: vw(805);
+        aspect-ratio: (805/502);
+      }
+    }
+  }
+  .btn {
+    background: url(../images/reservation/res_3/btn.webp) no-repeat 50% 0;
+    background-size: contain;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 378px;
+    aspect-ratio: (378/57);
+    transition: 300ms filter;
+    @include hover {
+      filter: brightness(1.1);
+    }
+    @include lg-max {
+      background-image: url(../images/reservation/res_3/btn_mo.webp);
+      max-width: 703px;
+      width: vw(703);
+      aspect-ratio: (703/105);
+    }
+  }
+}
+
+// 888
+// 888
+// 888
+// 88888b.   .d88b.  88888b.   .d88b.
+// 888 "88b d88""88b 888 "88b d8P  Y8b
+// 888  888 888  888 888  888 88888888
+// 888  888 Y88..88P 888 d88P Y8b.
+// 888  888  "Y88P"  88888P"   "Y8888
+//                   888
+//                   888
+//                   888
+
+.reservation--4 {
+  .title-bx {
+    max-width: 533px;
+    aspect-ratio: (533/58);
+    background-image: url(../images/reservation/res_4/title.webp);
+    @include lg-max {
+      background-image: url(../images/reservation/res_4/title_mo.webp);
+      max-width: vw(639);
+      aspect-ratio: (639/73);
+    }
+  }
+  .content {
+    background-image: url(../images/reservation/res_4/contents.webp);
+    aspect-ratio: (436/510);
+    max-width: 436px;
+    @include lg-max {
+      background-image: url(../images/reservation/res_4/contents_mo.webp);
+      max-width: vw(855);
+      aspect-ratio: (855/911);
+    }
+  }
+  .btn {
+    background: url(../images/reservation/res_4/btn.webp) no-repeat 50% 0;
+    background-size: contain;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: min(vw(30), 30px);
+    max-width: 313px;
+    aspect-ratio: (313/57);
+    transition: 300ms filter;
+    @include hover {
+      filter: brightness(1.1);
+    }
+    @include lg-max {
+      background-image: url(../images/reservation/res_4/btn_mo.webp);
+      max-width: 533px;
+      aspect-ratio: (533/105);
+      width: vw(533);
+    }
+  }
+}
+
+// 888b     d888 8888888888 888b    888 888     888  .d8888b.                    .d8888b.  888888b. 88888888888
+// 8888b   d8888 888        8888b   888 888     888 d88P  Y88b                  d88P  Y88b 888  "88b    888
+// 88888b.d88888 888        88888b  888 888     888        888                  888    888 888  .88P    888
+// 888Y88888P888 8888888    888Y88b 888 888     888      .d88P                  888        8888888K.    888
+// 888 Y888P 888 888        888 Y88b888 888     888  .od888P"                   888        888  "Y88b   888
+// 888  Y8P  888 888        888  Y88888 888     888 d88P"           888888      888    888 888    888   888
+// 888   "   888 888        888   Y8888 Y88b. .d88P 888"                        Y88b  d88P 888   d88P   888
+// 888       888 8888888888 888    Y888  "Y88888P"  888888888                    "Y8888P"  8888888P"    888
+
+.section--cbt {
+  @include lg-max {
+    background-image: url(../images/cbt/bg_mo.png);
+    background-attachment: local;
+  }
+  @include lg {
+    background-size: 2560px auto;
+    background-image: url(../images/cbt/bg.webp);
+    // overflow: hidden; // 어긋남 해결
+    background-repeat: repeat-y;
+    background-attachment: local;
+    background-position: 50% -400px;
+  }
+  .frame-section {
+    .container {
+      &__inner {
+        &--wrap {
+          background-image: url(../images/cbt/frame.webp);
+          @include lg-max {
+            background-image: url(../images/cbt/frame_mo.webp);
+          }
+        }
+        &:before {
+          background-image: url(../images/cbt/frame-top.webp);
+          @include lg-max {
+            background-image: url(../images/cbt/frame_top_mo.webp);
+          }
+        }
+        &:after {
+          background-image: url(../images/cbt/frame-bot.webp);
+          @include lg-max {
+            background-image: url(../images/cbt/frame_bot_mo.webp);
+          }
+        }
+      }
+    }
+  }
+  .hr {
+    background-image: url(../images/cbt/hr.webp);
+  }
+  .section-title {
+    background: url(../images/cbt/section-title.webp) no-repeat 50% 50% / contain;
+    margin: 0 auto 20px;
+    width: 384px;
+    aspect-ratio: 384/111;
+    @include lg-max {
+      background-image: url(../images/cbt/section-title_mo.webp);
+      width: vw(576);
+      aspect-ratio: 576/130;
+    }
+  }
+  .title-event {
+    background: url(../images/cbt/title-event.webp) no-repeat 50% 50% / contain;
+    margin: 0 auto 20px;
+    width: 496px;
+    aspect-ratio: 496/60;
+    @include lg-max {
+      background-image: url(../images/cbt/title-event_mo.webp);
+      width: vw(598);
+      aspect-ratio: 598/73;
+    }
+  }
+  .btn {
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 300ms filter;
+    font-size: 0;
+    margin: 0 auto;
+    @include hover {
+      filter: brightness(1.1);
+    }
+    &--cbt {
+      background-image: url(../images/cbt/btn-cbt.webp);
+      width: 313px;
+      aspect-ratio: (313/87);
+      @include lg-max {
+        background-image: url(../images/cbt/btn-cbt_mo.webp);
+        width: vw(523);
+        aspect-ratio: 523/143;
+      }
+    }
+    &--lounge {
+      background-image: url(../images/cbt/btn-lounge.webp);
+      width: 313px;
+      aspect-ratio: (313/57);
+      @include lg-max {
+        background-image: url(../images/cbt/btn-lounge_mo.webp);
+        width: vw(533);
+        aspect-ratio: (533/105);
+      }
+    }
+    &--survey {
+      background-image: url(../images/cbt/btn-survey.webp);
+      width: 150px;
+      aspect-ratio: (150/30);
+      position: absolute;
+      left: 213px;
+      top: 190px;
+      @include lg-max {
+        background-image: none;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .cbt-event-list {
+    margin: 30px auto 0;
+    text-align: center;
+    li {
+      margin-top: 8px;
+      position: relative;
+    }
+    .wrap {
+      display: inline-block;
+      position: relative;
+    }
+    img {
+      margin: 0 auto;
+    }
+  }
+  .bg {
+    i {
+      display: block;
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .bg-rizard {
+      @include gif(250, 279, -970, 234, 'rizard');
+    }
+    .bg-beetle {
+      @include gif(200, 156, 685, 690, 'beetle');
+    }
+    .bg-peco {
+      @include gif(230, 320, -819, 452, 'peco');
+    }
+    .bg-mira {
+      @include gif(200, 156, 685, 1320, 'mira');
+    }
+  }
+}
+
+// 888b     d888 8888888888 888b    888 888     888  .d8888b.                   8888888 888b    888 88888888888 8888888b.   .d88888b.
+// 8888b   d8888 888        8888b   888 888     888 d88P  Y88b                    888   8888b   888     888     888   Y88b d88P" "Y88b
+// 88888b.d88888 888        88888b  888 888     888      .d88P                    888   88888b  888     888     888    888 888     888
+// 888Y88888P888 8888888    888Y88b 888 888     888     8888"                     888   888Y88b 888     888     888   d88P 888     888
+// 888 Y888P 888 888        888 Y88b888 888     888      "Y8b.                    888   888 Y88b888     888     8888888P"  888     888
+// 888  Y8P  888 888        888  Y88888 888     888 888    888      888888        888   888  Y88888     888     888 T88b   888     888
+// 888   "   888 888        888   Y8888 Y88b. .d88P Y88b  d88P                    888   888   Y8888     888     888  T88b  Y88b. .d88P
+// 888       888 8888888888 888    Y888  "Y88888P"   "Y8888P"                   8888888 888    Y888     888     888   T88b  "Y88888P"
+
+$bgGap: 310px;
+$bgGap_m: 180;
+$bgOffset: 140px;
+
+.section--intro {
+  background-image: url(../images/intro/bg.png);
+  @include lg-max {
+    background-image: url(../images/intro/bg_mo.png);
+  }
+  @include lg {
+    background: url(../images/intro/bg.webp) repeat-y;
+    background-attachment: local;
+    background-size: 2560px auto;
+    background-position: center top -10px;
+    .frame-section {
+      min-height: 971px;
+    }
+  }
+  &::after {
+    @include lg-max {
+      margin-top: 15%;
+    }
+  }
+  .frame-section {
+    .container {
+      &__inner {
+        &--wrap {
+          padding: 0;
+          background: none;
+          display: flex;
+          justify-content: space-between;
+          @include lg-max {
+            flex-direction: column;
+            gap: vw(60);
+            padding-bottom: 0;
+          }
+        }
+        &:before,
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+  .bg {
+    i {
+      display: block;
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .bg-snake {
+      @include gif(200, 188, -783, 591, 'snake');
+    }
+    .bg-racoon {
+      @include gif(130, 130, 278, 698, 'racoon');
+    }
+    .bg-dog {
+      @include gif(160, 160, -1223, 932, 'dog');
+    }
+  }
+  .content {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    position: relative;
+    max-width: 367px;
+    aspect-ratio: 367/546;
+    font-size: 0;
+    @include lg-max {
+      max-width: 980px;
+      aspect-ratio: 980/526;
+      width: 100%;
+      margin: 0 auto;
+    }
+    &--world {
+      background-image: url(../images/intro/content-world.webp);
+      @include lg-max {
+        background-image: url(../images/intro/content-world_mo.webp);
+      }
+    }
+    &--job {
+      background-image: url(../images/intro/content-job.webp);
+      @include lg-max {
+        background-image: url(../images/intro/content-job_mo.webp);
+      }
+    }
+  }
+
+  .btn {
+    background-image: url(../images/intro/btn.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 300ms filter;
+    font-size: 0;
+    margin: 0 auto;
+    width: 233px;
+    aspect-ratio: 233/57;
+    position: absolute;
+    top: 411px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include hover {
+      filter: brightness(1.1);
+    }
+    @include lg-max {
+      top: 53%;
+      width: 100%;
+      max-width: vw(493);
+      aspect-ratio: 493/105;
+      background-image: url(../images/intro/btn_mo.webp);
+    }
+  }
+}
+
+// 888b     d888 8888888888 888b    888 888     888     d8888                   8888888888 8888888888        d8888 88888888888 888     888 8888888b.  8888888888
+// 8888b   d8888 888        8888b   888 888     888    d8P888                   888        888              d88888     888     888     888 888   Y88b 888
+// 88888b.d88888 888        88888b  888 888     888   d8P 888                   888        888             d88P888     888     888     888 888    888 888
+// 888Y88888P888 8888888    888Y88b 888 888     888  d8P  888                   8888888    8888888        d88P 888     888     888     888 888   d88P 8888888
+// 888 Y888P 888 888        888 Y88b888 888     888 d88   888                   888        888           d88P  888     888     888     888 8888888P"  888
+// 888  Y8P  888 888        888  Y88888 888     888 8888888888      888888      888        888          d88P   888     888     888     888 888 T88b   888
+// 888   "   888 888        888   Y8888 Y88b. .d88P       888                   888        888         d8888888888     888     Y88b. .d88P 888  T88b  888
+// 888       888 8888888888 888    Y888  "Y88888P"        888                   888        8888888888 d88P     888     888      "Y88888P"  888   T88b 8888888888
+
+.section--feature {
+  margin-bottom: 0;
+  background-image: url(../images/feature/bg.webp);
+  overflow: hidden;
+  min-height: 1230px;
+  overflow: hidden;
+  position: relative;
+  margin-top: -50px;
+  @include lg {
+    background: url(../images/feature/bg.webp) repeat-y;
+    background-attachment: local;
+    background-size: 2560px auto;
+    background-position: center 0;
+  }
+  @include lg-max {
+    min-height: 100%;
+    background-image: url(../images/feature/bg_mo.webp);
+    margin-top: -2px;
+    padding-top: 6%;
+  }
+  .frame-section,
+  .container {
+    padding: 0;
+  }
+  .mo-char {
+    display: none;
+    @include lg-max {
+      display: inline-block;
+      position: relative;
+      @for $i from 1 through 6 {
+        .char#{$i}-mo {
+          position: absolute;
+          max-width: vw(500);
+          width: 18%;
+          aspect-ratio: (500/700);
+        }
+        @if $i == 1 {
+          .char#{$i}-mo {
+            // display: none;
+            left: 17%;
+            top: 44%;
+            transform: scale(1.23);
+          }
+        }
+        @if $i == 2 {
+          .char#{$i}-mo {
+            left: 41%;
+            top: 46%;
+          }
+        }
+        @if $i == 3 {
+          .char#{$i}-mo {
+            left: 71%;
+            top: 46%;
+          }
+        }
+        @if $i == 4 {
+          .char#{$i}-mo {
+            left: 17%;
+            top: 3%;
+          }
+        }
+        @if $i == 5 {
+          .char#{$i}-mo {
+            left: 41%;
+            top: 3%;
+          }
+        }
+        @if $i == 6 {
+          .char#{$i}-mo {
+            left: 67%;
+            top: 3%;
+          }
+        }
+      }
+
+      i {
+        display: block;
+        position: absolute;
+        left: 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.bg-box-mo {
+          @include gifMo(87, 85, 380, 175, 'box_mo');
+          margin-left: 17.185185vw;
+          top: 7.203704vw;
+        }
+      }
+    }
+  }
+  .bg {
+    //배경요소캐릭터
+    height: 1230px;
+    position: absolute;
+    top: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    &--l {
+      margin-left: -1279px;
+      width: 984px;
+      background-image: url(../images/feature/bg-l.webp);
+    }
+    &--r {
+      margin-left: 591px;
+      width: 689px;
+      background-image: url(../images/feature/bg-r.webp);
+    }
+    i {
+      display: block;
+      position: absolute;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .bg-box {
+      @include gif(100, 100, -270, 964, 'box');
+    }
+    .bg-girl {
+      @include gif(88, 213, 785, 430, 'girl');
+    }
+    &--tree {
+      background: url(../images/feature/bg-tree.webp) no-repeat 50% 0;
+      width: 100%;
+      background-size: 2560px;
+      top: 408px;
+      position: absolute;
+      height: 1105px;
+      transform-origin: 50% 100%;
+      animation: idleCh 10s infinite alternate ease-in;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 148px;
+    @include backgroundDefault;
+    background-position: center bottom;
+    background-image: url(../images/feature/bottom_leaves.webp);
+    @include lg-max {
+      background-size: cover;
+    }
+  }
+  .feature {
+    &__inner {
+      width: 1292px;
+      margin: 0 auto;
+      text-align: center;
+      @include lp {
+        min-width: 100%;
+        min-width: min(100%, calc(100% - 30px));
+        width: min(100%, calc(100% - 30px));
+      }
+    }
+  }
+  .chars {
+    &-box {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 23px;
+    }
+    &-arrow {
+      position: absolute;
+      left: 2%;
+      top: -29%;
+    }
+  }
+  .swiper {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    &-container {
+      position: relative;
+      overflow: hidden;
+      border: 7px solid #8b97bc;
+      box-sizing: content-box;
+      border-radius: 26px;
+      width: 1033px;
+      max-width: 1033px;
+      width: 100%;
+      height: 525px;
+      margin: 0 auto;
+      @include backgroundDefault;
+      @include lp {
+        max-width: 90%;
+        height: 100%;
+      }
+      @include lg-max {
+        height: auto;
+        width: 100%;
+        max-width: vw(966);
+        aspect-ratio: 966/1158;
+        border-width: 4px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        border-radius: 19px;
+        border: 7px solid #fff;
+        @include lg-max {
+          border-width: 4px;
+        }
+      }
+    }
+    &-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      cursor: pointer;
+      &--next,
+      &--prev {
+        width: 98px;
+        aspect-ratio: 98/105;
+        @include backgroundDefault;
+        @include lg-max {
+          width: vw(99);
+          aspect-ratio: 99/100;
+        }
+      }
+      &--next {
+        right: 0;
+        background-image: url(../images/feature/swiper_arr_r.webp);
+        @include lg-max {
+          background-image: url(../images/feature/swiper_arr_r_mo.webp);
+          right: vw(63);
+        }
+      }
+      &--prev {
+        left: 0;
+        background-image: url(../images/feature/swiper_arr_l.webp);
+        @include lg-max {
+          background-image: url(../images/feature/swiper_arr_l_mo.webp);
+          left: vw(63);
+        }
+      }
+      &-disabled {
+        opacity: 0;
+        cursor: default;
+      }
+    }
+
+    &-pagination {
+      position: absolute;
+      bottom: 16%;
+      z-index: 100;
+      transform: translateY(200%);
+      margin: 40px auto 0;
+      @include lg-max {
+        bottom: vw(120);
+        margin: 0;
+      }
+      @include mo {
+        bottom: vw(150);
+      }
+      &-bullet {
+        border-radius: 0;
+        opacity: 1;
+      }
+    }
+
+    .img {
+      transition: 300ms opacity;
+      opacity: 0;
+      position: relative;
+      img {
+        z-index: 2;
+        position: relative;
+      }
+      .gif {
+        z-index: 1;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        max-width: calc(100% - 2px);
+        border-radius: 40px;
+      }
+    }
+    &-slide {
+      .img {
+        > img {
+          display: block;
+          width: 100%;
+        }
+        .dis {
+          &-pc {
+            @include lg-max {
+              display: none;
+            }
+          }
+          &-tm {
+            @include lg {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &-slide-active,
+    &-slide-prev,
+    &-slide-next {
+      .img {
+        opacity: 1;
+      }
+    }
+    &-pagination-bullet,
+    &-pagination-bullet-active {
+      position: relative;
+      width: 21px;
+      height: 21px;
+      margin: 0 8px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1px solid #d5ddf2;
+      @include lg-max {
+        width: vw(33);
+        height: vw(33);
+        margin: 0 vw(12);
+      }
+    }
+    &-pagination-bullet-active {
+      border-color: #fff;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        margin-left: -1%;
+        margin-top: 1%;
+        border-radius: 50%;
+        background-color: #5268b4;
+        @include lg-max {
+          width: vw(18);
+          height: vw(18);
+        }
+      }
+    }
+  }
+  .char-wrap {
+    height: 380px;
+    position: relative;
+    width: 133px;
+    left: 50%;
+    margin-left: -488px;
+    transition: 300ms opacity;
+    width: 133px * 6 + 8px * 5;
+
+    opacity: 0;
+    @include lg-max {
+      display: none;
+    }
+    &.init {
+      opacity: 1;
+      @include lg-max {
+        display: none;
+      }
+      .char {
+        opacity: 1;
+      }
+    }
+    .char {
+      opacity: 0;
+      aspect-ratio: (160/200);
+      background-size: contain;
+      max-width: vw(160);
+      width: 20%;
+      display: block;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transition: 300ms all;
+      @for $i from 1 through 6 {
+        &--#{$i} {
+          left: percentage(($i - 1)/5);
+          transition-delay: 100ms * $i;
+          background-image: url(../images/gif/feature/char#{$i}.gif);
+          @if $i == 1 {
+            transform: scale(1.089);
+          }
+        }
+      }
+    }
+  }
+}

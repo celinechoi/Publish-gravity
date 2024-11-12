@@ -1,0 +1,58 @@
+﻿@mixin xl {
+  @media all and (min-width: 1900px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  // web
+  @media all and (min-width: ($mediaPSD +  0.02px)) {
+    @content;
+  }
+}
+
+// 1453px : 비주얼 컨텐츠 안가리는 마지노선
+@mixin lp {
+  @media all and (max-width: 1465px) {
+    @content;
+  }
+}
+
+@mixin lg-max {
+  //mobile
+  @media all and (max-width: ($mediaPSD )) {
+    // @if ($media == true) {
+    @content;
+    // }
+  }
+}
+
+@mixin ta {
+  // tablet
+  @media all and (min-width: 768px) and (max-width: $mediaPSD) {
+    @content;
+  }
+}
+
+@mixin mo {
+  // mobile
+  @media all and (max-width: 767px) {
+    @content;
+  }
+}
+
+// 부트스트랩 V5 브레이크포인트
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) { ... }

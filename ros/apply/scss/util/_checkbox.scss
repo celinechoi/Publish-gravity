@@ -1,0 +1,180 @@
+﻿@charset 'UTF-8';
+$main-color: #111;
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  // padding: 0;
+  // margin: -1px;
+  // overflow: hidden;
+  clip: rect(0, 0, 0, 0); //TODO:
+  // border: 0;
+  + .input-label,
+  + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+// label input checkbox, radio style
+.input-label {
+  $w: rem(22);
+  line-height: $w;
+  display: block;
+  &__text {
+    display: inline-block;
+    // line-height: $w;
+    line-height: 1.2;
+    position: relative;
+    padding-left: calc($w + 0.5em);
+    cursor: pointer;
+    &::before {
+      content: '';
+      width: $w;
+      height: $w;
+      line-height: calc($w - 2px);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: (-$w / 2);
+      text-align: center;
+      background-position: center;
+      background-size: cover;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      border-radius: 50%;
+      transition: 200ms background-color;
+    }
+  }
+
+  &--checkbox,
+  &--radio {
+    position: relative;
+    input {
+      //브라우저 기본경고창 위치 확보
+      height: calc($w + 2px);
+      width: calc($w + 2px);
+      top: 1px;
+      left: 1px;
+    }
+  }
+  &--radio {
+    display: inline-flex;
+    // padding-right: 2em;
+    .input-label__text {
+      &:before {
+        border-radius: 50%;
+      }
+    }
+    input[type='radio']:focus + .input-label__text::before,
+    input[type='radio']:hover + .input-label__text::before {
+      border-color: lighten($main-color, 20%);
+    }
+
+    input[type='radio']:checked + .input-label__text {
+      &::before {
+        z-index: 1;
+      }
+      &::after {
+        content: '';
+        width: $w;
+        height: $w;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -$w/2;
+        background: $main-color;
+        border: 5px solid #fff;
+        border-radius: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+  &--checkbox {
+    $w: rem(30);
+    input {
+      height: calc($w + 2px);
+      width: calc($w + 2px);
+      width: 100%;
+      background-color: red;
+    }
+    .input-label__text {
+      padding-left: calc($w + 0.5em);
+      &:before {
+        border: 0;
+        background-color: #d5d9df;
+        width: $w;
+        height: $w;
+        line-height: calc($w - 2px);
+        position: absolute;
+
+        margin-top: (-$w / 2);
+      }
+      &:after {
+        width: rem(14);
+        height: rem(9);
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(-45deg);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: rem(8);
+        margin-top: rem(-8);
+      }
+    }
+    input[type='checkbox']:focus + .input-label__text::before,
+    input[type='checkbox']:hover + .input-label__text::before {
+      background-color: darken(#d5d9df, 5%);
+    }
+
+    input[type='checkbox']:checked + .input-label__text::before {
+      background: $main-color;
+      // border-color: $main-color;
+      // color: #fff;
+    }
+  }
+
+  &--radioBx {
+    // background: #000;
+    &__wrap {
+      display: flex;
+      align-items: center;
+    }
+    flex: 1 1 50%;
+
+    input[type='radio']:hover + .input-label__text {
+      color: #000;
+    }
+    input[type='radio']:checked + .input-label__text {
+      border: 2px solid #272727;
+      color: #000;
+      background-color: #fff;
+      font-weight: 500;
+    }
+    .input-label__text {
+      padding: 0;
+      height: rem(70);
+      background-color: #f9f9f9;
+      border: 1px solid #ededed;
+      color: #999;
+      font-size: rem(18);
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

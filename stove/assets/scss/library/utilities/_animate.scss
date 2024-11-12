@@ -1,0 +1,10 @@
+// ##### card
+@keyframes cardFlip {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(90deg);
+  }
+}

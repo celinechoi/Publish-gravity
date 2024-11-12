@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <!-- #include file="inc/head.html" -->
+  <body>
+    <!-- S: 임시 ---------------- 스토브 헤더 -->
+    <!-- #include file="inc/stove_header.html" -->
+    <!-- S: 임시 ---------------- 스토브 헤더 -->
+
+    <!-- #include file="inc/header.html" -->
+    <div id="wrap">
+      <!-- #include file="inc/visual.html" -->
+      <!-- S: 서브 페이지 -->
+      <div id="sub">
+        <h3 class="sub-title">
+          <p>쿠폰 등록</p>
+          <!-- <ul class="form-list">
+            <li>
+              <select name="" id="">
+                <option value="">제목+내용</option>
+              </select>
+            </li>
+            <li>
+              <div class="input-box">
+                <input type="text" placeholder="검색어를 입력해주세요" />
+                <a href="javascript:;" class="icon-search"><img src="assets/images/inc/search.png" alt="검색" /></a>
+              </div>
+            </li>
+          </ul> --><!-- 240628 수정 : 삭제 -->
+        </h3>
+
+        <!-- S: 240628 수정 : 추가 -->
+        <form action="" class="coupon-form">
+          <input type="text" class="coupon-form__input" placeholder="쿠폰 번호를 입력 해주세요. " />
+          <button type="submit" class="coupon-form__btn">확인</button>
+        </form>
+        <!-- E: 240628 수정 : 추가 -->
+
+        <div class="inner">
+          <div id="tabArea" class="tab tabMimic">
+            <ul class="tab-title">
+              <li class="item--1">
+                <a href="16_coupon_list.html" data-hash="tabContent1" class="tab-link active">사용가능쿠폰</a>
+              </li>
+              <li class="item--2">
+                <a href="16_coupon_list-history.html" data-hash="tabContent2" class="tab-link">쿠폰사용내역</a>
+              </li>
+            </ul>
+
+            <ul class="coupon-list">
+              <li>
+                <ul class="coupon-list__tit">
+                  <li>쿠폰명</li>
+                  <li>쿠폰발급일</li>
+                  <li>사용기간</li>
+                </ul>
+              </li>
+              <!-- S: data 없을 경우 -->
+              <li class="nodata-box">
+                <img src="assets/images/inc/caution.png" alt="nodata" />
+                <p class="nodata-box__txt">사용 가능 쿠폰이 없습니다.</p>
+              </li>
+              <!-- E: data 없을 경우 -->
+              <li>
+                <ul class="coupon-list__con">
+                  <li>
+                    <p>스토브 RO1 오픈 기념 쿠폰</p>
+                    <span class="coupon-num">쿠폰번호: IZC711190210131288192</span>
+                  </li>
+                  <li>
+                    <p>2024.05.20</p>
+                  </li>
+                  <li>
+                    <p>2024.06.02 ~ 2024.05.22</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="coupon-list__con">
+                  <li>
+                    <p>스토브 RO1 오픈 기념 쿠폰</p>
+                    <span class="coupon-num">쿠폰번호: IZC711190210131288192</span>
+                  </li>
+                  <li>
+                    <p>2024.05.20</p>
+                  </li>
+                  <li>
+                    <p>2024.06.02 ~ 2024.05.22</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="coupon-list__con">
+                  <li>
+                    <p>스토브 RO1 오픈 기념 쿠폰</p>
+                    <span class="coupon-num">쿠폰번호: IZC711190210131288192</span>
+                  </li>
+                  <li>
+                    <p>2024.05.20</p>
+                  </li>
+                  <li>
+                    <p>2024.06.02 ~ 2024.05.22</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="coupon-list__con">
+                  <li>
+                    <p>스토브 RO1 오픈 기념 쿠폰</p>
+                    <span class="coupon-num">쿠폰번호: IZC711190210131288192</span>
+                  </li>
+                  <li>
+                    <p>2024.05.20</p>
+                  </li>
+                  <li>
+                    <p>2024.06.02 ~ 2024.05.22</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="pagination-list">
+              <li class="remote-pprev">
+                <a href="javascript:;" title="처음으로 가기"><img src="assets/images/inc/list_start.png" alt="처음으로 가기" /></a>
+              </li>
+              <li class="remote-prev">
+                <a href="javascript:;" title="이전으로 가기"><img src="assets/images/inc/list_prev.png" alt="이전으로 가기" /></a>
+              </li>
+              <li class="active"><a href="javascript:;">1</a></li>
+              <li><a href="javascript:;">2</a></li>
+              <li><a href="javascript:;">3</a></li>
+              <li><a href="javascript:;">4</a></li>
+              <li><a href="javascript:;">5</a></li>
+              <li><a href="javascript:;">6</a></li>
+              <li><a href="javascript:;">7</a></li>
+              <li><a href="javascript:;">8</a></li>
+              <li><a href="javascript:;">9</a></li>
+              <li><a href="javascript:;">10</a></li>
+              <li><a href="javascript:;">11</a></li>
+              <li class="remote-next">
+                <a href="javascript:;" title="다음으로 가기"><img src="assets/images/inc/list_prev.png" alt="다음으로 가기" /></a>
+              </li>
+              <li class="remote-nnext">
+                <a href="javascript:;" title="마지막으로 가기"><img src="assets/images/inc/list_start.png" alt="마지막으로 가기" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="caution-box">
+            <div class="caution-box__inner">
+              <p>※ 주의사항을 확인해 주세요!</p>
+              <a href="javascript:;" data-popup="popup__caution" class="popup-link">주의사항</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- E: 서브 페이지 -->
+    </div>
+
+    <!-- #include file="inc/footer.html" -->
+    <!-- #include file="inc/popup_competition.html" -->
+    <script src="assets/js/common.min.js"></script>
+  </body>
+</html>

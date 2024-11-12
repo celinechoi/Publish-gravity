@@ -1,0 +1,177 @@
+$nav-bg: rgba(#000000, 0.7);
+$header-h: 80px;
+
+.header {
+  z-index: 99;
+  position: fixed;
+  top: 48px;
+  width: 100%;
+  height: $header-h;
+  transition: all 0.2s ease-in-out;
+  &.top {
+    top: 0;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    &__img {
+      display: block;
+      margin: 0 auto;
+      background: url('../images/inc/logo.png') no-repeat; //
+      background-size: contain;
+      width: 102px;
+      height: 60px;
+      @media all and (max-width: 1430px) {
+        width: 94px;
+        height: 49px;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $nav-bg;
+    height: 100%;
+    padding-left: 40px;
+    text-align: center;
+    width: 100%;
+    &__bg {
+      display: none;
+      background-color: rgba(#000, 0.9);
+      position: absolute;
+      top: $header-h;
+      // border-top: 1px solid #dedede;
+      width: 100%;
+      left: 0;
+      right: 0;
+      height: 330px;
+    }
+    &__list {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      padding-left: 140px;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      @media all and (max-width: 1430px) {
+        padding-left: 10px;
+      }
+      &--lnb {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: $header-h;
+        transform: translateX(-50%);
+        width: 87%;
+        height: auto;
+        > li {
+          margin-top: 28px;
+          > a {
+            color: #ddd;
+            line-height: 1.7;
+            font-size: 16px;
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-item {
+      position: relative;
+      height: 100%;
+      padding: 0 45px;
+      line-height: 1;
+      text-align: center;
+      @media all and (max-width: 1430px) {
+        padding: 0 20px;
+      }
+      .link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 10px;
+        transition: color 300ms;
+        color: #fff;
+        font-weight: 500;
+        font-family: $font-family-basic;
+        font-size: 18px;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 3px;
+          background-color: transparent;
+        }
+      }
+      &:hover {
+        .link {
+          &::after {
+            background-color: $color-1;
+          }
+        }
+      }
+    }
+
+    &__banner {
+      position: relative;
+      z-index: 5;
+      align-items: flex-end;
+      align-self: flex-end;
+      width: 282px;
+      height: 100%;
+      .link {
+        display: block;
+        width: 282px;
+        height: 100%;
+        background: url('../images/inc/gamestart.png') no-repeat center center / cover;
+        @media all and (max-width: 1430px) {
+          width: 240px;
+        }
+        &:hover {
+          filter: brightness(1.1);
+        }
+      }
+    }
+  }
+}
+
+.clientLaucherInstall {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: 50%;
+  margin-left: ceil(253px/-2);
+  width: 253px;
+  height: 117px;
+  *,
+  & {
+    font-size: 0;
+  }
+  background: url(../images/inc/clientLaucherInstall.webp) no-repeat;
+  .btnInstall {
+    display: block;
+    position: absolute;
+    width: 91px;
+    height: 87px;
+    top: 11px;
+    left: 18px;
+  }
+  .btnClose {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 26px;
+    height: 26px;
+  }
+}

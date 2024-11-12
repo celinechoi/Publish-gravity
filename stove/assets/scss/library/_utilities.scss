@@ -1,0 +1,53 @@
+﻿// 클래스형태로 자주 사용하는 유틸 모음
+@import 'utilities/_sr-only.scss';
+@import 'utilities/_animate.scss';
+
+.d-flex {
+  display: flex !important;
+}
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
+//
+.dis-none {
+  display: none !important;
+}
+.tm-none {
+  display: block !important;
+}
+.ta-none {
+  display: block !important;
+}
+.mo-none {
+  display: block !important;
+}
+.dis-block {
+  display: block !important;
+}
+.tm-block {
+  display: none !important;
+}
+.ta-block {
+  display: none !important;
+}
+.mo-block {
+  display: none !important;
+}
+
+@include deviceLg {
+  .d-lg-flex {
+    display: flex !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-inline-block {
+    display: inline-block !important;
+  }
+}

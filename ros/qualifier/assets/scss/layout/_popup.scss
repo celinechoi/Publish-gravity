@@ -1,0 +1,505 @@
+//  블라인드
+.blind {
+  backdrop-filter: blur(3px);
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  text-align: left;
+}
+
+.popup {
+  display: none;
+  z-index: 400;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 698px;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  * {
+    letter-spacing: -0.05em;
+    word-break: keep-all;
+  }
+  @include mo {
+    max-width: 97%;
+    width: 97%;
+  }
+  &-closed {
+    display: none;
+    position: fixed;
+    z-index: 500;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    right: 5%;
+    top: 6%;
+    background: url('../images/popup/popup_close.png') no-repeat center center / contain;
+    @include lg {
+      opacity: 0.8;
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
+    }
+    @include mo {
+      width: 100%;
+    }
+  }
+  &__scroll {
+    width: 100%;
+    max-height: 900px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    padding-right: 0;
+    overflow-anchor: none;
+    overscroll-behavior: contain;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: rgba(#ddd, 0.5);
+    }
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+    }
+    @media all and (max-height: 828px) {
+      max-height: 620px;
+    }
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+  }
+  &__page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // @include mo {
+    //   max-height: 70vh;
+    //   justify-content: flex-start;
+    // }
+    h2 {
+      color: #000;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      @include ta {
+        font-size: 32px;
+      }
+      @include mo {
+        font-size: 26px;
+      }
+    }
+    &--content {
+      // padding-top: 30px;
+      // @include ta {
+      //   padding-top: 25px;
+      // }
+      // @include mo {
+      //   padding-top: 20px;
+      // }
+      p {
+        color: #000;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 600;
+        @include ta {
+          font-size: 14px;
+        }
+      }
+    }
+    &--btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &--logo {
+      display: block;
+      width: 140px;
+      margin: 0 auto 30px;
+      @include mo {
+        width: 35%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &--info {
+    color: #333;
+    @at-root .popup {
+      &__header {
+        @include mo {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      &__footer {
+        display: block;
+        width: 100%;
+        margin-top: -1px;
+        background: url('../images/popup/popup_footer.png') no-repeat;
+        height: 16px;
+        background-size: 100% 100%;
+        @include mo {
+          height: 8px;
+        }
+      }
+      &__body {
+        background-color: #fff;
+        padding-bottom: 40px;
+        @include mo {
+          width: 100%;
+          padding-bottom: 4%;
+        }
+        &--inner {
+          display: inline-block;
+          position: relative;
+        }
+      }
+      &__nav {
+        padding: 33px 0 20px;
+        margin: 0 40px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        border-bottom: 2px solid #f3eded;
+        @include mo {
+          overflow-x: auto;
+          white-space: nowrap;
+          gap: 0;
+          padding: 3% 0;
+          margin: 0 3% 7%;
+        }
+
+        .link {
+          display: block;
+          width: 100%;
+          // height: 20px;
+          transition: none;
+          // @include mo {
+          //   height: 13px;
+          // }
+          @for $i from 1 through 4 {
+            &--#{$i} {
+              background: url('../images/popup/popup_nav' + $i + '.png') no-repeat center center;
+              @include mo {
+                width: 100%;
+                background-size: 100% auto;
+              }
+              &.active {
+                background-image: url('../images/popup/popup_nav' + $i + '_on.png');
+              }
+            }
+          }
+        }
+        > li {
+          &:nth-child(1) {
+            width: 24%;
+            .link {
+              aspect-ratio: (134/20);
+              max-width: 134px;
+            }
+          }
+          &:nth-child(2) {
+            width: 28%;
+            .link {
+              aspect-ratio: (150/20);
+              max-width: 150px;
+            }
+          }
+          &:nth-child(3) {
+            width: 24%;
+            .link {
+              aspect-ratio: (129/20);
+              max-width: 129px;
+            }
+          }
+          &:nth-child(4) {
+            width: 24%;
+            .link {
+              aspect-ratio: (129/20);
+              max-width: 129px;
+            }
+          }
+        }
+      }
+      &__content {
+        display: none;
+        padding: 0 40px;
+        @include mo {
+          padding: 0 3%;
+        }
+        &,
+        .scroll-bx {
+          min-height: 500px;
+          max-height: 50vh;
+          @include device {
+            min-height: 500px;
+            max-height: 500px;
+          }
+        }
+        .scroll-bx {
+          // overflow-x: hidden;
+          overflow: auto;
+          // padding: 0 10px;
+          padding-right: 7px;
+          &::-webkit-scrollbar {
+            width: 7px; /* 스크롤바의 너비 */
+            height: 7px;
+          }
+          @include mo {
+            $scrollw: 4px;
+            padding-right: $scrollw;
+            &::-webkit-scrollbar {
+              width: $scrollw; /* 스크롤바의 너비 */
+              height: $scrollw; /* 스크롤바의 너비 */
+            }
+          }
+          &::-webkit-scrollbar-thumb {
+            height: 30%; /* 스크롤바의 길이 */
+            background: #333; /* 스크롤바의 색상 */
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background: rgba(51, 51, 51, 0.4); /*스크롤바 뒷 배경 색상*/
+          }
+        }
+        h2 {
+          font-size: 20px;
+          font-weight: 500;
+          color: #000;
+          margin-bottom: 1em;
+          @include mo {
+            font-size: 16px;
+          }
+        }
+        .d-flex {
+          color: #666;
+          > span {
+            flex: 0 0 auto;
+          }
+        }
+        .txt {
+          &,
+          * {
+            font-size: 18px;
+            word-break: keep-all;
+            @include mo {
+              font-size: 14px;
+              line-height: 1.3;
+            }
+          }
+        }
+        .decimal-list {
+          padding-bottom: 1em;
+          > li {
+            p {
+              margin-top: 0.3em;
+            }
+            display: flex;
+            margin-top: 0.5em;
+            align-items: baseline;
+            counter-increment: list;
+            position: relative;
+            &:nth-child(1) {
+              margin-top: 0;
+            }
+            &:before {
+              font-feature-settings: 'tnum';
+              flex: 0 0 auto;
+              padding-right: 0.5em;
+              content: counter(list) '.';
+              @include mo {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+        // .rowscroll {
+        //   overflow-x: auto;
+        //   position: relative;
+        // }
+        table {
+          margin: 0.5em 0;
+          max-width: 100%;
+          table-layout: fixed;
+          th {
+            background: #f9f9f9;
+          }
+          th,
+          td {
+            line-height: 1.1;
+            font-size: 0.9em !important;
+            border: 1px solid #ddd;
+            padding: 0.2em 0.4em;
+          }
+        }
+      }
+    }
+    .popup {
+      &-closed {
+        position: initial;
+        width: 43px;
+        height: 43px;
+        margin: 0 0 20px auto;
+        @include deviceSpare {
+          width: 30px;
+          height: 30px;
+        }
+        @include mo {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+  &--item {
+    .popup {
+      &__content {
+        min-height: 600px;
+        padding: 10px;
+        @include device {
+          min-height: 500px;
+          max-height: 500px;
+        }
+        .scroll-bx {
+          min-height: 600px;
+          @include device {
+            min-height: 500px;
+            max-height: 500px;
+          }
+        }
+      }
+    }
+    .gif {
+      &-1,
+      &-2,
+      &-3,
+      &-4 {
+        position: absolute;
+        left: 17.36%;
+        top: 4.11%;
+        width: 28.6%;
+      }
+      &-2 {
+        left: 54%;
+      }
+      &-3 {
+        top: 21.9%;
+      }
+      &-4 {
+        left: 54%;
+        top: 21.9%;
+      }
+    }
+  }
+  &--video {
+    display: flex !important;
+    opacity: 0;
+    z-index: -2;
+    transition: 500ms opacity;
+    transition-delay: 100ms;
+    // position: relative;
+    display: inline-block;
+    @include lg-max {
+      // transform: none !important;
+    }
+    @include mo {
+      max-width: 100%;
+      width: 96%;
+    }
+    &.open {
+      z-index: 400;
+      opacity: 1;
+    }
+
+    .popup__wrap {
+      z-index: 2;
+    }
+    @at-root .you_tube {
+      background-color: #000; //
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      height: 0;
+      padding-bottom: 56.25%;
+      z-index: 25;
+      iframe,
+      object,
+      embed {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        // margin-top: 70px;
+      }
+    }
+    .popup {
+      &__wrap {
+        position: absolute;
+        left: 50%;
+        bottom: 2%;
+        width: 98%;
+        transform: translateX(-50%);
+      }
+      &-closed {
+        display: inline-block;
+        right: -4%;
+        top: -16%;
+      }
+    }
+  }
+}
+
+.video-closed {
+  background-size: percentage(31/80);
+}
+
+@include lg-max {
+  $margin: vw(110);
+  .video-closed {
+    opacity: 0.8;
+    width: $margin;
+    height: $margin;
+    // background-size: (31px / 1.6); //원본 닫기 이미지 사이즈
+  }
+  $gutter: $gutter;
+  .popup--video {
+    margin-top: calc(($margin - $gutter) / 2);
+    .popup {
+      &__wrap {
+        // width: calc(100% - 60px);
+      }
+      &__scroll {
+        max-height: calc(100vh - $margin - $gutter);
+        max-height: calc(var(--vh, 1vh) * 100 - $margin - $gutter);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+﻿@import 'content/_common.scss'; // 컨텐츠 공통
+@import 'content/_main.scss';
+@import 'content/_sub.scss'; // section1: 새소식
+
+.section {
+  * {
+    //flicking 방지
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+  }
+}

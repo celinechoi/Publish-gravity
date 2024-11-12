@@ -1,0 +1,216 @@
+﻿// ro1스타일 보충
+.guideContents {
+  min-width: 900px;
+  max-width: 900px;
+  table {
+    max-width: 900px;
+    th,
+    td {
+      padding: 7px 18px;
+    }
+  }
+  dl {
+    dt,
+    dd {
+      padding: 7px 18px;
+    }
+    dt {
+      width: 280px;
+    }
+    dd {
+      width: 620px;
+    }
+  }
+  .spaceMoveNav {
+    // max-width: 900px;
+    > li {
+      // padding: 7px 18px;
+    }
+  }
+  h3 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .btns {
+    a {
+      height: 27px;
+      font-size: 12px;
+      span {
+        width: auto;
+        min-width: 150px;
+        height: 100%;
+        font-weight: 400;
+      }
+    }
+    .i-outlink {
+      vertical-align: middle;
+      margin: 0 0 1px 4px;
+    }
+  }
+}
+.ragStartInterface05Contents {
+  div {
+    p {
+      float: none;
+    }
+  }
+}
+.systemBeginner01Contents,
+.systemBeginner02Contents,
+.systemBeginner03Contents,
+.systemBeginner05Contents,
+.systemBeginner06Contents,
+.systemBeginner07Contents,
+.systemBeginner08Contents {
+  .spaceMoveNav {
+    li {
+      padding: 0;
+    }
+  }
+  p {
+    margin: 15px 0;
+  }
+}
+
+.systemBeginnerContents table,
+.systemLoversContents table,
+.systemMania03Contents table {
+  margin: 15px 0 20px;
+}
+
+.cardWrap {
+  width: 695px;
+}
+
+.systemBeginner07Contents {
+  .spaceMoveNav {
+    > li {
+      width: calc(33.33% - 1px);
+    }
+  }
+}
+
+.systemBeginnerContents {
+  h4 {
+    height: auto;
+    font-size: 12px;
+    padding: 0 0 0 5px;
+    margin-top: 15px;
+    background-position: 0 50%;
+  }
+}
+
+// .systemLoversContents,
+// .systemBeginnerContents,
+// .systemGuildContents {
+//   h3 {
+//     width: 100%;
+//     padding: 0 0 7px 17px;
+//     margin-top: 20px;
+//     background-repeat: no-repeat;
+//     background-position: 0 2px;
+//     font-weight: bold;
+//     color: #333;
+//     &.system_num01 {
+//       background-image: url('https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/common/icon/icon_num1.gif');
+//     }
+//     &.system_num02 {
+//       background-image: url('/games/ro1/2013_ro1/images/common/icon/icon_num2.gif');
+//     }
+//     &.system_num03 {
+//       background-image: url('/games/ro1/2013_ro1/images/common/icon/icon_num3.gif');
+//     }
+//     &.system_num04 {
+//       background-image: url('/games/ro1/2013_ro1/images/common/icon/icon_num4.gif');
+//     }
+//   }
+// }
+
+// .systemLoversContents,
+// .systemGuildContents {
+//   h2 {
+//     + p {
+//       margin: -8px 0 15px;
+//     }
+//   }
+// }
+
+.systemGuild01Contents {
+  .guildSystemList {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+// .systemGuild01Contents {
+//   .makeGuild {
+//     height: 100px;
+//   }
+// }
+
+.systemManiaContents {
+  .homunculusInfo,
+  .homunculus {
+    text-align: center;
+  }
+}
+.ragStartInterface03Contents,
+.ragStartInterface04Contents {
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    &,
+    dt,
+    dd {
+      box-sizing: border-box !important;
+      width: auto;
+      float: none;
+    }
+  }
+  dt {
+    flex: 0 0 230px;
+  }
+  dd {
+    flex: 1 1 calc(100% - 230px - 2px);
+  }
+}
+
+.ragStartInterface03Contents .noShorten {
+  width: 100%;
+  li {
+    width: 50%;
+  }
+}
+
+.systemGuild04Contents .rentalItem {
+  box-sizing: content-box;
+}
+.ragStartInterface05Contents {
+  div p {
+    float: none;
+  }
+}
+.systemMania05Contents {
+  .homunculusSkill,
+  .embryo,
+  .homunculusEvolution {
+    * {
+      box-sizing: content-box;
+    }
+  }
+}
+#tabArea.system {
+  em {
+    font-family: inherit;
+  }
+}
+
+.systemPageNotice {
+  margin-top: 20px;
+  p {
+    margin: 0;
+    color: #0e69d0;
+    line-height: 1.3;
+  }
+}

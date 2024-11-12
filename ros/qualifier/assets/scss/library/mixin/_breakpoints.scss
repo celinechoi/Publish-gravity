@@ -1,0 +1,66 @@
+// $mediaResponsiveSize = 1024px; <= _var.scss
+
+@mixin lg {
+  // web
+  @media all and (min-width: ($mediaResponsiveSize +  0.02px)) {
+    @content;
+  }
+}
+
+@mixin lg-max {
+  //tablet, mobile
+  @media all and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin deviceLg {
+  @media all and (min-width: 1001px) {
+    @content;
+  }
+}
+
+@mixin device {
+  @media all and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin deviceSpare {
+  @media all and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin lp {
+  // 1440px 이하
+  @media all and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin tm {
+  // tablet, mobile
+  @media all and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin ta {
+  // tablet
+  @media all and (min-width: 768px) and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin mo {
+  @media all and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media all and (max-width: (768px - 0.2px)) {
+    @content;
+  }
+}

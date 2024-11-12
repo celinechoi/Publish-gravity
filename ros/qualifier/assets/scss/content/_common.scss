@@ -1,0 +1,100 @@
+﻿section {
+  text-align: center;
+}
+.section {
+  &-inner {
+    width: 100%;
+    margin: 0 auto;
+    @include tm {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+// button
+.btn {
+  width: 400px;
+  height: 93px;
+  background: url('../images/inc/btn.png') no-repeat center top / contain;
+  color: #fff;
+  font-size: 31px;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px #000;
+  line-height: 86px;
+  position: relative;
+  left: -6px;
+  margin-top: 18px;
+  &:hover {
+    filter: brightness(1.07);
+  }
+}
+// characters
+.ch {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  transition: all 2s ease-in-out;
+  &__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__item {
+    transition: all 2s ease-in-out;
+  }
+  &__ani {
+    display: block;
+    animation: floatCh 3000ms infinite alternate ease-in;
+  }
+  img {
+    width: auto;
+    max-width: fit-content;
+  }
+}
+.tab-content {
+  .ch {
+    &__wrap {
+      .ch {
+        &--l {
+          &-1,
+          &-2 {
+            @include device {
+              display: none !important;
+            }
+          }
+        }
+        &--r {
+          &-1 {
+            @include device {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// shining
+.particles-js {
+  display: block;
+  width: 90%;
+  height: 50%;
+  background: url('../images/powder.webp') no-repeat center top / contain;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 70%;
+  overflow: hidden;
+  filter: brightness(1.2) hue-rotate(240deg);
+  animation: fadeIn 3000ms alternate infinite;
+  canvas {
+    opacity: 1;
+  }
+}

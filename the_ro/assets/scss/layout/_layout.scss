@@ -1,0 +1,39 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #1e1e23;
+  //전환효과
+  @if $body-transition == true {
+    @at-root html {
+      background-color: #1e1e23;
+    }
+    transition: opacity 300ms !important;
+    opacity: 0;
+    &[data-loading='done'] {
+      opacity: 1;
+    }
+  }
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+
+  // 드래그 방지
+  * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+}

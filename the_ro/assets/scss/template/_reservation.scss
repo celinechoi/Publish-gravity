@@ -1,0 +1,275 @@
+﻿$form-main-color: $color-1; // 체크박스/라디오 악센트 컬러 설정
+$input-indent: em(22); // 체크박스 들여쓰기
+$border-color: #c3ceec;
+$color-common: #4a546b;
+#reservation {
+  position: absolute;
+  top: 0;
+}
+#reservation-market {
+  position: absolute;
+  top: 0;
+  @include lg-max {
+    top: vw(150);
+  }
+}
+//턴스타일
+.cloudeflare-container {
+  @at-root .reservation--1 .container__inner {
+    overflow: visible !important;
+  }
+  $h: 65px;
+  min-height: calc($h + 1.5 * 0.9em);
+  padding-top: $h;
+  position: relative;
+  width: 100%;
+  line-height: 1.2;
+  p {
+    margin-top: 0.2em;
+  }
+  * {
+    text-align: center !important;
+  }
+  .cf-turnstile {
+    font-size: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    // width: 100%;
+    // min-width: 330px;
+  }
+}
+
+.form-area {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  @include lg-max {
+    max-width: 89%;
+    margin-top: 0;
+  }
+  text-align: center;
+  display: block;
+  z-index: 5;
+  text-align: left;
+  font-size: css-rem(18);
+  color: $color-common;
+
+  * {
+    font-weight: 400;
+    // font-weight: 500;
+    letter-spacing: -0.05em;
+  }
+  form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .input {
+    height: 60px;
+    padding: 0 1.2em;
+    font-size: (20em/18);
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    text-align: center;
+    margin: css-rem(20) auto;
+    color: #a5b0cd;
+    text-align: left;
+    font-size: 18px;
+    @include lg-max {
+      height: vw(100);
+      font-size: vw(32);
+    }
+    &::placeholder {
+      color: #a5b0cd;
+    }
+  }
+  .radio-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    font-size: 22px;
+    margin-bottom: em(24);
+    @include lg-max {
+      margin-top: em(24);
+    }
+    img {
+      height: em(35);
+      max-height: 35px;
+    }
+    @media (max-width: 500px) {
+      font-size: 10px;
+      margin-top: em(24);
+    }
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      padding-left: em(30);
+
+      input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      &:has(input:checked) {
+        &:after {
+          content: '';
+        }
+        &:before {
+          border-color: $form-main-color;
+        }
+      }
+      &:hover,
+      &:focus,
+      &:focus-within {
+        &:before {
+          border-color: $form-main-color;
+        }
+      }
+      &:before,
+      &:after {
+        top: 50%;
+        position: absolute;
+        display: block;
+        left: 0;
+        transform: translateY(-50%);
+
+        width: em(18);
+        height: em(18);
+        border-radius: 50%;
+      }
+
+      &:before {
+        content: '';
+        background-color: #fff;
+        border: 1px solid $border-color;
+      }
+      &:after {
+        transform: translateY(-50%) scale(0.5);
+        background-color: $form-main-color;
+      }
+    }
+  }
+
+  .chk-wrap {
+    label {
+      cursor: pointer;
+      flex-wrap: wrap;
+      display: flex;
+      color: #546fb3;
+      align-items: center;
+      line-height: 1.3;
+      @include lg-max {
+        font-size: vw(32);
+      }
+    }
+    //체크박스
+    input {
+      font-size: (16em/18);
+      flex: 0 0 auto;
+      $input-border: 0; //1px;
+      accent-color: $form-main-color;
+      appearance: auto;
+      margin-right: 6px;
+      width: $input-indent;
+      height: $input-indent;
+      margin-top: -$input-border;
+      accent-color: $form-main-color;
+      background-color: #fff;
+      &:checked {
+        background-color: $form-main-color;
+      }
+      @include lg-max {
+        $input-border: vw(2);
+        width: $input-indent;
+        height: $input-indent;
+        margin-top: -$input-border;
+      }
+    }
+    .chk-all {
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+      border-bottom: 1px dashed #d2d5e7;
+      .text {
+        color: #546fb3;
+        font-size: 1.25rem;
+        font-weight: 700;
+        @include lg-max {
+          font-size: vw(34);
+        }
+      }
+    }
+    &__list {
+      li {
+        margin-top: 0.6em;
+      }
+    }
+  }
+  .clause-btn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    margin-left: 0.7em;
+    padding-left: 0.7em;
+    padding-right: 1.4em;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='%234a546b'/%3E%3Cpath d='M6 12L10 8L6 4' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 1em;
+    color: $color-common;
+    font-size: (16em/18);
+    position: relative;
+    margin-left: auto;
+  }
+
+  .btn-submit {
+    display: block;
+    transition: 300ms all;
+    background: url('../images/reservation/res_1/btn.webp') no-repeat;
+    margin: 0 auto;
+    margin-top: css-rem(30);
+    background-size: contain;
+    width: 100%;
+    max-width: 313px;
+    aspect-ratio: 313/87;
+    display: block;
+    @include lg-max {
+      width: vw(667);
+    }
+    @media (hover: hover) {
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+  }
+  .text {
+    &-alert {
+      margin-top: 0.4em;
+      padding-left: calc($input-indent + 6px);
+      font-size: css-rem(15);
+      line-height: 1.2;
+      color: $color-common;
+      letter-spacing: -0.07em;
+      @include lg-max {
+        font-size: vw(30);
+      }
+    }
+    &-color {
+      &-l {
+        color: #546fb3;
+        font-size: 18px;
+      }
+    }
+  }
+}

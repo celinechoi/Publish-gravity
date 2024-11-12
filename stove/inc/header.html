@@ -1,0 +1,116 @@
+<header class="header" id="header">
+  <nav class="nav">
+    <span class="nav__bg"></span>
+    <a class="logo" href="index.html">
+      <span class="logo__img"></span>
+    </a>
+
+    <ul class="nav__list">
+      <li class="nav-item">
+        <a href="1_notice.html" class="link">새소식</a>
+        <ul class="nav__list--lnb">
+          <!-- S: 240730 수정 : text뒤 공백문자 삭제 -->
+          <li>
+            <a href="1_notice.html">공지사항</a>
+          </li>
+          <li>
+            <a href="3_update.html">업데이트</a>
+          </li>
+          <!-- E: 240730 수정 : text뒤 공백문자 삭제 -->
+          <li><a href="4_develop_note.html">개발자 노트</a></li>
+          <li><a href="5_gallery_event.html">이벤트</a></li>
+          <li>
+            <a href="https://probability.gnjoy.com/" target="_blank">확률공개 <img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+            <!-- 240702 수정 : href/target 추가-->
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="6_info_page.html" class="link">게임정보</a>
+        <ul class="nav__list--lnb">
+          <li><a href="6_info_page.html">라그나로크 소개</a></li>
+          <li><a href="8_basic_systems.html">라그 시작하기</a></li>
+          <li><a href="11_system_info.html">시스템 소개</a></li>
+          <li>
+            <a href="https://ro.gnjoy.com/guide/runemidgarts/" target="_blank">룬 미드가츠 도서관 <img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+            <!-- 240702 수정 : href/target 추가-->
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="12_faq.html" class="link">고객센터</a>
+        <ul class="nav__list--lnb">
+          <li><a href="12_faq.html">FAQ</a></li>
+          <li><a href="13_1_1_qna.html">1:1 문의</a></li>
+          <!-- S: 240702 수정 : li 순서 변경-->
+          <li><a href="15_periodic_inspection.html">정기점검</a></li>
+          <li><a href="14_pwd_initial.html">2차 비밀번호 초기화</a></li>
+          <li>
+            <a href="https://cs.gate8.com/service/SB_RAGNAROK_IND" target="_blank">
+              <!-- 240722 수정 : a[href] 수정 -->
+              계정/결제 관련
+              <img src="assets/images/inc/outlink.png" class="icon icon-outlink" />
+            </a>
+          </li>
+          <!-- E: 240702 수정 : li 순서 변경-->
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="16_coupon_list.html" class="link">쿠폰등록</a>
+      </li>
+      <!-- S: 240715 수정 -->
+      <li class="nav-item">
+        <a href="https://store.onstove.com/ko/games/3687/community/126883/list" target="_blank" class="link">커뮤니티<img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+      </li>
+      <!-- E: 240715 수정 -->
+    </ul>
+
+    <div class="nav__banner">
+      <a href="javascript:;launcherLayerShow()" class="link"><span class="sr-only">GAME START</span></a>
+
+      <!-- 클라이언트 설치 토글 -->
+      <div id="clientLaucherInstall" class="clientLaucherInstall" style="display: none">
+        <a href="#" onclick="fnGameDown()" class="btnInstall" title="STOVE 클라이언트 설치">STOVE 클라이언트 설치</a>
+        <p>게임을 시작하기 위해선 먼저 STOVE 클라이언트 설치가 되어있어야 합니다.</p>
+        <a href="javascript:launcherLayerHide();" class="btnClose">닫기</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- S: 240723 수정 : 시작팝업 테스트 코드-->
+<button
+  onclick="window.open('startPopup.html','startPopup', 'width=500, height=580, left=200, top=200, scrollbars=no, status=no, toolbar=no, resizable=no')"
+  style="
+    position: fixed;
+
+    bottom: 0;
+    right: 0;
+    background-color: gray;
+    font-size: 10px;
+    color: white;
+    padding: 0.5em;
+    z-index: 10000;
+  "
+>
+  시작팝업 띄우기
+</button>
+<!-- E: 240723 수정 : 시작팝업 테스트 코드-->
+
+<script>
+  function launcherLayerShow() {
+    $('.clientLaucherInstall').show();
+  }
+  function launcherLayerHide() {
+    $('.clientLaucherInstall').hide();
+  }
+  function fnGameDown() {
+    // if ('https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe' != '') {
+    //   fnStoveLogClick('MAIN', 'MAIN_DOWNLOAD_1_BTN', 'https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe', window.event);
+    //   top.location.href = 'https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe';
+    // } else {
+    alert('게임 다운로드에 실패하였습니다. 고객센터에 문의해주십시요');
+    // }
+    launcherLayerHide();
+  }
+</script>

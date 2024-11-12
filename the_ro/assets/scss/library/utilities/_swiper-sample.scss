@@ -1,0 +1,105 @@
+﻿// https://v8.swiperjs.com/swiper-api
+
+.swiper-common {
+  //버튼사이즈
+  $sb-w: 93;
+  $sb-h: 131;
+  $sb-mobileRatio: (93/75); // == 1.3; //모바일 노출 비율. (web너비/mobile너비) 이미지 소스가 같은 것을 전제합니다.
+  .swiper-button {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+    cursor: pointer;
+    width: ($sb-w * 1px);
+    height: ($sb-h * 1px);
+    opacity: 0.8;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+    &--next {
+      background-image: url(../images/swiper-next.webp);
+    }
+    &--prev {
+      background-image: url(../images/swiper-prev.webp);
+    }
+    @include lg-max {
+      width: vw($sb-w / $sb-mobileRatio);
+      height: vw($sb-h / $sb-mobileRatio);
+    }
+  }
+
+  //가로형 기본
+  &--landscape {
+    .swiper-container {
+      position: relative;
+      max-width: 600px; //샘플코드
+      width: 100%;
+      margin: 0 auto;
+      overflow: visible;
+    }
+    .swiper-button {
+      &--next {
+        right: -$sb-w * 1px;
+      }
+      &--prev {
+        left: -$sb-w * 1px;
+      }
+    }
+    @include lg-max {
+      .swiper-container {
+        padding-bottom: vw($sb-h / $sb-mobileRatio);
+        overflow: hidden;
+      }
+      .swiper-button {
+        top: auto;
+        bottom: 0;
+        transform: none;
+        &--next {
+          right: 50%;
+          margin-right: vw(-$sb-w/$sb-mobileRatio);
+        }
+        &--prev {
+          left: 50%;
+          margin-left: vw(-$sb-w/$sb-mobileRatio);
+        }
+      }
+    }
+  }
+
+  //세로형 기본
+  &--portrait {
+    .swiper-container {
+      position: relative;
+      max-width: 300px; //샘플코드
+      width: 100%;
+      margin: 0 auto;
+      overflow: visible;
+    }
+    .swiper-button {
+      &--next {
+        right: -$sb-w * 1px;
+      }
+      &--prev {
+        left: -$sb-w * 1px;
+      }
+    }
+    @include lg-max {
+      .swiper-container {
+        padding: 0 vw($sb-w / $sb-mobileRatio);
+      }
+      .swiper-button {
+        &--next {
+          right: 0;
+        }
+        &--prev {
+          left: 0;
+        }
+      }
+    }
+  }
+}

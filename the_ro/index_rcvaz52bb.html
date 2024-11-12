@@ -1,0 +1,1097 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <!-- #include file="inc/head.html" -->
+  <body>
+    <!-- #include file="inc/header.html" -->
+
+    <main id="contents">
+      <!-- S: 240730 수정: 추가 -->
+      <!-- <button type="button" id="pv-btn" class="pv-btn popup-link--video" data-content="https://www.youtube.com/embed/OI2L91VrXu4" title="프로모션 영상 보기"> </button> -->
+      <!-- 240731 수정 : 임시 PV팝업버튼 삭제 -->
+      <!-- E: 240730 수정: 추가 -->
+
+      <!-- S: 240813-1 수정 : dat-content 에 첫번째 영상 key 값 입력-->
+      <button type="button" id="pv-btn" class="pv-btn popup-link" data-popup="popup__pv" data-content="https://www.youtube.com/embed/OI2L91VrXu4" title="프로모션 영상 보기"> </button>
+      <!-- E: 240813-1 수정 : dat-content 에 첫번째 영상 key 값 입력-->
+
+      <!-- S: 240812 수정 -->
+      <button id="pv-cbt" class="pv-cbt popup-link" title="CBT 사전예약하기" data-popup="popup__thero-open"></button>
+
+      <!-- <button id="pv-cbt" class="pv-cbt cbt-pre popup-link" title="CBT 참여하기" data-popup="popup__thero-open"></button> -->
+
+      <!-- E: 240812 수정 -->
+
+      <div id="contentsInner">
+        <section class="section section-main" id="sectionMain">
+          <!-- S: 240702 수정 -->
+
+          <!-- 240703 수정 : img 삭제-->
+          <div class="section-main__gif d-none d-lg-block">
+            <i class="ch-l-1"></i>
+            <i class="ch-l-2"></i>
+            <i class="ch-l-3"></i>
+            <i class="ch-l-4"></i>
+            <i class="ch-r-1"></i>
+            <i class="ch-r-2"></i>
+            <i class="ch-r-3"></i>
+            <i class="ch-r-4"></i>
+            <i class="ch-r-5"></i>
+            <i class="ch-r-6"></i>
+            <i class="ch-r-7"></i>
+            <i class="ch-r-8"></i>
+          </div>
+          <div class="section-main__gif d-block d-lg-none">
+            <i class="ch-l-1"></i>
+            <i class="ch-l-3"></i>
+            <i class="ch-l-4"></i>
+            <i class="ch-r-1"></i>
+            <i class="ch-r-2"></i>
+            <i class="ch-r-7"></i>
+          </div>
+          <!-- E: 240702 수정 -->
+          <div class="section-main__inner">
+            <div class="section-content">
+              <!-- S: inter -->
+              <div class="set">
+                <div><img src="assets/images/main/leaves1.png" /></div>
+                <div><img src="assets/images/main/leaves2.png" /></div>
+                <div><img src="assets/images/main/leaves3.png" /></div>
+                <div><img src="assets/images/main/leaves4.png" /></div>
+                <div><img src="assets/images/main/leaves1.png" /></div>
+                <div><img src="assets/images/main/leaves2.png" /></div>
+                <div><img src="assets/images/main/leaves4.png" /></div>
+              </div>
+              <span class="ch__wrap">
+                <span class="ch ch--l">
+                  <!-- S: 240701 수정 -->
+                  <span class="ch__item ch__ani">
+                    <img src="assets/images/main/angel.gif" class="d-none d-lg-block" />
+                    <img src="assets/images/main/angel_mo.gif" class="d-block d-lg-none" />
+                  </span>
+                  <!-- E: 240701 수정 -->
+                </span>
+
+                <span class="ch ch--r">
+                  <span class="ch__item ch__ani"><img data-aos="fade-down" data-aos-duration="700" src="assets/images/main/ch_r.webp" /></span>
+                </span>
+              </span>
+              <!-- E: inter -->
+              <div class="center-box">
+                <div class="center-box__top" data-aos="fade-up" data-aos-delay="300" data-aos-offset="-100" data-aos-duration="1000">
+                  <span class="logo"></span>
+                  <img src="assets/images/main/title.webp" class="title d-none d-lg-block" alt="갈라진 세계, 또 한 번의 모험" />
+                  <img src="assets/images/main/title_mo.webp" class="title d-block d-lg-none" alt="갈라진 세계, 또 한 번의 모험" />
+                </div>
+
+                <div class="center-box__bottom" data-aos="fade-down" data-aos-offset="-100" data-aos-delay="300" data-aos-duration="1000">
+                  <!-- S: 240703-2 수정 : onclick 수정 -->
+                  <button type="button" class="link" onclick="$('html,body').animate({scrollTop:$('#reservation').offset().top},300)">
+                    <!-- E: 240703-2 수정 : onclick 수정 -->
+                    <span class="sr-only">사전예약하기</span>
+                  </button>
+                  <img src="assets/images/main/scroll.webp" class="scroll-txt d-none d-lg-block" alt="스크롤을 내려 노비스를 움직여 보세요." />
+                  <img src="assets/images/main/scroll_mo.webp" class="scroll-txt d-block d-lg-none" alt="스크롤을 내려 노비스를 움직여 보세요." />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="charItem" class="char-frame">
+            <span class="char-frame__item"></span>
+          </div>
+        </section>
+        <section class="section-sub">
+          <div class="section-sub__inner">
+            <section class="trigger-section section--reservation" id="section-reservation">
+              <!-- <span class="bg bg--l"></span>
+              <span class="bg bg--r"></span> -->
+              <!-- 240703 수정 : span.bg 삭제 -->
+              <div class="bg">
+                <i class="bg-turtle"></i>
+                <i class="bg-green"></i>
+                <i class="bg-tree"></i>
+                <i class="bg-orange"></i>
+                <i class="bg-pig"></i>
+                <i class="bg-bug"></i>
+                <!-- <i class="bg-bug"></i> -->
+                <i class="bg-goblin"></i>
+                <!-- S: 240704-3 수정 -->
+                <i class="bg-larva"></i>
+                <!-- E: 240704-3 수정 -->
+              </div>
+
+              <section class="frame-section reservation--1">
+                <!-- S: MO -->
+                <div class="talk-box d-block d-lg-none">
+                  <i class="bg-turtle-mo"></i>
+                  <!-- S: 240702 수정 -->
+                  <button type="button" class="talk-box__btn popup-link" data-popup="popup__reservation-notice" title="유의사항 확인하기"></button>
+                  <img src="assets/images/reservation/step1_mo.webp" class="talk-box__img" alt="THE RAGNAROK 런칭 사전예약  시 정식 추시 후 특별한 아이템을 받을 수 있습니다." />
+                  <!-- E: 240702 수정 -->
+                </div>
+                <!-- E: MO -->
+                <!-- # 1-1 : 사전예약 -->
+                <div class="anchor encounter-1--1 container">
+                  <span class="ch__wrap">
+                    <span class="ch ch--l npc">
+                      <div class="npc__inner" data-aos-duration="1000" data-aos="fade-left">
+                        <!-- S: 240702 수정 -->
+                        <button type="button" class="popup-link" data-popup="popup__reservation-notice" title="유의사항 확인하기">
+                          <img src="assets/images/sub/balloon/item1.png" class="balloon" alt=" THE RAGNAROK 런칭 사전예약  시 정식 추시 후 특별한 아이템을 받을 수 있습니다." />
+                          <!-- E: 240702 수정 -->
+                        </button>
+                        <span class="ch__item"></span>
+                      </div>
+                    </span>
+                  </span>
+                  <div class="container__inner">
+                    <!-- S: 240703-2 수정 : 광고용 앵커 추가 -->
+                    <div id="reservation"></div>
+                    <!-- E: 240703-2 수정 : 광고용 앵커 추가 -->
+
+                    <div class="container__inner--wrap">
+                      <div class="title-bx" data-aos="fade-up">
+                        <h2 class="sr-only">사전 예약</h2>
+                        <p class="sr-only">2024년 7월 8일 ~ 정식 오픈까지</p>
+                      </div>
+                      <!-- S: 사전예약 폼 -->
+                      <div class="form-area" data-aos="fade-up">
+                        <form action="" onsubmit="return false">
+                          <div class="radio-wrap">
+                            <label>
+                              <input type="radio" name="os" value="aos" checked />
+                              <img src="assets/images/reservation/res_1/os-aos.webp" alt="Google Play" />
+                            </label>
+
+                            <label>
+                              <input type="radio" name="os" value="ios" />
+                              <img src="assets/images/reservation/res_1/os-ios.webp" alt="App Store" />
+                            </label>
+                          </div>
+
+                          <!-- S: turnstile : 테스트 코드 -->
+                          <div class="cloudeflare-container">
+                            <!-- S: 퍼블 테스트용 -->
+                            <!-- <div class="cf-turnstile" style="font-size: 0; height: 65px; border: 1px solid #ddd; background: #fff" data-theme="light"></div> -->
+                            <!-- E: 퍼블 테스트용 -->
+
+                            <!-- S: 개발용 -->
+                            <div class="cf-turnstile" style="font-size: 0" data-sitekey="0x4AAAAAAAQKMbMx6pImjuzR" data-theme="light"></div>
+                            <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+                            <!-- E: 개발용 -->
+
+                            <!-- 확인중 일 경우 : -->
+                            <!-- <p style="font-size: 0.9em">접속에 대한 보안을 검사 중입니다.</p> -->
+                            <!-- 성공 일 경우 : -->
+                            <p style="text-align: left; font-size: 0.9em; color: #038127">접속에 대한 보안 확인이 완료되었습니다.</p>
+                            <!-- 240308 수정 : color 수정 -->
+                            <!-- 실패 일 경우 : -->
+                            <!-- <p style="font-size: 0.9em; color: #ff0606">접속에 대한 보안이 미흡합니다. 다른 환경에서 재시도하거나 고객센터에 문의해주세요.</p> -->
+                          </div>
+
+                          <script>
+                            // 크기 조절을 위한 스크립트
+                            window.addEventListener('message', function (e) {
+                              if (e.data.event !== 'init') {
+                                return;
+                              }
+
+                              let turnstileIframe = document.getElementById('cf-chl-widget-' + e.data.widgetId);
+                              if (!turnstileIframe) {
+                                return;
+                              }
+
+                              turnstileIframe.style.width = '100%';
+                              turnstileIframe.style.height = '65px';
+                              turnstileIframe.style.display = '';
+                              e.stopImmediatePropagation();
+                            });
+                          </script>
+                          <!-- E: turnstile : 테스트 코드 -->
+
+                          <!-- S: 240702 수정 2 -->
+                          <input class="input" type="tel" name="phone" autocomplete="off" placeholder="‘-’을 제외한 휴대폰 번호를 입력해 주세요." />
+                          <!-- E: 240702 수정 2 -->
+
+                          <div class="chk-wrap">
+                            <label class="chk-all" id="chkAll">
+                              <input type="checkbox" id="chk" />
+                              <p class="text">모든 내용에 동의합니다.(선택 동의 포함)</p>
+                            </label>
+
+                            <ul class="chk-wrap__list">
+                              <li>
+                                <label name="yearsCheck">
+                                  <input type="checkbox" name="yearsCheck" />
+                                  <span style="font-weight: 700" class="text-color-1">[필수] 19세 이상입니다.</span>
+                                </label>
+                              </li>
+                              <li>
+                                <!-- S: 240702 수정 2 -->
+                                <label name="person">
+                                  <input type="checkbox" name="person" />
+                                  [필수] 개인정보 수집 및 이용 동의
+                                  <button type="button" class="clause-btn popup-link" data-popup="popup__privacy">자세히 보기</button>
+                                </label>
+                                <!-- E: 240702 수정 2 -->
+                              </li>
+                              <li>
+                                <label name="consignment">
+                                  <input type="checkbox" name="consignment" />
+                                  [필수] 개인정보 처리 위탁 동의
+                                  <button type="button" class="clause-btn popup-link" data-popup="popup__consignment">자세히 보기</button>
+                                </label>
+                              </li>
+                              <li>
+                                <label name="advertising">
+                                  <input type="checkbox" name="advertising" />
+                                  <span style="font-weight: 700" class="text-color-1">[선택] 광고성 정보 수신 동의</span>
+                                  <button type="button" class="clause-btn popup-link" data-popup="popup__advertising">자세히 보기</button>
+                                </label>
+                                <!-- S: 240702 수정 -->
+                                <p class="text-alert">
+                                  광고성 정보 수신 동의는 선택적 동의로 거부할 수 있으나,
+                                  <br />
+                                  거부 시 게임 소식 받기 및 이벤트 보상 지급이 어렵습니다.
+                                </p>
+                                <!-- E: 240702 수정 -->
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- <button type="submit" class="btn-submit"><span class="sr-only">사전예약</span></button> -->
+                          <!-- S: 사전예약 테스트용 버튼  -->
+                          <button type="submit" class="btn-submit popup-link" data-popup="popup__reservation"><span class="sr-only">사전예약하기</span></button>
+                          <!-- E: 사전예약 테스트용 버튼  -->
+                        </form>
+                      </div>
+                      <script>
+                        $(document).ready(function () {
+                          $('#chk').click(function () {
+                            if ($('#chk').is(':checked')) {
+                              $('.chk-wrap__list input').prop('checked', true);
+                            } else {
+                              $('.chk-wrap__list input').prop('checked', false);
+                            }
+                          });
+
+                          $('.chk-wrap__list input').click(function () {
+                            var total = $('.chk-wrap__list input').length;
+                            var checked = $('.chk-wrap__list input:checked').length;
+                            if (total != checked) {
+                              $('#chk').prop('checked', false);
+                            } else {
+                              $('#chk').prop('checked', true);
+                            }
+                          });
+                        });
+                      </script>
+                      <!-- E: 사전예약 폼 -->
+
+                      <span class="hr"></span>
+
+                      <div class="content" data-aos="fade-up">
+                        <h3 class="sr-only">사전예약 보상</h3>
+                        <ul class="sr-only">
+                          <li>루비</li>
+                          <li>머리 코스튬 (천사or악마)</li>
+                          <li>오리데오콘</li>
+                          <li>에르늄</li>
+                          <li>제니</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // # 1-1 -->
+              </section>
+              <section class="frame-section reservation--2">
+                <!-- S: 240730 수정 : 추가 -->
+                <div id="reservation-market"></div>
+                <!-- E: 240730 수정 : 추가 -->
+                <!-- S: MO -->
+                <div class="talk-box d-block d-lg-none">
+                  <i class="bg-bug-mo"></i>
+                  <!-- S: 240702 수정 -->
+                  <button type="button" class="talk-box__btn popup-link" data-popup="popup__market-notice" title="유의사항 확인하기"></button>
+                  <img src="assets/images/reservation/step2_mo.webp" class="talk-box__img" alt="THE RAGNAROK 마켓 사전예약 시 정식 출시 후 마켓 사전예약 보상이 지급됩니다" />
+                  <!-- E: 240702 수정 -->
+                </div>
+                <!-- E: MO -->
+                <!-- # 1-2 : 마켓 사전예약 -->
+                <div class="anchor encounter-1--2 container">
+                  <span class="ch__wrap">
+                    <span class="ch ch--l npc">
+                      <div class="npc__inner" data-aos-duration="1000" data-aos="fade-left">
+                        <!-- S: 240702 수정  -->
+                        <button type="button" class="popup-link" data-popup="popup__market-notice" title="유의사항 확인하기">
+                          <img src="assets/images/sub/balloon/item2.png" class="balloon" alt="THE RAGNAROK 마켓 사전예약 시 정식 출시 후 마켓 사전예약 보상이 지급됩니다" />
+                        </button>
+                        <!-- E: 240702 수정  -->
+                        <span class="ch__item"></span>
+                      </div>
+                    </span>
+                  </span>
+                  <div class="container__inner">
+                    <div class="container__inner--wrap">
+                      <div class="title-bx" data-aos="fade-up">
+                        <h2 class="sr-only">마켓 사전예약</h2>
+                      </div>
+                      <div class="content" data-aos="fade-up">
+                        <h3 class="sr-only">마켓 사전 예약 보상</h3>
+                        <!-- S: 240702 수정 -->
+                        <!-- E: 240702 수정 -->
+                      </div>
+                      <span class="hr"></span>
+                      <div data-aos="fade-up">
+                        <ul class="market-list">
+                          <li>
+                            <a href="#TODO:" class="link link--download-aos" target="_blank" title="Google Play에서 사전등록하기">
+                              <img src="assets/images/reservation/res_2/btn-aos.webp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#TODO:" class="link link--download-ios" target="_blank" title="App Store에서 사전 주문하기">
+                              <img src="assets/images/reservation/res_2/btn-ios.webp" />
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // # 1-2 -->
+              </section>
+              <section class="frame-section reservation--3">
+                <!-- S: MO -->
+                <div class="talk-box d-block d-lg-none">
+                  <i class="bg-tree-mo"></i>
+                  <!-- S: 240702 수정 -->
+                  <button type="button" class="talk-box__btn popup-link" data-popup="popup__friends-notice" title="유의사항 확인하기"></button>
+                  <img src="assets/images/reservation/step3_mo.webp" class="talk-box__img" alt="친구 초대 이벤트에 참여 시 추첨을 통해 다양한 경품을 받을 수 있습니다. " />
+                  <!-- E: 240702 수정 -->
+                </div>
+                <!-- E: MO -->
+                <!-- # 1-3 : 친구 초대 이벤트 -->
+                <div class="anchor encounter-1--3 container">
+                  <span class="ch__wrap">
+                    <span class="ch ch--l npc">
+                      <div class="npc__inner" data-aos-duration="1000" data-aos="fade-left">
+                        <!-- S: 240702 수정 -->
+                        <button type="button" class="popup-link" data-popup="popup__friends-notice" title="유의사항 확인하기">
+                          <img src="assets/images/sub/balloon/item3.png" class="balloon" alt="친구 초대 이벤트에 참여 시 추첨을 통해 다양한 경품을 받을 수 있습니다. " />
+                        </button>
+                        <!-- E: 240702 수정 -->
+                        <span class="ch__item"></span>
+                      </div>
+                    </span>
+                  </span>
+                  <div class="container__inner">
+                    <div class="container__inner--wrap">
+                      <div class="title-bx" data-aos="fade-up">
+                        <h2 class="sr-only">친구 초대 이벤트</h2>
+                      </div>
+                      <div class="content" data-aos="fade-up">
+                        <h3 class="sr-only">참여 방법</h3>
+                        <ul class="sr-only">
+                          <li>단계 1_사전예약 신청하기</li>
+                          <li>단계 2_친구 초대 URL 생성하기</li>
+                          <li>단계 3_친구 초대 URL 공유</li>
+                          <li>단계 4_친구가 사전예약 신청하면 성공!</li>
+                        </ul>
+                      </div>
+                      <div class="form-area" data-aos="fade-up">
+                        <!-- S: 240702 수정 3 : 추가 -->
+                        <p class="sr-only">사전예약 휴대폰 번호 입력</p>
+                        <!-- E: 240702 수정 3 : 추가 -->
+                        <form action="">
+                          <input class="input" type="tel" name="phone" autocomplete="off" placeholder="‘-’을 제외한 휴대폰 번호를 입력해 주세요." />
+                        </form>
+                      </div>
+                      <div data-aos="fade-up">
+                        <button type="button" class="btn popup-link" data-popup="popup__reservation-friends">
+                          <span class="sr-only">친구 초대 URL 생성 & 초대 수 확인</span>
+                        </button>
+                      </div>
+                      <span class="hr"></span>
+                      <div class="content content-2" data-aos="fade-up">
+                        <h3 class="sr-only">친구 초대 이벤트 보상</h3>
+                        <p class="sr-only">최대 5명 초대 가능!</p>
+                        <ul class="sr-only">
+                          <li>모든 참여자 대상. GS25 5천원권, 베스킨라빈스 1만원권, 구글플레이 5만원권</li>
+                          <li>랜던 추첨. 아이폰 프로 맥스</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // # 1-3 -->
+              </section>
+              <section class="frame-section reservation--4">
+                <!-- S: MO -->
+                <div class="talk-box d-block d-lg-none">
+                  <i class="bg-orange-mo"></i>
+                  <!-- S: 240702 수정 -->
+                  <button type="button" class="talk-box__btn popup-link" data-popup="popup__review-notice" title="유의사항 확인하기"></button>
+                  <img src="assets/images/reservation/step4_mo.webp" class="talk-box__img" alt="사전예약 기대평 작성 이벤트에 참여하면 추첨을 통해 선물을 드립니다. " />
+                  <!-- E: 240702 수정 -->
+                </div>
+                <!-- E: MO -->
+                <!-- # 1-4 : 기대평 이벤트 -->
+                <div class="anchor encounter-1--4 container">
+                  <span class="ch__wrap">
+                    <span class="ch ch--l npc">
+                      <div class="npc__inner" data-aos-duration="1000" data-aos="fade-left">
+                        <!-- S: 240702 수정 -->
+                        <button type="button" class="popup-link" data-popup="popup__review-notice" title="유의사항 확인하기">
+                          <img src="assets/images/sub/balloon/item4.png" class="balloon" alt="사전예약 기대평 작성 이벤트에 참여하면 추첨을 통해 선물을 드립니다. " />
+                        </button>
+                        <!-- E: 240702 수정 -->
+                        <span class="ch__item"></span>
+                      </div>
+                    </span>
+                  </span>
+                  <div class="container__inner">
+                    <div class="container__inner--wrap">
+                      <div class="title-bx" data-aos="fade-up">
+                        <h2 class="sr-only">기대평 이벤트</h2>
+                      </div>
+                      <div class="content" data-aos="fade-up">
+                        <h3 class="sr-only">사전예약 기대평 보상</h3>
+                      </div>
+                      <div data-aos="fade-up">
+                        <a href="javascript:;" class="btn">
+                          <span class="sr-only">공식 라운지에서 확인하기</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // # 1-4 -->
+              </section>
+            </section>
+            <!-- S: 섹션 병합 -->
+            <section class="trigger-section section--cbt" id="section-cbt">
+              <div class="bg">
+                <i class="bg-rizard"></i>
+                <i class="bg-beetle"></i>
+                <i class="bg-peco"></i>
+                <!-- S: 240705 수정 -->
+                <i class="bg-mira"></i>
+                <!-- E: 240705 수정 -->
+              </div>
+              <div class="frame-section">
+                <!-- S: MO -->
+                <div class="talk-box d-block d-lg-none">
+                  <i class="bg-beetle-mo"></i>
+                  <!-- S: 240702 수정 -->
+                  <button type="button" class="talk-box__btn popup-link" data-popup="popup__cbt-notice" title="유의사항 확인하기"></button>
+                  <img src="assets/images/cbt/step1_mo.webp" class="talk-box__img" alt=" THE RAGNAROK CBT에 참여해 보세요. 정식 출시 후 특별한 게임 아이템 증정 드립니다. " />
+                  <!-- E: 240702 수정 -->
+                </div>
+                <!-- E: MO -->
+                <!-- # 2 -->
+                <div class="anchor encounter-2 container">
+                  <span class="ch__wrap">
+                    <span class="ch ch--l npc">
+                      <div class="npc__inner" data-aos-duration="1000" data-aos="fade-left">
+                        <!-- S: 240702 수정 -->
+                        <button class="popup-link" data-popup="popup__cbt-notice" title="유의사항 확인하기">
+                          <img src="assets/images/sub/balloon/item-cbt.png" class="balloon" alt=" THE RAGNAROK CBT에 참여해 보세요. 정식 출시 후 특별한 게임 아이템 증정 드립니다. " />
+                        </button>
+                        <!-- E: 240702 수정 -->
+
+                        <span class="ch__item"></span>
+                      </div>
+                    </span>
+                  </span>
+                  <div class="container__inner">
+                    <div class="container__inner--wrap">
+                      <div class="section-title">
+                        <div class="sr-only">
+                          <h2>CBT</h2>
+                          <p>2024년 8월 26일 ~ 2024년 9월 2일</p>
+                        </div>
+                      </div>
+                      <a href="#TODO:" target="_blank" class="btn btn--cbt">CBT 참여하기</a>
+
+                      <span class="hr"></span>
+
+                      <div class="title-event">
+                        <div class="sr-only">
+                          <h2>CBT 이벤트</h2>
+                        </div>
+                      </div>
+                      <!-- S: 240813 수정 -->
+                      <a href="https://naver.me/5Kbdttgn" target="_blank" class="btn btn--lounge">공식 라운지에서 확인하기</a>
+                      <!-- E: 240813 수정 -->
+                      <ul class="cbt-event-list">
+                        <li data-aos="fade-up" data-aos-offset="50">
+                          <div class="wrap">
+                            <img src="assets/images/cbt/content-1.webp" alt="" class="d-none d-lg-block" />
+                            <img src="assets/images/cbt/content-1_mo.webp" alt="" class="d-block d-lg-none" />
+                            <div class="sr-only">
+                              <h3>[첫 번째] 레벨 달성! 이벤트</h3>
+                              <p>CBT 기간 동안 LV.45 달성하고 정식 출시 시 쿠폰을 받으세요.</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-offset="50">
+                          <div class="wrap">
+                            <img src="assets/images/cbt/content-2.webp" alt="" class="d-none d-lg-block" />
+                            <img src="assets/images/cbt/content-2_mo.webp" alt="" class="d-block d-lg-none" />
+                            <div class="sr-only">
+                              <h3>[두 번째] CBT 설문 조사 이벤트</h3>
+                              <p>CBT 경험 후 설문조사에 참여해 주시면 푸짐한 보상을 드립니다.</p>
+                            </div>
+                            <a href="#TODO:" target="_blank" class="btn btn--survey">설문조사 바로가기</a>
+                          </div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-offset="50">
+                          <div class="wrap">
+                            <img src="assets/images/cbt/content-3.webp" alt="" class="d-none d-lg-block" />
+                            <img src="assets/images/cbt/content-3_mo.webp" alt="" class="d-block d-lg-none" />
+                            <div class="sr-only">
+                              <h3>[세 번째] CBT 출석 체크! 이벤트</h3>
+                              <p>매일매일 접속하고 특별한 성장 아이템을 획득해 보세요.</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-offset="50">
+                          <div class="wrap">
+                            <img src="assets/images/cbt/content-4.webp" alt="" class="d-none d-lg-block" />
+                            <img src="assets/images/cbt/content-4_mo.webp" alt="" class="d-block d-lg-none" />
+                            <div class="sr-only">
+                              <h3>[네 번째] 데일리 쿠폰 이벤트</h3>
+                              <p>빠르게 성장하고 싶다면 매일 커뮤니티에서 공개되는 데일리 쿠폰을 확인하고 받으세요.</p>
+                            </div>
+                          </div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-offset="50">
+                          <div class="wrap">
+                            <img src="assets/images/cbt/content-5.webp" alt="" class="d-none d-lg-block" />
+                            <img src="assets/images/cbt/content-5_mo.webp" alt="" class="d-block d-lg-none" />
+                            <div class="sr-only">
+                              <h3>[다섯 번째] 푸시 보상 증정</h3>
+                              <p>매일 랜덤 보상을 지급 드립니다.</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- // # 2 -->
+              </div>
+            </section>
+
+            <section class="trigger-section section--intro" id="section-intro">
+              <!-- <span class="bg bg--l"></span>
+              <span class="bg bg--r"></span> -->
+              <!-- 240703 수정 : span.bg 삭제 -->
+
+              <div class="bg">
+                <i class="bg-snake"></i>
+                <i class="bg-racoon"></i>
+                <i class="bg-dog"></i>
+              </div>
+              <div class="frame-section">
+                <!-- S: MO -->
+                <div class="talk-box d-block d-lg-none">
+                  <i class="bg-racoon-mo"></i>
+                  <!-- S: 240702 수정 : button 삭제, alt 수정 -->
+                  <!-- <button type="button" class="talk-box__btn popup-link" data-popup=""></button> -->
+                  <img src="assets/images/intro/step1_mo.webp" class="talk-box__img" alt="THE RAGNAROK 세계관과 직업을 소개해 드립니다." />
+                  <!-- E: 240702 수정  : button 삭제, alt 수정 -->
+                </div>
+                <!-- E: MO -->
+                <!-- # 3 -->
+                <div class="anchor encounter-3 container">
+                  <span class="ch__wrap">
+                    <span class="ch ch--l npc">
+                      <div class="npc__inner" data-aos-duration="1000" data-aos="fade-left">
+                        <!-- S: 240702 수정 -->
+                        <img src="assets/images/sub/balloon/item-intro.webp" class="balloon" alt="THE RAGNAROK 세계관과 직업을 소개해 드립니다." />
+                        <!-- E: 240702 수정 -->
+                        <span class="ch__item"></span>
+                      </div>
+                    </span>
+                  </span>
+                  <div class="container__inner">
+                    <div class="container__inner--wrap">
+                      <div class="content content--world">
+                        세계관
+                        <button class="btn popup-link" data-popup="popup__intro-world">자세히보기</button>
+                      </div>
+                      <div class="content content--job">
+                        직업소개
+                        <button class="btn popup-link" data-popup="popup__intro-job">자세히보기</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // # 3 -->
+              </div>
+            </section>
+
+            <!-- S: 추가된 팝업 -->
+            <!-- S: 240813 수정 -->
+            <aside class="popup popup-terms" id="popup__cbt-notice">
+              <div class="popup__wrap">
+                <button type="button" class="popup__close" onclick="closed_popup()"></button>
+                <div class="popup__scroll">
+                  <div class="popup__head">
+                    <h2>CBT이벤트 참여 유의사항</h2>
+                  </div>
+                  <div class="popup__body">
+                    <div class="terms-content">
+                      <p style="font-weight: 600; color: #111">1. 레벨 달성 이벤트</p>
+                      <ul class="list-dot">
+                        <li data-dot="-">네이버 계정 당 1회만 참여 가능하며, 중복 참여 시 최초 1회만 참여로 인정됩니다.</li>
+                        <li data-dot="-">이벤트 성격과 무관한 게시글의 경우 보상 지급에서 제외될 수 있습니다.</li>
+                        <li data-dot="-">쿠폰은 라운지 수신함으로 발송되며 알림 수신 동의를 해주셔야 수령 가능합니다.</li>
+                        <li data-dot="-">알림 수신 미동의로 인해 쿠폰을 수신하지 못한 경우 도움을 드리기 어렵습니다.</li>
+                        <li data-dot="-">라운지 앱, 치지직 앱 사용 시 푸시 알람이 발생할 경우 제목 내 (광고)가 표시될 수 있습니다.</li>
+                      </ul>
+                      <p style="font-weight: 600; margin-top: 1em; color: #111">2. CBT 설문조사 이벤트</p>
+                      <ul class="list-dot">
+                        <li data-dot="-">참여는 1인당 1회 가능하며 중복 참여 시 최초 1회만 인정됩니다.</li>
+                        <li data-dot="-">설문은 제출 후 추가 수정이 불가능하니 주의 부탁드립니다.</li>
+                        <li data-dot="-">보상 발송은 직접 기재한 휴대폰 번호로 1회 발송됩니다.</li>
+                        <li data-dot="-">보상 지급을 위해 개인정보 수집 및 이용에 대한 동의가 필요합니다.</li>
+                      </ul>
+                      <p style="font-weight: 600; margin-top: 1em; color: #111">3. CBT 출석체크 이벤트</p>
+                      <ul class="list-dot">
+                        <li data-dot="-">보상은 캐릭터 당 최초 1회만 수령 가능합니다.</li>
+                        <li data-dot="-">보상은 CBT 진행 중 사용 가능하며 CBT 종료 시 삭제됩니다.</li>
+                      </ul>
+                      <p style="font-weight: 600; margin-top: 1em; color: #111">4. 데일리 쿠폰 이벤트</p>
+                      <ul class="list-dot">
+                        <li data-dot="-">이벤트 상세 내역 및 주의사항은 추후 안내 예정인 [데일리 쿠폰 이벤트] 공지를 확인해 주세요.</li>
+                      </ul>
+                      <p style="font-weight: 600; margin-top: 1em; color: #111">5. 매일 푸시 보상 이벤트</p>
+                      <ul class="list-dot">
+                        <li data-dot="-">우편을 삭제하신 경우 별도 도움을 드리기 어렵습니다.</li>
+                        <li data-dot="-">우편 내 표기된 기간 안에 수령하지 않아 삭제된 우편은 도움이 어렵습니다.</li>
+                        <li data-dot="-">우편이 확인되지 않을 경우 재접속을 진행해 주시길 바랍니다.</li>
+                      </ul>
+
+                      <strong style="display: flex; margin-top: 1.5em; line-height: 1.3; color: #4664d1">
+                        <span style="flex: 0 0 auto">* </span>
+                        <span>CBT이벤트 참여 유의사항의 경우 공식 라운지에서 더욱 자세하게 확인하실 수 있습니다. </span>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <!-- E: 240813 수정 -->
+            <aside class="popup" id="popup__intro-world">
+              <div class="popup__wrap">
+                <button type="button" class="popup__close" onclick="closed_popup()"></button>
+                <div class="popup__scroll">
+                  <div class="bg-wrap">
+                    <div class="wrap">
+                      <h2 class="tit tit--1"><span class="sr-only">신과 인간, 그리고…</span></h2>
+                      <!-- S: 240703 수정  -->
+                      <p>
+                        마족의 길고 길었던 성전이 끝난 후…
+                        <br />
+                        위협적이었던 전쟁의 시간 속에 인간과 신,
+                        <br />
+                        마족 모두 깊은 상처를 입은 채 멸망의 위기에서 벗어나
+                        <br />
+                        인간계, 신계, 마계는 길고 긴 휴전의 상태로 들어갔다.
+                      </p>
+                      <!-- E: 240703 수정 -->
+
+                      <span class="hr"></span>
+                      <h2 class="tit tit--2"><span class="sr-only">1,000년의 거짓평화…</span></h2>
+                      <!-- S: 240705-2 수정 -->
+                      <p>
+                        인간들이 살고 있는 미드가르드 대륙의 이 거짓 평화의 시간은
+                        <br />
+                        그들로 하여금 비참했던 과거와 전쟁의 상처를 잊히게 만들고,
+                        <br />
+                        인류는 과거의 잘못을 잊은 채 조금씩 다시 자신들의 문화 번성과 더불어
+                        <br />
+                        이기심과 자만을 키워가고 있다.
+                      </p>
+                      <!-- E: 240705-2 수정 -->
+                      <span class="hr"></span>
+
+                      <h2 class="tit tit--3"><span class="sr-only">그러던 어느날,</span></h2>
+                      <p>
+                        조금씩, 그 평화의 균형이 무너져 내리는 이상 징후가
+                        <br />
+                        미드가르드 대륙 곳곳에서 감지되기 시작한다.
+                        <br />
+                        인간계와 신계, 마계를 가로막고 있는 마벽에서 울려 퍼지는 굉음,
+                        <br />
+                        야생 생물들의 습격, 잦은 지진과 해일,
+                        <br />
+                        그리고… 언제 어디에서부터인가 퍼지기 시작한 괴마물들에 대한 전설…
+                        <br />
+                        평화의 기운이 깨어져 나가면서 이 세계의 평화를 지탱하고 있다는
+                        <br />
+                        이미르의 조각에 대한 이야기가 조금씩
+                        <br />
+                        모험가들을 중심으로 퍼져나가기 시작한다.
+                        <br />
+                        그러나 사람들은 그것의 본질은 망각한 채 하나 둘 자신만의 목적,
+                        <br />
+                        그 정체와 부를 찾아 그 조각들을 찾아나서는데…
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <aside class="popup" id="popup__intro-job">
+              <div class="popup__wrap">
+                <button type="button" class="popup__close" onclick="closed_popup()"></button>
+                <div class="popup__scroll">
+                  <div class="bg-wrap">
+                    <div class="wrap">
+                      <h1 class="sr-only">직업소개 팝업</h1>
+
+                      <!-- swiper -->
+                      <div id="infoSwiper" class="swiper-info">
+                        <div class="swiper-paging"></div>
+                        <!-- S: 240702 수정 : 추가 -->
+                        <span class="hr"></span>
+                        <!-- E: 240702 수정 : 추가 -->
+
+                        <div class="swiper-container">
+                          <div class="swiper-button swiper-button--prev"></div>
+                          <div class="swiper-button swiper-button--next"></div>
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide js-tab">
+                              <h2 class="job-title job-title--1">
+                                <span class="tit">검사 계열</span>
+                              </h2>
+                              <div class="swiper-slide__inner">
+                                <ul class="swiper-slide-tab">
+                                  <li data-hash="tabContent1" class="js-tab-link active">1차전직</li>
+                                  <li data-hash="tabContent2" class="js-tab-link">2차전직</li>
+                                </ul>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent1" style="display: block">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide1_gif1.gif" alt="소드맨 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide1_gif2.gif" alt="소드맨 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">소드맨 (SWORDMAN)</p>
+                                    <p class="text">강인한 육체로 기술을 연마하고, 튼튼한 갑옷으로 방어력을 극대화 하여, 공격과 방어를 겸비할 수 있습니다.</p>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent2">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide1_gif3.gif" alt="나이트 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide1_gif4.gif" alt="나이트 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">나이트 (KNIGHT)</p>
+                                    <p class="text">숙련된 양손 검 기술과 창술을 사용하여 연속 공격 및 강력한 반격으로 근접전에서 우위를 점할 수 있습니다.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide js-tab">
+                              <h2 class="job-title job-title--2">
+                                <span class="tit">법사 계열</span>
+                              </h2>
+                              <div class="swiper-slide__inner">
+                                <ul class="swiper-slide-tab">
+                                  <li data-hash="tabContent3" class="js-tab-link active">1차전직</li>
+                                  <li data-hash="tabContent4" class="js-tab-link">2차전직</li>
+                                </ul>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent3" style="display: block">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide2_gif1.gif" alt="매지션 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide2_gif2.gif" alt="매지션 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">매지션 (MAGICIAN)</p>
+                                    <p class="text">타고난 마법으로 다양한 속성의 기술을 구사하여 단숨에 적을 쓰러트릴 수 있습니다.</p>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent4">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide2_gif3.gif" alt="위저드 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide2_gif4.gif" alt="위저드 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">위저드 (WIZARD)</p>
+                                    <p class="text">자연의 원소를 사용하여 눈부시고 화려한 마법 스킬을 사용합니다.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide js-tab">
+                              <h2 class="job-title job-title--3">
+                                <span class="tit">도둑 계열</span>
+                              </h2>
+                              <div class="swiper-slide__inner">
+                                <ul class="swiper-slide-tab">
+                                  <li data-hash="tabContent5" class="js-tab-link active">1차전직</li>
+                                  <li data-hash="tabContent6" class="js-tab-link">2차전직</li>
+                                </ul>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent5" style="display: block">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide3_gif1.gif" alt="씨프 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide3_gif2.gif" alt="씨프 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">씨프 (THIEF)</p>
+                                    <p class="text">고도로 숙련된 민첩성을 활용하여 혼전 속으로 파고들어 적을 교란하고, 공격을 회피하며 적에게 큰 타격을 줄 수 있습니다.</p>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent6">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide3_gif3.gif" alt="어쌔신 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide3_gif4.gif" alt="어쌔신 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">어쌔신 (ASSASSIN)</p>
+                                    <p class="text">최고의 회피율과 독을 사용한 공격, 연계의 필살기를 갖추어 멋진 전투를 펼칩니다.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide js-tab">
+                              <h2 class="job-title job-title--4">
+                                <span class="tit">복사 계열</span>
+                              </h2>
+                              <div class="swiper-slide__inner">
+                                <ul class="swiper-slide-tab">
+                                  <li data-hash="tabContent7" class="js-tab-link active">1차전직</li>
+                                  <li data-hash="tabContent8" class="js-tab-link">2차전직</li>
+                                </ul>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent7" style="display: block">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide4_gif1.gif" alt="어콜라이트 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide4_gif2.gif" alt="어콜라이트 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">어콜라이트 (ACOLYTE)</p>
+                                    <p class="text">상처를 입은 아군을 치료하고 다양한 보조 마법 스킬을 사용하여 전투에서 대활약을 펼칠 수 있습니다.</p>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent8">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide4_gif3.gif" alt="프리스트 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide4_gif4.gif" alt="프리스트 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">프리스트 (PRIEST)</p>
+                                    <p class="text">더욱 강해진 기술을 활용하여 적에게는 피해를 주고 아군에게는 도움이 되는 막강하고 다양한 보조 마법의 도움을 끝없이 줄 수 있습니다.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide js-tab">
+                              <h2 class="job-title job-title--5">
+                                <span class="tit">상인 계열</span>
+                              </h2>
+                              <div class="swiper-slide__inner">
+                                <ul class="swiper-slide-tab">
+                                  <li data-hash="tabContent9" class="js-tab-link active">1차전직</li>
+                                  <li data-hash="tabContent10" class="js-tab-link">2차전직</li>
+                                </ul>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent9" style="display: block">
+                                  <ul class="gif-bx">
+                                    <!-- S: 240704-2 수정 : 머천트→머첸트-->
+                                    <li><img src="assets/images/intro/job/slide5_gif1.gif" alt="머첸트 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide5_gif2.gif" alt="머첸트 (남)" /></li>
+                                    <!-- E: 240704-2 수정 : 머천트→머첸트-->
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <!-- S: 240704-2 수정 : 머천트→머첸트-->
+                                    <p class="title">머첸트 (MERCHANT)</p>
+                                    <!-- E: 240704-2 수정 : 머천트→머첸트-->
+                                    <p class="text">금전과 카트를 이용한 특색 있는 공격은 전투에서 폭발적인 피해를 줄 수 있습니다.</p>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent10">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide5_gif3.gif" alt="블랙스미스 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide5_gif4.gif" alt="블랙스미스 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">블랙스미스 (BLACKSMITH)</p>
+                                    <!-- S: 240703 수정 -->
+                                    <p class="text">도구를 활용하거나 특별한 무기를 제작할 수 있으며, 다양한 기술을 보유하고 있어 누구도 무시할 수 없습니다.</p>
+                                    <!-- E: 240703 수정 -->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide js-tab">
+                              <h2 class="job-title job-title--6">
+                                <span class="tit">궁수 계열</span>
+                              </h2>
+                              <div class="swiper-slide__inner">
+                                <ul class="swiper-slide-tab">
+                                  <li data-hash="tabContent11" class="js-tab-link active">1차전직</li>
+                                  <li data-hash="tabContent12" class="js-tab-link">2차전직</li>
+                                </ul>
+
+                                <div class="swiper-slide-content js-tab-content" id="tabContent11" style="display: block">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide6_gif1.gif" alt="아처 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide6_gif2.gif" alt="아처 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">아처 (ARCHER)</p>
+                                    <p class="text">활을 이용한 기술에 다양한 재능을 가진 아처는 동료를 도와 원거리에서 지원 사격과 적을 견제하는데 있어서 우수한 능력을 갖고 있습니다.</p>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide-content js-tab-content" id="tabContent12">
+                                  <ul class="gif-bx">
+                                    <li><img src="assets/images/intro/job/slide6_gif3.gif" alt="헌터 (여)" /></li>
+                                    <li><img src="assets/images/intro/job/slide6_gif4.gif" alt="헌터 (남)" /></li>
+                                  </ul>
+                                  <div class="txt-bx">
+                                    <p class="title">헌터 (HUNTER)</p>
+                                    <!-- S: 240703 수정 -->
+                                    <p class="text">트랩을 활용하여 적들을 위험에 빠트리고, 팔콘과 함께 원거리 공격을 지원해 상대를 혼란에 빠뜨립니다.</p>
+                                    <!-- E: 240703 수정 -->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- swiper -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- 240703 수정 : script 삭제-->
+
+            <!-- E: 추가된 팝업 -->
+            <!-- E: 섹션 병합 -->
+            <section class="section--feature" id="section-feature">
+              <div class="bg">
+                <i class="bg-box"></i>
+                <!-- S: 240702 수정 2 -->
+                <i class="bg-girl"></i>
+                <!-- E: 240702 수정 2 -->
+              </div>
+
+              <div class="char-wrap">
+                <div class="char char--1"></div>
+                <div class="char char--2"></div>
+                <div class="char char--3"></div>
+                <div class="char char--4"></div>
+                <div class="char char--5"></div>
+                <div class="char char--6"></div>
+              </div>
+              <!-- <ul class="items">
+                <li><img src="assets/images/feature/item1.png" alt="" /></li>
+                <li></li>
+                <li><img src="assets/images/feature/item3.png" alt="" /></li>
+                <li><img src="assets/images/feature/item4.png" alt="" /></li>
+              </ul> -->
+              <div class="frame-section">
+                <!-- S: MO char -->
+                <div class="mo-char">
+                  <!-- S: 240702 수정 -->
+                  <i class="bg-box-mo"></i>
+                  <img src="assets/images/gif/feature/char1_mo.gif" class="char1-mo" alt="" />
+                  <img src="assets/images/gif/feature/char2_mo.gif" class="char2-mo" alt="" />
+                  <img src="assets/images/gif/feature/char3_mo.gif" class="char3-mo" alt="" />
+                  <!-- E: 240702 수정 -->
+                  <img src="assets/images/feature/char_list_v1_mo.webp" alt="" />
+                </div>
+                <!-- E: MO char -->
+                <!-- # 4 -->
+                <div class="container">
+                  <div class="feature__inner">
+                    <div class="chars-box">
+                      <!-- <img src="assets/images/feature/select_arrow.png" class="chars-arrow" alt="" /> -->
+                      <!-- <img src="assets/images/feature/char_list.png" class="chars-img" alt="캐릭들" /> -->
+                    </div>
+                    <div id="featureSwiper" class="swiper">
+                      <div class="swiper-container">
+                        <!-- S: 240702 수정 3 -->
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide s1">
+                            <div class="img">
+                              <img src="assets/images/feature/slide1.jpg" class="dis-pc" alt="" />
+                              <img src="assets/images/feature/slide1_mo.jpg" class="dis-tm" alt="" />
+                            </div>
+                          </div>
+                          <div class="swiper-slide s2">
+                            <div class="img">
+                              <img src="assets/images/feature/slide2.jpg" class="dis-pc" alt="" />
+                              <img src="assets/images/feature/slide2_mo.jpg" class="dis-tm" alt="" />
+                            </div>
+                          </div>
+                          <div class="swiper-slide s3">
+                            <div class="img">
+                              <img src="assets/images/feature/slide3.jpg" class="dis-pc" alt="" />
+                              <img src="assets/images/feature/slide3_mo.jpg" class="dis-tm" alt="" />
+                            </div>
+                          </div>
+                          <div class="swiper-slide s4">
+                            <div class="img">
+                              <img src="assets/images/feature/slide4.jpg" class="dis-pc" alt="" />
+                              <img src="assets/images/feature/slide4_mo.jpg" class="dis-tm" alt="" />
+                            </div>
+                          </div>
+                          <div class="swiper-slide s5">
+                            <div class="img">
+                              <img src="assets/images/feature/slide5.jpg" class="dis-pc" alt="" />
+                              <img src="assets/images/feature/slide5_mo.jpg" class="dis-tm" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <!-- E: 240702 수정 3 -->
+                      </div>
+
+                      <div class="swiper-pagination"></div>
+
+                      <div class="swiper-button swiper-button--prev"></div>
+                      <div class="swiper-button swiper-button--next"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // # 4 -->
+                <!-- S: MO char -->
+                <div class="mo-char">
+                  <!-- S: 240702 수정 -->
+                  <img src="assets/images/gif/feature/char4_mo.gif" class="char4-mo" alt="" />
+                  <img src="assets/images/gif/feature/char5_mo.gif" class="char5-mo" alt="" />
+                  <img src="assets/images/gif/feature/char6_mo.gif" class="char6-mo" alt="" />
+                  <!-- E: 240702 수정 -->
+                  <img src="assets/images/feature/char_list_v2_mo.webp" alt="" />
+                </div>
+                <!-- E: MO char -->
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- #include file="inc/footer.html" -->
+
+        <!-- #include file="inc/popup-common.html" -->
+      </div>
+    </main>
+    <button type="button" title="최상단으로" class="btnTop"></button>
+    <script src="assets/js/common.min.js"></script>
+    <script src="assets/js/animate.min.js"></script>
+    <!-- S: 240731 수정 : 추가 -->
+    <!-- 유튜브 아이프레임 제어를 위한 api -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- E: 240731 수정 : 추가 -->
+  </body>
+</html>

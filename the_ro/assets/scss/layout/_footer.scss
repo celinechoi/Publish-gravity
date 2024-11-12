@@ -1,0 +1,40 @@
+.btnTop {
+  display: none;
+  position: fixed;
+  aspect-ratio: 1;
+  background-size: contain;
+  background-image: url(../images/btnTop.webp);
+  @include lg-max {
+    background-image: url(../images/btnTop_mo.webp);
+    width: vw(262);
+    aspect-ratio: (262/162);
+    bottom: vw(40);
+    right: vw(40);
+    &.fix {
+      position: fixed;
+    }
+  }
+  z-index: 100;
+  background-repeat: no-repeat;
+  @include lg {
+    &.fix {
+      position: absolute;
+      bottom: 287px;
+    }
+    width: 70px;
+    height: 75px;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.common-footer {
+  overflow: visible;
+  @include lg-max {
+    padding-bottom: vw(150 + 40);
+  }
+}

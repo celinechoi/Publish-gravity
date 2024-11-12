@@ -1,0 +1,118 @@
+// 캐릭터 모션
+@keyframes chMoveL {
+  from {
+    transform: rotate(0) translateY(0);
+  }
+  to {
+    transform: rotate(3deg) translateY(10%);
+  }
+}
+@keyframes chMoveR {
+  from {
+    transform: rotate(0) translateY(0);
+  }
+  to {
+    transform: rotate(-3deg) translateY(10%);
+  }
+}
+// 유령 캐릭 모션
+@keyframes casperMotion {
+  25%,
+  75% {
+    opacity: 0.5;
+    transform: translateY(-3%);
+    filter: brightness(1.07) hue-rotate(1deg);
+  }
+
+  0% {
+    opacity: 0.7;
+    transform: translateY(3%);
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  50%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: brightness(1) hue-rotate(0deg);
+  }
+}
+// 팡파레 모션
+@keyframes confettiMove {
+  from {
+    transform: translate(-50%, 0%);
+    opacity: 0.7;
+  }
+  to {
+    transform: translate(-50%, 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes confettiMove2 {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0.7;
+  }
+  to {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+}
+// 메인 포링 모션
+@keyframes poringMove {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  60% {
+    -webkit-transform: translate(-50%, -5%);
+    transform: translate(-50%, -5%);
+  }
+}
+// 메인 해 비침 빛
+@keyframes shineMotion {
+  0% {
+    opacity: 0;
+    filter: brightness(1) hue-rotate(0);
+  }
+  55% {
+    opacity: 0;
+    filter: brightness(1) hue-rotate(3deg);
+  }
+  75%,
+  100% {
+    filter: brightness(1) hue-rotate(0);
+    opacity: 1;
+  }
+  65% {
+    filter: brightness(1.1) hue-rotate(3deg);
+  }
+}
+// 타이틀 배경 물결 반짝임
+@keyframes mainStarsTwinkle {
+  0% {
+    opacity: 0.6;
+    filter: brightness(1) hue-rotate(0);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1.1) hue-rotate(1deg);
+  }
+}
+// 메인 타이틀 빛
+@keyframes titleTrans {
+  0% {
+    filter: brightness(1) hue-rotate(0);
+  }
+  55% {
+    filter: brightness(1) hue-rotate(3deg);
+  }
+  75%,
+  100% {
+    filter: brightness(1) hue-rotate(0);
+  }
+  65% {
+    filter: brightness(1.1) hue-rotate(3deg);
+  }
+}

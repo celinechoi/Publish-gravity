@@ -1,0 +1,272 @@
+.anchor {
+  .ch {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-left: -294px;
+
+    .npc {
+      text-align: right;
+      left: 50%;
+      margin-left: -313px;
+      margin-top: 7.5%;
+      button {
+        display: block;
+      }
+      &__inner {
+        min-height: 220px;
+        display: flex;
+        align-items: end;
+        //aos 무효화
+        transform: none !important;
+        opacity: 1 !important;
+      }
+    }
+
+    .balloon {
+      display: block;
+      width: 244px;
+      position: relative;
+      animation: ballonMove 1.5s infinite;
+      @keyframes ballonMove {
+        0%,
+        100% {
+          top: 0;
+        }
+        50% {
+          top: 3px;
+        }
+      }
+    }
+
+    &__item {
+      animation-delay: -1000ms;
+      display: inline-block;
+      width: 108px;
+      height: 202px;
+      background: url(../images/inc/char/npc.webp) no-repeat center center / contain;
+      position: absolute;
+      top: 100%;
+      right: 10px;
+    }
+    &__wrap {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      @include lg-max {
+        display: none;
+      }
+    }
+
+    img {
+      width: auto;
+      max-width: fit-content;
+    }
+  }
+
+  * {
+    //flicking 방지
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+  } /* 
+  //하단고정
+  &.bottom .ch__wrap {
+    position: absolute;
+    .ch {
+      top: auto;
+      bottom: 30px;
+      // background-color: red;
+      transform: translate(-50%, -100%);
+    }
+  } */
+}
+
+//고정된 캐릭터
+.char {
+  &-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    &__item {
+      display: block;
+      aspect-ratio: 160/314;
+      width: 104px;
+      @include backgroundDefault;
+      background-image: url(../images/inc/char/front.gif);
+      background-size: contain;
+      left: 50%;
+      position: absolute;
+      margin-left: -478px;
+      top: 675px;
+      z-index: -1;
+
+      @include lg-max {
+        aspect-ratio: (111/296);
+        width: 100%;
+        max-width: vw(122);
+        top: vw(1200);
+        left: 61%;
+        margin-left: -44%;
+      }
+    }
+    &.active {
+      position: fixed;
+      transition: 0.5s all;
+      .char-frame {
+        &__item {
+          top: 126px + 180px; //250px;
+          background-image: url(../images/inc/char/front.gif);
+          @include lg-max {
+            top: vw(1122); //vw(910);
+          }
+          &.back {
+            background-image: url(../images/inc/char/back.gif);
+          }
+          &.pause {
+            transform: scaleX(-1);
+            background-image: url(../images/inc/char/side.gif) !important;
+            max-width: vw(150);
+          }
+        }
+      }
+    }
+    &.initial {
+      top: 0;
+    }
+    @at-root {
+      //모바일 가로모드에서 고정위치
+      @media (min-aspect-ratio: '50/75') {
+        @include lg-max {
+          .char-frame.active .char-frame__item {
+            // bottom: -70vw;
+            top: auto;
+          }
+        }
+      }
+    }
+    &.trigger {
+      $num: (1, 2, 3, 4, 5, 6, 7);
+      @for $i from 1 through length($num) {
+        &-#{$i}-active {
+          .char-frame {
+            &__item {
+              // width: 97px;
+              // <!-- S: 방현경 수정 -->
+              // background-image: url('../images/inc/char/side.gif') !important;
+              // transform: scaleX(-1);
+              // <!-- E: 방현경 수정 -->
+            }
+          }
+        }
+      }
+    }
+    &.arrivalFinal {
+      opacity: 0;
+    }
+  }
+}
+
+.reservation--2 .ch__item {
+  background-image: url(../images/inc/char/npc-market.webp);
+}
+.reservation--3 .ch__item {
+  background-image: url(../images/inc/char/npc2.webp);
+}
+.reservation--4 .ch__item {
+  background-image: url(../images/inc/char/npc-review.webp);
+}
+.section--cbt .ch__item {
+  background-image: url(../images/inc/char/npc-cbt.webp);
+}
+.section--intro .ch__item {
+  background-image: url(../images/inc/char/npc-intro.webp);
+}
+
+.pv-btn {
+  position: fixed;
+  right: 20px;
+  top: 78px;
+  z-index: 300;
+  cursor: pointer;
+  @media (min-width: 1800px) {
+    left: 50%;
+    margin-left: 690px;
+  }
+  width: 174px;
+  height: 162px;
+  background: url(../images/inc/pv-banner.webp) no-repeat;
+  background-size: contain;
+  @media (hover: hover) {
+    transition: filter 300ms;
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+  &:before {
+    position: absolute;
+    background: url(../images/inc/pv-banner_gif.gif) no-repeat;
+    background-size: contain;
+    content: '';
+    width: 79px;
+    height: 99px;
+    // bottom: 97px;
+    // left: 41px;
+    bottom: 90px;
+    left: 44px;
+  }
+  @include lg-max {
+    background-image: url(../images/inc/pv-banner_mo.webp);
+    width: vw(213);
+    height: vw(208);
+    top: vw(121);
+    right: vw(15);
+    &:before {
+      width: vw(95);
+      height: vw(145);
+      left: vw(45);
+      bottom: vw(105);
+    }
+  }
+}
+
+.pv-cbt {
+  display: block;
+  position: fixed;
+  right: 20px;
+  top: 265px;
+  z-index: 300;
+  width: 160px;
+  height: 165px;
+  @include backgroundDefault;
+  background-image: url('../images/main/badge_cbt.webp');
+  cursor: pointer;
+  @media (min-width: 1800px) {
+    left: 50%;
+    margin-left: 710px;
+  }
+  @include lg-max {
+    top: vw(330);
+    right: vw(15);
+    width: vw(177);
+    height: vw(181);
+    background-image: url('../images/main/badge_cbt_mo.webp');
+  }
+  @media (hover: hover) {
+    transition: filter 300ms;
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+  &.cbt-pre {
+    background-image: url('../images/main/badge_cbt_pre.webp');
+    @include lg-max {
+      background-image: url('../images/main/badge_cbt_pre_mo.webp');
+    }
+  }
+}

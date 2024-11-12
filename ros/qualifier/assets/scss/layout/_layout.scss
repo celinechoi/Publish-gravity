@@ -1,0 +1,136 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+}
+
+body {
+  // width: 100%;
+  // margin: 0 auto;
+  position: relative;
+  background-color: #4c3a2e;
+  color: #ffdb9b;
+  font: 500 16px $font-family-basic;
+  line-height: 1.1;
+  overflow-x: hidden;
+  @include mo {
+    font-size: 14px;
+  }
+  &.none {
+    &-scroll {
+      overflow: hidden !important;
+      touch-action: none !important;
+      -webkit-overflow-scrolling: none !important;
+      overscroll-behavior: none !important;
+    }
+  }
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+  //전환효과
+  @if $body-transition == true {
+    @at-root html {
+      background-color: #71563d;
+    }
+    transition: opacity 300ms !important;
+    opacity: 0;
+    &[data-loading='done'] {
+      opacity: 1;
+    }
+  }
+
+  // 드래그 방지
+  // * {
+  //   -webkit-user-select: none;
+  //   -moz-user-select: none;
+  //   -ms-user-select: none;
+  //   user-select: none;
+  //   -webkit-user-drag: none;
+  //   user-drag: none;
+  // }
+}
+
+footer {
+  background-color: #000 !important;
+  position: relative;
+  z-index: 1;
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.mo-box {
+  @include device {
+    position: relative;
+  }
+  &__img {
+    @include device {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+.scroll-icon {
+  display: block;
+  position: relative;
+  z-index: 10;
+  width: 114px;
+  height: 66px;
+  margin: 21px auto 0 425px;
+  background: url('../images/main/scroll_down.png') no-repeat center center / contain;
+  cursor: pointer;
+  animation: downAction 1s infinite alternate;
+  @media all and (min-width: 1001px) and (max-width: 1550px) {
+    width: 94px;
+    margin: 12px auto 0 302px;
+  }
+  @include device {
+    top: 72.7%;
+    display: none;
+  }
+}
+
+#btnTop {
+  display: none;
+  position: fixed;
+  width: 111px;
+  height: 115px;
+  bottom: 20px;
+  right: 50px;
+  z-index: 100;
+  background: url('../images/btnTop.webp') no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  @include mo {
+    width: 60px;
+    height: 60px;
+    right: 10px;
+  }
+  &:hover {
+    background-image: url('../images/btnTop_on.webp');
+  }
+  &.absolute {
+    position: absolute;
+    bottom: 220px;
+  }
+}
+
+// GNJOY 헤더 모바일 숨김
+@include lg-max {
+  form[name='frmPaymentGnb'] + table {
+    display: none !important;
+  }
+}
+@import 'popup';

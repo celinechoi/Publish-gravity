@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <!-- #include file="/gnjoy/2024_ros/apply/inc/head.html" -->
+
+  <body>
+    <main class="main">
+      <section class="apply-wrap">
+        <span class="apply-wrap__frame"></span>
+        <span class="ch ch--1"></span>
+        <span class="ch ch--2"></span>
+        <div class="container">
+          <h1 class="title title--h1">
+            <img class="mx-auto d-none d-lg-block" src="images/title.png" alt="한국대표선발전 참가 신청" />
+            <img class="mx-auto d-block d-lg-none" style="max-width: 290px" src="images/title_m.jpg" alt="한국대표선발전 참가 신청" />
+          </h1>
+
+          <div class="step-title">
+            <h2 class="title title--h2">팀 정보</h2>
+            <span class="sr-only">참가신청 두 번째 단계입니다</span>
+            <div class="step-title__step step-title__step--2">
+              <i class="step">1</i>
+              <i class="step">2</i>
+              <i class="step">3</i>
+            </div>
+          </div>
+
+          <form action="step3.html" method="post">
+            <div class="mb-7">
+              <h3 class="title title--h3 mb-4">게임선택</h3>
+              <div class="input-label--radioBx__wrap">
+                <label class="input-label input-label--radioBx">
+                  <input type="radio" name="gameType" id="ro1" checked />
+                  <span class="input-label__text">라그나로크 온라인</span>
+                </label>
+                <label class="input-label input-label--radioBx">
+                  <input type="radio" name="gameType" id="roz" />
+                  <span class="input-label__text">라그나로크 제로</span>
+                </label>
+              </div>
+            </div>
+            <div class="mb-7">
+              <h3 class="title title--h3 mb-4">소속 서버</h3>
+              <!--  RO1 -->
+              <fieldset class="input-label--radioBx__wrap" name="server" id="server-ro1" style="display: flex">
+                <label class="input-label input-label--radioBx">
+                  <input type="radio" name="ro1Server" id="igdrasil" checked />
+                  <span class="input-label__text">이그드라실</span>
+                </label>
+                <label class="input-label input-label--radioBx">
+                  <input type="radio" name="ro1Server" id="bafomet" />
+                  <span class="input-label__text">바포메트</span>
+                </label>
+                <label class="input-label input-label--radioBx">
+                  <input type="radio" name="ro1Server" id="darkroad" />
+                  <span class="input-label__text">다크로드</span>
+                </label>
+              </fieldset>
+
+              <!--  ROZ -->
+              <fieldset class="input-label--radioBx__wrap" name="server" id="server-roz" style="display: none">
+                <label class="input-label input-label--radioBx">
+                  <input type="radio" name="rozServer" id="brunehilt" checked />
+                  <span class="input-label__text">브륀힐트</span>
+                </label>
+                <label class="input-label input-label--radioBx">
+                  <input type="radio" name="rozServer" id="myrnil" />
+                  <span class="input-label__text">묘르닐</span>
+                </label>
+              </fieldset>
+            </div>
+
+            <div class="mb-7">
+              <h3 class="title title--h3 mb-4">팀 이름</h3>
+              <input class="input-text" type="text" name="teamName" required />
+            </div>
+            <!-- <div class="mb-7">
+              <h3 class="title title--h3 mb-4">팀 엠블럼 이미지</h3>
+              <div class="fileBx">
+                <p class="fileBx__text input-text"></p>
+                <span class="fileBx__btn">찾아보기</span>
+                <input class="fileBx__input" type="file" name="teamImage" accept=".png, .jpg, .jpeg, .gif, .bmp" required />
+              </div>
+              <p class="mt-4 text-alert d-flex font-weight-medium">
+                <i class="alert-icon">!</i>
+                길드 엠블럼 이미지 파일은 jpg, png, gif, bmp 형식만 첨부 가능, 1mb 용량 제한
+              </p>
+            </div> -->
+            <!-- 230413 수정 : 삭제-->
+            <div class="mb-7">
+              <h3 class="title title--h3 mb-4">팀 대표 계정명</h3>
+              <input class="input-text" type="text" value="$팀 대표 계정명$" disabled />
+            </div>
+            <div class="mb-7">
+              <h3 class="title title--h3 mb-4">팀 대표 캐릭터명</h3>
+              <input class="input-text" type="text" name="" required />
+              <!-- 230418 수정 -->
+            </div>
+            <div class="mb-7">
+              <h3 class="title title--h3 mb-4">팀 대표 이름 (실명)</h3>
+              <input class="input-text" type="text" value="$팀 대표 이름 (실명)$" disabled />
+            </div>
+            <div class="mb-7">
+              <h3 class="title title--h3 mb-4">팀 대표 연락처</h3>
+              <input class="input-text" type="text" value="$팀 대표 연락처$" disabled />
+            </div>
+            <div class="mb-7">
+              <h3 class="title title--h3 mb-4">팀 대표 e-mail</h3>
+              <input class="input-text" type="text" value="$팀 대표 e-mail$" disabled />
+            </div>
+
+            <hr class="my-6" />
+
+            <a href="#" target="_blank" class="mt-4 text-alert d-flex font-weight-medium">
+              <!-- 고객센터 > 개인정보 변경 으로 이동 -->
+              <i class="alert-icon">!</i>
+              팀 대표 개인정보 수정하기 →
+            </a>
+            <p style="padding-top: 12px; color: #666; font-size: 14px">* 팀 대표 개인정보 수정 후 페이지 새로고침 시 변경된 정보로 갱신됩니다.</p>
+            <div class="form-btn__wrap mt-12">
+              <button class="form-btn" type="button" onclick="movePrevStep()">이전</button>
+              <button class="form-btn form-btn--black" type="submit">다음</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- #include file="/gnjoy/2024_ros/apply/inc/footer.html" -->
+
+    <script type="text/javascript" src="/gnjoy/2024_ros/apply/js/common.js"></script>
+    <script>
+      $(document).ready(function () {
+        const $gameTypeRadios = $('input[name="gameType"]');
+        const $serverFieldsets = $('fieldset[name="server"]');
+
+        function updateServerFieldset() {
+          const selectedGameType = $('input[name="gameType"]:checked').attr('id');
+
+          $serverFieldsets.each(function () {
+            if ($(this).attr('id') === `server-${selectedGameType}`) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          });
+        }
+        // updateServerFieldset();
+        $gameTypeRadios.on('change', updateServerFieldset);
+      });
+      // S: 230413 수정 : 삭제
+      // $('.fileBx__input').on('change', function () {
+      //   if (this.value != '') {
+      //     var file_size = this.files[0].size;
+      //     if (file_size > 1048576) {
+      //       alert('1mb 이하의 파일을 업로드 해주세요.');
+      //       $(this).val('');
+      //       $(this).siblings('.fileBx__text').text('');
+      //     } else {
+      //       var tmp = $(this).val().replace(/^.*\\/, '');
+      //       $(this).siblings('.fileBx__text').text(tmp);
+      //     }
+      //   } else {
+      //     //파일이 없을 때 input, text 비우기
+      //     $(this).val('');
+      //     $(this).siblings('.fileBx__text').text('');
+      //   }
+      // });
+      // E: 230413 수정 : 삭제
+    </script>
+  </body>
+</html>

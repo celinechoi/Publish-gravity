@@ -1,0 +1,184 @@
+﻿/*점검*/
+body:has(.pageChk) {
+  height: auto;
+}
+.pageChk {
+  position: relative;
+  width: 1300px;
+  min-height: 600px;
+  margin: 200px auto 50px;
+  text-align: center;
+  box-sizing: border-box;
+
+  h1 {
+    font-size: 34px;
+    padding-bottom: 30px;
+    line-height: 65px;
+
+    strong {
+      font-size: 70px;
+    }
+  }
+
+  img {
+    position: absolute;
+    display: block;
+    z-index: 1;
+  }
+
+  .img1 {
+    top: 200px;
+    left: 0px;
+  }
+
+  .img2 {
+    top: 120px;
+    right: -150px;
+  }
+
+  .info {
+    font-size: 16px;
+  }
+
+  .errorBox {
+    position: relative;
+    width: 580px;
+    margin: 100px auto 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 4px solid #e3e3e3;
+
+    .title {
+      background-color: rgba(#fff, 0.5);
+      text-align: center;
+      z-index: 5;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: -0.5em;
+      font-size: 22px;
+      line-height: 1;
+      .icon {
+        display: block;
+        margin: 0 auto 10px;
+      }
+      span {
+        font-size: inherit;
+        background-color: #fff;
+        padding: 0 1em;
+        color: #000;
+        font-weight: 600;
+      }
+    }
+    img {
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      margin-left: -94px;
+    }
+  }
+
+  table {
+    width: 100%;
+    min-height: 0;
+    margin: 0 auto;
+    tr {
+      background-color: #fff;
+      border: 0;
+      box-sizing: border-box;
+      height: 40px;
+      border: 0;
+      th {
+        background-color: #fff;
+        text-align: right;
+        padding: 0 15px;
+        border: 0;
+        font-size: 18px;
+        font-weight: normal;
+        background: url('../images/img_errerBar.jpg') no-repeat right center;
+      }
+      td {
+        color: #333;
+        text-align: left;
+        padding: 0 15px;
+        width: 100%;
+        height: 40px;
+        border: 0;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/*error페이지*/
+.error {
+  position: relative;
+  width: 800px;
+  min-height: 500px;
+  margin: 150px auto 50px;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 2;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 500;
+    color: #333;
+    padding: 20px 0;
+    letter-spacing: -1px;
+    line-height: 50px;
+
+    em {
+      font-size: inherit;
+      font-weight: inherit;
+      color: #8f8f8f;
+    }
+  }
+
+  .explain {
+    padding: 10px 0;
+  }
+
+  + {
+    .bgImg {
+      position: absolute;
+      z-index: 0;
+    }
+
+    .bgImg1 {
+      left: 250px;
+      top: 170px;
+    }
+
+    .bgImg2 {
+      right: 250px;
+      top: 230px;
+    }
+  }
+
+  .btnArea {
+    // width: 240px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 30px auto 0;
+
+    .btn_ok {
+      display: inline-flex;
+      width: 240px;
+      height: 60px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 500;
+
+      color: #fff;
+      background-color: #e78c03;
+    }
+  }
+}

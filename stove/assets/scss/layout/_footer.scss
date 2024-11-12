@@ -1,0 +1,143 @@
+#btnTop {
+  display: none;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: vw(40);
+  right: vw(40);
+  z-index: 100;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url('../images/inc/top.png');
+  &:hover {
+    background-image: url('../images/inc/top_on.png');
+  }
+  &.fix {
+    position: absolute;
+    bottom: calc(100% + vw(40));
+  }
+}
+
+.common-footer {
+  overflow: visible;
+  min-width: 1200px;
+  margin-top: 0;
+  padding: 0;
+  position: initial !important;
+  bottom: auto !important;
+  left: auto !important;
+  &__container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .btn {
+    font-size: 16px !important;
+    color: #cfcfcf;
+  }
+  &__link {
+    @include minWidth;
+    justify-content: flex-start;
+    height: 70px;
+    margin: 0 auto 60px;
+    > li {
+      padding: 0 42px;
+      &::before {
+        border-left-color: #4d4d4d !important;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      &.grade-frame {
+        position: relative;
+        .grade-arrow {
+          display: inline-block;
+          width: 14px;
+          height: 9px;
+          margin-left: 7px;
+          background: url('../images/main/slider_arrow.png') no-repeat center top / contain;
+          transform: rotate(270deg);
+          &.open {
+            transform: rotate(90deg);
+          }
+        }
+      }
+      .grade-frame {
+        &__table {
+          display: none;
+          position: absolute;
+          left: -190px;
+          top: 59px;
+          width: 468px;
+          padding: 10px 5px;
+          border-radius: 5px;
+          background-color: #131313;
+        }
+      }
+    }
+    .link {
+      height: 100%;
+      font-size: 16px;
+      &.point {
+        color: #85b8f8 !important;
+      }
+    }
+    &--frame {
+      background-color: #363636;
+    }
+  }
+  &__bottom {
+    margin: 0;
+    padding-bottom: 64px;
+    text-align: left;
+  }
+  &__txt {
+    text-align: left;
+    &__address {
+      margin-bottom: 30px;
+      span {
+        color: #cfcfcf;
+        font-size: 16px;
+        padding: 3px 7px;
+        line-height: inherit;
+        display: inline-block;
+        vertical-align: middle;
+        &.slash {
+          display: inline-block;
+          vertical-align: middle;
+          width: 1px;
+          height: 12px;
+          padding: 0;
+          background-color: #4d4d4d;
+        }
+      }
+    }
+  }
+  &__bottom {
+    &__copyright {
+      margin-left: 0;
+      margin-bottom: 17px;
+      color: #6a6969;
+      font-size: 14px;
+      p {
+        color: #6a6969;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.logo {
+  &__smilegate {
+    width: 177px;
+    height: 35px;
+    margin-left: 20px;
+    background-image: url('../images/inc/logo_smilegate.png') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// 모바일최적화 func
+@mixin lg {
+  @media all and (max-width: 1080px) {
+    @content;
+  }
+}
+@mixin lg-min {
+  @media all and (min-width: 1080.2px) {
+    @content;
+  }
+}
+
+@function vw($val) {
+  @return ($val/1080 * 100vw);
+}
+/*
+TODO: 1080px사이즈의 모바일 시안에서 측정한 값을 vw로 바꿔주는 함수입니다.
+
+예시) 300px 가로값의 영역작업
+.box{
+    width: vw(300);
+}
+
+*/
+
+@import '_basic.scss';
+@import '_layout.scss';
+
+
+// @import '_bluemarble.scss';
+@import '_main.scss';
+
+@import '_popup.scss';
+
+
+

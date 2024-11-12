@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <!-- #include file="inc/head.html" -->
+  <body>
+    <!-- S: 임시 ---------------- 스토브 헤더 -->
+    <!-- #include file="inc/stove_header.html" -->
+    <!-- S: 임시 ---------------- 스토브 헤더 -->
+
+    <!-- #include file="inc/header.html" -->
+    <div id="wrap">
+      <!-- #include file="inc/visual.html" -->
+      <!-- S: 서브 페이지 -->
+      <div id="sub">
+        <h3 class="sub-title">
+          <p>1:1 문의</p>
+        </h3>
+        <div class="inner">
+          <ul class="bbs-list">
+            <li class="detail-box">
+              <!-- S:form -->
+              <form action="" class="inquiry-form">
+                <!-- S: 240726 삭제 -->
+                <!-- <p><span class="text-alert">*</span>필수 입력 항목입니다</p> -->
+                <!-- E: 240726 삭제 -->
+                <table class="inquiry-form__table">
+                  <caption class="sr-only">
+                    1:1문의 작성 폼입니다
+                  </caption>
+
+                  <colgroup>
+                    <col width="170" />
+                  </colgroup>
+                  <tbody>
+                    <!-- S: 240726 삭제 -->
+                    <!-- <tr>
+                      <th>PC사양제공</th>
+                      <td>
+                        <textarea name="" id="">
+현재 사용중인 PC의 시스템 정보를 기재 바랍니다.
+
+시스템 정보 확인 방법은 아래와 같습니다.
+1. 윈도우 PC의 찾기(돋보기모양) 입력창에 설정 입력합니다.
+(보통 좌측하단에 있으나 측면에 존재하는 경우도 있습니다.)
+2. 설정(시스템) 열기를 클릭합니다.
+3. 하단에 위치한 정보를 클릭합니다.
+4. 장치 사양 및 윈도우 사양 복사하여 1:1문의 PC 사양 제공에 붙여넣기로 기재해 주시기를 바랍니다.
+(붙여넣기: 마우스 오른쪽 버튼 클릭 후 붙여넣기 또는 키보드의 Ctrl + V를 동시에 누릅니다.)</textarea
+                        >
+                      </td>
+                    </tr> -->
+                    <!-- E: 240726 삭제 -->
+                    <tr>
+                      <!-- S: 240726 수정 -->
+                      <th>서버명</th>
+                      <!-- E: 240726 수정 -->
+                      <td>
+                        <div class="row">
+                          <select name="" id="" class="col-4">
+                            <option value="" selected disabled>선택</option>
+                            <option value="">선택</option>
+                            <option value="">선택</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- S: 240726 수정 -->
+                      <th>분류</th>
+                      <!-- E: 240726 수정 -->
+                      <td>
+                        <div class="row">
+                          <select name="" id="" class="col-4">
+                            <option value="" selected disabled>선택</option>
+                          </select>
+                          <select name="" id="" class="col-4">
+                            <option value="" selected disabled>선택</option>
+                          </select>
+                          <select name="" id="" class="col-4">
+                            <option value="" selected disabled>선택</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>문의제목</th>
+                      <td>
+                        <input type="text" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- S: 240726 수정 -->
+                      <th>문의내용</th>
+                      <!-- E: 240726 수정 -->
+                      <td>
+                        <textarea name="" id=""></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- S: 240726 수정 -->
+                      <th>이메일</th>
+                      <!-- E: 240726 수정 -->
+                      <td>
+                        <div class="row">
+                          <input class="col-4" type="text" />
+                          <span>@</span>
+                          <input class="col-4" type="text" />
+                          <select class="col-4" name="" id="">
+                            <option value="" selected disabled>선택</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>파일첨부하기</th>
+                      <td>
+                        <div class="inquiry-form__file">
+                          <div class="file-btn-wrap">
+                            <input type="file" />
+                            <button class="file-btn">파일첨부</button>
+                          </div>
+
+                          <div class="file-list-wrap">
+                            <div class="file-list"><span style="color: #666">등록된 파일이 없습니다.</span></div>
+                            <div class="file-list">
+                              파일1234.jpg
+                              <button class="file-list__delete" title="삭제" type="button"></button>
+                            </div>
+                            <div class="file-list">
+                              파일1234.jpg
+                              <button class="file-list__delete" title="삭제" type="button"></button>
+                            </div>
+                          </div>
+                          <p class="file-uplaod-notice">파일첨부는 파일 한개 당 3MB를 넘을 수 없으며, 최대 3개까지만 가능합니다.(이미지[jpg, gif, bmp]파일과 zip 형식만 첨부가 가능합니다.)</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="inquiry-form__term">
+                  <p class="title">개인정보 수집 및 이용에 대한 동의 <span class="text-alert">*</span></p>
+                  <!-- S: 240715-2 수정 -->
+                  <div class="content">
+                    ▣ 수집하는 개인정보 항목 및 수집방법<br />
+                    회사는 STOVE 이용자가 서비스를 원활하게 이용할 수 있도록 서비스 제공에 필요한 최소한의 개인정보만을 STOVE로부터 제공 받아 수집하고 있으며, 이에 대한 동의를 얻고 있습니다.
+                    <br /><br />
+                    STOVE 이용자가 회사의 서비스를 이용하시고자 할 경우 서비스 이용 전 회사의 개인정보 수집 및 이용에 대한 동의를 하셔야 서비스 이용이 가능합니다.<br /><br />
+                    (1) 고객센터 문의 시 수집하는 정보<br />
+                    - E-MAIL
+                    <br /><br />
+                    ▣개인정보의 수집목적 및 이용목적<br />
+                    회사는 수집한 개인정보를 다음과 같은 목적으로 이용합니다.<br />
+                    <br />
+                    (1) E-MAIL<br />
+                    - 고객상담<br /><br />
+                    ▣수집하는 개인정보의 보유 및 이용기간<br />
+                    STOVE 이용자가 회사에서 제공하는 서비스를 이용하는 동안 회사는 STOVE 이용자들의 개인정보를 계속적으로 보유하며 서비스 제공 등을 위해 이용합니다.<br /><br />
+                    회사가 STOVE로부터 제공 받은 개인정보는 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.<br /><br />
+                    단, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계 법령의 규정에 근거하여 아래와 같이 일정한 기간 동안 개인정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용합니다.<br /><br />
+                    (1) 전자상거래 등에서의 소비자보호에 관한 법률<br />
+                    <span style="color: red; font-size: 18px; font-weight: bold">- 계약 또는 청약철회 등에 관한 기록: 5년</span><br /><br />
+                    <span style="color: red; font-size: 18px; font-weight: bold">- 대금결제 및 재화 등의 공급에 관한 기록: 5년</span><br /><br />
+                    <span style="color: red; font-size: 18px; font-weight: bold">- 소비자의 불만 또는 분쟁처리에 관한 기록: 3년</span><br /><br />
+                    (2) 통신비밀보호법<br />
+                    <span style="color: red; font-size: 18px; font-weight: bold">- 홈페이지 방문에 관한 기록: 3개월</span><br /><br />
+                    ▣ 개인정보 수집 및 이용에 대한 동의를 거부할 권리<br />
+                    STOVE 이용자는 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다.<br /><br />
+                    만일, STOVE 이용자가 서비스 이용신청 시 수집하는 최소한의 개인정보, 즉, 필수 항목에 대한 수집 및 이용 동의를 거부하는 경우, 서비스 이용을 할 수 없게 됩니다.
+                  </div>
+                  <!-- E: 240715-2 수정 -->
+                  <div class="chk">
+                    <label>
+                      <input type="checkbox" required />
+                      <!-- S: 240715 수정 -->
+                      (필수)정보 수집 및 이용에 대하여 동의합니다.
+                      <!-- E: 240715 수정 -->
+                    </label>
+                  </div>
+                  <!-- S: 240726 삭제 -->
+                  <!-- <div class="chk">
+                    <label>
+                      <input type="checkbox" required />
+                      (선택)정보 수집 및 이용에 대하여 동의합니다.
+                    </label>
+                  </div> -->
+                  <!-- E: 240726 삭제 -->
+                </div>
+
+                <div class="btn-wrap">
+                  <button class="submit-btn submit-btn--submit" type="submit">등록</button>
+                  <button class="submit-btn submit-btn--reset" type="reset">취소</button>
+                </div>
+              </form>
+              <!-- E:form -->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- E: 서브 페이지 -->
+    </div>
+
+    <!-- #include file="inc/footer.html" -->
+
+    <script src="assets/js/common.min.js"></script>
+  </body>
+</html>

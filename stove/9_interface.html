@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <!-- #include file="inc/head.html" -->
+  <body>
+    <!-- S: 임시 ---------------- 스토브 헤더 -->
+    <!-- #include file="inc/stove_header.html" -->
+    <!-- S: 임시 ---------------- 스토브 헤더 -->
+
+    <!-- #include file="inc/header.html" -->
+    <div id="wrap">
+      <!-- #include file="inc/visual.html" -->
+      <!-- S: 서브 페이지 -->
+      <div id="sub">
+        <h3 class="sub-title line">
+          <p>라그 시작하기</p>
+        </h3>
+        <div class="inner">
+          <div class="flex-box">
+            <div class="flex-box__sidebar">
+              <!-- #include file="inc/lnb-info.html" -->
+            </div>
+            <div class="flex-box__con">
+              <div id="tabArea" class="tab system">
+                <ul class="tab-title">
+                  <li class="item--1">
+                    <a href="#tabContent1" data-hash="tabContent1" class="tab-link active">기본 인터페이스</a>
+                  </li>
+                  <li class="item--2">
+                    <a href="#tabContent2" data-hash="tabContent2" class="tab-link">이모티콘</a>
+                  </li>
+                  <li class="item--3">
+                    <a href="#tabContent3" data-hash="tabContent3" class="tab-link">단축키</a>
+                  </li>
+                  <li class="item--4">
+                    <a href="#tabContent4" data-hash="tabContent4" class="tab-link">명령어</a>
+                  </li>
+                  <li class="item--5">
+                    <a href="#tabContent5" data-hash="tabContent5" class="tab-link">카메라 조작법</a>
+                  </li>
+                </ul>
+                <div id="tabContent1" class="tab-content" style="display: block">
+                  <section class="guideContents ragStartInterface01Contents">
+                    <h2>기본 인터페이스</h2>
+                    <p>인터페이스 디자인은 스킨을 이용하여 색다르게 꾸밀 수 있습니다. 클릭하시면 해당 정보를 보실 수 있습니다.</p>
+                    <div class="interface">
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('01'); return false;" class="interface01" title="기본 정보창 (Alt + V)">기본 정보창</a>
+                        <div class="popup_interface" id="interface01" style="display: none">
+                          <div tabindex="0">
+                            <strong>기본 정보창 (Alt+V)</strong>
+                            <p>캐릭터의 이름과 직업, 레벨, HP, SP , 경험치 등의 정보가 표시되며, 다른 미니창을 호출할 수 있는 버튼이 하단에 포함되어 있습니다.<br />기본 정보창은 단축키를 통해 크기 변경이 가능합니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface01').toggle(); $('#interface01').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('02'); return false;" class="interface02" title="단축키 창 (F12)">단축키창</a>
+                        <div class="popup_interface" id="interface02">
+                          <div tabindex="0">
+                            <strong>단축키 창 (F12)</strong>
+                            <p>스킬이나 아이템을 등록하여 키보드로 쉽게 사용할 수 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface02').toggle(); $('#interface02').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('03'); return false;" class="interface03" title="status (Alt + A)">status</a>
+                        <div class="popup_interface" id="interface03">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_3_1.gif" alt="장착아이템 창" /></span>
+                            <strong>스테이터스창 (Alt + A)</strong>
+                            <p>장착 아이템 창에 포함된 창으로, 캐릭터의 스테이터스와 그에 따른<br />능력치를 확인할 수 있습니다.<br />레벨업 시 획득한 포인트를 이 창에서 각각의 스테이터스에 배분할 수<br />있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface03').toggle(); $('#interface03').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('04'); return false;" class="interface22" title="equip (Alt + Q)">equip</a>
+                        <div class="popup_interface" id="interface04">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_3_2.gif" alt="equip (Alt + Q)" /></span>
+                            <strong>장착 아이템 (Alt + Q)</strong>
+                            <p>캐릭터가 현재 장착하고 있는 장비 아이템을 확인할 수 있습니다.<br />각각의 아이템은 더블 클릭 또는 드래그 &amp; 드롭 방식으로 장착/ 해제가 <br />가능하며, 우측 하단의 “장비창 공개”를 통해 다른 유저들에게 장비를<br />공개할 수도 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface04').toggle(); $('#interface04').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('05'); return false;" class="interface04" title="skill (Alt + S)">skill</a>
+                        <div class="popup_interface" id="interface05">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_4_1.jpg" alt="스킬창" /></span>
+                            <strong>스킬창 (Alt + S)</strong>
+                            <p>각 직업의 스킬을 보여줍니다. <br />직업 레벨업 시 획득한 스킬 포인트를 사용하여 원하는 스킬에 투자할 수<br />있습니다. <br />스킬의 기본 정보와 레벨 정보는 각 스킬 아이콘에서 마우스 우측 버튼을<br />클릭하면 볼 수 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface05').toggle(); $('#interface05').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('06'); return false;" class="interface05" title="item (Alt + E)">item</a>
+                        <div class="popup_interface" id="interface06">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_5_1.jpg" alt="소지 아이템창" /></span>
+                            <strong>소지 아이템창 (Alt + E)</strong>
+                            <p>현재 소지하고 있는 아이템을 보여주는 창으로, 소비 / 장비 / 기타 / 개인<br />탭에서 종류별로 아이템의 소지 내역을 확인할 수 있습니다.<br />소비, 장비 아이템의 경우, 더블 클릭으로 사용하거나, 장착할 수 있으며,<br />아이템을 마우스 우클릭하면, 해당 아이템의 자세한 설명을 볼 수<br />있습니다.<br />또한, 드래그 &amp; 드롭 방식으로 아이템의 장착/해제를 하거나 바닥에<br />아이템을 떨어트릴 수 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface06').toggle(); $('#interface06').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('07'); return false;" class="interface11" title="booking">booking</a>
+                        <div class="popup_interface" id="interface07">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_11_1.jpg" alt="파티 모집 리스트 창" /></span>
+                            <strong>파티 모집 리스트</strong>
+                            <p>자동으로 파티를 모집합니다.<br />레벨 및 지역 등을 설정하여 같이 사냥할 파티를 모집하는 기능입니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface07').toggle(); $('#interface07').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('08'); return false;" class="interface07" title="party (Alt + Z)">party</a>
+                        <div class="popup_interface" id="interface08">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_7_1.jpg" alt="파티창" /></span>
+                            <strong>파티창 (Alt + Z)</strong>
+                            <p>결성된 파티의 정보를 확인할 수 있습니다.<br />채팅 창에 “/결성 파티명” 을 입력하면 파티를 생성할 수 있습니다.<br />파티에는 최대 12명이 합류할 수 있으며, 이미 다른 파티가 사용하고 있는<br />명칭은 중복 사용할 수 없습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface08').toggle(); $('#interface08').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('09'); return false;" class="interface08" title="guild (Alt + G)">guild</a>
+                        <div class="popup_interface" id="interface09">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_8_1.jpg" alt="길드 창" /></span>
+                            <strong>길드 (Alt + G)</strong>
+                            <p>가입된 길드의 정보를 보여줍니다.<br />길드레벨 , 길드경험치 , 길드원정보 등의 내용을 볼 수 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface09').toggle(); $('#interface09').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('10'); return false;" class="interface12" title="battle">battle</a>
+                        <div class="popup_interface" id="interface10">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_12_1.jpg" alt="전장 입장 설정 창" /></span>
+                            <strong>전장 입장 설정</strong>
+                            <p>전장으로 입장할 수 있도록 하는 메뉴입니다.<br />티에라 협곡, 플라비우스, KVM 중 한곳을 선택하여 입장이 가능합니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface10').toggle(); $('#interface10').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('11'); return false;" class="interface09" title="quest (Alt + U)">quest</a>
+                        <div class="popup_interface" id="interface11">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_9_1.jpg" alt="퀘스트 목록창" /></span>
+                            <strong>퀘스트 목록창 (Alt+U)</strong>
+                            <p>현재 캐릭터가 진행 중인 퀘스트와 보류 중인 퀘스트를 포함하여, 기타<br />다른 퀘스트의 정보를 볼 수 있습니다.<br />퀘스트 목록 창에서 퀘스트 제목을 클릭하면, 상세 내용이 출력되며, 좌측<br />하단의 “퀘스트 보기창” 체크를 통해 화면에서 현재 수행중인 퀘스트의<br />진행 설명과 각종 조건에 대한 정보를 확인할 수 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface11').toggle(); $('#interface11').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('12'); return false;" class="interface06" title="map (Ctrl + `)">map</a>
+                        <div class="popup_interface" id="interface12">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_6_1.gif" alt="지도 화면" /></span>
+                            <strong>전체맵 (Ctrl + ` )</strong>
+                            <p>각종 던전의 위치를 포함한 전체지도의 확인이 가능합니다.<br />Tab 버튼을 누르면 주요 몬스터 및 권장레벨등의 자세한 내용도 표시되며,<br />네비게이션 기능도 제공합니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface12').toggle(); $('#interface12').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('13'); return false;" class="interface14" title="Navigation">Navigation</a>
+                        <div class="popup_interface" id="interface13">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_14_1.jpg" alt="Navigation 창" /></span>
+                            <strong>Navigation</strong>
+                            <p>게임내 네비게이션 관련 메뉴입니다.<br />게임내 몬스터 및 NPC를 찾을수 있는 길찾기 기능을 제공합니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface13').toggle(); $('#interface13').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('14'); return false;" class="interface10" title="option (ESC)">option</a>
+                        <div class="popup_interface" id="interface14">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_10_1.jpg" alt="게임 옵션 창" /></span>
+                            <strong>게임 옵션창(ESC)</strong>
+                            <p>각종 게임 설정창을 호출하거나, 캐릭터 선택 화면으로 이동, 및 게임을<br />종료할 때 사용됩니다.</p>
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_10_2.jpg" alt="그래픽 설정 창" /></span>
+                            <strong>그래픽 설정</strong>
+                            <p>게임의 해상도, 스킨을 설정할 때 사용하는 메뉴입니다.</p>
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_10_3.jpg" alt="단축키 설정 창" /></span>
+                            <strong>단축키 설정</strong>
+                            <p>스킬바 / 인터페이스 / 이모션 등의 단축키를 직접 설정하는 메뉴입니다.</p>
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_10_4.jpg" alt="사운드 설정 창" /></span>
+                            <strong>사운드 설정</strong>
+                            <p>게임내 사운드를 설정하는 메뉴입니다.<br />배경음 및 효과음의 음량 조정이 가능합니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface14').toggle(); $('#interface14').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('15'); return false;" class="interface15" title="bank (Ctrl + B)">Bank</a>
+                        <div class="popup_interface" id="interface15">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_15_1.jpg" alt="제니 창고 창" /></span>
+                            <strong>제니 창고 (Ctrl + B)</strong>
+                            <p>보유한 제니의 입금 / 출금 이 가능합니다.<br />라그나로크의 제니는 캐릭터당 저장이 되기 때문에 계정내 다른<br />캐릭터로의 제니이동을 원하신다면 [제니 창고] 를 이용해주시기<br />바랍니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface15').toggle(); $('#interface15').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('16'); return false;" class="interface13" title="rec">rec</a>
+                        <div class="popup_interface" id="interface16">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_13_1.jpg" alt="리플레이 녹화 창" /></span>
+                            <strong>리플레이 녹화 메뉴</strong>
+                            <p>게임내 플레이화면을 녹화할수 있습니다.<br />녹화된 화면은 홈페이지 스타터 팝업내 [리플레이] 기능을 통해 확인이<br />가능합니다.</p>
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_13_2.jpg" alt="리플레이 보러가기는 여기!" /></span>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface16').toggle(); $('#interface16').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('17'); return false;" class="interface16" title="친구창 (Alt + H)">친구창</a>
+                        <div class="popup_interface" id="interface17">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_16_1.jpg" alt="친구창" /></span>
+                            <strong>친구창 (Alt + H)</strong>
+                            <p>친구 목록 및 접속 여부를 확인할 수 있습니다.<br />파티 창과 동일한 틀 안에 존재하며, 단축키를 이용하거나, 파티창 하단의<br />“친구” 버튼을 클릭하면 확인할 수 있습니다.<br />쪽지를 보내거나, 1:1 대화를 할 수 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface17').toggle(); $('#interface17').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('18'); return false;" class="interface17" title="채팅방 만들기창 (Alt + C)">채팅방 만들기창 (Alt + C)</a>
+                        <div class="popup_interface" id="interface18">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_17_1.jpg" alt="채팅방 만들기창" /></span>
+                            <strong>채팅방 만들기창 (Alt + C)</strong>
+                            <p>채팅방을 개설하여 다른 유저들과 대화할 수 있습니다.<br />채팅방은 최대 20명이 입장할 수 있으며, 방 개설 시 비밀번호를 설정하여<br />입장을 제한할 수도 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface18').toggle(); $('#interface18').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('19'); return false;" class="interface18" title="단축키 목록창 (Alt + M)">단축키 목록창</a>
+                        <div class="popup_interface" id="interface19">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_18_1.jpg" alt="단축키 목록창" /></span>
+                            <strong>단축키 목록창 (Alt + M)</strong>
+                            <p>매크로 설정을 통해 이모티콘이나 명령어를 손쉽게 사용할 수 있습니다.<br />각 칸에 원하는 내용을 입력한 후 Alt + 숫자 버튼을 누르면, 입력된 내용을<br />출력하며, 각 칸의 내용은 언제든지 변경이 가능합니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface19').toggle(); $('#interface19').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('20'); return false;" class="interface19" title="이모션 목록 (Alt + L)">이모션 목록</a>
+                        <div class="popup_interface" id="interface20">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_19_1.jpg" alt="이모션 목록 창" /></span>
+                            <strong>이모션 목록 (Alt + L)</strong>
+                            <p>게임내 각종 이모션을 설정할수 있습니다.<br />주로 [단축키 목록] 에 등록하여 사용합니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface20').toggle(); $('#interface20').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('21'); return false;" class="interface23" title="미니맵 (Ctrl + Tab)">미니맵</a>
+                        <div class="popup_interface" id="interface21">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_23_1.jpg" alt="미니맵 위치는 여기!" /></span>
+                            <strong>미니맵 (Ctrl + Tab)</strong>
+                            <p>캐릭터가 현재 위치한 장소를 화면 우측 상단에 나타나는 미니맵으로<br />확인할 수 있습니다.<br />+ / - 버튼을 통해 맵을 확대/ 축소할 수 있으며, 돋보기 버튼을 통해 주요<br />시설의 표시 여부를 선택할 수 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface21').toggle(); $('#interface21').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('22'); return false;" class="interface20" title="Command List (Alt + Y)">Command List</a>
+                        <div class="popup_interface" id="interface22">
+                          <div tabindex="0">
+                            <span><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_interface01_20_1.jpg" alt="Command List 창" /></span>
+                            <strong>Command List (Alt + Y)</strong>
+                            <p>게임내 각종 단축키를 설정합니다.<br />게임내 단축키를 on / off 형식으로 설정이 가능합니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface22').toggle(); $('#interface22').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                      <div class="interfaceArea">
+                        <a href="javascript:;" onclick="InterfaceInfo('23'); return false;" class="interface21" title="채팅창 (Alt + F10)">채팅 창</a>
+                        <div class="popup_interface" id="interface23">
+                          <div tabindex="0">
+                            <strong>채팅창 (Alt + F10)</strong>
+                            <p>대화 시 사용되는 창으로 엔터키를 누르면, 하단에 하얀색의 채팅칸이<br />열리거나 닫힙니다.<br />채팅칸을 열고 채팅을 입력한 후 엔터를 누르면, 공개 대화가 출력됩니다.<br />채팅창부분으로 분리되어 있으며, 좌측 칸에 다른 캐릭터의<br />캐릭터명을 입력한 뒤 오른쪽 칸에 하고 싶은 말을 쓰면, 1:1 귓말을 보낼<br />수 있습니다.</p>
+                          </div>
+                          <a href="javascript:;" onclick="$('#interface23').toggle(); $('#interface23').parent().find('a').eq(0).focus(); return false;" class="close"><img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/btn_monsterLayerpopup_close.gif" alt="닫기" /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- S: 240628 수정 : 추가-->
+                  <div class="systemPageNotice">
+                    <p>※홈페이지 정보는 게임의 업데이트에 따라 내용이 다소 변경 될 수 있습니다.</p>
+                  </div>
+                  <!-- E: 240628 수정 : 추가-->
+                </div>
+                <div id="tabContent2" class="tab-content">
+                  <section class="guideContents ragStartInterface02Contents">
+                    <h2 class="title-1">이모티콘</h2>
+                    <p>라그나로크 온라인에서는 다양한 이모티콘을 이용하여 캐릭터의 감정을 표현할 수 있습니다.</p>
+                    <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_ragStartInterface02_1.jpg" alt="" width="460" style="border: 1px solid #999" />
+                    <br />
+                    <br />
+                    <br />
+                    <h2 class="title-2">이모티콘 구매</h2>
+                    <p>미구매 탭에서 냥다래 열매를 통해 이모티콘 구매가 가능하여 색다른 감정을 표현할 수 있습니다.</p>
+                    <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_ragStartInterface02_2.jpg" alt="" width="460" style="border: 1px solid #999" />
+                    <p>구매된 이모티콘은 구매 탭에서 확인 가능합니다.</p>
+                    <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_ragStartInterface02_3.jpg" alt="" width="460" style="border: 1px solid #999" />
+                    <p>Alt+ L 을 누르면 이모션 목록 창이 나타납니다.</p>
+                    <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_ragStartInterface02_4.jpg" alt="" width="460" style="border: 1px solid #999" />
+                    <p>목록창에서 바로 이모티콘을 사용할 수 있으며, 채팅창에 직접 단어를 입력하여 사용할 수도있습니다.<br />또한, Ctrl + 1, 2, 3 등의 숫자를 이용하여 국가 이모티콘의 사용도 가능합니다.</p>
+                    <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_ragStartInterface02_5.jpg" alt="" width="460" style="border: 1px solid #999" />
+                    <p>자주 사용하는 이모티콘은 단축키 창 (Alt+ M)에 등록하여 좀 더 쉽게 감정을 표현할 수 있습니다.</p>
+                  </section>
+
+                  <!-- S: 240628 수정 : 추가-->
+                  <div class="systemPageNotice">
+                    <p>※해당 내용은 인게임 팁박스를 통해 확인이 가능합니다.</p>
+                    <p>※홈페이지 정보는 게임의 업데이트에 따라 내용이 다소 변경 될 수 있습니다.</p>
+                  </div>
+                  <!-- E: 240628 수정 : 추가-->
+                </div>
+                <div id="tabContent3" class="tab-content">
+                  <section class="guideContents ragStartInterface03Contents">
+                    <h2>단축키</h2>
+                    <p>라그나로크 온라인에서는 다양한 단축키가 적용되어 있습니다. 자주 사용하는 메뉴는 단축키를 사용하시면 편리합니다.</p>
+                    <h3>기본 단축키</h3>
+                    <dl>
+                      <dt>ESC</dt>
+                      <dd>게임을 종료하거나 초기화면으로 돌아가는 메뉴 On/ Off</dd>
+                      <dt>F1 ~ F9</dt>
+                      <dd>단축창에 등록된 아이템 및 스킬 사용</dd>
+                      <dt>F10</dt>
+                      <dd>채팅창 크기 확대/ 축소</dd>
+                      <dt>F11</dt>
+                      <dd>모든 창 닫기</dd>
+                      <dt>F12</dt>
+                      <dd>스킬바 On/ Off</dd>
+                      <dt>Print Screen/ Scroll Lock</dt>
+                      <dd>스크린 샷 찍기</dd>
+                      <dt>Insert</dt>
+                      <dd>캐릭터 앉기 / 서기</dd>
+                      <dt>Return</dt>
+                      <dd>채팅 모드 On/ Off</dd>
+                      <dt>Page Up &amp; Down</dt>
+                      <dd>화면 및 각 인터페이스의 텍스트 스크롤</dd>
+                      <dt>Shift + 캐릭터 클릭</dt>
+                      <dd>클릭한 상대 캐릭터 따라가기</dd>
+                      <dt>Shift + 방향 클릭</dt>
+                      <dd>클릭한 방향으로 캐릭터의 방향 전환</dd>
+                      <dt>Ctrl + Enter</dt>
+                      <dd>메시지 입력 후 명령어를 통해 파티에게 메시지 전송</dd>
+                      <dt>Ctrl + tab</dt>
+                      <dd>미니 맵 상태 변경</dd>
+                      <dt>Ctrl + `</dt>
+                      <dd>지도 On/ Off</dd>
+                      <dt>Ctrl + R</dt>
+                      <dd>용병 정보 창 On/ Off</dd>
+                      <dt>Ctrl + T</dt>
+                      <dd>용병 대기 명령</dd>
+                      <dt>Ctrl + G</dt>
+                      <dd>클랜창 On/ Off</dd>
+                      <dt>Ctrl + B</dt>
+                      <dd>은행 창 On/ Off</dd>
+                      <dt>Alt + Home</dt>
+                      <dd>지면 커서 표시 On/ Off</dd>
+                      <dt>Alt + End</dt>
+                      <dd>상태 게이지 On/ Off</dd>
+                      <dt>Alt + `</dt>
+                      <dd>기본 정보 창 확장 옵션</dd>
+                      <dt>Alt + F10</dt>
+                      <dd>채팅창 On/ Off</dd>
+                      <dt>Alt + B</dt>
+                      <dd>메모리얼 던전 창 On/ Off</dd>
+                      <dt>Alt + C</dt>
+                      <dd>대화방 만들기</dd>
+                      <dt>Alt + E</dt>
+                      <dd>아이템 창 On/ Off</dd>
+                      <dt>Alt + G</dt>
+                      <dd>길드 창 On/ Off</dd>
+                      <dt>Alt + H</dt>
+                      <dd>친구 창 On/ Off</dd>
+                      <dt>Alt + J</dt>
+                      <dd>펫 정보 창 On/ Off</dd>
+                      <dt>Alt + L</dt>
+                      <dd>이모션 목록 창 On/ Off</dd>
+                      <dt>Alt + M</dt>
+                      <dd>단축키 목록 창 On/ Off</dd>
+                      <dt>Alt + Q</dt>
+                      <dd>캐릭터 정보 창 On/ Off</dd>
+                      <dt>Alt + R</dt>
+                      <dd>호문 정보 창 On/ Off</dd>
+                      <dt>Alt + S</dt>
+                      <dd>스킬 목록 창 On/ Off</dd>
+                      <dt>Alt + T</dt>
+                      <dd>호문 대기 명령</dd>
+                      <dt>Alt + U</dt>
+                      <dd>퀘스트 목록 창 On/ Off</dd>
+                      <dt>Alt + V</dt>
+                      <dd>기본 정보 창 최소/</dd>
+                      <dt>Alt + W</dt>
+                      <dd>카트 창 On/ Off</dd>
+                      <dt>Alt + Y</dt>
+                      <dd>커맨드 창 On/ Off</dd>
+                      <dt>Alt + Z</dt>
+                      <dd>파티 창 On/ Off</dd>
+                    </dl>
+                    <h3>미지정 단축키 (단축키 설정을 통해 이용 가능)</h3>
+                    <ul class="noShorten">
+                      <li class="noShorten_left">친구 설정 창</li>
+                      <li>네비게이션 On/ Off</li>
+                      <li class="noShorten_left">파티 설정 창</li>
+                      <li>리플레이 녹화 창 On/ Off</li>
+                      <li class="noShorten_left">파티 모집 창</li>
+                      <li>리플레이 시작 정지</li>
+                      <li class="noShorten_left">파티 모집 리스트 창</li>
+                      <li>리플레이 속도 증가</li>
+                      <li class="noShorten_left">버튼 재배치</li>
+                      <li>리플레이 속도 감소</li>
+                      <li class="noShorten_left">메뉴 아이콘 숨김/ 보임</li>
+                      <li></li>
+                    </ul>
+                  </section>
+
+                  <!-- S: 240628 수정 : 추가-->
+                  <div class="systemPageNotice">
+                    <p>※홈페이지 정보는 게임의 업데이트에 따라 내용이 다소 변경 될 수 있습니다.</p>
+                  </div>
+                  <!-- E: 240628 수정 : 추가-->
+                </div>
+                <div id="tabContent4" class="tab-content">
+                  <section class="guideContents ragStartInterface04Contents">
+                    <h2>명령어</h2>
+                    <p>라그나로크 온라인에서는 다양한 명령어를 통해 직접 기능을 사용할 수 있습니다.<br />명령어는 /h 또는 /help 명령어를 통해 일람이 가능하며, 자주 사용하는 명령어는 단축키를 사용하시거나, 외워두시는 것이 편리합니다.</p>
+                    <h3>일반 명령어</h3>
+                    <dl>
+                      <dt>/tip</dt>
+                      <dd>오늘의팁 열기</dd>
+                      <dt>/음악</dt>
+                      <dd>배경음악 On Off</dd>
+                      <dt>/효과음</dt>
+                      <dd>효과음 On Off</dd>
+                      <dt>/이펙트</dt>
+                      <dd>이펙트 On Off</dd>
+                      <dt>/좌표 or /장소</dt>
+                      <dd>현재 위치 표시</dd>
+                      <dt>/skip</dt>
+                      <dd>프래임스킵 On Off</dd>
+                      <dt>/v (0~127)</dt>
+                      <dd>효과음 볼륨조정</dd>
+                      <dt>/bv (0~127)</dt>
+                      <dd>배경음악 볼륨조정</dd>
+                      <dt>/ex (캐릭터이름) or /차단 (캐릭터이름)</dt>
+                      <dd>해당캐릭터에 대해 귓말차단</dd>
+                      <dt>/ex (캐릭터이름) or /차단 (캐릭터이름)</dt>
+                      <dd>해당캐릭터에 대해 귓말차단</dd>
+                      <dt>/ex or /차단</dt>
+                      <dd>귓말차단 캐릭터 리스트</dd>
+                      <dt>/in (캐릭터이름) or /해제 (캐릭터이름)</dt>
+                      <dd>해당캐릭터에 대해 귓말허용</dd>
+                      <dt>/inall or /해제전부</dt>
+                      <dd>모두에게 귓말허용</dd>
+                      <dt>/exall or /차단전부</dt>
+                      <dd>모두에게 귓말차단</dd>
+                      <dt>/결성 [파티이름]</dt>
+                      <dd>파티결성 /탈퇴 : 파티탈퇴</dd>
+                      <dt>/앉기 or /sit</dt>
+                      <dd>앉기. 앉아있을때 서기</dd>
+                      <dt>/서기 or /stand</dt>
+                      <dd>서기. 서있을때 앉기</dd>
+                      <dt>/채팅방 or /chat</dt>
+                      <dd>채팅방 만들기창 띄우기</dd>
+                      <dt>/q</dt>
+                      <dd>채팅방 나가기</dd>
+                      <dt>/결성 [파티이름] or /organize [파티이름]</dt>
+                      <dd>파티결성</dd>
+                      <dt>/탈퇴 or /leave</dt>
+                      <dd>파티 탈퇴</dd>
+                      <dt>/제명 [캐릭터이름] or /expel [캐릭터이름]</dt>
+                      <dd>해당캐릭터를 파티에서 제명시킴</dd>
+                      <dt>/기억</dt>
+                      <dd>워프할 장소 기억(워프 스킬이 있는경우)</dd>
+                      <dt>/스냅 or /snap</dt>
+                      <dd>몬스터 공격시 스냅 On Off</dd>
+                      <dt>스킬스냅 or /skillsnap</dt>
+                      <dd>스킬로 몬스터 공격시 스냅 On Off</dd>
+                      <dt>아이템스냅 or /itemsnap</dt>
+                      <dd>아이템 주울때 스냅 On Off</dd>
+                      <dt>/갈무리 or /savechat</dt>
+                      <dd>채팅 내용 파일로 저장하기</dd>
+                      <dt>/camera</dt>
+                      <dd>플레이어에게 카메라고정 On Off</dd>
+                      <dt>/miss</dt>
+                      <dd>미스이펙트 On Off</dd>
+                      <dt>/fog</dt>
+                      <dd>FOG이펙트를 키거나 끌수있습니다 On Off</dd>
+                      <dt>/notalkmsg2</dt>
+                      <dd>채팅내용을 채팅창에 표시하지 않습니다 (길드말 포함) On Off</dd>
+                      <dt>/bingbing</dt>
+                      <dd>연속해서 이 명령어를 쳐주면 캐릭터가 빙글빙글</dd>
+                      <dt>/bangbang</dt>
+                      <dd>연속해서 이 명령어를 쳐주면 캐릭터가 뱅글뱅글</dd>
+                      <dt>/doridori</dt>
+                      <dd>연속해서 이 명령어를 쳐주면 캐릭터가 도리도리</dd>
+                      <dt>/aura</dt>
+                      <dd>오오라를 간략화 시킬수있습니다 On Off</dd>
+                      <dt>/이름표시 or /showname</dt>
+                      <dd>캐릭터의 이름 표시 방식을 변경합니다.</dd>
+                      <dt>/quickspell</dt>
+                      <dd>마우스 우클릭으로 F9에 저장한 스킬을 사용합니다 On Off</dd>
+                      <dt>/quickspell2</dt>
+                      <dd>마우스 WHEEL을 위,아래로 굴려서 F7과F8에 저장한 스킬을 사용합니다 On Off</dd>
+                      <dt>/이모션</dt>
+                      <dd>현재 사용가능한 이모션의 리스트를 보여줍니다.</dd>
+                      <dt>/hi 또는 /hi 문장</dt>
+                      <dd>친구로 등록된 캐릭터들에게 인사를 합니다.</dd>
+                      <dt>/notrade</dt>
+                      <dd>거래신청을 자동으로 거절합니다 On Off</dd>
+                      <dt>/hunting</dt>
+                      <dd>사냥 목록을 보여줍니다.</dd>
+                      <dt>/alchemist</dt>
+                      <dd>알케미스트의 상위 10위권 랭킹을 보여줍니다.</dd>
+                      <dt>/blacksmith</dt>
+                      <dd>블랙스미스의 상위 10위권 랭킹을 보여줍니다.</dd>
+                      <dt>/window</dt>
+                      <dd>창 위치 이동시 다른 창과 달라붙는 속성이 들어갑니다 On Off</dd>
+                      <dt>/skillfail</dt>
+                      <dd>빨간색의 스킬사용 실패 메세지를 표시하지 않습니다 On Off</dd>
+                      <dt>/notalkmsg</dt>
+                      <dd>채팅내용을 채팅창에 표시하지 않습니다 On Off</dd>
+                      <dt>/noshift</dt>
+                      <dd>쉬프트를 누르지않고 힐로 적을 공격할수있게됩니다 On Off</dd>
+                      <dt>/noctrl</dt>
+                      <dd>콘트롤을 누르지않아도 자동공격이 됩니다. On Off</dd>
+                      <dt>/loginout</dt>
+                      <dd>길드원과 친구들의 접속관련 메세지를 보여줍니다. On Off</dd>
+                      <dt>/shopping</dt>
+                      <dd>클릭 한번으로 상점을 열고 상점이름 오른쪽 클릭으로 상점을 닫습니다 On Off</dd>
+                      <dt>/tingonly</dt>
+                      <dd>채팅방 입장음만 들을수있게됩니다.</dd>
+                      <dt>/monsterhp</dt>
+                      <dd>공격한 몬스터의 HP정보를 표시합니다. On Off</dd>
+
+                      <dt>/mineffect</dt>
+                      <dd>이펙트 간소화</dd>
+                      <dt>/quake</dt>
+                      <dd>화면 흔들림 효과 on off</dd>
+                    </dl>
+                    <h3>기타 단축키</h3>
+                    <dl>
+                      <dt>[Alt] + [End]</dt>
+                      <dd>플레이어 hp/sp 게이지 On Off</dd>
+                      <dt>[Alt] + [Home]</dt>
+                      <dd>지면 커서 표시 On Off</dd>
+                      <dt>[Insert]</dt>
+                      <dd>앉기 서기</dd>
+                      <dt>[Alt] + [=]</dt>
+                      <dd>알파벳 간격이 넓어졌을때 되돌리기</dd>
+                      <dt>[F10]</dt>
+                      <dd>채팅창 크기조정</dd>
+                      <dt>[Alt] + [F10]</dt>
+                      <dd>채팅창 On Off</dd>
+                      <dt class="line2">Alt + (1~9)</dt>
+                      <dd>/! /? /기쁨 /하트 /땀 /아하 /짜증 /화 /돈 /... /가위 /바위 /보<br />Ctrl + (-=\\) 에 대응되는 명령어 입니다.</dd>
+                      <dt>[Print Screen] / [Scroll Lock]</dt>
+                      <dd>스크린샷</dd>
+                      <dt>ALT+Y</dt>
+                      <dd>여러가지 명령어를 쉽게 쓸수있는 윈도우가 열립니다.</dd>
+                    </dl>
+                  </section>
+
+                  <!-- S: 240628 수정 : 추가-->
+                  <div class="systemPageNotice">
+                    <p>※홈페이지 정보는 게임의 업데이트에 따라 내용이 다소 변경 될 수 있습니다.</p>
+                  </div>
+                  <!-- E: 240628 수정 : 추가-->
+                </div>
+                <div id="tabContent5" class="tab-content">
+                  <section class="guideContents ragStartInterface05Contents">
+                    <h2>카메라 조작법</h2>
+                    <h3 class="ragStart_num01">카메라 고도</h3>
+                    <div>
+                      <div class="interfaceGif">
+                        <img src="/games/ro1/2013_ro1/images/guide/camera_1.gif" class="gif" alt="" />
+                        <img src="/games/ro1/2013_ro1/images/guide/camera_1-cover.gif" class="gif__cover" alt="" />
+                      </div>
+
+                      <p>Shift 키를 누른 상태에서 마우스 오른쪽 버튼을 상, 하로 드래그하면<br />카메라의 각도가 일정 범위만큼 조절이 가능해 집니다.</p>
+                      <p>Shift + Ctrl 키를 누른 상태에서 마우스의 휠을 상, 하로 드래그하면<br />카메라의 각도가 더 넓은 범위만큼 조절이 가능해 집니다.</p>
+                      <p><strong>그림 위에 마우스를 올려 놓으시면 예를 볼 수 있습니다.</strong></p>
+                    </div>
+
+                    <h3 class="ragStart_num02">카메라 회전</h3>
+                    <div>
+                      <div class="interfaceGif">
+                        <img src="/games/ro1/2013_ro1/images/guide/camera_2.gif" class="gif" alt="" />
+                        <img src="/games/ro1/2013_ro1/images/guide/camera_2-cover.gif" class="gif__cover" alt="" />
+                      </div>
+
+                      <p>마우스 오른쪽 버튼을 누른채 좌, 우로 드래그하면<br />카메라가 케릭터를 중심으로 360' 회전합니다.</p>
+                      <p><strong>그림 위에 마우스를 올려 놓으시면 예를 볼 수 있습니다.</strong></p>
+                    </div>
+
+                    <h3 class="ragStart_num03">카메라 확대축소</h3>
+                    <div>
+                      <div class="interfaceGif">
+                        <img src="/games/ro1/2013_ro1/images/guide/camera_3.gif" class="gif" alt="" />
+                        <img src="/games/ro1/2013_ro1/images/guide/camera_3-cover.gif" class="gif__cover" alt="" />
+                      </div>
+
+                      <p>컨트롤키(Ctrl)를 누른 상태에서 마우스 오른쪽 버튼을 누른채 상, 하로 드래그하면<br />카메라가 캐릭터를 향해 확대, 축소 됩니다. 마우스의 휠로도 가능합니다.</p>
+                      <p><strong>그림 위에 마우스를 올려 놓으시면 예를 볼 수 있습니다.</strong></p>
+                    </div>
+                  </section>
+
+                  <!-- S: 240628 수정 : 추가-->
+                  <div class="systemPageNotice">
+                    <p>※홈페이지 정보는 게임의 업데이트에 따라 내용이 다소 변경 될 수 있습니다.</p>
+                  </div>
+                  <!-- E: 240628 수정 : 추가-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- E: 서브 페이지 -->
+    </div>
+
+    <!-- #include file="inc/footer.html" -->
+
+    <script src="assets/js/common.min.js"></script>
+  </body>
+</html>

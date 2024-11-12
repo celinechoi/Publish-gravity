@@ -1,0 +1,47 @@
+// $mediaResponsiveSize = 1024px; <= _var.scss
+
+@mixin deviceLg {
+  @media all and (min-width: 1001px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  // web
+  @media all and (min-width: ($mediaResponsiveSize +  0.02px)) {
+    @content;
+  }
+}
+
+@mixin lp {
+  // 1440px 이하
+  @media all and (max-width: ($container + $gutter * 2)) {
+    @content;
+  }
+}
+
+@mixin tm {
+  // tablet, mobile
+  @media all and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin device {
+  @media all and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin ta {
+  // tablet
+  @media all and (min-width: 768px) and (max-width: ($mediaResponsiveSize )) {
+    @content;
+  }
+}
+
+@mixin mo {
+  @media all and (max-width: 767px) {
+    @content;
+  }
+}
