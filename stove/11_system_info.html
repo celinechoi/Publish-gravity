@@ -1,14 +1,230 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
-  <!-- #include file="inc/head.html" -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <!-- S: 240715-4 상대경로 수정 -->
+    <link rel="icon" href="assets/favicon/favicon_ro1.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon/favicon_ro1.ico" type="image/x-icon" />
+    <!-- E: 240715-4 상대경로 수정 -->
+    <!-- S: 240711 수정 : 추가 및 수정 -->
+    <meta property="og:image" content="assets/images/og_img/og_img.jpg" />
+    <meta property="og:image:secure_url" content="assets/images/og_img/og_img.jpg" />
+
+    <meta name="title" content="로맨틱 환타지 - Ragnarok online -" />
+    <meta name="description" content=" 로맨틱 환타지 라그나로크 온라인 on STOVE" />
+    <meta name="keywords" content="MMORPG, 1세대 MMORPG, 스토리텔링, BGM, 스토리 중심 퀘스트, 냥다래, 공성전, 카드 시스템, 제련 시스템, 결혼, 입양, 인챈트, 전승, 이명진, 사전예약, 로맨틱, 환타지, 좋은 음악, 귀여운, 힐링, 멀티플레이" />
+    <meta property="og:title" content="로맨틱 환타지 - Ragnarok online -" />
+    <meta property="og:description" content=" 로맨틱 환타지 라그나로크 온라인 on STOVE" />
+    <title>로맨틱 환타지 - Ragnarok online -</title>
+    <!-- E: 240711 수정 : 추가 및 수정 -->
+
+    <script src="https://imgc1.gnjoy.com/common/js/jquery-3.last.min.js"></script>
+    <script src="https://imgc1.gnjoy.com/common/js/swiper.min.js"></script>
+    <script src="https://imgc1.gnjoy.com/common/js/aos.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/common/20220818_common_footer/css/common-footer.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/common/css/aos.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/common/css/swiper.min.css" />
+
+    <!-- S: fonts -->
+    <link rel="stylesheet" href="https://imgc1.gnjoy.com/common/fonts/noto_sans_kr/noto_sans_kr.css" />
+    <link rel="stylesheet" href="https://imgc1.gnjoy.com/common/fonts/han_sans_neo/han_sans_neo.css" />
+    <!-- E: fonts -->
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/gnjoy/2012_gnjoy/common/CSS/common.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/gnjoy/2012_gnjoy/common/CSS/contents.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/gnjoy/2012_gnjoy/common/CSS/support.css" /> 
+    -->
+
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/games/ro1/2013_ro1/common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/games/ro1/2013_ro1/common/css/contents.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+  </head>
+
   <body>
     <!-- S: 임시 ---------------- 스토브 헤더 -->
-    <!-- #include file="inc/stove_header.html" -->
+
+    <div class="wrapper"></div>
+    <script charset="utf-8" src="https://static-new.onstove.com/sh-6.4.5/cp-header.js"></script>
+    <style type="text/css">
+      .gnb-stove.gnb-default-mini {
+        z-index: 9999;
+      }
+    </style>
+    <script>
+      var options = {
+        wrapper: '.wrapper',
+        skin: 'gnb-default-mini',
+        widget: {
+          gameListAndService: false,
+        },
+        global: {
+          useGds: true,
+        },
+        loginMethod: {
+          params: {
+            inflow_path: 'tr',
+            //redirect_url: Common.Http.Portal + '/member/simpleuserlogout.asp?u=' + Base64LoginUrl.encode(location.href) + '&change_type=n',
+            game_no: '2',
+            show_play_button: 'Y',
+          },
+          redirectCurrentPage: false,
+        },
+        onCreatedHeaderElement: function (headerElement) {
+          // console.log(headerElement);
+        },
+      };
+
+      var header = new window.cp.Header(options);
+      header.render();
+    </script>
+
     <!-- S: 임시 ---------------- 스토브 헤더 -->
 
-    <!-- #include file="inc/header.html" -->
+    <header class="header" id="header">
+      <nav class="nav">
+        <span class="nav__bg"></span>
+        <a class="logo" href="index_u39vsa5bxz.html">
+          <span class="logo__img"></span>
+        </a>
+
+        <ul class="nav__list">
+          <li class="nav-item">
+            <a href="1_notice.html" class="link">새소식</a>
+            <ul class="nav__list--lnb">
+              <!-- S: 240730 수정 : text뒤 공백문자 삭제 -->
+              <li>
+                <a href="1_notice.html">공지사항</a>
+              </li>
+              <li>
+                <a href="3_update.html">업데이트</a>
+              </li>
+              <!-- E: 240730 수정 : text뒤 공백문자 삭제 -->
+              <li><a href="4_develop_note.html">개발자 노트</a></li>
+              <li><a href="5_gallery_event.html">이벤트</a></li>
+              <li>
+                <a href="https://probability.gnjoy.com/" target="_blank">확률공개 <img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+                <!-- 240702 수정 : href/target 추가-->
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="6_info_page.html" class="link">게임정보</a>
+            <ul class="nav__list--lnb">
+              <li><a href="6_info_page.html">라그나로크 소개</a></li>
+              <li><a href="8_basic_systems.html">라그 시작하기</a></li>
+              <li><a href="11_system_info.html">시스템 소개</a></li>
+              <li>
+                <a href="https://ro.gnjoy.com/guide/runemidgarts/" target="_blank">룬 미드가츠 도서관 <img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+                <!-- 240702 수정 : href/target 추가-->
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="12_faq.html" class="link">고객센터</a>
+            <ul class="nav__list--lnb">
+              <li><a href="12_faq.html">FAQ</a></li>
+              <li><a href="13_1_1_qna.html">1:1 문의</a></li>
+              <!-- S: 240702 수정 : li 순서 변경-->
+              <li><a href="15_periodic_inspection.html">정기점검</a></li>
+              <li><a href="14_pwd_initial.html">2차 비밀번호 초기화</a></li>
+              <li>
+                <a href="https://cs.gate8.com/service/SB_RAGNAROK_IND" target="_blank">
+                  <!-- 240722 수정 : a[href] 수정 -->
+                  계정/결제 관련
+                  <img src="assets/images/inc/outlink.png" class="icon icon-outlink" />
+                </a>
+              </li>
+              <!-- E: 240702 수정 : li 순서 변경-->
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="16_coupon_list.html" class="link">쿠폰등록</a>
+          </li>
+          <!-- S: 240715 수정 -->
+          <li class="nav-item">
+            <a href="https://store.onstove.com/ko/games/3687/community/126883/list" target="_blank" class="link">커뮤니티<img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+          </li>
+          <!-- E: 240715 수정 -->
+        </ul>
+
+        <div class="nav__banner">
+          <a href="javascript:;launcherLayerShow()" class="link"><span class="sr-only">GAME START</span></a>
+
+          <!-- 클라이언트 설치 토글 -->
+          <div id="clientLaucherInstall" class="clientLaucherInstall" style="display: none">
+            <a href="#" onclick="fnGameDown()" class="btnInstall" title="STOVE 클라이언트 설치">STOVE 클라이언트 설치</a>
+            <p>게임을 시작하기 위해선 먼저 STOVE 클라이언트 설치가 되어있어야 합니다.</p>
+            <a href="javascript:launcherLayerHide();" class="btnClose">닫기</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- S: 240723 수정 : 시작팝업 테스트 코드-->
+    <button
+      onclick="window.open('startPopup.html','startPopup', 'width=500, height=580, left=200, top=200, scrollbars=no, status=no, toolbar=no, resizable=no')"
+      style="
+        position: fixed;
+
+        bottom: 0;
+        right: 0;
+        background-color: gray;
+        font-size: 10px;
+        color: white;
+        padding: 0.5em;
+        z-index: 10000;
+      "
+    >
+      시작팝업 띄우기
+    </button>
+    <!-- E: 240723 수정 : 시작팝업 테스트 코드-->
+
+    <script>
+      function launcherLayerShow() {
+        $('.clientLaucherInstall').show();
+      }
+      function launcherLayerHide() {
+        $('.clientLaucherInstall').hide();
+      }
+      function fnGameDown() {
+        // if ('https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe' != '') {
+        //   fnStoveLogClick('MAIN', 'MAIN_DOWNLOAD_1_BTN', 'https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe', window.event);
+        //   top.location.href = 'https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe';
+        // } else {
+        alert('게임 다운로드에 실패하였습니다. 고객센터에 문의해주십시요');
+        // }
+        launcherLayerHide();
+      }
+    </script>
+
     <div id="wrap">
-      <!-- #include file="inc/visual.html" -->
+      <section id="visual">
+        <div id="visualSlider" class="swiper">
+          <div class="swiper-wrapper">
+            <!-- S: 240627 수정 : style 추가 및 수정 -->
+            <div class="swiper-slide">
+              <a href="javascript:;" class="swiper-slide__link" style="background-color: #060201; background-image: url('assets/images/sub/sv_060201.jpg')"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:;" class="swiper-slide__link" style="background-color: #7fbceb; background-image: url('assets/images/sub/sv_7fbceb.jpg')"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:;" class="swiper-slide__link" style="background-color: #23233b; background-image: url('assets/images/sub/sv_23233b.jpg')"></a>
+            </div>
+            <!-- E: 240627 수정 : style 추가 및 수정 -->
+          </div>
+          <div class="custom-remote">
+            <div class="swiper-button-prev"></div>
+            <div class="custom-remote__pagination"></div>
+            <button class="btn-pause"></button>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
       <!-- S: 서브 페이지 -->
       <div id="sub">
         <h3 class="sub-title line">
@@ -17,7 +233,27 @@
         <div class="inner">
           <div class="flex-box">
             <div class="flex-box__sidebar">
-              <!-- #include file="inc/lnb-info.html" -->
+              <ul class="sidebar-list">
+                <li><a href="6_info_page.html">라그나로크 소개</a></li>
+                <li class="depth2">
+                  <a href="8_basic_systems.html">라그 시작하기</a>
+                  <ul class="sidebar-sub-list">
+                    <!-- <li><a href="javascript:;">초보자 가이드</a></li> -->
+                    <li><a href="8_basic_systems.html">기본 시스템</a></li>
+                    <li><a href="9_interface.html">인터페이스</a></li>
+                    <li><a href="10_gameplay.html">게임플레이</a></li>
+                  </ul>
+                </li>
+                <li class="depth2">
+                  <a href="11_system_info.html">시스템 소개</a>
+                  <ul class="sidebar-sub-list">
+                    <li><a href="11_system_info.html">초보자를 위한</a></li>
+                    <li><a href="11_system_info2.html">연인을 위한</a></li>
+                    <li><a href="11_system_info3.html">길드를 위한</a></li>
+                    <li><a href="11_system_info4.html">매니아를 위한</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <div class="flex-box__con">
               <div id="tabArea" class="tab system systemBeginner">
@@ -86,7 +322,9 @@
                     <p>현재 라그나로크 온라인에는 거의 대부분의 몬스터들이자신의 이름이 붙은 카드 아이템을 낮은 확률로 드롭합니다.<br />카드 아이템에는 각기 다른 옵션이 부여되어 있으며, 장비의 소켓에 카드를 조합할 경우, 카드의 능력이 발현됩니다.</p>
                     <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_systemBeginner02_1.jpg" alt="헌터플라이 카드의 옵션 이미지" />
                     <table border="1">
-                      <caption> 카드의 점 색상별 몬스터의 속성 </caption>
+                      <caption>
+                        카드의 점 색상별 몬스터의 속성
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col">색상</th>
@@ -145,7 +383,9 @@
                     <p>각각의 카드에는 고유의 접두사나 접미사가 있기 때문에 장비에 조합할 경우, 해당 장비의 이름을 변경시킵니다.<br />또한, 같은 카드를 하나의 장비에 여러 장 조합할 경우에는 고유 명칭에 추가로 명칭이 붙습니다.</p>
                     <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_systemBeginner02_4.jpg" alt="카드를 3장 조합 한 트리플 매리셔스 그레이트 보우 이미지" />
                     <table border="1">
-                      <caption> 카드 수에 따른 추가 명칭 </caption>
+                      <caption>
+                        카드 수에 따른 추가 명칭
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col">카드 수</th>
@@ -184,7 +424,9 @@
                     <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_systemBeginner02_5_230717.jpg" alt="특산물자판기" />
                     <p>윤활제는 특살물자판기 CX - 82를 통해 구매 가능합니다.</p>
                     <table border="1">
-                      <caption> NPC에 따른 분리 위치 </caption>
+                      <caption>
+                        NPC에 따른 분리 위치
+                      </caption>
                       <colgroup></colgroup>
                       <tbody>
                         <tr>
@@ -235,7 +477,9 @@
                     <h4>기초 제련용 제련석</h4>
                     <p>무기, 방어구 레벨에 따라 각각 다른 제련석이 필요합니다.</p>
                     <table border="1">
-                      <caption> 무기, 방어구 레벨에 따라 각각 다른 제련석 </caption>
+                      <caption>
+                        무기, 방어구 레벨에 따라 각각 다른 제련석
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col" style="width: 180px">아이템</th>
@@ -272,7 +516,9 @@
                       카르늄과 브라디움은 제련소에 있는 제련 물품 담당들이 수수료와 일반제련 광석을 받고 교환해줍니다.
                     </p>
                     <table border="1">
-                      <caption> 무기, 방어구 레벨에 따라 각각 다른 제련석 </caption>
+                      <caption>
+                        무기, 방어구 레벨에 따라 각각 다른 제련석
+                      </caption>
                       <colgroup>
                         <col style="width: 70px" />
                         <col style="width: 100px" />
@@ -304,7 +550,9 @@
                     <h4>캐시 제련석</h4>
                     <p>캐시 제련석을 이용할 경우, 제련 성공율을 높이거나, 실패시의 부담을 줄일 수 있습니다.</p>
                     <table border="1">
-                      <caption> 무기, 방어구 레벨에 따라 각각 다른 제련석 </caption>
+                      <caption>
+                        무기, 방어구 레벨에 따라 각각 다른 제련석
+                      </caption>
                       <colgroup>
                         <col style="width: 70px" />
                         <col style="width: 100px" />
@@ -347,7 +595,9 @@
                     </table>
                     <h4>에테르 제련용 제련석</h4>
                     <table border="1">
-                      <caption> 무기, 방어구 레벨에 따라 각각 다른 제련석 </caption>
+                      <caption>
+                        무기, 방어구 레벨에 따라 각각 다른 제련석
+                      </caption>
                       <colgroup>
                         <col style="width: 80px" />
                         <col style="width: 110px" />
@@ -414,7 +664,9 @@
                       <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_systemBeginner03_4.jpg" alt="" width="460" style="border: 1px solid #999" />
                       <p class="guideTxt01" style="width: auto">&lt;제련석을 교환해주는 NPC&gt;</p>
                       <table border="1" style="margin-top: 0; width: 100%">
-                        <caption> 제련석 교환원 NPC 위치 </caption>
+                        <caption>
+                          제련석 교환원 NPC 위치
+                        </caption>
                         <tbody>
                           <tr>
                             <th scope="row">제노폰</th>
@@ -474,7 +726,9 @@
                     <p>참고) 송곳, 티아라, 크라운, 링, 브로치 등 일부 아이템은 인챈트 시 옵션이 변경됩니다.</p>
                     <strong>[ 세야블렘 무기 인챈트 아이템 리스트 ]</strong>
                     <table border="1">
-                      <caption> 세야블렘 무기 인챈트 아이템 리스트 </caption>
+                      <caption>
+                        세야블렘 무기 인챈트 아이템 리스트
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col" class="rating">등급</th>
@@ -637,7 +891,9 @@
                     </table>
                     <strong>[ 세야블렘 방어구 인챈트 아이템 리스트 ]</strong>
                     <table border="1">
-                      <caption> 세야블렘 방어구 인챈트 아이템 리스트 </caption>
+                      <caption>
+                        세야블렘 방어구 인챈트 아이템 리스트
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col" class="rating">등급</th>
@@ -878,7 +1134,9 @@
                     <img src="https://imgc1.gnjoy.com/games/ro1/2013_ro1/images/guide/img_systemBeginner05_3.jpg" alt="레아블렘 NPC 이미지" />
                     <strong>[ 레아블렘 무기 인챈트 아이템 리스트 ]</strong>
                     <table border="1">
-                      <caption> 레아블렘 무기 인챈트 아이템 리스트 </caption>
+                      <caption>
+                        레아블렘 무기 인챈트 아이템 리스트
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col" class="rating">등급</th>
@@ -1021,7 +1279,9 @@
                     </table>
                     <strong>[ 레아블렘 방어구 인챈트 아이템 리스트 ]</strong>
                     <table border="1">
-                      <caption> 레아블렘 방어구 인챈트 아이템 리스트 </caption>
+                      <caption>
+                        레아블렘 방어구 인챈트 아이템 리스트
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col" class="rating">등급</th>
@@ -1116,7 +1376,9 @@
                     <p>부여되는 옵션은 6가지 스테이터스 중 한 개의 스테이터스가 1~3까지 랜덤하게 추가됩니다.<br />단, 같은 갑옷을 2개 이상 소지하고 있을 경우, 소지창의 아이템 순서대로 인챈트가 진행되니, 주의하시기 바랍니다.</p>
                     <strong>[ 히든 소켓 갑옷 인챈트 아이템 리스트 ]</strong>
                     <table border="1">
-                      <caption> 히든 소켓 갑옷 인챈트 아이템 리스트 </caption>
+                      <caption>
+                        히든 소켓 갑옷 인챈트 아이템 리스트
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col" class="rating">종류</th>
@@ -1261,7 +1523,9 @@
                     <p>1회에 1개의 소켓에만 인챈트가 가능하며, 인챈트 실패 시 장비가 파괴되지 않습니다.</p>
                     <strong>[ 인챈트 항목 ]</strong>
                     <table border="1" class="enchant">
-                      <caption> 인챈트 항목 </caption>
+                      <caption>
+                        인챈트 항목
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col">인챈트</th>
@@ -1460,7 +1724,9 @@
                     </p>
                     <h3 class="system_num03">낙원단의 추가 기능</h3>
                     <table border="1" class="signNPC">
-                      <caption> 낙원단의 추가 기능 </caption>
+                      <caption>
+                        낙원단의 추가 기능
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col">표지판 및 NPC</th>
@@ -1510,7 +1776,9 @@
                     <h3 class="system_num05">낙원단 장비</h3>
                     <p>낙원단에서 성장에 도움이 되는 아이템을 획득 할 수 있습니다.</p>
                     <table border="1" class="signNPC item">
-                      <caption> 낙원단 장비 </caption>
+                      <caption>
+                        낙원단 장비
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col">표지판 및 NPC</th>
@@ -1653,7 +1921,109 @@
       <!-- E: 서브 페이지 -->
     </div>
 
-    <!-- #include file="inc/footer.html" -->
+    <footer class="common-footer common-footer--darkmode">
+      <a href="javascript:;" id="btnTop" alt="위로 가기"></a>
+      <!--
+        ## [footer mode: 푸터 라이트모드/다크모드] ##
+        라이트 : common-footer
+        다크 : common-footer common-footer--darkmode
+      -->
+      <div class="common-footer__container">
+        <div class="common-footer__link--frame">
+          <ul class="common-footer__link">
+            <li><a class="link" href="https://www.gravity.co.kr/" target="_blank">회사소개</a></li>
+            <!-- S: 240711 수정 : href 수정 -->
+            <li><a class="link" href="https://member.gnjoy.com/support/terms/common/commonterm.asp?category=STOVE_terms" target="_blank">이용약관</a></li>
+            <li><a class="link point" href="https://member.gnjoy.com/support/terms/common/commonterm.asp?category=STOVE_privacy" target="_blank">개인정보처리방침</a></li>
+            <li><a class="link" href="https://member.gnjoy.com/support/terms/common/commonterm.asp?category=STOVE_youthpolicy" target="_blank">청소년보호정책</a></li>
+            <!-- E: 240711 수정 : href 수정 -->
+            <li><a class="link" href="https://member.onstove.com/game/block" target="_blank">게임시간선택제</a></li>
+            <li class="grade-frame">
+              <!-- S: 240715 수정 : a 태그에서 p로 변경 -->
+              <p class="link">게임이용등급 <span class="grade-arrow"></span></p>
+              <!-- E: 240715 수정 : a 태그에서 p로 변경 -->
+              <div class="grade-frame__table">
+                <div class="common-footer__game-info">
+                  <div class="game-grade-mark">
+                    <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span>
+                    <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+                  </div>
+
+                  <table class="game-grade-table game-grade-table--12">
+                    <caption>
+                      라그나로크 온라인 등급분류표 입니다.
+                    </caption>
+                    <tbody>
+                      <tr>
+                        <th>제명</th>
+                        <td>라그나로크 온라인</td>
+                        <th>등급분류일자</th>
+                        <td>2007.10.10</td>
+                      </tr>
+                      <tr>
+                        <th>상호</th>
+                        <td>(주)그라비티</td>
+                        <th>등급분류번호</th>
+                        <td>제OL-071010-006호</td>
+                      </tr>
+                      <tr>
+                        <th>이용등급</th>
+                        <td>12세이용가</td>
+                        <th>제작·배급업신고번호</th>
+                        <td>제2000-000002호</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <!-- S: 240711 수정 : href 수정 -->
+            <li><a class="link" href="https://member.gnjoy.com/support/terms/common/commonterm.asp?category=STOVE_policy" target="_blank">운영정책</a></li>
+            <!-- E: 240711 수정 : href 수정 -->
+          </ul>
+        </div>
+
+        <div class="common-footer__txt">
+          <div class="inner">
+            <address class="common-footer__txt__address">
+              <span>㈜그라비티</span>
+              <span>대표이사 : 박현철</span><br />
+              <span>서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span><span class="slash"></span> <span>전화문의: 1588-9897</span><span class="slash"></span> <span>팩스: 02-2132-7077</span><br />
+              <span>e-mail : webmaster@gravity.co.kr</span><span class="slash"></span> <span>사업자등록번호: 201-81-56197</span><span class="btn-bizinfo"><button class="btn" onclick="window.open('//www.ftc.go.kr/bizCommPop.do?wrkr_no=2018156197', 'bizCommPop', 'width=750, height=700')">사업자정보확인</button></span><span class="slash"></span><span>통신사업자등록번호: 제2008-서울마포-0207호 </span><br />
+              <span>고객지원센터 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+            </address>
+
+            <!-- S: 240715-3 수정 -->
+            <address class="common-footer__txt__address">
+              <div class="common-footer__bottom__copyright">
+                <p>© Gravity Co., LTD & Lee MyoungJin(studio DTDS). All Rights Reserved.</p>
+              </div>
+              <div class="common-footer__bottom__copyright">
+                <p>(주)스마일게이트홀딩스는 통신판매중개자로서 게임의 거래에 대한 의무와 책임은 각 제공자에게 있으며, 이와 관련하여 발생하는 문제에 대해서는 당사는 법적 책임을 부담하지 않습니다.</p>
+                <p>© Smilegate. All Rights Reserved.</p>
+              </div>
+            </address>
+            <!-- E: 240715-3 수정 -->
+          </div>
+        </div>
+
+        <div class="common-footer__bottom">
+          <div class="inner">
+            <div class="common-footer__bottom__logo">
+              <!--
+                        .common-footer__bottom__logo
+                        ## [logo 종류] ##
+      
+                        <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+                        <span class="logo logo__neocyonGravity"><span class="sr-only">GRAVITY NEOCYON</span></span>
+                      -->
+              <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+              <span class="logo logo__smilegate"><span class="sr-only">smilegate</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="assets/js/common.min.js"></script>
   </body>

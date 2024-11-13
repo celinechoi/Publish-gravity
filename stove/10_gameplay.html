@@ -1,14 +1,230 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
-  <!-- #include file="inc/head.html" -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <!-- S: 240715-4 상대경로 수정 -->
+    <link rel="icon" href="assets/favicon/favicon_ro1.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon/favicon_ro1.ico" type="image/x-icon" />
+    <!-- E: 240715-4 상대경로 수정 -->
+    <!-- S: 240711 수정 : 추가 및 수정 -->
+    <meta property="og:image" content="assets/images/og_img/og_img.jpg" />
+    <meta property="og:image:secure_url" content="assets/images/og_img/og_img.jpg" />
+
+    <meta name="title" content="로맨틱 환타지 - Ragnarok online -" />
+    <meta name="description" content=" 로맨틱 환타지 라그나로크 온라인 on STOVE" />
+    <meta name="keywords" content="MMORPG, 1세대 MMORPG, 스토리텔링, BGM, 스토리 중심 퀘스트, 냥다래, 공성전, 카드 시스템, 제련 시스템, 결혼, 입양, 인챈트, 전승, 이명진, 사전예약, 로맨틱, 환타지, 좋은 음악, 귀여운, 힐링, 멀티플레이" />
+    <meta property="og:title" content="로맨틱 환타지 - Ragnarok online -" />
+    <meta property="og:description" content=" 로맨틱 환타지 라그나로크 온라인 on STOVE" />
+    <title>로맨틱 환타지 - Ragnarok online -</title>
+    <!-- E: 240711 수정 : 추가 및 수정 -->
+
+    <script src="https://imgc1.gnjoy.com/common/js/jquery-3.last.min.js"></script>
+    <script src="https://imgc1.gnjoy.com/common/js/swiper.min.js"></script>
+    <script src="https://imgc1.gnjoy.com/common/js/aos.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/common/20220818_common_footer/css/common-footer.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/common/css/aos.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/common/css/swiper.min.css" />
+
+    <!-- S: fonts -->
+    <link rel="stylesheet" href="https://imgc1.gnjoy.com/common/fonts/noto_sans_kr/noto_sans_kr.css" />
+    <link rel="stylesheet" href="https://imgc1.gnjoy.com/common/fonts/han_sans_neo/han_sans_neo.css" />
+    <!-- E: fonts -->
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/gnjoy/2012_gnjoy/common/CSS/common.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/gnjoy/2012_gnjoy/common/CSS/contents.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/gnjoy/2012_gnjoy/common/CSS/support.css" /> 
+    -->
+
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/games/ro1/2013_ro1/common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="https://imgc1.gnjoy.com/games/ro1/2013_ro1/common/css/contents.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+  </head>
+
   <body>
     <!-- S: 임시 ---------------- 스토브 헤더 -->
-    <!-- #include file="inc/stove_header.html" -->
+
+    <div class="wrapper"></div>
+    <script charset="utf-8" src="https://static-new.onstove.com/sh-6.4.5/cp-header.js"></script>
+    <style type="text/css">
+      .gnb-stove.gnb-default-mini {
+        z-index: 9999;
+      }
+    </style>
+    <script>
+      var options = {
+        wrapper: '.wrapper',
+        skin: 'gnb-default-mini',
+        widget: {
+          gameListAndService: false,
+        },
+        global: {
+          useGds: true,
+        },
+        loginMethod: {
+          params: {
+            inflow_path: 'tr',
+            //redirect_url: Common.Http.Portal + '/member/simpleuserlogout.asp?u=' + Base64LoginUrl.encode(location.href) + '&change_type=n',
+            game_no: '2',
+            show_play_button: 'Y',
+          },
+          redirectCurrentPage: false,
+        },
+        onCreatedHeaderElement: function (headerElement) {
+          // console.log(headerElement);
+        },
+      };
+
+      var header = new window.cp.Header(options);
+      header.render();
+    </script>
+
     <!-- S: 임시 ---------------- 스토브 헤더 -->
 
-    <!-- #include file="inc/header.html" -->
+    <header class="header" id="header">
+      <nav class="nav">
+        <span class="nav__bg"></span>
+        <a class="logo" href="index_u39vsa5bxz.html">
+          <span class="logo__img"></span>
+        </a>
+
+        <ul class="nav__list">
+          <li class="nav-item">
+            <a href="1_notice.html" class="link">새소식</a>
+            <ul class="nav__list--lnb">
+              <!-- S: 240730 수정 : text뒤 공백문자 삭제 -->
+              <li>
+                <a href="1_notice.html">공지사항</a>
+              </li>
+              <li>
+                <a href="3_update.html">업데이트</a>
+              </li>
+              <!-- E: 240730 수정 : text뒤 공백문자 삭제 -->
+              <li><a href="4_develop_note.html">개발자 노트</a></li>
+              <li><a href="5_gallery_event.html">이벤트</a></li>
+              <li>
+                <a href="https://probability.gnjoy.com/" target="_blank">확률공개 <img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+                <!-- 240702 수정 : href/target 추가-->
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="6_info_page.html" class="link">게임정보</a>
+            <ul class="nav__list--lnb">
+              <li><a href="6_info_page.html">라그나로크 소개</a></li>
+              <li><a href="8_basic_systems.html">라그 시작하기</a></li>
+              <li><a href="11_system_info.html">시스템 소개</a></li>
+              <li>
+                <a href="https://ro.gnjoy.com/guide/runemidgarts/" target="_blank">룬 미드가츠 도서관 <img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+                <!-- 240702 수정 : href/target 추가-->
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="12_faq.html" class="link">고객센터</a>
+            <ul class="nav__list--lnb">
+              <li><a href="12_faq.html">FAQ</a></li>
+              <li><a href="13_1_1_qna.html">1:1 문의</a></li>
+              <!-- S: 240702 수정 : li 순서 변경-->
+              <li><a href="15_periodic_inspection.html">정기점검</a></li>
+              <li><a href="14_pwd_initial.html">2차 비밀번호 초기화</a></li>
+              <li>
+                <a href="https://cs.gate8.com/service/SB_RAGNAROK_IND" target="_blank">
+                  <!-- 240722 수정 : a[href] 수정 -->
+                  계정/결제 관련
+                  <img src="assets/images/inc/outlink.png" class="icon icon-outlink" />
+                </a>
+              </li>
+              <!-- E: 240702 수정 : li 순서 변경-->
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="16_coupon_list.html" class="link">쿠폰등록</a>
+          </li>
+          <!-- S: 240715 수정 -->
+          <li class="nav-item">
+            <a href="https://store.onstove.com/ko/games/3687/community/126883/list" target="_blank" class="link">커뮤니티<img src="assets/images/inc/outlink.png" class="icon icon-outlink" /></a>
+          </li>
+          <!-- E: 240715 수정 -->
+        </ul>
+
+        <div class="nav__banner">
+          <a href="javascript:;launcherLayerShow()" class="link"><span class="sr-only">GAME START</span></a>
+
+          <!-- 클라이언트 설치 토글 -->
+          <div id="clientLaucherInstall" class="clientLaucherInstall" style="display: none">
+            <a href="#" onclick="fnGameDown()" class="btnInstall" title="STOVE 클라이언트 설치">STOVE 클라이언트 설치</a>
+            <p>게임을 시작하기 위해선 먼저 STOVE 클라이언트 설치가 되어있어야 합니다.</p>
+            <a href="javascript:launcherLayerHide();" class="btnClose">닫기</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- S: 240723 수정 : 시작팝업 테스트 코드-->
+    <button
+      onclick="window.open('startPopup.html','startPopup', 'width=500, height=580, left=200, top=200, scrollbars=no, status=no, toolbar=no, resizable=no')"
+      style="
+        position: fixed;
+
+        bottom: 0;
+        right: 0;
+        background-color: gray;
+        font-size: 10px;
+        color: white;
+        padding: 0.5em;
+        z-index: 10000;
+      "
+    >
+      시작팝업 띄우기
+    </button>
+    <!-- E: 240723 수정 : 시작팝업 테스트 코드-->
+
+    <script>
+      function launcherLayerShow() {
+        $('.clientLaucherInstall').show();
+      }
+      function launcherLayerHide() {
+        $('.clientLaucherInstall').hide();
+      }
+      function fnGameDown() {
+        // if ('https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe' != '') {
+        //   fnStoveLogClick('MAIN', 'MAIN_DOWNLOAD_1_BTN', 'https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe', window.event);
+        //   top.location.href = 'https://sgs-live-dl.game.playstove.com/game/lcs/STOVESetup.exe?launcherfilename=STOVESetup.exe';
+        // } else {
+        alert('게임 다운로드에 실패하였습니다. 고객센터에 문의해주십시요');
+        // }
+        launcherLayerHide();
+      }
+    </script>
+
     <div id="wrap">
-      <!-- #include file="inc/visual.html" -->
+      <section id="visual">
+        <div id="visualSlider" class="swiper">
+          <div class="swiper-wrapper">
+            <!-- S: 240627 수정 : style 추가 및 수정 -->
+            <div class="swiper-slide">
+              <a href="javascript:;" class="swiper-slide__link" style="background-color: #060201; background-image: url('assets/images/sub/sv_060201.jpg')"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:;" class="swiper-slide__link" style="background-color: #7fbceb; background-image: url('assets/images/sub/sv_7fbceb.jpg')"></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:;" class="swiper-slide__link" style="background-color: #23233b; background-image: url('assets/images/sub/sv_23233b.jpg')"></a>
+            </div>
+            <!-- E: 240627 수정 : style 추가 및 수정 -->
+          </div>
+          <div class="custom-remote">
+            <div class="swiper-button-prev"></div>
+            <div class="custom-remote__pagination"></div>
+            <button class="btn-pause"></button>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
       <!-- S: 서브 페이지 -->
       <div id="sub">
         <h3 class="sub-title line">
@@ -17,7 +233,27 @@
         <div class="inner">
           <div class="flex-box">
             <div class="flex-box__sidebar">
-              <!-- #include file="inc/lnb-info.html" -->
+              <ul class="sidebar-list">
+                <li><a href="6_info_page.html">라그나로크 소개</a></li>
+                <li class="depth2">
+                  <a href="8_basic_systems.html">라그 시작하기</a>
+                  <ul class="sidebar-sub-list">
+                    <!-- <li><a href="javascript:;">초보자 가이드</a></li> -->
+                    <li><a href="8_basic_systems.html">기본 시스템</a></li>
+                    <li><a href="9_interface.html">인터페이스</a></li>
+                    <li><a href="10_gameplay.html">게임플레이</a></li>
+                  </ul>
+                </li>
+                <li class="depth2">
+                  <a href="11_system_info.html">시스템 소개</a>
+                  <ul class="sidebar-sub-list">
+                    <li><a href="11_system_info.html">초보자를 위한</a></li>
+                    <li><a href="11_system_info2.html">연인을 위한</a></li>
+                    <li><a href="11_system_info3.html">길드를 위한</a></li>
+                    <li><a href="11_system_info4.html">매니아를 위한</a></li>
+                  </ul>
+                </li>
+              </ul>
             </div>
             <div class="flex-box__con">
               <div id="tabArea" class="tab system">
@@ -68,7 +304,9 @@
                     <h2>레벨별 필요 경험치</h2>
                     <h3 class="ragStart_num01">레벨</h3>
                     <table border="1" class="ragStartLevel">
-                      <caption> 비전승 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        비전승 직업 레벨에 따른 경험치
+                      </caption>
                       <thead>
                         <tr class="tit_table">
                           <th scope="col" colspan="8">비전승 직업 (1-99 Level)</th>
@@ -338,7 +576,9 @@
                       </tbody>
                     </table>
                     <table class="ragStartLevel">
-                      <caption> 전승 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        전승 직업 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -618,7 +858,9 @@
                       </tbody>
                     </table>
                     <table border="1" class="ragStartLevel">
-                      <caption> 1 - 99레벨(도람족)에 따른 경험치 </caption>
+                      <caption>
+                        1 - 99레벨(도람족)에 따른 경험치
+                      </caption>
                       <thead>
                         <tr class="tit_table">
                           <th scope="col" colspan="8">도람족 (1-99 Level)</th>
@@ -889,7 +1131,9 @@
                     </table>
                     <!--//200407추가-->
                     <table border="1" class="ragStartLevel">
-                      <caption> 100레벨 이상(도람족)에 따른 경험치 </caption>
+                      <caption>
+                        100레벨 이상(도람족)에 따른 경험치
+                      </caption>
                       <thead>
                         <tr class="tit_table">
                           <th scope="col" colspan="8">100 Level 이상(도람족)</th>
@@ -1174,7 +1418,9 @@
                     <!--210315 100 Level 이상(확장 직업) 삭제-->
 
                     <table border="1" class="ragStartLevel">
-                      <caption> 100레벨 이상(3차 직업, 확장 직업)에 따른 경험치 </caption>
+                      <caption>
+                        100레벨 이상(3차 직업, 확장 직업)에 따른 경험치
+                      </caption>
                       <!--210315수정-->
                       <thead>
                         <tr class="tit_table">
@@ -1459,7 +1705,9 @@
 
                     <!-- 200 레벨 이상 4차 직업 테이블 추가  -->
                     <table border="1" class="ragStartLevel">
-                      <caption> 200레벨 이상(4차 직업 / 2차 상위 확장 직업)에 따른 경험치 </caption>
+                      <caption>
+                        200레벨 이상(4차 직업 / 2차 상위 확장 직업)에 따른 경험치
+                      </caption>
                       <!-- S: 240729 수정 -->
                       <thead>
                         <tr class="tit_table">
@@ -1683,7 +1931,9 @@
 
                     <h3 class="ragStart_num02">직업 레벨</h3>
                     <table border="1" class="ragStartLevel">
-                      <caption> 비전승 노비스와 전승 노비스의 레벨에 따른 경험치 </caption>
+                      <caption>
+                        비전승 노비스와 전승 노비스의 레벨에 따른 경험치
+                      </caption>
                       <thead>
                         <tr class="tit_table">
                           <th scope="col" colspan="2">비전승 노비스</th>
@@ -1757,7 +2007,9 @@
                     </table>
 
                     <table class="ragStartLevel">
-                      <caption> 비전승 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        비전승 직업 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -2040,7 +2292,9 @@
                       </tbody>
                     </table>
                     <table class="ragStartLevel">
-                      <caption> 비전승 2차 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        비전승 2차 직업 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -2200,7 +2454,9 @@
                       </tbody>
                     </table>
                     <table class="ragStartLevel">
-                      <caption> 전승 2차 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        전승 2차 직업 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -2413,7 +2669,9 @@
                     </table>
 
                     <table class="ragStartLevel">
-                      <caption> 전승 3차 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        전승 3차 직업 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -2627,7 +2885,9 @@
 
                     <!-- S: 240729 수정 -->
                     <table class="ragStartLevel">
-                      <caption> 전승 4차 직업 / 2차 상위 확장 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        전승 4차 직업 / 2차 상위 확장 직업 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -2809,7 +3069,9 @@
                     <!-- E: 240729 수정 -->
 
                     <table class="ragStartLevel">
-                      <caption> 확장 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        확장 직업 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -3019,7 +3281,9 @@
                       </tbody>
                     </table>
                     <table class="ragStartLevel">
-                      <caption> 확장 2차 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        확장 2차 직업 레벨에 따른 경험치
+                      </caption>
                       <!-- 221122 수정 -->
                       <colgroup>
                         <col width="69" />
@@ -3181,7 +3445,9 @@
                       </tbody>
                     </table>
                     <table class="ragStartLevel">
-                      <caption> 확장 2차 직업 – 슈퍼 노비스 레벨에 따른 경험치 </caption>
+                      <caption>
+                        확장 2차 직업 – 슈퍼 노비스 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -3463,7 +3729,9 @@
                       <!-- //221123 수정 -->
                     </table>
                     <table class="ragStartLevel">
-                      <caption> 확장 2차 직업 – 슈퍼 노비스 한계 돌파 레벨에 따른 경험치 </caption>
+                      <caption>
+                        확장 2차 직업 – 슈퍼 노비스 한계 돌파 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -3491,29 +3759,193 @@
                       </thead>
                       <!-- S: 240816 수정 -->
                       <tbody>
-                        <tr><td>2</td><td>12800</td><td>20</td><td>1088903</td><td>38</td><td>18537584</td><td>56</td><td>169973033</td></tr>
-                        <tr><td>3</td><td>16384</td><td>21</td><td>1393796</td><td>39</td><td>20966007</td><td>57</td><td>192239500</td></tr>
-                        <tr><td>4</td><td>20971</td><td>22</td><td>1784059</td><td>40</td><td>23712554</td><td>58</td><td>217422874</td></tr>
-                        <tr><td>5</td><td>26843</td><td>23</td><td>2283596</td><td>41</td><td>26818899</td><td>59</td><td>245905271</td></tr>
-                        <tr><td>6</td><td>34359</td><td>24</td><td>2923003</td><td>42</td><td>30332175</td><td>60</td><td>278118862</td></tr>
-                        <tr><td>7</td><td>43980</td><td>25</td><td>3741444</td><td>43</td><td>34305690</td><td>61</td><td>319836691</td></tr>
-                        <tr><td>8</td><td>56294</td><td>26</td><td>4231573</td><td>44</td><td>38799735</td><td>62</td><td>367812195</td></tr>
-                        <tr><td>9</td><td>72057</td><td>27</td><td>4785909</td><td>45</td><td>43882500</td><td>63</td><td>422984024</td></tr>
-                        <tr><td>10</td><td>92233</td><td>28</td><td>5412863</td><td>46</td><td>49631108</td><td>64</td><td>486431628</td></tr>
-                        <tr><td>11</td><td>118059</td><td>29</td><td>6121948</td><td>47</td><td>56132783</td><td>65</td><td>559396372</td></tr>
-                        <tr><td>12</td><td>151115</td><td>30</td><td>6923924</td><td>48</td><td>63486178</td><td>66</td><td>632361116</td></tr>
-                        <tr><td>13</td><td>193428</td><td>31</td><td>7830958</td><td>49</td><td>71802867</td><td>67</td><td>705325860</td></tr>
-                        <tr><td>14</td><td>247588</td><td>32</td><td>8856813</td><td>50</td><td>81209043</td><td>68</td><td>778290604</td></tr>
-                        <tr><td>15</td><td>316912</td><td>33</td><td>10017056</td><td>51</td><td>91847428</td><td>69</td><td>851255348</td></tr>
-                        <tr><td>16</td><td>405648</td><td>34</td><td>11329290</td><td>52</td><td>103879441</td><td>70</td><td>924220092</td></tr>
-                        <tr><td>17</td><td>519229</td><td>35</td><td>12813427</td><td>53</td><td>117487647</td><td> </td><td> </td></tr>
-                        <tr><td>18</td><td>664613</td><td>36</td><td>14491986</td><td>54</td><td>132878529</td><td> </td><td> </td></tr>
-                        <tr><td>19</td><td>850705</td><td>37</td><td>16390436</td><td>55</td><td>150285617</td><td> </td><td> </td></tr>
+                        <tr>
+                          <td>2</td>
+                          <td>12800</td>
+                          <td>20</td>
+                          <td>1088903</td>
+                          <td>38</td>
+                          <td>18537584</td>
+                          <td>56</td>
+                          <td>169973033</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>16384</td>
+                          <td>21</td>
+                          <td>1393796</td>
+                          <td>39</td>
+                          <td>20966007</td>
+                          <td>57</td>
+                          <td>192239500</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>20971</td>
+                          <td>22</td>
+                          <td>1784059</td>
+                          <td>40</td>
+                          <td>23712554</td>
+                          <td>58</td>
+                          <td>217422874</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>26843</td>
+                          <td>23</td>
+                          <td>2283596</td>
+                          <td>41</td>
+                          <td>26818899</td>
+                          <td>59</td>
+                          <td>245905271</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>34359</td>
+                          <td>24</td>
+                          <td>2923003</td>
+                          <td>42</td>
+                          <td>30332175</td>
+                          <td>60</td>
+                          <td>278118862</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>43980</td>
+                          <td>25</td>
+                          <td>3741444</td>
+                          <td>43</td>
+                          <td>34305690</td>
+                          <td>61</td>
+                          <td>319836691</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>56294</td>
+                          <td>26</td>
+                          <td>4231573</td>
+                          <td>44</td>
+                          <td>38799735</td>
+                          <td>62</td>
+                          <td>367812195</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>72057</td>
+                          <td>27</td>
+                          <td>4785909</td>
+                          <td>45</td>
+                          <td>43882500</td>
+                          <td>63</td>
+                          <td>422984024</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>92233</td>
+                          <td>28</td>
+                          <td>5412863</td>
+                          <td>46</td>
+                          <td>49631108</td>
+                          <td>64</td>
+                          <td>486431628</td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td>118059</td>
+                          <td>29</td>
+                          <td>6121948</td>
+                          <td>47</td>
+                          <td>56132783</td>
+                          <td>65</td>
+                          <td>559396372</td>
+                        </tr>
+                        <tr>
+                          <td>12</td>
+                          <td>151115</td>
+                          <td>30</td>
+                          <td>6923924</td>
+                          <td>48</td>
+                          <td>63486178</td>
+                          <td>66</td>
+                          <td>632361116</td>
+                        </tr>
+                        <tr>
+                          <td>13</td>
+                          <td>193428</td>
+                          <td>31</td>
+                          <td>7830958</td>
+                          <td>49</td>
+                          <td>71802867</td>
+                          <td>67</td>
+                          <td>705325860</td>
+                        </tr>
+                        <tr>
+                          <td>14</td>
+                          <td>247588</td>
+                          <td>32</td>
+                          <td>8856813</td>
+                          <td>50</td>
+                          <td>81209043</td>
+                          <td>68</td>
+                          <td>778290604</td>
+                        </tr>
+                        <tr>
+                          <td>15</td>
+                          <td>316912</td>
+                          <td>33</td>
+                          <td>10017056</td>
+                          <td>51</td>
+                          <td>91847428</td>
+                          <td>69</td>
+                          <td>851255348</td>
+                        </tr>
+                        <tr>
+                          <td>16</td>
+                          <td>405648</td>
+                          <td>34</td>
+                          <td>11329290</td>
+                          <td>52</td>
+                          <td>103879441</td>
+                          <td>70</td>
+                          <td>924220092</td>
+                        </tr>
+                        <tr>
+                          <td>17</td>
+                          <td>519229</td>
+                          <td>35</td>
+                          <td>12813427</td>
+                          <td>53</td>
+                          <td>117487647</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>18</td>
+                          <td>664613</td>
+                          <td>36</td>
+                          <td>14491986</td>
+                          <td>54</td>
+                          <td>132878529</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>19</td>
+                          <td>850705</td>
+                          <td>37</td>
+                          <td>16390436</td>
+                          <td>55</td>
+                          <td>150285617</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
                       </tbody>
                       <!-- E: 240816 수정 -->
                     </table>
                     <table class="ragStartLevel">
-                      <caption> 상위 확장 직업 레벨에 따른 경험치 </caption>
+                      <caption>
+                        상위 확장 직업 레벨에 따른 경험치
+                      </caption>
                       <!--200407 수정-->
                       <colgroup>
                         <col width="69" />
@@ -3729,7 +4161,9 @@
 
                     <!-- 221122 도람족 경험치 테이블, 호문클로스 경험치 테이블 추가 -->
                     <table class="ragStartLevel">
-                      <caption> 도람족 레벨에 따른 경험치 </caption>
+                      <caption>
+                        도람족 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -3942,7 +4376,9 @@
                     <h3 class="ragStart_num03">호문클루스 레벨</h3>
 
                     <table class="ragStartLevel">
-                      <caption> 호문클루스 (1-99 Level)레벨에 따른 경험치 </caption>
+                      <caption>
+                        호문클루스 (1-99 Level)레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -4223,7 +4659,9 @@
                     </table>
 
                     <table class="ragStartLevel">
-                      <caption> 100 Level 이상 (호문클루스) 레벨에 따른 경험치 </caption>
+                      <caption>
+                        100 Level 이상 (호문클루스) 레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -4515,7 +4953,9 @@
 
                     <!-- S: 240729 수정 -->
                     <table class="ragStartLevel">
-                      <caption> 200 Level 이상 (호문클루스)레벨에 따른 경험치 </caption>
+                      <caption>
+                        200 Level 이상 (호문클루스)레벨에 따른 경험치
+                      </caption>
                       <colgroup>
                         <col width="69" />
                         <col width="105" />
@@ -4543,26 +4983,206 @@
                       </thead>
                       <!-- S: 240816 수정 -->
                       <tbody>
-                        <tr><td>201</td><td>65304745</td><td>221</td><td>78807456</td><td>241</td><td>1083089468</td><td>261</td><td>28372786856</td></tr>
-                        <tr><td>202</td><td>65500659</td><td>222</td><td>89840500</td><td>242</td><td>1234721993</td><td>262</td><td>29791426199</td></tr>
-                        <tr><td>203</td><td>65697161</td><td>223</td><td>102418170</td><td>243</td><td>1407583072</td><td>263</td><td>31280997509</td></tr>
-                        <tr><td>204</td><td>65894252</td><td>224</td><td>116756713</td><td>244</td><td>1604644703</td><td>264</td><td>32845047385</td></tr>
-                        <tr><td>205</td><td>66091935</td><td>225</td><td>133102653</td><td>245</td><td>1829294961</td><td>265</td><td>34487299754</td></tr>
-                        <tr><td>206</td><td>66290211</td><td>226</td><td>151737025</td><td>246</td><td>2085396255</td><td>266</td><td>35349482248</td></tr>
-                        <tr><td>207</td><td>66489081</td><td>227</td><td>172980208</td><td>247</td><td>2377351731</td><td>267</td><td>36233219304</td></tr>
-                        <tr><td>208</td><td>66688548</td><td>228</td><td>197197437</td><td>248</td><td>2710180973</td><td>268</td><td>37139049786</td></tr>
-                        <tr><td>209</td><td>66888614</td><td>229</td><td>224805078</td><td>249</td><td>3089606310</td><td>269</td><td>38067526031</td></tr>
-                        <tr><td>210</td><td>67089280</td><td>230</td><td>256277789</td><td>250</td><td>3522151193</td><td>270</td><td>39019214182</td></tr>
-                        <tr><td>211</td><td>67290548</td><td>231</td><td>292156679</td><td>251</td><td>4318157362</td><td>271</td><td>39799598465</td></tr>
-                        <tr><td>212</td><td>67492419</td><td>232</td><td>333058615</td><td>252</td><td>5294060926</td><td>272</td><td>40595590435</td></tr>
-                        <tr><td>213</td><td>67694896</td><td>233</td><td>379686821</td><td>253</td><td>6490518695</td><td>273</td><td>41407502243</td></tr>
-                        <tr><td>214</td><td>67897981</td><td>234</td><td>432842975</td><td>254</td><td>7957375920</td><td>274</td><td>42235652288</td></tr>
-                        <tr><td>215</td><td>68101675</td><td>235</td><td>493440992</td><td>255</td><td>9755742878</td><td>275</td><td>43080365334</td></tr>
-                        <tr><td>216</td><td>68305980</td><td>236</td><td>562522731</td><td>256</td><td>11960540769</td><td></td><td></td></tr>
-                        <tr><td>217</td><td>68510898</td><td>237</td><td>641275913</td><td>257</td><td>14663622983</td><td></td><td></td></tr>
-                        <tr><td>218</td><td>68716430</td><td>238</td><td>731054541</td><td>258</td><td>17977601777</td><td></td><td></td></tr>
-                        <tr><td>219</td><td>68922580</td><td>239</td><td>833402176</td><td>259</td><td>22040539778</td><td></td><td></td></tr>
-                        <tr><td>220</td><td>69129347</td><td>240</td><td>950078481</td><td>260</td><td>27021701768</td><td></td><td></td></tr>
+                        <tr>
+                          <td>201</td>
+                          <td>65304745</td>
+                          <td>221</td>
+                          <td>78807456</td>
+                          <td>241</td>
+                          <td>1083089468</td>
+                          <td>261</td>
+                          <td>28372786856</td>
+                        </tr>
+                        <tr>
+                          <td>202</td>
+                          <td>65500659</td>
+                          <td>222</td>
+                          <td>89840500</td>
+                          <td>242</td>
+                          <td>1234721993</td>
+                          <td>262</td>
+                          <td>29791426199</td>
+                        </tr>
+                        <tr>
+                          <td>203</td>
+                          <td>65697161</td>
+                          <td>223</td>
+                          <td>102418170</td>
+                          <td>243</td>
+                          <td>1407583072</td>
+                          <td>263</td>
+                          <td>31280997509</td>
+                        </tr>
+                        <tr>
+                          <td>204</td>
+                          <td>65894252</td>
+                          <td>224</td>
+                          <td>116756713</td>
+                          <td>244</td>
+                          <td>1604644703</td>
+                          <td>264</td>
+                          <td>32845047385</td>
+                        </tr>
+                        <tr>
+                          <td>205</td>
+                          <td>66091935</td>
+                          <td>225</td>
+                          <td>133102653</td>
+                          <td>245</td>
+                          <td>1829294961</td>
+                          <td>265</td>
+                          <td>34487299754</td>
+                        </tr>
+                        <tr>
+                          <td>206</td>
+                          <td>66290211</td>
+                          <td>226</td>
+                          <td>151737025</td>
+                          <td>246</td>
+                          <td>2085396255</td>
+                          <td>266</td>
+                          <td>35349482248</td>
+                        </tr>
+                        <tr>
+                          <td>207</td>
+                          <td>66489081</td>
+                          <td>227</td>
+                          <td>172980208</td>
+                          <td>247</td>
+                          <td>2377351731</td>
+                          <td>267</td>
+                          <td>36233219304</td>
+                        </tr>
+                        <tr>
+                          <td>208</td>
+                          <td>66688548</td>
+                          <td>228</td>
+                          <td>197197437</td>
+                          <td>248</td>
+                          <td>2710180973</td>
+                          <td>268</td>
+                          <td>37139049786</td>
+                        </tr>
+                        <tr>
+                          <td>209</td>
+                          <td>66888614</td>
+                          <td>229</td>
+                          <td>224805078</td>
+                          <td>249</td>
+                          <td>3089606310</td>
+                          <td>269</td>
+                          <td>38067526031</td>
+                        </tr>
+                        <tr>
+                          <td>210</td>
+                          <td>67089280</td>
+                          <td>230</td>
+                          <td>256277789</td>
+                          <td>250</td>
+                          <td>3522151193</td>
+                          <td>270</td>
+                          <td>39019214182</td>
+                        </tr>
+                        <tr>
+                          <td>211</td>
+                          <td>67290548</td>
+                          <td>231</td>
+                          <td>292156679</td>
+                          <td>251</td>
+                          <td>4318157362</td>
+                          <td>271</td>
+                          <td>39799598465</td>
+                        </tr>
+                        <tr>
+                          <td>212</td>
+                          <td>67492419</td>
+                          <td>232</td>
+                          <td>333058615</td>
+                          <td>252</td>
+                          <td>5294060926</td>
+                          <td>272</td>
+                          <td>40595590435</td>
+                        </tr>
+                        <tr>
+                          <td>213</td>
+                          <td>67694896</td>
+                          <td>233</td>
+                          <td>379686821</td>
+                          <td>253</td>
+                          <td>6490518695</td>
+                          <td>273</td>
+                          <td>41407502243</td>
+                        </tr>
+                        <tr>
+                          <td>214</td>
+                          <td>67897981</td>
+                          <td>234</td>
+                          <td>432842975</td>
+                          <td>254</td>
+                          <td>7957375920</td>
+                          <td>274</td>
+                          <td>42235652288</td>
+                        </tr>
+                        <tr>
+                          <td>215</td>
+                          <td>68101675</td>
+                          <td>235</td>
+                          <td>493440992</td>
+                          <td>255</td>
+                          <td>9755742878</td>
+                          <td>275</td>
+                          <td>43080365334</td>
+                        </tr>
+                        <tr>
+                          <td>216</td>
+                          <td>68305980</td>
+                          <td>236</td>
+                          <td>562522731</td>
+                          <td>256</td>
+                          <td>11960540769</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>217</td>
+                          <td>68510898</td>
+                          <td>237</td>
+                          <td>641275913</td>
+                          <td>257</td>
+                          <td>14663622983</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>218</td>
+                          <td>68716430</td>
+                          <td>238</td>
+                          <td>731054541</td>
+                          <td>258</td>
+                          <td>17977601777</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>219</td>
+                          <td>68922580</td>
+                          <td>239</td>
+                          <td>833402176</td>
+                          <td>259</td>
+                          <td>22040539778</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>220</td>
+                          <td>69129347</td>
+                          <td>240</td>
+                          <td>950078481</td>
+                          <td>260</td>
+                          <td>27021701768</td>
+                          <td></td>
+                          <td></td>
+                        </tr>
                       </tbody>
                       <!-- E: 240816 수정 -->
                     </table>
@@ -4636,7 +5256,9 @@
 
                     <h4>파티 경험치 분배</h4>
                     <table border="1" class="ragStartParty">
-                      <caption> 파티 경험치 분배 </caption>
+                      <caption>
+                        파티 경험치 분배
+                      </caption>
                       <thead>
                         <tr>
                           <th scope="col">각자 취득</th>
@@ -4693,7 +5315,109 @@
       <!-- E: 서브 페이지 -->
     </div>
 
-    <!-- #include file="inc/footer.html" -->
+    <footer class="common-footer common-footer--darkmode">
+      <a href="javascript:;" id="btnTop" alt="위로 가기"></a>
+      <!--
+        ## [footer mode: 푸터 라이트모드/다크모드] ##
+        라이트 : common-footer
+        다크 : common-footer common-footer--darkmode
+      -->
+      <div class="common-footer__container">
+        <div class="common-footer__link--frame">
+          <ul class="common-footer__link">
+            <li><a class="link" href="https://www.gravity.co.kr/" target="_blank">회사소개</a></li>
+            <!-- S: 240711 수정 : href 수정 -->
+            <li><a class="link" href="https://member.gnjoy.com/support/terms/common/commonterm.asp?category=STOVE_terms" target="_blank">이용약관</a></li>
+            <li><a class="link point" href="https://member.gnjoy.com/support/terms/common/commonterm.asp?category=STOVE_privacy" target="_blank">개인정보처리방침</a></li>
+            <li><a class="link" href="https://member.gnjoy.com/support/terms/common/commonterm.asp?category=STOVE_youthpolicy" target="_blank">청소년보호정책</a></li>
+            <!-- E: 240711 수정 : href 수정 -->
+            <li><a class="link" href="https://member.onstove.com/game/block" target="_blank">게임시간선택제</a></li>
+            <li class="grade-frame">
+              <!-- S: 240715 수정 : a 태그에서 p로 변경 -->
+              <p class="link">게임이용등급 <span class="grade-arrow"></span></p>
+              <!-- E: 240715 수정 : a 태그에서 p로 변경 -->
+              <div class="grade-frame__table">
+                <div class="common-footer__game-info">
+                  <div class="game-grade-mark">
+                    <span class="spr-grade spr-grade__violence"><span class="sr-only">폭력성</span></span>
+                    <span class="spr-grade spr-grade__12"><span class="sr-only">12세이용가</span></span>
+                  </div>
+
+                  <table class="game-grade-table game-grade-table--12">
+                    <caption>
+                      라그나로크 온라인 등급분류표 입니다.
+                    </caption>
+                    <tbody>
+                      <tr>
+                        <th>제명</th>
+                        <td>라그나로크 온라인</td>
+                        <th>등급분류일자</th>
+                        <td>2007.10.10</td>
+                      </tr>
+                      <tr>
+                        <th>상호</th>
+                        <td>(주)그라비티</td>
+                        <th>등급분류번호</th>
+                        <td>제OL-071010-006호</td>
+                      </tr>
+                      <tr>
+                        <th>이용등급</th>
+                        <td>12세이용가</td>
+                        <th>제작·배급업신고번호</th>
+                        <td>제2000-000002호</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <!-- S: 240711 수정 : href 수정 -->
+            <li><a class="link" href="https://member.gnjoy.com/support/terms/common/commonterm.asp?category=STOVE_policy" target="_blank">운영정책</a></li>
+            <!-- E: 240711 수정 : href 수정 -->
+          </ul>
+        </div>
+
+        <div class="common-footer__txt">
+          <div class="inner">
+            <address class="common-footer__txt__address">
+              <span>㈜그라비티</span>
+              <span>대표이사 : 박현철</span><br />
+              <span>서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span><span class="slash"></span> <span>전화문의: 1588-9897</span><span class="slash"></span> <span>팩스: 02-2132-7077</span><br />
+              <span>e-mail : webmaster@gravity.co.kr</span><span class="slash"></span> <span>사업자등록번호: 201-81-56197</span><span class="btn-bizinfo"><button class="btn" onclick="window.open('//www.ftc.go.kr/bizCommPop.do?wrkr_no=2018156197', 'bizCommPop', 'width=750, height=700')">사업자정보확인</button></span><span class="slash"></span><span>통신사업자등록번호: 제2008-서울마포-0207호 </span><br />
+              <span>고객지원센터 : 서울특별시 마포구 월드컵북로 396, 15층(상암동, 누리꿈스퀘어 연구개발타워)</span>
+            </address>
+
+            <!-- S: 240715-3 수정 -->
+            <address class="common-footer__txt__address">
+              <div class="common-footer__bottom__copyright">
+                <p>© Gravity Co., LTD & Lee MyoungJin(studio DTDS). All Rights Reserved.</p>
+              </div>
+              <div class="common-footer__bottom__copyright">
+                <p>(주)스마일게이트홀딩스는 통신판매중개자로서 게임의 거래에 대한 의무와 책임은 각 제공자에게 있으며, 이와 관련하여 발생하는 문제에 대해서는 당사는 법적 책임을 부담하지 않습니다.</p>
+                <p>© Smilegate. All Rights Reserved.</p>
+              </div>
+            </address>
+            <!-- E: 240715-3 수정 -->
+          </div>
+        </div>
+
+        <div class="common-footer__bottom">
+          <div class="inner">
+            <div class="common-footer__bottom__logo">
+              <!--
+                        .common-footer__bottom__logo
+                        ## [logo 종류] ##
+      
+                        <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+                        <span class="logo logo__neocyonGravity"><span class="sr-only">GRAVITY NEOCYON</span></span>
+                      -->
+              <span class="logo logo__gravity"><span class="sr-only">GRAVITY</span></span>
+              <span class="logo logo__smilegate"><span class="sr-only">smilegate</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="assets/js/common.min.js"></script>
   </body>
