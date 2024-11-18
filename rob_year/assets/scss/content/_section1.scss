@@ -1,0 +1,41 @@
+﻿.section-sub {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  @include lg {
+    padding: 60px 0;
+    background-position: 50% 50%;
+    background-image: url(../images/section1/bg.webp#{$version});
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  @include lg-max {
+    &:before {
+      //ios fallback
+      z-index: -1;
+      content: '';
+      @include vh100;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url(../images/section1/bg_m.webp#{$version});
+      background-size: cover;
+    }
+  }
+
+  .content {
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+    @include lg {
+      padding: 40px 0 0;
+    }
+  }
+}

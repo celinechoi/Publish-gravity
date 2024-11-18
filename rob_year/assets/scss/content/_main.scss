@@ -1,0 +1,321 @@
+﻿.section-main {
+  position: relative;
+  justify-content: start;
+  overflow: hidden;
+  min-height: auto !important;
+  background-size: cover;
+  padding-bottom: 0;
+  // ##### S: dungdung
+  @keyframes swing {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes downAction {
+    from {
+      transform: translateY(-10px);
+    }
+    to {
+      ransform: translateY(0);
+    }
+  }
+  .main-floating {
+    position: absolute;
+    right: vw(42);
+    top: vw(57);
+    > .link {
+      display: block;
+      width: vw(348);
+      height: vw(94);
+      > img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  // ##### E: dungdung
+  .ch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    transition: all 2s ease-in-out;
+    &__wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &__ani {
+      display: block;
+      animation: floatCh 3000ms infinite alternate ease-in;
+    }
+    img {
+      width: auto;
+      max-width: fit-content;
+    }
+  }
+  .ch {
+    &__wrap {
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 1920px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 100vh;
+      @media all and (max-width: 1919px) {
+        max-width: 100%;
+      }
+    }
+    &__item {
+      display: block;
+      > img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &--l {
+      width: vwWeb(693);
+      margin-top: 4%;
+      margin-left: -25%;
+      .ch__item {
+        display: block;
+        width: 100%;
+        img {
+          animation: swing 6.5s ease-in-out infinite alternate;
+        }
+      }
+    }
+    &--r {
+      width: vwWeb(907);
+      margin-top: 6%;
+      margin-left: 30%;
+      img {
+        animation: swing 7.5s ease-in-out infinite alternate;
+      }
+      .ch__item {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .section-content {
+    padding-top: 0;
+  }
+
+  .particles_area {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    transform: translateX(-50%);
+    &,
+    canvas {
+      width: max(100vw, 1920px);
+      height: 100vh !important;
+      top: 0;
+    }
+    canvas {
+      z-index: 1;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  @include lg-max {
+    height: vw(2040);
+    background-image: url(../images/main/bg_m.webp#{$version});
+  }
+  @include lg {
+    max-height: 100vh;
+    background-image: url(../images/main/bg.webp#{$version});
+    background-position: 50% 50%;
+    color: #fff;
+    text-align: center;
+    padding-top: 0;
+
+    @keyframes effectBg {
+      0% {
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes featherConfetti {
+      0% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .effect-cloud {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../images/main/f_cloud.webp') no-repeat center center / cover;
+      animation: featherConfetti infinite 4.5s alternate both;
+    }
+    .effect-confetti {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../images/main/confetti.webp') no-repeat center center / cover;
+      animation: featherConfetti infinite 4.5s alternate both;
+    }
+    .effect-shine {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: url('../images/main/shine.webp') no-repeat center center / cover;
+      animation: effectBg infinite 2.5s alternate both;
+      animation-delay: -3s;
+    }
+    .section-container {
+      z-index: 2;
+      position: relative;
+      // padding-bottom: 153px;
+    }
+    @keyframes featherFloat {
+      0% {
+        transform: rotate(0);
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(-5deg); //translate(15%, 15%);
+        opacity: 1;
+      }
+    }
+    @keyframes featherFloatMove {
+      0% {
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+    .bg-feather {
+      position: absolute;
+      background: url('../images/main/f_cloud.webp') no-repeat center center / cover;
+      transform-origin: center;
+      animation: featherFloat infinite 5s alternate both;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100vh;
+      animation-name: featherFloatMove;
+      animation-delay: -3s;
+      animation-duration: 5s;
+    }
+
+    .title {
+      position: relative;
+      display: block;
+      margin: 90px auto 0;
+      &__desc,
+      &__date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      &__title {
+        display: inline-block;
+        position: relative;
+        .fire {
+          position: absolute;
+          left: 17%;
+          top: 27%;
+        }
+      }
+    }
+    .app-download {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      z-index: 5;
+    }
+    .scroll-down {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      margin-top: 80px;
+      animation: scrollDown 1s infinite both alternate;
+    }
+  }
+  @keyframes scrollDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(10px);
+    }
+  }
+
+  @include lg-max {
+    .section-container--m {
+      position: relative;
+      height: 100%;
+      z-index: 2;
+      .popup-link--video {
+        position: absolute;
+        top: vw(700);
+        width: vw(250);
+        height: vw(250);
+        display: block;
+        left: 50%;
+        margin-left: vw(275 / -2);
+      }
+      .app-download {
+        position: absolute;
+        width: 100%;
+        bottom: vw(210);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: vw(27);
+        column-gap: vw(30);
+        .link {
+          width: vw(421);
+          height: vw(127);
+          display: block;
+        }
+      }
+    }
+  }
+}

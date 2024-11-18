@@ -1,0 +1,108 @@
+﻿@import 'content/_common.scss'; //컨텐츠 공통
+@import 'content/_main.scss';
+@import 'content/_section1.scss';
+@import 'content/_section2.scss';
+
+//# 보일러플레이트 임시코드
+
+//section1의 fix 캐릭터 (유령,엔젤링,데비루치) 가리기
+@include lg {
+  .section,
+  .common-footer {
+    z-index: 4;
+  }
+  .section--2 {
+    z-index: 3;
+  }
+  .section--1 {
+    z-index: 2;
+  }
+}
+
+.section {
+  *,
+  .content,
+  .content img {
+    //flicking 방지
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+  .link,
+  .link-btn {
+    // background-color: rgba(yellow, 0.5); //FIXME:
+  }
+  &.fix {
+    .ch__wrap {
+      position: fixed;
+    }
+
+    &.bottom .ch__wrap {
+      position: absolute;
+    }
+  }
+}
+
+.ch {
+  position: absolute;
+  &__wrap {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute; //<!-- 231229 수정 -->
+  }
+  &__ani {
+    display: block;
+    animation: floatCh 3000ms infinite alternate ease-in; //FIXME: 둥둥 빼보기
+  }
+  img {
+    width: auto;
+    max-width: fit-content;
+  }
+  @at-root {
+    .section--1 {
+      .ch__wrap {
+        .ch {
+          left: 50%;
+          &--l {
+            top: 280px;
+            transform: translateX(-940px);
+          }
+          &--r {
+            top: 325px;
+            transform: translateX(420px);
+          }
+          &--all {
+            left: 0;
+            width: 100%;
+            top: -120px;
+          }
+        }
+      }
+    }
+    .section--2 .ch {
+      left: 50%;
+      &--l {
+        top: 640px;
+        transform: translateX(-710px);
+      }
+      &--r {
+        top: 105px;
+        transform: translateX(420px);
+      }
+      &--all {
+        left: 0;
+        width: 111%;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+      }
+    }
+  }
+}
