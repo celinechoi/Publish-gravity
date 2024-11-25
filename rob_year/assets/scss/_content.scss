@@ -72,16 +72,17 @@
           left: 50%;
           &--l {
             top: 280px;
-            transform: translateX(-940px);
+            transform: translateX(-970px);
           }
           &--r {
             top: 325px;
-            transform: translateX(420px);
+            transform: translateX(490px);
           }
           &--all {
             left: 0;
             width: 100%;
             top: -120px;
+            z-index: -1;
           }
         }
       }
@@ -90,11 +91,11 @@
       left: 50%;
       &--l {
         top: 640px;
-        transform: translateX(-710px);
+        transform: translateX(-780px);
       }
       &--r {
         top: 105px;
-        transform: translateX(420px);
+        transform: translateX(490px);
       }
       &--all {
         left: 0;

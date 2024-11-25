@@ -10,7 +10,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 300;
+  z-index: 21;
   text-align: left;
 }
 .blind--btnClosed {
@@ -45,68 +45,236 @@
 }
 
 .popup {
+  text-align: center;
   display: none;
-  z-index: 400;
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  align-items: center;
-  justify-content: center;
-  * {
-    letter-spacing: -0.05em;
-    word-break: keep-all;
+  top: 50%;
+  left: 50%;
+  min-width: 400px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 25;
+  background-color: #fff;
+
+  max-width: fit-content;
+  width: auto;
+
+  > div {
+    width: 100%;
+    height: 100%;
   }
-  .popup-container {
-    position: relative;
+  .btn_close {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: (33px / -2);
+    width: 33px;
+    height: 33px;
+    z-index: 50;
+    cursor: pointer;
+    &:hover {
+      animation: rotate 1.5s;
+    }
+  }
+
+  strong {
+    font-size: 1.1rem;
+  }
+  .popbg {
+    width: 100%;
+    display: block;
+  }
+}
+.pop_alert,
+.pop_alert2 {
+  width: auto;
+  height: auto;
+  line-height: 1.3;
+  .popup__wrap {
+    padding: 60px 20px 40px;
+  }
+  strong {
+    font-size: 20px;
+  }
+  .btn_close {
+    left: auto;
+    margin-left: auto;
+    top: 20px;
+    right: 20px;
+    margin-right: 0;
+    width: 18px;
+    height: 18px;
+  }
+  .btnArea {
+    // background-color: #f9f9f9;
+    margin-top: 30px;
+    a,
+    button {
+      width: 100px;
+      height: 45px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+    }
+    .btn_ok {
+      background-color: #333;
+      color: #fff;
+    }
+    .btn_cancel {
+      background-color: #999;
+      color: #fff;
+    }
+  }
+  .notToday {
+    span {
+      display: block;
+      width: 100%;
+      padding: 6px 20px;
+      text-align: right;
+      background-color: #888;
+      box-sizing: border-box;
+    }
+    label {
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+}
+
+.pop_download {
+  background: transparent;
+  > .wrap {
+    > img {
+      max-width: initial;
+    }
+  }
+  .btn_close {
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 57px;
+    height: 57px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
+    img {
+      width: 22px;
+    }
   }
-  &__close {
+  .wrap {
+    position: relative;
+  }
+  .btn {
     position: absolute;
-    top: 0;
-    // right: 0;
-    right: $gutter;
-    @include lg {
-      right: 0;
+    left: 177px;
+    top: 415px;
+    height: 80px;
+    width: 486px;
+    display: block;
+    background: url(../images/popup/download-btn.png);
+    transition: none;
+    &:not([disabled]) {
+      background-position: 0 50%;
+      &:hover {
+        background-position: 0 100%;
+      }
     }
-    transform: translateY(calc(-100% - 10px));
-    width: 31px;
-    height: 31px;
-    background-size: 31px;
+    &[disabled] {
+      cursor: no-drop;
+      background-position: 0 0;
+    }
+    &:hover {
+    }
   }
-  &__scroll {
-    max-height: calc(100vh - 100px);
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: relative;
-    padding-right: 0;
-    overflow-anchor: none;
-    overscroll-behavior: contain;
 
-    &::-webkit-scrollbar {
-      width: 6px;
+  .input-label {
+    letter-spacing: -0.02em;
+    position: absolute;
+    font-size: 16px;
+    left: 177px;
+    top: 371px;
+    $w: 24px;
+    display: block;
+    &__txt {
+      display: inline-block;
+      line-height: $w;
+      position: relative;
+      padding-left: ($w + 5px);
+      cursor: pointer;
+      color: #fff;
+      &::before {
+        content: '';
+        width: $w;
+        height: $w;
+        line-height: ($w - 2px);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -$w/2;
+        text-align: center;
+        border: 1px solid #333;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 50%;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L5.5 8L12.5 1' stroke='%23333333' stroke-width='2'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: 14px;
+        background-position: center;
+      }
     }
-    &::-webkit-scrollbar-track {
-      background-color: transparent;
+
+    &--checkbox {
+      // position: relative;
+      input {
+        top: 1px;
+        left: 1px;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        //브라우저 기본경고창 위치 확보
+        height: $w + 2px;
+        width: $w + 2px;
+      }
     }
-    &::-webkit-scrollbar-thumb {
-      border-radius: 3px;
-      background-color: rgba(#fff, 0.3);
-    }
-    &::-webkit-scrollbar-button {
-      width: 0;
-      height: 0;
+    &--checkbox {
+      // input[type='checkbox']:focus + .input-label__txt::before {
+      //   border-color: $color-1;
+      // }
+
+      input[type='checkbox']:checked + .input-label__txt::before {
+        background-color: $color-1;
+        border-color: $color-1;
+        background-image: url("data:image/svg+xml,%0A%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L5.5 8L12.5 1' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E%0A");
+      }
     }
   }
-  &__wrap {
-    position: relative;
-    // height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    // padding: 0 66px; //닫기버튼용 여백
+  .btn {
+    position: absolute;
+    left: 177px;
+    top: 415px;
+    height: 80px;
+    width: 486px;
+    display: block;
+    background: url(../images/popup/download-btn.png);
+    transition: none;
+    &:not([disabled]) {
+      background-position: 0 50%;
+      &:hover {
+        background-position: 0 100%;
+      }
+    }
+    &[disabled] {
+      cursor: no-drop;
+      background-position: 0 0;
+    }
+    &:hover {
+    }
   }
 }
 

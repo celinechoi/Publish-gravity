@@ -134,7 +134,7 @@ $nav-bg: rgba(#080315, 0.9);
       @include lg {
         min-height: calc(100vh - 20px - 446px - 40px);
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 5px;
         // padding-bottom: 42px;
         background: url(../images/inc/nav-bg-top.webp#{$version}) no-repeat 0 0;
         background-position: center top;
