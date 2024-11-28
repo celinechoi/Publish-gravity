@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <title>코드기아스 콜라보 실시!｜퍼즐앤드래곤</title>
+
+    <meta name="description" content="퍼즐앤드래곤 공식 운영 사이트. 퍼즐앤드래곤은 몬스터를 육성하여 퍼즐로 배틀하는 신감각 퍼즐 RPG! 이벤트 및 콜라보 소식, 몬스터에 대한 최신 정보를 공개!" />
+    <meta name="keywords" content="퍼드,퍼즐,RPG,퍼즐앤드래곤,퍼즐RPG,드래곤" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="https://imgc.gnjoy.com/neocyon/pad/favicon/favicon_pad.ico" />
+
+    <meta property="og:title" content="코드기아스 콜라보 실시!｜퍼즐앤드래곤" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/neocyon/pad/mobile/geass_FN820917G3/og_img/ogp.jpg" />
+    <meta property="og:image:secure_url" content="/neocyon/pad/mobile/geass_FN820917G3/og_img/ogp.jpg" />
+    <meta property="og:site_name" content="코드기아스 콜라보 실시!｜퍼즐앤드래곤" />
+    <meta property="og:description" content="퍼즐앤드래곤 공식 운영 사이트. 퍼즐앤드래곤은 몬스터를 육성하여 퍼즐로 배틀하는 신감각 퍼즐 RPG! 이벤트 및 콜라보 소식, 몬스터에 대한 최신 정보를 공개!" />
+
+    <link rel="stylesheet" type="text/css" href="/neocyon/pad/mobile/geass_FN820917G3/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/neocyon/pad/mobile/geass_FN820917G3/css/style.css" />
+    <script type="text/javascript" src="/neocyon/pad/mobile/geass_FN820917G3/js/jquery.js"></script>
+    <script>
+      const mainPath = '';
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="container">
+        <article>
+          <header id="head">
+            <picture id="head_chara">
+              <source media="(min-width: 1024px)" srcset="/neocyon/pad/mobile/geass_FN820917G3/img/main_pc.png" alt="코드기아스 콜라보 실시！ " />
+              <img src="/neocyon/pad/mobile/geass_FN820917G3/img/main_sp.jpg" alt="코드기아스 콜라보 실시！ " />
+            </picture>
+          </header>
+          <nav id="menu">
+            <ul>
+              <li>
+                <a href="#list_chara"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/nav_1.jpg" alt="character" /></a>
+              </li>
+              <li>
+                <a href="#list_dungeon"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/nav_2.jpg" alt="dungeon" /></a>
+              </li>
+              <li>
+                <a href="#list_other"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/nav_3.jpg" alt="other" /></a>
+              </li>
+            </ul>
+          </nav>
+
+          <section id="list_chara" class="target">
+            <div id="list_chara_inner" class="section_div">
+              <div class="bnr bnr--chara">
+                <a href="https://pad.neocyon.com/Notice/View.aspx?id=4605"><img src="./img/top_lineup.jpg" alt="마법석 7개! 코드기아스 콜라보 에그" /></a>
+                <p><a href="https://pad.neocyon.com/Notice/View.aspx?id=4605">→ [마법석 7개! 코드기아스 콜라보 에그] 자세히 보기</a></p>
+              </div>
+              <div class="bnr">
+                <a href="https://pad.neocyon.com/Notice/View.aspx?id=4604"><img src="./img/top_lineup2.jpg" alt="광고 시청 에그에 콜라보 캐릭터 추가!" /></a>
+                <p><a href="https://pad.neocyon.com/Notice/View.aspx?id=4604">→ 자세히 보기 </a></p>
+              </div>
+              <h2><img src="/neocyon/pad/mobile/geass_FN820917G3/img/chara_ttl.png" alt="character" /></h2>
+              <p class="tap_text">
+                <strong>캐릭터를 클릭하면 상세를 확인할 수 있습니다.</strong>
+              </p>
+
+              <div id="chara_cont">
+                <chara-list
+                  :prop="{
+						init: initCharaList,
+						list_data: list.list,
+					  }"
+                  :hide-item="['28','29','30','31']"
+                ></chara-list>
+              </div>
+              <p class="under_text">※ 게재된 몬스터 도감은 파라미터 증감과 관련된 일부 각성 스킬의 효과는 반영되어 있지 않습니다.</p>
+
+              <a href="https://pad.neocyon.com/Notice/View.aspx?id=4603"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/btn_evo.png" alt="진화정보 자세히 보기" id="btn_evo" class="btn" /></a>
+              <a href="https://pad.neocyon.com/Notice/View.aspx?id=4602"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/gacha_set.jpg" alt="코드기아스 콜라보 마법석 세트 판매! 자세히 보기" class="gacha_set" /></a>
+            </div>
+            <!-- #list_chara_inner -->
+          </section>
+          <!-- #list_chara -->
+
+          <section id="list_dungeon" class="target">
+            <div id="list_dungeon_inner" class="section_div">
+              <h2><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_ttl.png" alt="dungeon" /></h2>
+              <h3><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_h3.png" alt="콜라보던전등장！" /></h3>
+              <div class="dg_main1h w1000"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main1h.jpg" alt="코드기아스 반역의 를르슈" /></div>
+              <div class="dg_main1 w1000"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main1.png" alt="나이트 오브 라운드, 흑의 기사단" /></div>
+              <div class="dg_main1_2"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main1_2.png" alt="메달을 모아 기간 한정 캐릭터와 교환!" /></div>
+              <div class="dg_main2h w1000"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main2h.jpg" alt="샤를＆마리안느 강림！" /></div>
+              <div class="dg_main2"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main2.png" alt="첫 클리어로「클리어 보상!★7이상 확정 코드기아스 에그」획득！" /></div>
+              <div class="dg_main3h w1000"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main3h.jpg" alt="코드기아스콜로세움" /></div>
+              <div class="dg_main3"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main3.png" alt="첫 클리어로「코드기아스 에그」획득！" /></div>
+              <div class="dg_main4h w1000"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main4h.jpg" alt="칭호「기아스」챌린지!" /></div>
+              <div class="dg_main4"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/dungeon_main4.png" alt="제한 시간 안에 클리어해서 칭호 [기아스]를 획득하세요!" /></div>
+              <a href="https://pad.neocyon.com/Notice/View.aspx?id=4596"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/btn_dungeon.png" alt="던전자세히 보기" id="btn_dungeon" class="btn" /></a>
+            </div>
+            <!-- #list_dungeon_inner -->
+          </section>
+          <!-- #list_dungeon -->
+
+          <section id="list_other" class="target">
+            <div id="list_other_inner" class="section_div">
+              <h2><img src="/neocyon/pad/mobile/geass_FN820917G3/img/other_ttl.png" alt="others" /></h2>
+
+              <div class="other_cont">
+                <img src="/neocyon/pad/mobile/geass_FN820917G3/img/other_1h.jpg" alt="로그인 스탬프" class="other_main1h" />
+                <img src="/neocyon/pad/mobile/geass_FN820917G3/img/other_1.png" class="other_main1" />
+                <div class="other_main1_2"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/other_1_2.png" alt="「코드기아스 에그」등 다양한 보상 획득！" /></div>
+                <a href="https://pad.neocyon.com/Notice/View.aspx?id=4595"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/btn_about.png" alt="자세히 보기" class="btn btn_about" /></a>
+              </div>
+
+              <div class="other_cont">
+                <img src="/neocyon/pad/mobile/geass_FN820917G3/img/other_2h.jpg" alt="몬스터 교환소" class="other_main2h" />
+                <img src="/neocyon/pad/mobile/geass_FN820917G3/img/other_2_3h.png" alt="콜라보 캐릭터 등장！" class="other_main2_3h" />
+                <img src="/neocyon/pad/mobile/geass_FN820917G3/img/other_2.png" alt="셜리 페넷" class="other_main2" />
+                <a href="https://pad.neocyon.com/Notice/View.aspx?id=4594"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/btn_about.png" alt="자세히 보기" class="btn btn_about" /></a>
+              </div>
+            </div>
+            <!-- #list_other_inner -->
+          </section>
+          <!-- #list_exchange -->
+
+          <div id="foot">
+            <img src="/neocyon/pad/mobile/geass_FN820917G3/img/cs.jpg" class="foot_text" alt="9/20(금)10:00~콜라보개시" />
+          </div>
+          <!-- #foot -->
+
+          <footer>
+            <p class="tac">
+              ※ 해당 이미지는 개발 중인 이미지로 추후 변경될 가능성이 있습니다.
+              <br />
+              ※ 게재된 정보는 실시 시점의 내용입니다.
+            </p>
+
+            <p class="tac copyright">
+              ©SUNRISE/PROJECT L-GEASS Character Design ©2006-2017 CLAMP・ST<br />
+              ©SUNRISE／PROJECT G-ROZE　Character Design ©2006-2024 CLAMP・ST
+            </p>
+            <div class="bottomBox">
+              <dl class="center">
+                <dd class="download_box">
+                  <ul>
+                    <li>
+                      <a href="https://play.google.com/store/apps/details?id=jp.gungho.padKO" target="_blank">
+                        <img src="/neocyon/pad/mobile/geass_FN820917G3/img/btn_Android.png" alt="Apple　Store" class="download_Andr" onmousedown="return false" onselectstart="return false" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://apps.apple.com/kr/app/peojeul-aendeulaegon/id588637521" target="_blank">
+                        <img src="/neocyon/pad/mobile/geass_FN820917G3/img/btn_app.png" alt="Google Play" class="download_ios" onmousedown="return false" onselectstart="return false" />
+                      </a>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <p class="center mb15">
+                Apple 및 Apple 로고는 미국 기타 국가에서 등록된 Apple Inc. 의 상표입니다.
+                <br />
+                App Store는 Apple Inc. 의 서비스 마크입니다.
+                <br />
+                Google Play 및 Google Play 로고는 Google LLC의 상표입니다.
+              </p>
+            </div>
+          </footer>
+          <div id="copyright">
+            <p class="inline">© GRAVITY NEOCYON INC. ALL RIGHTS RESERVED.</p>
+            <p class="inline">© GUNGHO ONLINE ENTERTAINMENT, INC. ALL RIGHTS RESERVED.</p>
+          </div>
+
+          <div class="overlay"></div>
+          <div id="pagetop"
+            ><a href="javascript:void(0)"><img src="/neocyon/pad/mobile/geass_FN820917G3/img/btn_backtop.png" alt="TOP" /></a
+          ></div>
+        </article>
+      </div>
+      <!-- #container -->
+    </div>
+    <!-- #app -->
+
+    <script src="/neocyon/pad/mobile/geass_FN820917G3/js/axios.js"></script>
+    <script src="/neocyon/pad/mobile/geass_FN820917G3/js/vue.js"></script>
+    <script src="/neocyon/pad/mobile/geass_FN820917G3/js/app.js"></script>
+
+    <script>
+      $(function () {
+        $('nav a[href*="#"]').click(function () {
+          var elmHash = $(this).attr('href');
+          var navH = $('nav').outerHeight(true);
+          var pos = Math.round($(elmHash).offset().top - navH);
+          $('body,html').animate({ scrollTop: pos }, 500);
+          return false;
+        });
+
+        $('.overlay').fadeOut(500, function () {
+          $(this).remove();
+        });
+
+        $('#pagetop').click(function () {
+          $('body,html').animate({ scrollTop: 0 }, 500);
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
