@@ -1,3 +1,3 @@
-# 그라비티에서 퍼블리싱했던 작업물의 링크 연결을 위한 저장소
+# Gravity personal link
 
 (각 프로젝트 관한 설명은 개인 레파지토리 Source_gravity 참고)
